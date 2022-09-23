@@ -3,6 +3,7 @@ import './top.css';
 import yoshii from "../../assets/img/yoshi.png"
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import { Link } from "react-router-dom";
 
 
 
@@ -12,31 +13,11 @@ function Top() {
     <div className="background">
     <Box sx={{ '& button': { m: 1 } }}>
       <div>
-        <Button size="small">Small</Button>
-        <Button size="medium">Medium</Button>
-        <Button size="large">Large</Button>
-      </div>
-      <div>
-        <Button variant="outlined" size="small">
-          Small
-        </Button>
-        <Button variant="outlined" size="medium">
-          Medium
-        </Button>
-        <Button variant="outlined" size="large">
-          Large
-        </Button>
-      </div>
-      <div>
-        <Button variant="contained" size="small">
-          Small
-        </Button>
-        <Button variant="contained" size="medium">
-          Medium
-        </Button>
+        <Link to={"/contents"}>
         <Button variant="contained" size="large">
-          Large
+          contents
         </Button>
+        </Link>
       </div>
     </Box>
     </div>
