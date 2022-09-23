@@ -13,7 +13,7 @@ if (container) {
     root.render(
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Top />} />
+                    <Route path="/" element={<Top/>} />
                 </Routes>
             </BrowserRouter>
     );
