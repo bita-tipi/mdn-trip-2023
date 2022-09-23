@@ -4,13 +4,15 @@ import yoshii from "../../assets/img/yoshi.png"
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom";
-
-
+import berger from "../menu";
+import { slide as Menu } from "react-burger-menu"
 
 
 function Top() {
   return (
     <div className="background">
+      <Menu width="600" className="berger">
+       </Menu> 
     <Box sx={{ '& button': { m: 1 } }}>
       <div>
         <Link to={"/contents"}>
