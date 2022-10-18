@@ -1,5 +1,5 @@
-.background{
-  background-color: #0a1929;
+.background {
+  background-color: #eee;
   min-height: 100vh;
   height: 170vh;
   display: flex;
@@ -10,6 +10,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .bm-burger-button {
   position: fixed;
   width: 36px;
@@ -21,7 +22,7 @@
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: #373a47;
-  left:0%
+  left: 0%
 }
 
 /* Color/shape of burger icon bars on hover*/
@@ -42,8 +43,8 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-menu {
   background: #444444;
   font-size: 1.15em;
-  width:150px;
-  opacity:0.8;
+  width: 150px;
+  opacity: 0.8;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -55,7 +56,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 .bm-item-list {
   color: #444444;
   padding: 0.8em;
-  top:0%;
+  top: 0%;
 }
 
 /* Individual item */
@@ -68,11 +69,16 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
-  left : 0%;
-  top:0%;
+  left: 0%;
+  top: 0%;
 }
 
-.berger{
-  left : 0%;
-  top:0%;
+.berger {
+  left: 0%;
+  top: 0%;
+}
+
+.title {
+  margin-top: 10%;
+  width: 50px;
 }
