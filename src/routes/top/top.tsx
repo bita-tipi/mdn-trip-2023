@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import "./top.css";
 import yoshii from "../../assets/img/yoshi.png";
 import Box from "@mui/material/Box";
@@ -8,15 +8,16 @@ import berger from "../menu";
 import { slide as Menu } from "react-burger-menu";
 import Loading from "../loading";
 
-class Number extends React.Component {
-    componentDidMount(): void {
-        <Loading />;
-        console.log("DidMount");
-    }
-}
-
 function Top() {
-    const [isLoading, SetLoading] = useState(true);
+    const [isLoading, SetLoading] = useState(false);
+    const updateSetLoading = () => {
+        SetLoading(!isLoading);
+    };
+
+    useEffect(() => {
+        SetLoading(true);
+    });
+
     return (
         <div className="background">
             <Menu width="600" className="berger">
@@ -32,7 +33,13 @@ function Top() {
                         </Button>
                     </Link>
                     <p>{isLoading.toString()}</p>
-                    {isLoading ? <div></div> : <div></div>}
+                    {isLoading ? (
+                        <div>
+                            <Loading />
+                        </div>
+                    ) : (
+                        <div></div>
+                    )}
                 </div>
             </Box>
         </div>
