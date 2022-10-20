@@ -19,7 +19,7 @@ function Top() {
     });
 
     return (
-        <div className="background">
+        <div className="background_top">
             <Menu width="600" className="berger">
                 <a className="menu-item--small" href="">
                     修学旅行

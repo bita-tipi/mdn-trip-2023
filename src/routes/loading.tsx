@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import yoshii from "../assets/img/yoshi.png";
+import "./loading.css";
 
 function Loading() {
     console.log("awa");
-    const [time, setTime] = useState(0);
     return (
-        <div className="load">
-            {time <= 30 ? <div></div> : <div></div>}
-            <img src={yoshii} />
+        <div className="con">
+        <div className="animation-box"></div>
+        <p className="animation">loading</p>
         </div>
     );
 }
