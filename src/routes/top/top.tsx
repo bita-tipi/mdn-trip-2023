@@ -11,6 +11,7 @@ import Loading from "../loading";
 class Number extends React.Component {
     componentDidMount(): void {
         <Loading />;
+        console.log("DidMount");
     }
 }
 
