@@ -8,6 +8,12 @@ import berger from "../menu";
 import { slide as Menu } from "react-burger-menu";
 import Loading from "../loading";
 
+class Number extends React.Component {
+    componentDidMount(): void {
+        <Loading />;
+    }
+}
+
 function Top() {
     const [isLoading, SetLoading] = useState(true);
     return (
@@ -25,13 +31,7 @@ function Top() {
                         </Button>
                     </Link>
                     <p>{isLoading.toString()}</p>
-                    {isLoading ? (
-                        <div>
-                            <Loading />
-                        </div>
-                    ) : (
-                        <div></div>
-                    )}
+                    {isLoading ? <div></div> : <div></div>}
                 </div>
             </Box>
         </div>

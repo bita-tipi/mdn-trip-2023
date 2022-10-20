@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import yoshii from "../assets/ img/yoshi.png";
+import yoshii from "../assets/img/yoshi.png";
 
 function Loading() {
     return (
