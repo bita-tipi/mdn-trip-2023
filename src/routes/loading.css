@@ -9,7 +9,7 @@
     width: 1500px;
     height: 1500px;
     background-color: white;
-    animation-iteration-count: 2;
+    animation-iteration-count: 1;
     opacity: 0;
     margin-left: -550px;
     margin-top: -1100px;
@@ -30,13 +30,6 @@
     100% {
         opacity: 0;
     }
-
-    <<<<<<< HEAD=======100% {
-        opacity: 0;
-        visibilty: hidden;
-    }
-
-    >>>>>>>3282f0c4ea48a5b4f19f9f3c3cf62fe1f546dca5
 }
 
 .animation {
@@ -45,7 +38,7 @@
     margin-top: -500px;
     animation-direction: forwards;
     animation-iteration-count: 2;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
     font-size: 50px;
     opacity: 0;
 }
@@ -59,13 +52,8 @@
         opacity: 1
     }
 
-    <<<<<<< HEAD 100% {
+    100% {
         opacity: 0;
         visibility: hidden;
-
-        =======100% {
-            opacity: 0;
-            visibilty: hidden;
-            >>>>>>>3282f0c4ea48a5b4f19f9f3c3cf62fe1f546dca5
-        }
     }
+}
