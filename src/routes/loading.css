@@ -3,51 +3,57 @@
     background-size: cover;
 }
 
-.animation-box{
-animation-name: animation-sample;
-animation-duration: 4s;
-width:500px;
-margin-left:-150px;
-height:1000px;
-background-color: white;
-animation-iteration-count:1;
-opacity:0;
-margin-top:-900px;
-position:absolute;
-animation-direction:forwards;
+.animation-box {
+    animation-name: animation-sample;
+    animation-duration: 3s;
+    width: 1500px;
+    height: 1500px;
+    background-color: white;
+    animation-iteration-count: 2;
+    opacity: 0;
+    margin-left: -550px;
+    margin-top: -1100px;
+    position: absolute;
+    animation-direction: forwards;
+    background-size: cover;
 }
 
 @keyframes animation-sample {
-    0%{
-        opacity:1;
+    0% {
+        opacity: 1;
     }
-    80%{
-        opacity:1;
+
+    80% {
+        opacity: 1;
     }
-    100%{
-        opacity:0;
-    }   
+
+    100% {
+        opacity: 0;
+    }
 }
 
-.animation{
-    animation-name:animation;
-    position:absolute;
-    margin-top:-500px;
-    animation-direction:forwards;
-    animation-iteration-count:1;
-    animation-duration:4s;
+.animation {
+    animation-name: animation;
+    position: absolute;
+    margin-top: -500px;
+    animation-direction: forwards;
+    animation-iteration-count: 2;
+    animation-duration: 3s;
     font-size: 50px;
-    opacity:0;
+    opacity: 0;
 }
 
-@keyframes animation{
-    0%{
-        opacity:0;
+@keyframes animation {
+    0% {
+        opacity: 0;
     }
-    50%{
-        opacity:1
+
+    50% {
+        opacity: 1
     }
-    100%{
-        opacity:0;
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
     }
 }
