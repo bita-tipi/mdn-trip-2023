@@ -6,8 +6,10 @@ function Loading() {
     console.log("awa");
     return (
         <div className="con">
-        <div className="animation-box"></div>
-        <p className="animation">loading</p>
+            <div className="animation-box"></div>
+            <div className="animation">
+                <img src={yoshii} />
+            </div>
         </div>
     );
 }
