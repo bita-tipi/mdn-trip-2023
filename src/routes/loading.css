@@ -30,6 +30,13 @@
     100% {
         opacity: 0;
     }
+
+    <<<<<<< HEAD=======100% {
+        opacity: 0;
+        visibilty: hidden;
+    }
+
+    >>>>>>>3282f0c4ea48a5b4f19f9f3c3cf62fe1f546dca5
 }
 
 .animation {
@@ -52,8 +59,13 @@
         opacity: 1
     }
 
-    100% {
+    <<<<<<< HEAD 100% {
         opacity: 0;
         visibility: hidden;
+
+        =======100% {
+            opacity: 0;
+            visibilty: hidden;
+            >>>>>>>3282f0c4ea48a5b4f19f9f3c3cf62fe1f546dca5
+        }
     }
-}
