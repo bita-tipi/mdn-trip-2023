@@ -50,5 +50,6 @@ animation-direction:forwards;
     }
     100%{
         opacity:0;
+        visibilty:hidden;
     }
 }
