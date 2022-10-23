@@ -7,6 +7,7 @@ type YoshiData = {
     IfYoshi:boolean;
 };
 
+
 /**
  * ## modalDataState
  * `ModalData`の状態を持った`atom`
@@ -18,4 +19,5 @@ const YoshiDataState = atom<YoshiData>({
     },
 });
 
+export type {YoshiData};
 export { YoshiDataState };

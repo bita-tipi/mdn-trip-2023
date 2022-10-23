@@ -7,16 +7,24 @@ import { Link } from "react-router-dom";
 import berger from "../menu";
 import { slide as Menu } from "react-burger-menu";
 import Loading from "../loading";
+import { YoshiDataState, YoshiData } from "../../assets/atom";
 
-function Top(updateYoshiData: (IfYoshiData: classDataType) => void) {
+function Top() {
     const [isLoading, SetLoading] = useState(false);
-    const updateSetLoading = () => {
-        SetLoading(!isLoading);
+    const [isTrue, SetYoshi] = useState(false);
+    const Yoshi: YoshiData = {
+        IfYoshi: isTrue,
     };
 
     useEffect(() => {
         SetLoading(true);
     });
+
+    for (let index = 0; index <= 10; index++) {
+        if (index == 10) {
+            SetYoshi(true);
+        }
+    }
 
     return (
         <div className="background_top">
@@ -49,3 +57,4 @@ function Top(updateYoshiData: (IfYoshiData: classDataType) => void) {
 }
 
 export default Top;
+export type { YoshiData };
