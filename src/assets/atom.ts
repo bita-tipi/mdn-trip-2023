@@ -7,7 +7,16 @@ type YoshiData = {
     IfYoshi:boolean;
 };
 
+type IndexData = {
+    Index:number;
+}
 
+const IndexDataState = atom<IndexData> ({
+    key: "Index",
+    default:{
+        Index:0
+    }
+})
 /**
  * ## modalDataState
  * `ModalData`の状態を持った`atom`
@@ -19,5 +28,5 @@ const YoshiDataState = atom<YoshiData>({
     },
 });
 
-export type {YoshiData};
-export { YoshiDataState };
+export type {YoshiData,IndexData};
+export { YoshiDataState ,IndexDataState};
