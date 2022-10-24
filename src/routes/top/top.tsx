@@ -15,15 +15,16 @@ function Top() {
     const Yoshi: YoshiData = {
         IfYoshi: isTrue,
     };
+    let [index, Setindex] = useState(0);
 
     useEffect(() => {
         SetLoading(true);
+        Setindex(index++);
     });
 
-    for (let index = 0; index <= 10; index++) {
-        if (index == 10) {
-            SetYoshi(true);
-        }
+    if (index <= 10) {
+        SetYoshi(true);
+        Setindex(0);
     }
 
     return (
