@@ -7,7 +7,12 @@ import { Link } from "react-router-dom";
 import berger from "../menu";
 import { slide as Menu } from "react-burger-menu";
 import Loading from "../loading";
-import { YoshiDataState, YoshiData, IndexData, IndexDataState } from "../../assets/atom";
+import {
+    YoshiDataState,
+    YoshiData,
+    IndexData,
+    IndexDataState,
+} from "../../assets/atom";
 
 function Top() {
     const [isLoading, SetLoading] = useState(false);
@@ -15,8 +20,6 @@ function Top() {
     const Yoshi: YoshiData = {
         IfYoshi: isTrue,
     };
-    const Index:
-    let [index, SetIndex] = useState(0);
 
     useEffect(() => {
         SetLoading(true);
@@ -24,9 +27,7 @@ function Top() {
 
     return (
         <div className="background_top">
-            {index == 10 ? <div>SetYoshi(true) SetIndex(0)</div> : <div></div>}
             <div>
-                {index}
                 <Menu width="600" className="berger">
                     <a className="menu-item--small" href="">
                         修学旅行
