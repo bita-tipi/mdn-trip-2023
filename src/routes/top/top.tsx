@@ -41,6 +41,11 @@ function Top() {
                             contents
                         </Button>
                     </Link>
+                    <Link to={"/mosya"}>
+                        <Button variant="contained" size="large">
+                            mosya
+                        </Button>
+                    </Link>
                     <p>{isLoading.toString()}</p>
                     {isLoading ? (
                         <div>
