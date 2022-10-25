@@ -44,13 +44,22 @@
     font-size: 50px;
 }
 
+.animation {
+    animation-name: animation;
+    position: absolute;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 2;
+    animation-duration: 1.5s;
+    font-size: 100px;
+}
+
 @keyframes animation {
     0% {
         opacity: 0;
     }
 
     50% {
-        opacity: 1
+        opacity: 1;
     }
 
     100% {

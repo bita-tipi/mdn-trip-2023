@@ -8,11 +8,13 @@ import {
     IndexDataState,
 } from "../assets/atom";
 
+let index = 0;
+
 function Loading() {
-    const [isIndex, SetIndex] = useState(0);
     console.log("awa");
     function UpdateSetIndex() {
-        return isIndex;
+        index = index + 1;
+        return index;
     }
 
     return (
@@ -20,9 +22,16 @@ function Loading() {
             <div>
                 {UpdateSetIndex()}
                 <div className="animation-box"></div>
-                <div className="animation">
-                    <img src={yoshii} />
-                </div>
+                {index === 3 ? (
+                    <div>
+                        <div className="animation">
+                            <img src={yoshii} />
+                        </div>
+                        {(index = 0)}
+                    </div>
+                ) : (
+                    <p className="animation">loading</p>
+                )}
             </div>
         </div>
     );
