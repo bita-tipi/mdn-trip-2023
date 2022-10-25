@@ -45,15 +45,12 @@ function Contents() {
                             <Radio
                                 sx={{
                                     color: pink[800],
-                                    "&.Mui-checked": {
-                                        color: pink[200],
-                                    },
+                                    "&.Mui-checked": { color: pink[200] },
                                 }}
                             />
                         }
                         label="Female"
                     />
-
                     <FormControlLabel
                         value="male"
                         control={

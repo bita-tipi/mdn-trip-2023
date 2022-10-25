@@ -14,7 +14,7 @@ function Loading() {
     console.log("awa");
     function UpdateSetIndex() {
         index = index + 1;
-        return index;
+        return null;
     }
 
     return (
@@ -26,8 +26,8 @@ function Loading() {
                     <div>
                         <div className="animation">
                             <img src={yoshii} />
+                            <div className="null">{(index = 0)}</div>
                         </div>
-                        {(index = 0)}
                     </div>
                 ) : (
                     <p className="animation">loading</p>

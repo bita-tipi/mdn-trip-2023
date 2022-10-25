@@ -41,7 +41,6 @@ function Top() {
                             contents
                         </Button>
                     </Link>
-                    <p>{isLoading.toString()}</p>
                     {isLoading ? (
                         <div>
                             <Loading />
