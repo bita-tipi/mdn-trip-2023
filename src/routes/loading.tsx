@@ -14,7 +14,6 @@ function Loading() {
     console.log("awa");
     function UpdateSetIndex() {
         index = index + 1;
-        return index;
     }
 
     return (
