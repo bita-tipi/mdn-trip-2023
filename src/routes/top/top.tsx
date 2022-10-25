@@ -54,6 +54,7 @@ function Top() {
                     ) : (
                         <div></div>
                     )}
+                    <input type="passsword"></input>
                 </div>
             </Box>
         </div>
