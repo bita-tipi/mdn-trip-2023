@@ -16,10 +16,11 @@ function Contents() {
     const g2c = "3333";
 
     const [ClassDate, SetClassDate] = useState("0000");
-    const [value, setValue] = React.useState("female");
+    const [ClassName, SetClassName] = useState("G2A");
+    const [value, SetValue] = React.useState("female");
     const [Text, SetText] = useState("2345");
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setValue((event.target as HTMLInputElement).value);
+        SetValue((event.target as HTMLInputElement).value);
     };
 
     return (
@@ -28,9 +29,31 @@ function Contents() {
                 <button>back</button>
             </Link>
             <div>
-                <button onClick={() => SetClassDate(g2a)}>G2A</button>
-                <button onClick={() => SetClassDate(g2b)}>G2B</button>
-                <button onClick={() => SetClassDate(g2c)}>G2C</button>
+                <button
+                    onClick={() => {
+                        SetClassDate(g2a);
+                        SetClassName("G2A");
+                    }}
+                >
+                    G2A
+                </button>
+                <button
+                    onClick={() => {
+                        SetClassDate(g2b);
+                        SetClassName("G2B");
+                    }}
+                >
+                    G2B
+                </button>
+                <button
+                    onClick={() => {
+                        SetClassDate(g2c);
+                        SetClassName("G2C");
+                    }}
+                >
+                    G2C
+                </button>
+                {ClassName}
             </div>
 
             {Text === ClassDate ? <p>success</p> : <p>missing</p>}
