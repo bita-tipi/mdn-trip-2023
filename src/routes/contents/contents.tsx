@@ -11,6 +11,11 @@ import FormLabel from "@mui/material/FormLabel";
 import { pink } from "@mui/material/colors";
 
 function Contents() {
+    const g2a = "1111";
+    const g2b = "2222";
+    const g2c = "3333";
+
+    const [ClassDate, SetClassDate] = useState("0000");
     const [value, setValue] = React.useState("female");
     const [Text, SetText] = useState("2345");
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -22,50 +27,13 @@ function Contents() {
             <Link to={"/"}>
                 <button>back</button>
             </Link>
-            <FormControl>
-                <FormLabel
-                    id="demo-controlled-radio-buttons-group"
-                    sx={{
-                        color: pink[800],
-                        "&.Mui-checked": { color: pink[200] },
-                    }}
-                >
-                    Gender
-                </FormLabel>
-                <RadioGroup
-                    aria-labelledby="demo-controlled-radio-buttons-group"
-                    name="controlled-radio-buttons-group"
-                    value={value}
-                    onChange={handleChange}
-                    sx={{ color: pink[800] }}
-                >
-                    <FormControlLabel
-                        value="female"
-                        control={
-                            <Radio
-                                sx={{
-                                    color: pink[800],
-                                    "&.Mui-checked": { color: pink[200] },
-                                }}
-                            />
-                        }
-                        label="Female"
-                    />
-                    <FormControlLabel
-                        value="male"
-                        control={
-                            <Radio
-                                sx={{
-                                    color: pink[800],
-                                    "&.Mui-checked": { color: pink[200] },
-                                }}
-                            />
-                        }
-                        label="Male"
-                    />
-                </RadioGroup>
-            </FormControl>
-            {Text === "9987" ? <p>success</p> : <p>missing</p>}
+            <div>
+                <button onClick={() => SetClassDate(g2a)}>G2A</button>
+                <button onClick={() => SetClassDate(g2b)}>G2B</button>
+                <button onClick={() => SetClassDate(g2c)}>G2C</button>
+            </div>
+
+            {Text === ClassDate ? <p>success</p> : <p>missing</p>}
             <input
                 maxLength={Number(4)}
                 value={Text}
