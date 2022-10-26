@@ -6,7 +6,7 @@ import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import berger from "../menu";
 import { slide as Menu } from "react-burger-menu";
-import Loading from "../loading";
+import Loading from "../load/loading";
 import {
     YoshiDataState,
     YoshiData,
@@ -46,7 +46,6 @@ function Top() {
                             mosya
                         </Button>
                     </Link>
-                    <p>{isLoading.toString()}</p>
                     {isLoading ? (
                         <div>
                             <Loading />
@@ -54,7 +53,6 @@ function Top() {
                     ) : (
                         <div></div>
                     )}
-                    <input type="passsword"></input>
                 </div>
             </Box>
         </div>

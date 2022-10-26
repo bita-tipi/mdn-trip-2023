@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 import yoshii from "../../assets/img/yoshi.png";
 import Box from "@mui/material/Box";
@@ -12,7 +12,7 @@ import { pink } from "@mui/material/colors";
 
 function Contents() {
     const [value, setValue] = React.useState("female");
-
+    const [Text, SetText] = useState("2345");
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setValue((event.target as HTMLInputElement).value);
     };
@@ -65,6 +65,13 @@ function Contents() {
                     />
                 </RadioGroup>
             </FormControl>
+            {Text === "9987" ? <p>success</p> : <p>missing</p>}
+            <input
+                maxLength={Number(4)}
+                value={Text}
+                type="number"
+                onChange={(event) => SetText(event.target.value)}
+            ></input>
         </div>
     );
 }
