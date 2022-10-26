@@ -11,13 +11,8 @@ function Loading() {
     let LoadingIndex = 0;
     console.log("awa");
 
-    function UpdateSetIndex() {
-        index = index + 1;
-    }
-
     function Random(): void {
         let randomIndex = Math.floor(Math.random() * 3);
-        console.log(randomIndex);
         LoadingIndex = randomIndex;
     }
 
@@ -27,15 +22,7 @@ function Loading() {
     }
 
     Random();
-    UpdateSetIndex();
-    return (
-        <div className="con">
-            <div>
-                {RandomLoading()}
-                {LoadingIndex}
-            </div>
-        </div>
-    );
+    return <div className="con">{RandomLoading()}</div>;
 }
 
 export default Loading;
