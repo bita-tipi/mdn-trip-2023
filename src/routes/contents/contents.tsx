@@ -1,14 +1,5 @@
 import React, { useState, useEffect, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
-import yoshii from "../../assets/img/yoshi.png";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
-import { pink } from "@mui/material/colors";
 
 function Contents() {
     function Checker() {
@@ -20,48 +11,133 @@ function Contents() {
     const g2a = "1111";
     const g2b = "2222";
     const g2c = "3333";
-
+    const j2a = "4444";
+    const j2b = "5555";
+    const j2c = "6666";
+    const [isListOpen, setIsListOpen] = useState(false);
+    const [isListOpen2, setIsListOpen2] = useState(false);
+    const [Check, SetCheck] = useState(true);
     const [password, Setpassword] = useState(false);
     const [ClassDate, SetClassDate] = useState("0000");
-    const [ClassName, SetClassName] = useState("G2A");
-    const [value, SetValue] = React.useState("female");
+    const [ClassName, SetClassName] = useState("");
+    const [CheckName, SetCheckName] = useState("");
     const [Text, SetText] = useState("2345");
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        SetValue((event.target as HTMLInputElement).value);
-    };
 
     return (
         <div className="background">
+            <button
+                type="button"
+                onClick={() => setIsListOpen(!isListOpen)}
+                className="select"
+            >
+                学科
+            </button>
+
+            {isListOpen ? (
+                <ul className="select_ul">
+                    <button
+                        className="b"
+                        onClick={() => {
+                            SetCheck(true);
+                            SetCheckName("普通科");
+                        }}
+                    >
+                        普通科
+                    </button>
+                    <button
+                        className="b"
+                        onClick={() => {
+                            SetCheck(false);
+                            SetCheckName("情報科");
+                        }}
+                    >
+                        情報科
+                    </button>
+                </ul>
+            ) : (
+                <div></div>
+            )}
+            {CheckName}
+            <button
+                type="button"
+                onClick={() => setIsListOpen2(!isListOpen2)}
+                className="select"
+            >
+                クラス
+            </button>
+            {isListOpen2 ? (
+                <div>
+                    {" "}
+                    {Check ? (
+                        <ul className="select_ul">
+                            <button
+                                className="b"
+                                onClick={() => {
+                                    SetClassDate(g2a);
+                                    SetClassName("G2A");
+                                }}
+                            >
+                                G2A
+                            </button>
+                            <button
+                                className="b"
+                                onClick={() => {
+                                    SetClassDate(g2b);
+                                    SetClassName("G2B");
+                                }}
+                            >
+                                G2B
+                            </button>
+                            <button
+                                className="b"
+                                onClick={() => {
+                                    SetClassDate(g2c);
+                                    SetClassName("G2C");
+                                }}
+                            >
+                                G2C
+                            </button>
+                        </ul>
+                    ) : (
+                        <ul className="select_ul">
+                            <button
+                                className="b"
+                                onClick={() => {
+                                    SetClassDate(j2a);
+                                    SetClassName("J2A");
+                                }}
+                            >
+                                J2A
+                            </button>
+                            <button
+                                className="b"
+                                onClick={() => {
+                                    SetClassDate(j2b);
+                                    SetClassName("J2B");
+                                }}
+                            >
+                                J2B
+                            </button>
+                            <button
+                                className="b"
+                                onClick={() => {
+                                    SetClassDate(j2c);
+                                    SetClassName("J2C");
+                                }}
+                            >
+                                J2C
+                            </button>
+                        </ul>
+                    )}
+                </div>
+            ) : (
+                <div></div>
+            )}
+
             <Link to={"/"}>
                 <button>back</button>
             </Link>
-            <div>
-                <button
-                    onClick={() => {
-                        SetClassDate(g2a);
-                        SetClassName("G2A");
-                    }}
-                >
-                    G2A
-                </button>
-                <button
-                    onClick={() => {
-                        SetClassDate(g2b);
-                        SetClassName("G2B");
-                    }}
-                >
-                    G2B
-                </button>
-                <button
-                    onClick={() => {
-                        SetClassDate(g2c);
-                        SetClassName("G2C");
-                    }}
-                >
-                    G2C
-                </button>
-                {ClassName}
-            </div>
+            <div>{ClassName}</div>
             <button onClick={Checker}>確定</button>
             {password ? <p>success</p> : <p>missing</p>}
             <input
