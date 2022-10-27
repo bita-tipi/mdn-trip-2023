@@ -11,10 +11,17 @@ import FormLabel from "@mui/material/FormLabel";
 import { pink } from "@mui/material/colors";
 
 function Contents() {
+    function Checker() {
+        {
+            Text === ClassDate ? Setpassword(true) : Setpassword(false);
+        }
+    }
+
     const g2a = "1111";
     const g2b = "2222";
     const g2c = "3333";
 
+    const [password, Setpassword] = useState(false);
     const [ClassDate, SetClassDate] = useState("0000");
     const [ClassName, SetClassName] = useState("G2A");
     const [value, SetValue] = React.useState("female");
@@ -55,8 +62,8 @@ function Contents() {
                 </button>
                 {ClassName}
             </div>
-
-            {Text === ClassDate ? <p>success</p> : <p>missing</p>}
+            <button onClick={Checker}>確定</button>
+            {password ? <p>success</p> : <p>missing</p>}
             <input
                 maxLength={Number(4)}
                 value={Text}
