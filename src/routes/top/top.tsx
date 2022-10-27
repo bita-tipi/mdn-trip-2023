@@ -33,11 +33,28 @@ function Top() {
         </div>
         )
     }
+    function Burger2() {
+        return  (
+        <div className="hum2">
+            <ul>
+                <li>I</li>
+                <li>want</li>
+                <li>to</li>
+                <li>eat</li>
+                <li>ham</li>
+                <li>burger</li>
+            </ul>
+        </div>
+        )
+    }
 
     function MenuOpen():void{
         SetMenu(!Menu);
+        SetMenuRespons(!MenuRespons);
+        
     }
 
+    const [MenuRespons,SetMenuRespons] = useState(true);
     const [Menu,SetMenu] = useState(false);
     const [isLoading, SetLoading] = useState(false);
     const [isTrue, SetYoshi] = useState(false);
@@ -78,7 +95,10 @@ function Top() {
                     )}
                 </div>
             </Box>
-            {Menu ? <div>{Burger()}</div> :<div></div>}
+            {MenuRespons 
+            ?<div>{Menu ? <div>{Burger()}</div> :<div></div>}</div>
+            : <div>{Menu ? <div>{Burger()}</div> :<div>{Burger2()}</div>}</div>
+            }
         </div>
     );
 }
