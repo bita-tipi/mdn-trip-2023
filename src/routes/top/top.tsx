@@ -15,24 +15,47 @@ import {
 } from "../../assets/atom";
 
 function Top() {
-    const [isLoading, SetLoading] = useState(false);
-    const [isTrue, SetYoshi] = useState(false);
-    const Yoshi: YoshiData = {
-        IfYoshi: isTrue,
-    };
-
     useEffect(() => {
         SetLoading(true);
     });
 
+    function Burger() {
+        return  (
+        <div className="hum">
+            <ul>
+                <li>I</li>
+                <li>want</li>
+                <li>to</li>
+                <li>eat</li>
+                <li>ham</li>
+                <li>burger</li>
+            </ul>
+        </div>
+        )
+    }
+
+    function MenuOpen():void{
+        SetMenu(!Menu);
+    }
+
+    const [Menu,SetMenu] = useState(false);
+    const [isLoading, SetLoading] = useState(false);
+    const [isTrue, SetYoshi] = useState(false);
+    const Yoshi: YoshiData = {IfYoshi: isTrue};
+
+
     return (
         <div className="background_top">
             <div>
-                <Menu width="600" className="berger">
-                    <a className="menu-item--small" href="">
-                        修学旅行
-                    </a>
-                </Menu>
+                <button onClick={MenuOpen} className="Menubutton">
+                <div className="Menu">
+                    <div className="bar"></div>
+                    <div className="bar1"></div>
+                    <div className="bar"></div>
+                    <div className="bar1"></div>
+                    <div className="bar"></div>
+                </div>
+                </button>
             </div>
             <Box sx={{ "& button": { m: 1 } }}>
                 <div>
@@ -55,6 +78,7 @@ function Top() {
                     )}
                 </div>
             </Box>
+            {Menu ? <div>{Burger()}</div> :<div></div>}
         </div>
     );
 }

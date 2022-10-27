@@ -11,74 +11,52 @@
   background-size: cover;
 }
 
-.bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 36px;
-  top: 36px;
+.Menubutton{
+  border: none;
+}
+.Menu{
+  width:100px;
+  height:100px;
+  margin:10%;
+  align-content:space-between;
+}
+.bar{
+  background-color:#222;
+  width:80%;
+  align-content:space-between;
+  height:20%;
 }
 
-/* Color/shape of burger icon bars */
-.bm-burger-bars {
-  background: #373a47;
-  left: 0%
+.bar1{
+  background-color:#eee;
+  width:80%;
+  height:10%;
 }
 
-/* Color/shape of burger icon bars on hover*/
-.bm-burger-bars-hover {
-  background: #005b99;
+.hum{
+  background-color:rgba(105, 104, 104.5);
+  animation-name:hum;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+  position:absolute;
+  left:0;
+  top:0;
+  height:100%;
+  width:30%;
+}
+li{
+  list-style-type: none;
+  padding-top:10%;
+  font-family:'Impact';
 }
 
-/*
-Sidebar wrapper styles
-Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
-*/
-.bm-menu-wrap {
-  position: fixed;
-  height: 100%;
-}
-
-/* General sidebar styles */
-.bm-menu {
-  background: #444444;
-  font-size: 1.15em;
-  width: 150px;
-  opacity: 0.8;
-}
-
-/* Morph shape necessary with bubble or elastic */
-.bm-morph-shape {
-  fill: #373a47;
-}
-
-/* Wrapper for item list */
-.bm-item-list {
-  color: #444444;
-  padding: 0.8em;
-  top: 0%;
-}
-
-/* Individual item */
-.bm-item {
-  display: inline-block;
-  text-decoration: none;
-  outline: none;
-}
-
-/* Styling of overlay */
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
-  left: 0%;
-  top: 0%;
-}
-
-.berger {
-  left: 0%;
-  top: 0%;
-}
-
-.title {
-  margin-top: 10%;
-  width: 50px;
+@keyframes hum{
+  0%{
+    opacity:0;
+    transform: translateX(-500px);
+  }
+  100%{
+    opacity:1;
+    transform: translateX(0px);
+  }
 }
