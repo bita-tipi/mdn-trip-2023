@@ -8,12 +8,14 @@ import reportWebVitals from './reportWebVitals';
 import { Routes } from "react-router-dom";
 import { createRoot } from "react-dom/client";
 import { Route, BrowserRouter } from "react-router-dom";
+import Header from "./routes/header/header"
 
 const container = document.getElementById("root");
 if (container) {
     const root = createRoot(container);
     root.render(
             <BrowserRouter>
+                <Header />
                 <Routes>
                     <Route path="/" element={<Top/>} />
                     <Route path="/contents" element={<Contents/>} />

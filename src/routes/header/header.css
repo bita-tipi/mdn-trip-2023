@@ -1,0 +1,65 @@
+.Menubutton{
+    border: none;
+    background-color:none;
+  }
+  .Menu{
+    width:100px;
+    height:100px;
+    margin:10%;
+    align-content:space-between;
+  }
+  .bar{
+    background-color:#222;
+    width:80%;
+    align-content:space-between;
+    height:20%;
+  }
+  
+  .bar1{
+    background-color:#eee;
+    width:80%;
+    height:10%;
+  }
+  
+  .hum{
+    background-color:rgba(105, 104, 104.5);
+    animation-name:ham;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+    width:40%;
+  }
+  
+  .hum2{
+    background-color:rgba(105, 104, 104.5);
+    animation-name:ham;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+    width:40%;
+    animation-direction: reverse;
+  }
+
+  li{
+    list-style-type: none;
+    padding-top:10%;
+    font-family:'Impact';
+  }
+  
+  @keyframes ham{
+    0%{
+      opacity:0;
+      transform: translateX(-500px);
+    }
+    100%{
+      opacity:1;
+      transform: translateX(0px);
+    }
+  }
+  
