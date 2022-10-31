@@ -25,6 +25,7 @@ if (container) {
                 <Route path="/mosya" element={<Mosya />} />
                 <Route path="/Map" element={<Map />} />
                 <Route path="/Checklist" element={<Checklist />} />
+                <Route path="/attention" element={<Attention />} />
             </Routes>
         </BrowserRouter>
     );

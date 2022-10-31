@@ -11,24 +11,28 @@ function Header() {
                 <ul>
                     <button onClick={(event) => MenuOpen(event)}>back</button>
                     <Link to="/">
-                        <li>HOME</li>
+                        <li onClick={MenuClose}>HOME</li>
                     </Link>
-                    <Link to="/">
-                        <li>HOME</li>
+                    <Link to="/contents">
+                        <li onClick={MenuClose}>部屋割り</li>
                     </Link>
-                    <Link to="/">
-                        <li>HOME</li>
+                    <Link to="/checklist">
+                        <li onClick={MenuClose}>持ち物リスト</li>
                     </Link>
-                    <Link to="/">
-                        <li>HOME</li>
+                    <Link to="/attention">
+                        <li onClick={MenuClose}>注意事項</li>
                     </Link>
-                    <Link to="/">
-                        <li>HOME</li>
+                    <Link to="/map">
+                        <li onClick={MenuClose}>MAP</li>
                     </Link>
                     {Events}
                 </ul>
             </div>
         );
+    }
+
+    function MenuClose() {
+        SetMenu(!Menu);
     }
 
     function MenuOpen(event: React.MouseEvent<HTMLButtonElement>): void {
