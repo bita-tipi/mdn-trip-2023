@@ -37,7 +37,7 @@
 
 .hum2 {
   background-color: rgba(105, 104, 104.5);
-  animation-name: ham;
+  animation-name: open;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   position: absolute;
@@ -54,7 +54,7 @@ li {
   font-family: 'Impact';
 }
 
-@keyframes ham {
+@keyframes open {
   0% {
     opacity: 0;
     transform: translateX(-500px);
@@ -68,5 +68,13 @@ li {
 
 
 @keyframes close {
-  0% {}
+  0% {
+    opacity: 0;
+    transform: translateX(0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
 }
