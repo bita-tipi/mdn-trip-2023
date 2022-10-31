@@ -9,7 +9,7 @@ function Header() {
         return (
             <div className="hum">
                 <ul>
-                    <button onClick={(event) => MenuOpen(event)}>back</button>
+                    <button onClick={() => SetMenu(!Menu)}>back</button>
                     <Link to="/">
                         <li onClick={MenuClose}>HOME</li>
                     </Link>
