@@ -23,7 +23,6 @@ if (container) {
             <Header />
             <Routes>
                 <Route path="/" element={<Top />} />
-                <Route path="/room" element={<Room />} />
                 <Route path="/contents" element={<Contents />} />
                 <Route path="/mosya" element={<Mosya />} />
                 <Route path="/map" element={<Map />} />

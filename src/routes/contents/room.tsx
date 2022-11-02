@@ -1,16 +1,13 @@
 import React , {useState,useEffect} from "react";
 
 function Room(){
-    const [roomDate,upDateRoomDate] = useState("");
-    useEffect(() => {
-        upDateRoomDate("");
-    });
+
     return(
-        <dev>
+        <div>
             <body>
                 <p>ヘヤワリ</p>
             </body>
-        </dev>
+        </div>
     )
 }
 export default Room()
