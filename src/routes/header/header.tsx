@@ -8,6 +8,9 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 
+import "./header.css";
+import favicon from "../../assets/img/favicon.png";
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -88,6 +91,7 @@ function Header() {
                     </Drawer>
                 </React.Fragment>
             ))}
+
         </div>
     );
 }
