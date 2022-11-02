@@ -4,8 +4,8 @@
 }
 
 .Menu {
-  width: 100px;
-  height: 100px;
+  width: 10px;
+  height: 10px;
   margin: 10%;
   align-content: space-between;
 }
@@ -24,34 +24,21 @@
 }
 
 .hum {
-  background-color: rgba(105, 104, 104.5);
-  animation-name: ham;
+  background-color: rgba(105, 104, 0);
   animation-duration: 1s;
-  animation-fill-mode: forwards;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 40%;
-}
-
-.hum2 {
-  background-color: rgba(105, 104, 104.5);
   animation-name: open;
-  animation-duration: 1s;
   animation-fill-mode: forwards;
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   width: 40%;
-  animation-direction: reverse;
 }
 
 li {
   list-style-type: none;
   padding-top: 10%;
-  font-family: 'Impact';
+  font-family: "Impact";
 }
 
 @keyframes open {
@@ -66,15 +53,6 @@ li {
   }
 }
 
-
-@keyframes close {
-  0% {
-    opacity: 0;
-    transform: translateX(0px);
-  }
-
-  100% {
-    opacity: 0;
-    transform: translateX(-500px);
-  }
+.header {
+  top: 0
 }

@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import Top from "./routes/top/top";
+import Loading from "./routes/load/loading";
 import Mosya from "./routes/top/mosya";
 import Contents from "./routes/contents/contents";
 import Attention from "./routes/attention/attention";
