@@ -5,6 +5,7 @@ import Top from "./routes/top/top";
 import Loading from "./routes/load/loading";
 import Mosya from "./routes/top/mosya";
 import Contents from "./routes/contents/contents";
+import Room from "./routes/contents/room";
 import Attention from "./routes/attention/attention";
 import Checklist from "./routes/checklist/checklist";
 import Map from "./routes/map/map";
@@ -22,9 +23,10 @@ if (container) {
             <Header />
             <Routes>
                 <Route path="/" element={<Top />} />
+                <Route path="/room" element={<Room />} />
                 <Route path="/contents" element={<Contents />} />
                 <Route path="/mosya" element={<Mosya />} />
-                <Route path="/Map" element={<Map />} />
+                <Route path="/map" element={<Map />} />
                 <Route path="/Checklist" element={<Checklist />} />
                 <Route path="/attention" element={<Attention />} />
             </Routes>
