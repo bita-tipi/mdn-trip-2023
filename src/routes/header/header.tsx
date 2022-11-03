@@ -1,57 +1,97 @@
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
+import Button from "@mui/material/Button";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+
+import "./header.css";
+import favicon from "../../assets/img/favicon.png";
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+type Anchor = "top" | "left" | "bottom" | "right";
+
 function Header() {
-    const [Events, SetEvents] = useState(false);
-    const [Menu, SetMenu] = useState(false);
+    const [state, setState] = React.useState({
+        left: false,
+    });
 
-    function Burger() {
-        return (
-            <div className="hum">
-                <ul>
-                    <button onClick={(event) => MenuOpen(event)}>back</button>
-                    <Link to="/">
-                        <li onClick={MenuClose}>HOME</li>
-                    </Link>
-                    <Link to="/contents">
-                        <li onClick={MenuClose}>部屋割り</li>
-                    </Link>
-                    <Link to="/checklist">
-                        <li onClick={MenuClose}>持ち物リスト</li>
-                    </Link>
-                    <Link to="/attention">
-                        <li onClick={MenuClose}>注意事項</li>
-                    </Link>
-                    <Link to="/map">
-                        <li onClick={MenuClose}>MAP</li>
-                    </Link>
-                    {Events}
-                </ul>
-            </div>
-        );
-    }
+    const toggleDrawer =
+        (anchor: Anchor, open: boolean) =>
+        (event: React.KeyboardEvent | React.MouseEvent) => {
+            if (
+                event.type === "keydown" &&
+                ((event as React.KeyboardEvent).key === "Tab" ||
+                    (event as React.KeyboardEvent).key === "Shift")
+            ) {
+                return;
+            }
 
-    function MenuClose() {
-        SetMenu(!Menu);
-    }
+            setState({ ...state, [anchor]: open });
+        };
 
-    function MenuOpen(event: React.MouseEvent<HTMLButtonElement>): void {
-        SetMenu(!Menu);
-        console.log(event);
-    }
+    const list = (anchor: Anchor) => (
+        <Box
+            sx={{
+                width: anchor === "top" || anchor === "bottom" ? "auto" : 250,
+            }}
+            role="presentation"
+            onClick={toggleDrawer(anchor, false)}
+            onKeyDown={toggleDrawer(anchor, false)}
+        >
+            <List>
+                {
+                    <div>
+                        <Link to="/">
+                            <li>HOME</li>
+                        </Link>
+                        <Link to="/contents">
+                            <li>部屋割り</li>
+                        </Link>
+                        <Link to="/map">
+                            <li>MAP</li>
+                        </Link>
+                    </div>
+                }
+            </List>
+            <Divider />
+            <List>
+                {
+                    <div>
+                        <Link to="/checklist">
+                            <li>持ち物リスト</li>
+                        </Link>
+                        <Link to="/attention">
+                            <li>注意事項</li>
+                        </Link>
+                    </div>
+                }
+            </List>
+        </Box>
+    );
 
     return (
         <div>
-            <button onClick={(event) => MenuOpen(event)} className="Menubutton">
-                <div className="Menu">
-                    <div className="bar"></div>
-                    <div className="bar1"></div>
-                    <div className="bar"></div>
-                    <div className="bar1"></div>
-                    <div className="bar"></div>
-                </div>
-            </button>
-            {Menu ? <div>{Burger()}</div> : <div></div>}
+            {(["left"] as const).map((anchor) => (
+                <React.Fragment key={anchor}>
+                    <Button onClick={toggleDrawer(anchor, true)}>
+                        {anchor}
+                    </Button>
+                    <Drawer
+                        anchor={anchor}
+                        open={state[anchor]}
+                        onClose={toggleDrawer(anchor, false)}
+                    >
+                        {list(anchor)}
+                    </Drawer>
+                </React.Fragment>
+            ))}
+
         </div>
     );
 }
