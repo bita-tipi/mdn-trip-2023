@@ -14,27 +14,13 @@ function Top() {
 
     return (
         <div className="background_top">
-            <Box sx={{ "& button": { m: 1 } }}>
+            {isLoading ? (
                 <div>
-                    <Link to={"/contents"}>
-                        <Button variant="contained" size="large">
-                            contents
-                        </Button>
-                    </Link>
-                    <Link to={"/mosya"}>
-                        <Button variant="contained" size="large">
-                            mosya
-                        </Button>
-                    </Link>
-                    {isLoading ? (
-                        <div>
-                            <Loading />
-                        </div>
-                    ) : (
-                        <div></div>
-                    )}
+                    <Loading />
                 </div>
-            </Box>
+            ) : (
+                <div></div>
+            )}
         </div>
     );
 }

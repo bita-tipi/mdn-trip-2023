@@ -6,13 +6,9 @@
 .animation-box {
     animation-name: animation-sample;
     animation-duration: 3s;
-    width: 1500px;
-    height: 1700px;
     background-color: white;
     animation-iteration-count: 1;
     opacity: 0;
-    margin-left: -550px;
-    margin-top: -1300px;
     position: absolute;
     animation-fill-mode: forwards;
     background-size: cover;
@@ -31,17 +27,6 @@
         opacity: 0;
         visibility: hidden;
     }
-}
-
-.animation {
-    animation-name: animation;
-    position: absolute;
-    margin-top: -900px;
-    margin-left: -400px;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 2;
-    animation-duration: 1.5s;
-    font-size: 50px;
 }
 
 .animation {
