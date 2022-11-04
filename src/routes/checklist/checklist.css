@@ -1,5 +1,19 @@
-.top{
-    font-size: 40px;
-    text-align: center;
+.top {
+  font-size: 40px;
+  text-align: center;
+}
+
+
+.list-title {
+  text-align: center;
+}
+
+.checkbox-container {
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
