@@ -9,8 +9,7 @@ li{
 .tyui{
     text-align: center;
 }
-
-.pilldown{
+.pulldown{
     animation-name:pulldown;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
