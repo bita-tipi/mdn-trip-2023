@@ -33,7 +33,7 @@
     animation-name: animation;
     position: absolute;
     animation-fill-mode: forwards;
-    animation-iteration-count: 2;
+    animation-iteration-count: 1;
     animation-duration: 1.5s;
     font-size: 100px;
 }
