@@ -1,64 +1,73 @@
-import React from "react";
+import React, { useState } from "react";
 import "./checklist.css";
 import Checkbox from "@mui/material/Checkbox";
 import { FormControlLabel, FormGroup } from "@mui/material";
+import _ from "lodash";
 
 function Check() {
-    return (
-        <div>
-            <h1>持ち物リスト</h1>
-            <main>
-                <div className="list-title">
-                    <hr />
-                    必要なもの
-                </div>
-                <div className="list-container">
-                    <FormGroup>
-                        <FormControlLabel control={<Checkbox />} label="制服" />
-                        <FormControlLabel control={<Checkbox />} label="財布" />
-                    </FormGroup>
-                    <FormGroup>
-                        <FormControlLabel control={<Checkbox />} label="あ" />
-                        <FormControlLabel control={<Checkbox />} label="あ" />
-                        <FormControlLabel control={<Checkbox />} label="あ" />
-                        <FormControlLabel control={<Checkbox />} label="あ" />
-                    </FormGroup>
-                </div>
-
-                <div className="list-title">
-                    <hr />
-                    あると便利
-                </div>
-                <div className="list-container">
-                    <FormGroup>
-                        <FormControlLabel control={<Checkbox />} label="制服" />
-                        <FormControlLabel control={<Checkbox />} label="財布" />
-                    </FormGroup>
-                    <FormGroup>
-                        <FormControlLabel control={<Checkbox />} label="あ" />
-                        <FormControlLabel control={<Checkbox />} label="あ" />
-                        <FormControlLabel control={<Checkbox />} label="あ" />
-                        <FormControlLabel control={<Checkbox />} label="あ" />
-                    </FormGroup>
-                </div>
-
-                <div className="list-title">
-                    <hr />
-                    自分だけのもの
-                </div>
-                <div className="list-container">
-                    <FormGroup className="checkbox-container">
-                        <FormControlLabel control={<Checkbox />} label="制服" />
-                        <FormControlLabel control={<Checkbox />} label="財布" />
-                    </FormGroup>
-                    <FormGroup>
-                        <FormControlLabel control={<Checkbox />} label="あ" />
-                        <FormControlLabel control={<Checkbox />} label="あ" />
-                    </FormGroup>
-                </div>
-            </main>
+  function ListSelect(index: number) {
+    const copiedList = _.cloneDeep(isListOpen);
+    copiedList[index] = !copiedList[index];
+    updateIsListOpen(copiedList);
+  }
+  const [isListOpen, updateIsListOpen] = useState([false, false, false]);
+  return (
+    <div>
+      <h1>持ち物リスト</h1>
+      <main>
+        <div
+          className="list-title"
+          onClick={() => {
+            ListSelect(0);
+          }}
+        >
+          <hr />
+          必要なもの
         </div>
-    );
+        {isListOpen[0] ? (
+          <div>
+            <FormGroup>
+              <FormControlLabel control={<Checkbox />} label="制服" />
+              <FormControlLabel control={<Checkbox />} label="財布" />
+            </FormGroup>
+            <FormGroup>
+              <FormControlLabel control={<Checkbox />} label="あ" />
+              <FormControlLabel control={<Checkbox />} label="あ" />
+              <FormControlLabel control={<Checkbox />} label="あ" />
+              <FormControlLabel control={<Checkbox />} label="あ" />
+            </FormGroup>
+          </div>
+        ) : (
+          <div></div>
+        )}
+        <div
+          className="list-title"
+          onClick={() => {
+            ListSelect(1);
+          }}
+        >
+          <hr />
+          あると便利
+        </div>
+        {isListOpen[1] ? (
+          <div>
+            <FormGroup>
+              <FormControlLabel control={<Checkbox />} label="制服" />
+              <FormControlLabel control={<Checkbox />} label="財布" />
+            </FormGroup>
+            <FormGroup>
+              <FormControlLabel control={<Checkbox />} label="あ" />
+              <FormControlLabel control={<Checkbox />} label="あ" />
+              <FormControlLabel control={<Checkbox />} label="あ" />
+              <FormControlLabel control={<Checkbox />} label="あ" />
+            </FormGroup>
+          </div>
+        ) : (
+          <div></div>
+        )}
+      </main>
+    </div>
+  );
 }
 
 export default Check;
