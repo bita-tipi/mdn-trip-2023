@@ -16,7 +16,7 @@
 
 .animation-box1 {
     animation-name: animation-sample;
-    animation-duration: 4s;
+    animation-duration: 3s;
     background-image:url("../../assets/img/main_logo.svg");
     animation-iteration-count: 1;
     position: absolute;
@@ -44,9 +44,6 @@
     }
     10%{
         opacity: 0;
-    }
-    40%{
-        opacity: 1;
     }
     60%{
         opacity:1;
@@ -77,9 +74,6 @@
         opacity: 0;
     }
     40%{
-        opacity: 1;
-    }
-    60%{
         opacity:1;
         transform: translateY(0%);
     }
@@ -100,7 +94,7 @@
 
 .flame{
     animation-name: flame;
-    animation-duration: 4s;
+    animation-duration: 3s;
     background-color: #fff;
     background-image:url("../../assets/img/frame.svg");
     animation-iteration-count: 1;
