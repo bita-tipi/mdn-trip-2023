@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Load1 from "./load1";
 import Load2 from "./load2";
 import Load3 from "./load3";
-import yoshii from "../../assets/img/yoshi.png";
 import "./loading.css";
 
 let index = 0;
@@ -12,7 +11,7 @@ function Loading() {
     console.log("awa");
 
     function Random(): void {
-        let randomIndex = Math.floor(Math.random() * 3);
+        let randomIndex = Math.floor(Math.random() * 1);
         LoadingIndex = randomIndex;
     }
 
@@ -22,7 +21,7 @@ function Loading() {
     }
 
     Random();
-    return <div className="con">{RandomLoading()}</div>;
+    return <div className="load">{RandomLoading()}</div>;
 }
 
 export default Loading;

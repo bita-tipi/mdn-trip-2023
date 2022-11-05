@@ -4,8 +4,9 @@ import yoshii from "../../assets/img/yoshi.png";
 
 function Load1() {
     return (
-        <div className="animation">
-            <img src={yoshii} />
+        <div>
+        <div className="flame"></div>
+        <div className="animation-box1"></div>
         </div>
     );
 }

@@ -1,13 +1,11 @@
-import React , {useState,useEffect} from "react";
+import React from "react";
 
-function Room(){
-
-    return(
+function ClassRoom() {
+    return (
         <div>
-            <body>
-                <p>ヘヤワリ</p>
-            </body>
+            <p>room</p>
         </div>
-    )
+    );
 }
-export default Room()
+
+export default ClassRoom;

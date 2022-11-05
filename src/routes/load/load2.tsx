@@ -4,8 +4,8 @@ import yoshii from "../../assets/img/yoshi.png";
 
 function Load2() {
     return (
-        <div className="animation">
-            <p>loading</p>
+        <div>
+        <div className="animation-box2"></div>
         </div>
     );
 }

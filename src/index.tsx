@@ -4,7 +4,7 @@ import "./index.css";
 import Top from "./routes/top/top";
 import Loading from "./routes/load/loading";
 import Contents from "./routes/contents/contents";
-import Room from "./routes/contents/room";
+import ClassRoom from "./routes/contents/room";
 import Attention from "./routes/attention/attention";
 import Checklist from "./routes/checklist/checklist";
 import Map from "./routes/map/map";
@@ -26,6 +26,7 @@ if (container) {
         <Route path="/map" element={<Map />} />
         <Route path="/Checklist" element={<Checklist />} />
         <Route path="/attention" element={<Attention />} />
+        <Route path="/room" element={<ClassRoom />} />
       </Routes>
     </BrowserRouter>
   );

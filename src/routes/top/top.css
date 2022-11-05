@@ -1,8 +1,7 @@
 .background_top {
-  background-color: #eee;
-  min-height: 100vh;
-  width: 100vh;
-  height: 100vh;
+  background-color: #333;
+  width:100%;
+  height:100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,4 +9,10 @@
   font-size: calc(10px + 2vmin);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.load_top{
+  width:100%;
+  height:100%;
+  margin-top:-14%;
 }

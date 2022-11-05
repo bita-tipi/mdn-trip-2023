@@ -11,16 +11,16 @@ function Contents() {
     const [isListOpen, setIsListOpen] = useState(false);
     const [isListOpen2, setIsListOpen2] = useState(false);
     const [Check, SetCheck] = useState(true);
-    const [password, Setpassword] = useState(true);
-    const [ClassDate, SetClassDate] = useState("0000");
+    const [password, SetPassword] = useState(true);
+    const [ClassDate, SetClassDate] = useState("");
     const [ClassName, SetClassName] = useState("");
     const [CheckName, SetCheckName] = useState("");
-    const [Text, SetText] = useState("2345");
+    const [Text, SetText] = useState("0000");
     let TF = false;
 
     function ErrorLog() {
         {
-            TF ? Setpassword(true) : Setpassword(false);
+            TF ? SetPassword(true) : SetPassword(false);
         }
     }
 
@@ -146,7 +146,7 @@ function Contents() {
                     type="number"
                     onChange={(event) => SetText(event.target.value)}
                 ></input>
-                <Link to={TF ? "/map" : "/contents"}>
+                <Link to={TF ? "/room" : "/contents"}>
                     <button onClick={ErrorLog}>確定</button>
                 </Link>
             </div>

@@ -1,58 +1,137 @@
 .load {
-    background-color: brown;
-    background-size: cover;
+    text-align:center;
 }
 
 .animation-box {
     animation-name: animation-sample;
-    animation-duration: 3s;
+    animation-duration: 2s;
     background-color: white;
     animation-iteration-count: 1;
-    opacity: 0;
     position: absolute;
     animation-fill-mode: forwards;
     background-size: cover;
+    height:100%;
+    width:100%;
+}
+
+.animation-box1 {
+    animation-name: animation-sample;
+    animation-duration: 4s;
+    background-image:url("../../assets/img/main_logo.svg");
+    animation-iteration-count: 1;
+    position: absolute;
+    animation-fill-mode: forwards;
+    background-size: cover;
+    height:100%;
+    width:100%;
+}
+
+.animation-box2 {
+    animation-name: animation-sample;
+    animation-duration: 4s;
+    background-image:url("../../assets/img/load2.png");
+    animation-iteration-count: 1;
+    position: absolute;
+    animation-fill-mode: forwards;
+    background-size: cover;
+    height:100%;
+    width:100%;
 }
 
 @keyframes animation-sample {
     0% {
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    40%{
         opacity: 1;
     }
-
-    80% {
+    60%{
+        opacity:1;
+        transform: translateY(0%);
+    }
+    90%{
         opacity: 1;
     }
-
     100% {
         opacity: 0;
+        transform: translateY(-100%);
         visibility: hidden;
     }
 }
 
 .animation {
     animation-name: animation;
-    position: absolute;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
-    animation-duration: 1.5s;
-    font-size: 100px;
+    animation-duration: 2s;
 }
 
 @keyframes animation {
     0% {
         opacity: 0;
     }
-
-    50% {
+    10%{
+        opacity: 0;
+    }
+    40%{
         opacity: 1;
     }
-
+    60%{
+        opacity:1;
+        transform: translateY(0%);
+    }
+    90%{
+        opacity: 1;
+    }
     100% {
         opacity: 0;
+        transform: translateY(-100%);
         visibility: hidden;
     }
 }
 
 .null {
     display: none;
+}
+
+
+.flame{
+    animation-name: flame;
+    animation-duration: 4s;
+    background-color: #fff;
+    background-image:url("../../assets/img/frame.svg");
+    animation-iteration-count: 1;
+    position: absolute;
+    animation-fill-mode: forwards;
+    background-size: cover;
+    height:100%;
+    width:100%;
+    transform-origin:center;
+}
+
+@keyframes flame {
+    0%{
+        opacity: 0;
+        transform: scale(200%);
+    }
+    30%{
+        opacity: 1;
+        transform: scale(100%);
+    }
+    60%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-100%);
+        visibility: hidden;
+    }
+
 }
