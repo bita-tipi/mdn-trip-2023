@@ -90,10 +90,10 @@ function Check() {
               <FormControlLabel control={<Checkbox />} label="あ" />
             </FormGroup>
           </div>
-        ) : (
-        <div></div>
-
-         )} </main>
+        ) 
+        : (<div></div>)} 
+          <hr />
+          </main>
     </div>
   );
 }
