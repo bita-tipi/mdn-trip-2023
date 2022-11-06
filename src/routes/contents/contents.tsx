@@ -1,7 +1,12 @@
 import React, { useState, useEffect, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
+import { useRecoilState, useSetRecoilState } from "recoil";
+import { CLASS, PassClass, PassSuccess } from "../../assets/atom";
 
 function Contents() {
+    const updatePassClassData = useSetRecoilState(PassClass);
+    const updatePassSuccessData = useSetRecoilState(PassSuccess);
+
     const g2a = "1111";
     const g2b = "2222";
     const g2c = "3333";
@@ -15,13 +20,12 @@ function Contents() {
     const [ClassDate, SetClassDate] = useState("");
     const [ClassName, SetClassName] = useState("");
     const [CheckName, SetCheckName] = useState("");
-    const [Text, SetText] = useState("0000");
+    const [Text, SetText] = useState("");
     let TF = false;
 
-    function ErrorLog() {
-        {
-            TF ? SetPassword(true) : SetPassword(false);
-        }
+    function handleOnClick(): void {
+        SetPassword(TF);
+        updatePassSuccessData(TF);
     }
 
     return (
@@ -77,6 +81,7 @@ function Contents() {
                                     onClick={() => {
                                         SetClassDate(g2a);
                                         SetClassName("G2A");
+                                        updatePassClassData(CLASS.G2A);
                                     }}
                                 >
                                     G2A
@@ -86,6 +91,7 @@ function Contents() {
                                     onClick={() => {
                                         SetClassDate(g2b);
                                         SetClassName("G2B");
+                                        updatePassClassData(CLASS.G2B);
                                     }}
                                 >
                                     G2B
@@ -95,6 +101,7 @@ function Contents() {
                                     onClick={() => {
                                         SetClassDate(g2c);
                                         SetClassName("G2C");
+                                        updatePassClassData(CLASS.G2C);
                                     }}
                                 >
                                     G2C
@@ -107,6 +114,7 @@ function Contents() {
                                     onClick={() => {
                                         SetClassDate(j2a);
                                         SetClassName("J2A");
+                                        updatePassClassData(CLASS.J2A);
                                     }}
                                 >
                                     J2A
@@ -116,6 +124,7 @@ function Contents() {
                                     onClick={() => {
                                         SetClassDate(j2b);
                                         SetClassName("J2B");
+                                        updatePassClassData(CLASS.J2B);
                                     }}
                                 >
                                     J2B
@@ -125,6 +134,7 @@ function Contents() {
                                     onClick={() => {
                                         SetClassDate(j2c);
                                         SetClassName("J2C");
+                                        updatePassClassData(CLASS.J2C);
                                     }}
                                 >
                                     J2C
@@ -147,7 +157,7 @@ function Contents() {
                     onChange={(event) => SetText(event.target.value)}
                 ></input>
                 <Link to={TF ? "/room" : "/contents"}>
-                    <button onClick={ErrorLog}>確定</button>
+                    <button onClick={() => handleOnClick()}>確定</button>
                 </Link>
             </div>
         </div>

@@ -13,11 +13,13 @@ import { Routes } from "react-router-dom";
 import { createRoot } from "react-dom/client";
 import { Route, BrowserRouter } from "react-router-dom";
 import Header from "./routes/header/header";
+import { RecoilRoot } from "recoil";
 
 const container = document.getElementById("root");
 if (container) {
   const root = createRoot(container);
   root.render(
+    <RecoilRoot>
     <BrowserRouter>
       <Header />
       <Routes>
@@ -29,5 +31,6 @@ if (container) {
         <Route path="/room" element={<ClassRoom />} />
       </Routes>
     </BrowserRouter>
+    </RecoilRoot>
   );
 }

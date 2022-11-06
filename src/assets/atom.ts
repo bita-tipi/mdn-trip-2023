@@ -1,32 +1,24 @@
 import { atom } from "recoil";
 import React, { useState } from "react";
+import CLASS from "./data/classDate"
 
+export type valueOf<T> = T[keyof T];
+export type PickType<T, K extends keyof T> = T[K];
 
-/** Modalを表示させるのに必要な, `classData`と`FloorIndex`を持った複合objectを`ModalData`とする */
-type YoshiData = {
-    IfYoshi:boolean;
+type CLASS_DATA = {
+    className: string;
 };
 
-type IndexData = {
-    Index:number;
-}
 
-const IndexDataState = atom<IndexData> ({
-    key: "Index",
-    default:{
-        Index:0
-    }
-})
-/**
- * ## modalDataState
- * `ModalData`の状態を持った`atom`
- */
-const YoshiDataState = atom<YoshiData>({
-    key: "Yoshi",
-    default: {
-        IfYoshi:false
-    },
+const PassClass = atom<CLASS_DATA>({
+    key: "PassClass",
+    default: CLASS.G2A,
 });
 
-export type {YoshiData,IndexData};
-export { YoshiDataState ,IndexDataState};
+const PassSuccess = atom<boolean>({
+    key: "FATAL_KEY",
+    default: false,
+});
+
+export { PassClass, PassSuccess, CLASS };
+export type { CLASS_DATA };
