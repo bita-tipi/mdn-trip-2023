@@ -1,0 +1,34 @@
+.tyui {
+    font-size: 80%;
+    padding: 0 10%;
+
+}
+
+.pulldown {
+    animation-name: pulldown;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    margin-bottom: -10%;
+}
+
+@keyframes pulldown {
+    0% {
+        opacity: 0;
+        margin-bottom: -10%;
+    }
+
+    50% {
+        opacity: 1;
+        margin-bottom: 0%;
+    }
+
+    100% {
+        opacity: 1;
+        margin-bottom: 0%;
+    }
+}
+
+.title {
+    text-decoration: underline solid 3px orange;
+    margin-left: -15px;
+}
