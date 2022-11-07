@@ -95,7 +95,7 @@ function Attention(){
                     </div> :<></>}
                 </ul>
             </div>
-           
+           <p>やらかした</p>
         </body>
     );
 }
