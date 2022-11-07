@@ -1,13 +1,14 @@
 import React from "react";
+import "./schedule.css";
 
-function RoomHTML() {
+function Schedule() {
     return (
         <body>
             <header>
-                <p>roomHTML</p>
+                <p>schedule</p>
             </header>
         </body>
     );
 }
 
-export default RoomHTML;
+export default Schedule;
