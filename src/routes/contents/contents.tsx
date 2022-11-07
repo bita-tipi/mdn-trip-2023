@@ -17,7 +17,7 @@ function Contents() {
     const [isListOpen2, setIsListOpen2] = useState(false);
     const [Check, SetCheck] = useState(true);
     const [password, SetPassword] = useState(true);
-    const [ClassDate, SetClassDate] = useState("");
+    const [ClassDate, SetClassDate] = useState("null");
     const [ClassName, SetClassName] = useState("");
     const [CheckName, SetCheckName] = useState("");
     const [Text, SetText] = useState("");
