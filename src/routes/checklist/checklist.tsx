@@ -13,7 +13,7 @@ function Check() {
   const [isListOpen, updateIsListOpen] = useState([false, false, false]);
   return (
     <div>
-      <h1>持ち物リスト</h1>
+      <h1 className="title">持ち物リスト</h1>
       <main>
 
         <div

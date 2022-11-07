@@ -69,6 +69,9 @@ function Header() {
                         <Link to="/attention">
                             <li>注意事項</li>
                         </Link>
+                        <Link to="/schedule">
+                            <li>スケジュール</li>
+                        </Link>
                     </div>
                 }
             </List>
@@ -77,7 +80,8 @@ function Header() {
 
     return (
         <div>
-            {(["left"] as const).map((anchor) => (
+            <div>
+           {(["left"] as const).map((anchor) => (
                 <React.Fragment key={anchor}>
                     <Button onClick={toggleDrawer(anchor, true)}>
                         {anchor}
@@ -91,7 +95,8 @@ function Header() {
                     </Drawer>
                 </React.Fragment>
             ))}
-
+            </div>
+            
         </div>
     );
 }
