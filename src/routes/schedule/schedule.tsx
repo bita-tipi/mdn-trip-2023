@@ -13,6 +13,8 @@ function Schedule() {
                 <h2 className="hinichi">3日目</h2>
                 <h2 className="hinichi">4日目</h2>
             </div>
+            <div>
+            </div>
         </body>
     );
 }
