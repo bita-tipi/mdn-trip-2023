@@ -69,6 +69,9 @@ function Header() {
                         <Link to="/attention">
                             <li>注意事項</li>
                         </Link>
+                        <Link to="/schedule">
+                            <li>スケジュール</li>
+                        </Link>
                     </div>
                 }
             </List>
