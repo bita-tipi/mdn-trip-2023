@@ -1,5 +1,5 @@
 .load {
-    text-align:center;
+    text-align: center;
 }
 
 .animation-box {
@@ -10,48 +10,52 @@
     position: absolute;
     animation-fill-mode: forwards;
     background-size: cover;
-    height:100%;
-    width:100%;
+    height: 100%;
+    width: 100%;
 }
 
 .animation-box1 {
     animation-name: animation-sample;
     animation-duration: 3s;
-    background-image:url("../../assets/img/main_logo.svg");
+    background-image: url("../../assets/img/main_logo.svg");
     animation-iteration-count: 1;
     position: absolute;
     animation-fill-mode: forwards;
     background-size: cover;
-    height:100%;
-    width:100%;
+    height: 100%;
+    width: 100%;
 }
 
 .animation-box2 {
     animation-name: animation-sample;
     animation-duration: 4s;
-    background-image:url("../../assets/img/load2.png");
+    background-image: url("../../assets/img/load2.png");
     animation-iteration-count: 1;
     position: absolute;
     animation-fill-mode: forwards;
     background-size: cover;
-    height:100%;
-    width:100%;
+    height: 100%;
+    width: 100%;
 }
 
 @keyframes animation-sample {
     0% {
         opacity: 0;
     }
-    10%{
+
+    10% {
         opacity: 0;
     }
-    60%{
-        opacity:1;
+
+    60% {
+        opacity: 1;
         transform: translateY(0%);
     }
-    90%{
+
+    90% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
         transform: translateY(-100%);
@@ -70,16 +74,20 @@
     0% {
         opacity: 0;
     }
-    10%{
+
+    10% {
         opacity: 0;
     }
-    40%{
-        opacity:1;
+
+    40% {
+        opacity: 1;
         transform: translateY(0%);
     }
-    90%{
+
+    90% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
         transform: translateY(-100%);
@@ -92,37 +100,41 @@
 }
 
 
-.flame{
+.flame {
     animation-name: flame;
     animation-duration: 3s;
     background-color: #fff;
-    background-image:url("../../assets/img/frame.svg");
+    background-image: url("../../assets/img/flame.png");
     animation-iteration-count: 1;
     position: absolute;
     animation-fill-mode: forwards;
     background-size: cover;
-    height:100%;
-    width:100%;
-    transform-origin:center;
+    height: 100%;
+    width: 100%;
+    transform-origin: center;
 }
 
 @keyframes flame {
-    0%{
+    0% {
         opacity: 0;
         transform: scale(200%);
     }
-    30%{
+
+    30% {
         opacity: 1;
         transform: scale(100%);
     }
-    60%{
+
+    60% {
         opacity: 1;
         transform: translateY(0%);
     }
-    90%{
+
+    90% {
         opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 0;
         transform: translateY(-100%);
         visibility: hidden;

@@ -5,6 +5,10 @@ import CLASS from "./data/classDate"
 export type valueOf<T> = T[keyof T];
 export type PickType<T, K extends keyof T> = T[K];
 
+type PAGES_DATA = {
+    
+}
+
 type CLASS_DATA = {
     className: string;
 };
