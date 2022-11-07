@@ -80,7 +80,8 @@ function Header() {
 
     return (
         <div>
-            {(["left"] as const).map((anchor) => (
+            <div>
+           {(["left"] as const).map((anchor) => (
                 <React.Fragment key={anchor}>
                     <Button onClick={toggleDrawer(anchor, true)}>
                         {anchor}
@@ -94,7 +95,8 @@ function Header() {
                     </Drawer>
                 </React.Fragment>
             ))}
-
+            </div>
+            
         </div>
     );
 }
