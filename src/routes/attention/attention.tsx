@@ -94,8 +94,20 @@ function Attention(){
                     <li>いいいいいいいいい</li>
                     </div> :<></>}
                 </ul>
+                <ul>
+                <h2 onClick={() => (ListSelect(6))}>しばたについて</h2>
+                {isListOpen[6] ?
+                    <div className="pulldown">
+                    <li>あああああああああ</li>
+                    <li>いいいいいいいいい</li>
+                    <li>いいいいいいいいい</li>
+                    <li>いいいいいいいいい</li>
+                    <li>いいいいいいいいい</li>
+                    <li>いいいいいいいいい</li>
+                    </div> :<></>}
+                </ul>
             </div>
-           
+
         </body>
     );
 }
