@@ -18,7 +18,7 @@ type Anchor = "top" | "left" | "bottom" | "right";
 function Header() {
     function ListSelect(index: number) {
         const copiedPage = _.cloneDeep(onPage);
-        for (let n = 0; n < 5; n++) {
+        for (let n = 0; n < 6; n++) {
             copiedPage[n] = false;
         }
         copiedPage[index] = !copiedPage[index];
