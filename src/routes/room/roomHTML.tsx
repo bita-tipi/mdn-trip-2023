@@ -202,10 +202,31 @@ function RoomHTML() {
           </ul>
         </section>
         <section>
-          <h2>何月何日</h2>
+          <h2>○月○日</h2>
+          <p>夕食○時○分 場所〇〇</p>
+          <p>点呼 ○時○分</p>
+          <p>消灯 ○時○分</p>
+        </section>
+        <section>
+        <h2>○月○日</h2>
+          <p>起床 ○時○分</p>
+          <p>朝食 ○時○分 場所〇〇</p>
+          <p>点呼 ○時○分</p>
+          <p>消灯 ○時○分</p>
         </section>
         <section></section>
-        <section></section>
+        <h2>○月○日</h2>
+          <p>起床 ○時○分</p>
+          <p>朝食 ○時○分 場所〇〇</p>
+          <p>点呼 ○時○分</p>
+          <p>消灯 ○時○分</p>
+        <section>
+        <h2>○月○日</h2>
+          <p>起床 ○時○分</p>
+          <p>朝食 ○時○分 場所〇〇</p>
+          <p>集合 ○時○分</p>
+          <p>出発 ○時○分</p>
+        </section>
       </main>
     </body>
   );
