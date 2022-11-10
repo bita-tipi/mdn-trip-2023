@@ -9,11 +9,14 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import _ from "lodash";
 import "./header.css";
+import title_logo from "../../assets/img/title-logo.svg";
+import wave from "../../assets/img/wave.svg"
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 type Anchor = "top" | "left" | "bottom" | "right";
+
 
 function Header() {
     function ListSelect(index: number) {
@@ -59,53 +62,59 @@ function Header() {
             role="presentation"
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
+            className="background_menu"
         >
+            <div className="padding-menu"> 
             <List>
-                {
+                { 
                     <div>
-                        <Link to="/" className={onPage[0] ? "yellow" : "red"}>
-                            <p onClick={() => ListSelect(0)}>HOME</p>
+                        <h2 className="title_menu">MENU</h2>
+                        <li>
+                            <Link to="/" className="link">
+                            <p onClick={() => ListSelect(0)} className={onPage[0] ? "yellow" : "red"}>HOME</p>
                         </Link>
-                        <Link
-                            to="/contents"
-                            className={onPage[1] ? "yellow" : "red"}
-                        >
-                            <p onClick={() => ListSelect(1)}>部屋割り</p>
+                        </li>
+
+                        <li>
+                            <Link to="/contents" className="link">
+                            <p onClick={() => ListSelect(1)} className={onPage[1] ? "yellow" : "red"}>部屋割り</p>
                         </Link>
-                        <Link
-                            to="/map"
-                            className={onPage[2] ? "yellow" : "red"}
-                        >
-                            <p onClick={() => ListSelect(2)}>MAP</p>
+                        </li>
+                        
+                        <li>
+                            <Link to="/map" className="link">
+                            <p onClick={() => ListSelect(2)} className={onPage[2] ? "yellow" : "red"}>MAP</p>
                         </Link>
+                        </li>
+
                     </div>
                 }
-            </List>
-            <Divider />
-            <List>
                 {
                     <div>
-                        <Link
-                            to="/checklist"
-                            className={onPage[3] ? "yellow" : "red"}
-                        >
-                            <p onClick={() => ListSelect(3)}>持ち物リスト</p>
+                        <li>
+                            <Link to="/checklist" className="link">
+                            <p onClick={() => ListSelect(3)} className={onPage[3] ? "yellow" : "red"}>持ち物リスト</p>
                         </Link>
-                        <Link
-                            to="/attention"
-                            className={onPage[4] ? "yellow" : "red"}
-                        >
-                            <p onClick={() => ListSelect(4)}>注意事項</p>
+                        </li>
+
+                        <li>
+                            <Link to="/attention" className="link">
+                            <p onClick={() => ListSelect(4)} className={onPage[4] ? "yellow" : "red"}>注意事項</p>
                         </Link>
-                        <Link
-                            to="/schedule"
-                            className={onPage[5] ? "yellow" : "red"}
-                        >
-                            <p onClick={() => ListSelect(5)}>スケジュール</p>
+                        </li>
+
+                        <li>
+                            <Link to="/schedule" className="link">
+                            <p onClick={() => ListSelect(5)} className={onPage[5] ? "yellow" : "red"}>スケジュール</p>
                         </Link>
+                        </li>
                     </div>
+                
                 }
+                
             </List>
+            <img src={wave} className="wave"/>
+            </div>
         </Box>
     );
 
@@ -121,6 +130,7 @@ function Header() {
                             anchor={anchor}
                             open={state[anchor]}
                             onClose={toggleDrawer(anchor, false)}
+                            className="padding-menu"
                         >
                             {list(anchor)}
                         </Drawer>

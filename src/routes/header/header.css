@@ -1,9 +1,46 @@
 .yellow {
-    color: yellow;
     text-decoration: none;
+    background-image: url(../../assets/img/flame_list.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:100%;
+    font-size: 100%;
+    text-align: center;
+    padding-top:5%;
+    color:#612D30;
 }
 
 .red {
-    color: red;
+    color:#612D30;
+    padding-top:5%;
     text-decoration: none;
+    background-image: url(../../assets/img/flame_list.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:100%;
+    font-size: 100%;
+    padding-left:5%;
+    padding-right:5%;
+    text-align: center;
+}
+.link{
+    text-decoration: none;
+}
+
+.title_menu{
+    text-align: center;
+    color:#612D30;
+}
+
+.wave{
+    text-align:center;
+    bottom:0;
+}
+
+.wave img{
+    width:100%;
+}
+.padding-menu{
+    background-color:#FEFFF5;
+    height:199%;
 }
