@@ -12,7 +12,7 @@ function Contents() {
     const g2c = "3333";
     const j2a = "4444";
     const j2b = "5555";
-    const j2c = "6666";
+    const t2a = "5454";
     const [isListOpen, setIsListOpen] = useState(false);
     const [isListOpen2, setIsListOpen2] = useState(false);
     const [Check, SetCheck] = useState(true);
@@ -132,12 +132,12 @@ function Contents() {
                                 <button
                                     className="b"
                                     onClick={() => {
-                                        SetClassDate(j2c);
-                                        SetClassName("J2C");
-                                        updatePassClassData(CLASS.J2C);
+                                        SetClassDate(t2a);
+                                        SetClassName("T2A");
+                                        updatePassClassData(CLASS.T2A);
                                     }}
                                 >
-                                    J2C
+                                    T2A
                                 </button>
                             </ul>
                         )}

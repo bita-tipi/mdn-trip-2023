@@ -21,8 +21,8 @@ const J2B: CLASS_DATA = {
     className: "J2B",
 };
 
-const J2C: CLASS_DATA = {
-    className: "J2C",
+const T2A: CLASS_DATA = {
+    className: "T2A",
 };
 const CLASS = {
     G2A,
@@ -30,7 +30,7 @@ const CLASS = {
     G2C,
     J2A,
     J2B,
-    J2C,
+    T2A,
 };
 type CLASS = valueOf<typeof CLASS>;
 export default CLASS
