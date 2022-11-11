@@ -30,29 +30,30 @@ function RoomHTML() {
       <main>
         <h2>クラス名・担任</h2>
         <section>
-          <ul className="tyui">
-            <h2 onClick={() => ListSelect(1)} className="heya">
-              111
-            </h2>
-            {isListOpen[1] ? (
-              <div className="pulldown">
+            <div className="heya-itibanue">
+              <ul className="tyui">
+                <h2 onClick={() => ListSelect(1)} className="heya">
+                 111
+                </h2>
+                {isListOpen[1] ? (
+                <div className="pulldown">               
                 <li>名前</li>
                 <li>名前</li>
                 <li>名前</li>
                 <li>名前</li>
                 <li>名前</li>
-                <li>名前</li>
-              </div>
-            ) : (
-              <></>
-            )}
-          </ul>
+                <li>名前</li>                
+                </div>
+                ) : (
+                <></>
+                )}
+              </ul>
           <ul className="tyui">
             <h2 onClick={() => ListSelect(2)} className="heya">
               112
             </h2>
             {isListOpen[2] ? (
-              <div className="pulldown">
+                <div className="pulldown">
                 <li>名前</li>
                 <li>名前</li>
                 <li>名前</li>
@@ -61,15 +62,15 @@ function RoomHTML() {
                 <li>名前</li>
               </div>
             ) : (
-              <></>
-            )}
+                <></>
+                )}
           </ul>
           <ul className="tyui">
             <h2 onClick={() => ListSelect(3)} className="heya">
               113
             </h2>
             {isListOpen[3] ? (
-              <div className="pulldown">
+                <div className="pulldown">
                 <li>名前</li>
                 <li>名前</li>
                 <li>名前</li>
@@ -78,9 +79,11 @@ function RoomHTML() {
                 <li>名前</li>
               </div>
             ) : (
-              <></>
-            )}
+                <></>
+                )}
           </ul>
+        </div> 
+        <div className="heya-itibanue">
           <ul className="tyui">
             <h2 onClick={() => ListSelect(4)} className="heya">
               114
@@ -132,6 +135,8 @@ function RoomHTML() {
               <></>
             )}
           </ul>
+          </div>
+          <div className="heya-itibanue">
           <ul className="tyui">
             <h2 onClick={() => ListSelect(7)} className="heya">
               117
@@ -183,6 +188,7 @@ function RoomHTML() {
               <></>
             )}
           </ul>
+          </div>
           <ul className="tyui">
             <h2 onClick={() => ListSelect(10)} className="heya">
               120
@@ -208,7 +214,7 @@ function RoomHTML() {
           <p>消灯 ○時○分</p>
         </section>
         <section>
-        <h2>○月○日</h2>
+          <h2>○月○日</h2>
           <p>起床 ○時○分</p>
           <p>朝食 ○時○分 場所〇〇</p>
           <p>点呼 ○時○分</p>
@@ -216,12 +222,12 @@ function RoomHTML() {
         </section>
         <section></section>
         <h2>○月○日</h2>
-          <p>起床 ○時○分</p>
-          <p>朝食 ○時○分 場所〇〇</p>
-          <p>点呼 ○時○分</p>
-          <p>消灯 ○時○分</p>
+        <p>起床 ○時○分</p>
+        <p>朝食 ○時○分 場所〇〇</p>
+        <p>点呼 ○時○分</p>
+        <p>消灯 ○時○分</p>
         <section>
-        <h2>○月○日</h2>
+          <h2>○月○日</h2>
           <p>起床 ○時○分</p>
           <p>朝食 ○時○分 場所〇〇</p>
           <p>集合 ○時○分</p>
