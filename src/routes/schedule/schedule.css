@@ -6,3 +6,9 @@
 .hinichi{
     width:100%;
 }
+.place{
+    display:flex;
+}
+.timeschedule{
+    background-color: aqua;
+}
