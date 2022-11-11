@@ -11,7 +11,7 @@ function Loading() {
     console.log("awa");
 
     function Random(): void {
-        let randomIndex = Math.floor(Math.random() * 2);
+        let randomIndex = Math.floor(Math.random() * 1);
         LoadingIndex = randomIndex;
     }
 

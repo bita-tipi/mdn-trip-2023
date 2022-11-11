@@ -113,7 +113,6 @@ function Header() {
                 }
                 
             </List>
-            <img src={wave} className="wave"/>
             </div>
         </Box>
     );

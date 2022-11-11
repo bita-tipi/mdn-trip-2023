@@ -16,6 +16,7 @@ function Top() {
         <div className="background_top">
             {isLoading ? (
                 <div className="load_top">
+                    <Loading/>
                 </div>
             ) : (
                 <div></div>
