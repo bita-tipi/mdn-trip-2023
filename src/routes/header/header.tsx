@@ -10,13 +10,12 @@ import ListItemText from "@mui/material/ListItemText";
 import _ from "lodash";
 import "./header.css";
 import title_logo from "../../assets/img/title-logo.svg";
-import wave from "../../assets/img/wave.svg"
+import wave from "../../assets/img/wave.svg";
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 type Anchor = "top" | "left" | "bottom" | "right";
-
 
 function Header() {
     function ListSelect(index: number) {
@@ -57,62 +56,89 @@ function Header() {
     const list = (anchor: Anchor) => (
         <Box
             sx={{
-                width: anchor === "top" || anchor === "bottom" ? "auto" : 250,
+                width: anchor === "top" || anchor === "bottom" ? "auto" : 200,
             }}
             role="presentation"
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
             className="background_menu"
         >
-            <div className="padding-menu"> 
-            <List>
-                { 
-                    <div>
-                        <h2 className="title_menu">MENU</h2>
-                        <li>
-                            <Link to="/" className="link">
-                            <p onClick={() => ListSelect(0)} className={onPage[0] ? "yellow" : "red"}>HOME</p>
-                        </Link>
-                        </li>
+            <div className="padding-menu">
+                <List className="List_menu">
+                    {
+                        <div>
+                            <h2 className="title_menu">MENU</h2>
+                            <li>
+                                <Link to="/" className="link">
+                                    <p
+                                        onClick={() => ListSelect(0)}
+                                        className={onPage[0] ? "yellow" : "red"}
+                                    >
+                                        HOME
+                                    </p>
+                                </Link>
+                            </li>
 
-                        <li>
-                            <Link to="/contents" className="link">
-                            <p onClick={() => ListSelect(1)} className={onPage[1] ? "yellow" : "red"}>部屋割り</p>
-                        </Link>
-                        </li>
-                        
-                        <li>
-                            <Link to="/map" className="link">
-                            <p onClick={() => ListSelect(2)} className={onPage[2] ? "yellow" : "red"}>MAP</p>
-                        </Link>
-                        </li>
+                            <li>
+                                <Link to="/contents" className="link">
+                                    <p
+                                        onClick={() => ListSelect(1)}
+                                        className={onPage[1] ? "yellow" : "red"}
+                                    >
+                                        部屋割り
+                                    </p>
+                                </Link>
+                            </li>
 
-                    </div>
-                }
-                {
-                    <div>
-                        <li>
-                            <Link to="/checklist" className="link">
-                            <p onClick={() => ListSelect(3)} className={onPage[3] ? "yellow" : "red"}>持ち物リスト</p>
-                        </Link>
-                        </li>
+                            <li>
+                                <Link to="/map" className="link">
+                                    <p
+                                        onClick={() => ListSelect(2)}
+                                        className={onPage[2] ? "yellow" : "red"}
+                                    >
+                                        MAP
+                                    </p>
+                                </Link>
+                            </li>
+                        </div>
+                    }
+                    {
+                        <div>
+                            <li>
+                                <Link to="/checklist" className="link">
+                                    <p
+                                        onClick={() => ListSelect(3)}
+                                        className={onPage[3] ? "yellow" : "red"}
+                                    >
+                                        持ち物リスト
+                                    </p>
+                                </Link>
+                            </li>
 
-                        <li>
-                            <Link to="/attention" className="link">
-                            <p onClick={() => ListSelect(4)} className={onPage[4] ? "yellow" : "red"}>注意事項</p>
-                        </Link>
-                        </li>
+                            <li>
+                                <Link to="/attention" className="link">
+                                    <p
+                                        onClick={() => ListSelect(4)}
+                                        className={onPage[4] ? "yellow" : "red"}
+                                    >
+                                        注意事項
+                                    </p>
+                                </Link>
+                            </li>
 
-                        <li>
-                            <Link to="/schedule" className="link">
-                            <p onClick={() => ListSelect(5)} className={onPage[5] ? "yellow" : "red"}>スケジュール</p>
-                        </Link>
-                        </li>
-                    </div>
-                
-                }
-                
-            </List>
+                            <li>
+                                <Link to="/schedule" className="link">
+                                    <p
+                                        onClick={() => ListSelect(5)}
+                                        className={onPage[5] ? "yellow" : "red"}
+                                    >
+                                        スケジュール
+                                    </p>
+                                </Link>
+                            </li>
+                        </div>
+                    }
+                </List>
             </div>
         </Box>
     );
@@ -129,7 +155,7 @@ function Header() {
                             anchor={anchor}
                             open={state[anchor]}
                             onClose={toggleDrawer(anchor, false)}
-                            className="padding-menu"
+                            className="drawer_opacity"
                         >
                             {list(anchor)}
                         </Drawer>

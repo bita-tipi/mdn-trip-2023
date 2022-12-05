@@ -2,37 +2,44 @@
     text-decoration: none;
     background-image: url(../../assets/img/flame_list.svg);
     background-repeat: no-repeat;
-    background-size:cover;
-    height:100%;
+    background-size: cover;
+    height: 100%;
     font-size: 100%;
     text-align: center;
-    padding-top:5%;
-    color:#612D30;
+    padding-top: 5%;
+    color: #612D30;
 }
 
 .red {
-    color:#612D30;
-    padding-top:5%;
+    color: #999;
+    padding-top: 5%;
     text-decoration: none;
     background-image: url(../../assets/img/flame_list.svg);
     background-repeat: no-repeat;
-    background-size:cover;
-    height:100%;
+    background-size: cover;
+    height: 100%;
     font-size: 100%;
-    padding-left:5%;
-    padding-right:5%;
+    padding-left: 5%;
+    padding-right: 5%;
     text-align: center;
 }
-.link{
+
+.link {
     text-decoration: none;
 }
 
-.title_menu{
+.title_menu {
     text-align: center;
-    color:#612D30;
+    color: #612D30;
 }
-.padding-menu{
-    background-color:#FEFFF5;
-    height:100vh;
+
+.padding-menu {
+    background-color: #FEFFF5;
+    height: 100vh;
     height: 100dvh;
+    opacity: 1;
+}
+
+.background_black {
+    opacity: 1;
 }

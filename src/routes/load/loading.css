@@ -3,7 +3,7 @@
 }
 
 .animation-box {
-    animation-name: animation-sample;
+    animation-name: animation-logo;
     animation-duration: 2s;
     background-color: white;
     animation-iteration-count: 1;
@@ -15,7 +15,7 @@
 }
 
 .animation-box1 {
-    animation-name: animation-sample;
+    animation-name: animation-logo;
     animation-duration: 3s;
     background-image: url("../../assets/img/main_logo.svg");
     animation-iteration-count: 1;
@@ -27,7 +27,7 @@
 }
 
 .animation-box2 {
-    animation-name: animation-sample;
+    animation-name: animation-logo;
     animation-duration: 4s;
     background-image: url("../../assets/img/load2.png");
     animation-iteration-count: 1;
@@ -38,30 +38,6 @@
     width: 100%;
 }
 
-@keyframes animation-sample {
-    0% {
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 0;
-    }
-
-    60% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-
-    90% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(-100%);
-        visibility: hidden;
-    }
-}
 
 .animation {
     animation-name: animation;
@@ -70,30 +46,6 @@
     animation-duration: 2s;
 }
 
-@keyframes animation {
-    0% {
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 0;
-    }
-
-    40% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-
-    90% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(-100%);
-        visibility: hidden;
-    }
-}
 
 .null {
     display: none;
@@ -130,8 +82,22 @@
         transform: translateY(0%);
     }
 
-    90% {
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+        visibility: hidden;
+    }
+
+}
+
+@keyframes animation-logo {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
         opacity: 1;
+        transform: translateY(0%);
     }
 
     100% {
@@ -139,5 +105,21 @@
         transform: translateY(-100%);
         visibility: hidden;
     }
+}
 
+@keyframes animation {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+        visibility: hidden;
+    }
 }
