@@ -55,7 +55,7 @@ function Check() {
 
     return (
         <div>
-            <h1 className="title">持ち物リスト</h1>
+            <h1 className="list-title">持ち物リスト</h1>
             <main>
                 <div
                     className="list-title"
@@ -67,7 +67,7 @@ function Check() {
                     必要なもの
                 </div>
                 {isListOpen[0] ? (
-                    <div className="pulldown">
+                    <div className="list-pulldown">
                         <FormGroup>
                             <FormControlLabel
                                 control={<Checkbox />}
@@ -110,7 +110,7 @@ function Check() {
                     あると便利
                 </div>
                 {isListOpen[1] ? (
-                    <div className="pulldown">
+                    <div className="list-pulldown">
                         <FormGroup>
                             <FormControlLabel
                                 control={<Checkbox />}
@@ -153,7 +153,7 @@ function Check() {
                     自分だけの持ち物
                 </div>
                 {isListOpen[2] ? (
-                    <div className="pulldown">
+                    <div className="list-pulldown">
                         <ul>
                             <li>
                                 <Checkbox />

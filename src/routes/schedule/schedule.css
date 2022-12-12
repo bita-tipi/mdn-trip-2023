@@ -1,14 +1,17 @@
-.hiduke{
-    display:flex;
+.schedule_hiduke {
+    display: flex;
     text-align: center;
-    width:100%;
+    width: 100%;
 }
-.hinichi{
-    width:100%;
+
+.schedule_hinichi {
+    width: 100%;
 }
-.place{
-    display:flex;
+
+.schedule_place {
+    display: flex;
 }
-.timeschedule{
+
+.timeschedule {
     background-color: aqua;
 }

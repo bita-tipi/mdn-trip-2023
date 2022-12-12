@@ -7,13 +7,13 @@ function Schedule() {
             <header>
                 <p>schedule</p>
             </header>
-            <div className="hiduke">
-                <h2 className="hinichi">1日目</h2>
-                <h2 className="hinichi">2日目</h2>
-                <h2 className="hinichi">3日目</h2>
-                <h2 className="hinichi">4日目</h2>
+            <div className="schedule_hiduke">
+                <h2 className="schedule_hinichi">1日目</h2>
+                <h2 className="schedule_hinichi">2日目</h2>
+                <h2 className="schedule_hinichi">3日目</h2>
+                <h2 className="schedule_hinichi">4日目</h2>
             </div>
-            <main className="place">
+            <main className="schedule_place">
                 <div className="timeschedule">
                     <h3>7:20</h3>
                     <p>7:51</p>

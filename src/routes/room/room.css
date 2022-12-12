@@ -1,4 +1,4 @@
-pulldown {
+.room_pulldown {
   animation-name: pulldown;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -21,6 +21,7 @@ pulldown {
     margin-bottom: 0%;
   }
 }
+
 .heya-itibanue {
-    display: flex;
+  display: flex;
 }

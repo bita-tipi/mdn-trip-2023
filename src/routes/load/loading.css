@@ -39,7 +39,7 @@
 }
 
 
-.animation {
+.load_animation {
     animation-name: animation;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
@@ -52,7 +52,7 @@
 }
 
 
-.flame {
+.load_flame {
     animation-name: flame;
     animation-duration: 3s;
     background-color: #fff;

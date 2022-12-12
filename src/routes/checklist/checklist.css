@@ -1,9 +1,9 @@
-.title {
+.list-title {
   text-align: center;
   padding: 10px;
 }
 
-.main {
+.list-main {
   text-align: center;
   padding: 0 10%;
   max-width: 1400px;
@@ -17,21 +17,25 @@
 .list-container {
   display: flex;
 }
-.pulldown {
+
+.list-pulldown {
   animation-name: pulldown;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
   margin-bottom: -10%;
 }
+
 @keyframes pulldown {
   0% {
     opacity: 0;
     margin-bottom: -10%;
   }
+
   50% {
     opacity: 1;
     margin-bottom: 0%;
   }
+
   100% {
     opacity: 1;
     margin-bottom: 0%;

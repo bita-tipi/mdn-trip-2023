@@ -67,9 +67,9 @@ function Header() {
                 <List className="List_menu">
                     {
                         <div>
-                            <h2 className="title_menu">MENU</h2>
+                            <h2 className="header_title_menu">MENU</h2>
                             <li>
-                                <Link to="/" className="link">
+                                <Link to="/" className="header_link">
                                     <p
                                         onClick={() => ListSelect(0)}
                                         className={onPage[0] ? "yellow" : "red"}
@@ -80,7 +80,7 @@ function Header() {
                             </li>
 
                             <li>
-                                <Link to="/contents" className="link">
+                                <Link to="/contents" className="header_link">
                                     <p
                                         onClick={() => ListSelect(1)}
                                         className={onPage[1] ? "yellow" : "red"}
@@ -91,7 +91,7 @@ function Header() {
                             </li>
 
                             <li>
-                                <Link to="/map" className="link">
+                                <Link to="/map" className="header_link">
                                     <p
                                         onClick={() => ListSelect(2)}
                                         className={onPage[2] ? "yellow" : "red"}
@@ -105,7 +105,7 @@ function Header() {
                     {
                         <div>
                             <li>
-                                <Link to="/checklist" className="link">
+                                <Link to="/checklist" className="header_link">
                                     <p
                                         onClick={() => ListSelect(3)}
                                         className={onPage[3] ? "yellow" : "red"}
@@ -116,7 +116,7 @@ function Header() {
                             </li>
 
                             <li>
-                                <Link to="/attention" className="link">
+                                <Link to="/attention" className="header_link">
                                     <p
                                         onClick={() => ListSelect(4)}
                                         className={onPage[4] ? "yellow" : "red"}
@@ -127,7 +127,7 @@ function Header() {
                             </li>
 
                             <li>
-                                <Link to="/schedule" className="link">
+                                <Link to="/schedule" className="header_link">
                                     <p
                                         onClick={() => ListSelect(5)}
                                         className={onPage[5] ? "yellow" : "red"}
