@@ -21,7 +21,7 @@ function Attention() {
             </div>
             <div>
                 <ul className="tyui">
-                    <h2 onClick={() => (ListSelect(0))} className="title">ころなについて</h2>
+                    <h2 onClick={() => (ListSelect(0))} className="tyuuititle">ころなについて</h2>
                     {isListOpen[0] ?
                         <div className="pulldown">
                             <li>感染者と他の同居者の部屋を可能な限り分ける</li>
@@ -34,7 +34,7 @@ function Attention() {
                 </ul>
 
                 <ul className="tyui">
-                    <h2 onClick={() => (ListSelect(1))} className="title">ドコモ光ご利用時</h2>
+                    <h2 onClick={() => (ListSelect(1))} className="tyuuititle">ドコモ光ご利用時</h2>
                     {isListOpen[1] ?
                         <div className="pulldown">
                             <li>事前に機器を送付させていただく場合、開通工事当日の午前9時までにお客さまご自身で機器の接続をお願いいたします</li>
@@ -46,7 +46,7 @@ function Attention() {
                         </div> : <></>}
                 </ul>
                 <ul className="tyui">
-                    <h2 onClick={() => (ListSelect(2))} className="title">服装について</h2>
+                    <h2 onClick={() => (ListSelect(2))} className="tyuuititle">服装について</h2>
                     {isListOpen[2] ?
                         <div className="pulldown">
                             <li>あああああああああ</li>
@@ -59,7 +59,7 @@ function Attention() {
                 </ul>
 
                 <ul className="tyui">
-                    <h2 onClick={() => (ListSelect(3))} className="title">ヒョウドウについて</h2>
+                    <h2 onClick={() => (ListSelect(3))} className="tyuuititle">ヒョウドウについて</h2>
                     {isListOpen[3] ?
                         <div className="pulldown">
                             <li>あああああああああ</li>
@@ -71,7 +71,7 @@ function Attention() {
                         </div> : <></>}
                 </ul>
                 <ul className="tyui">
-                    <h2 onClick={() => (ListSelect(4))} className="title">ゆうまについて</h2>
+                    <h2 onClick={() => (ListSelect(4))} className="tyuuititle">ゆうまについて</h2>
                     {isListOpen[4] ?
                         <div className="pulldown">
                             <li>あああああああああ</li>
@@ -83,7 +83,7 @@ function Attention() {
                         </div> : <></>}
                 </ul>
                 <ul className="tyui">
-                    <h2 onClick={() => (ListSelect(5))} className="title">ながのについて</h2>
+                    <h2 onClick={() => (ListSelect(5))} className="tyuuititle">ながのについて</h2>
                     {isListOpen[5] ?
                         <div className="pulldown">
                             <li>あああああああああ</li>
@@ -95,7 +95,7 @@ function Attention() {
                         </div> : <></>}
                 </ul>
                 <ul className="tyui">
-                    <h2 onClick={() => (ListSelect(6))} className="title">しばたについて</h2>
+                    <h2 onClick={() => (ListSelect(6))} className="tyuuititle">しばたについて</h2>
                     {isListOpen[6] ?
                         <div className="pulldown">
                             <li>あああああああああ</li>
