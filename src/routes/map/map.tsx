@@ -2,12 +2,18 @@ import React, { useState } from "react";
 import "./map.css";
 import error from "../../assets/img/sannkau.png";
 import yoshi from "../../assets/img/yoshi.png";
-import main_logo from "../../assets/img/main_logo.svg"
+import main_logo from "../../assets/img/main_logo.svg";
+import food from "../../assets/img/食べ物.png";
+import language from "../../assets/img/方言.png";
+import place from "../../assets/img/場所.png";
+import history from "../../assets/img/歴史.png";
+import omiyage from "../../assets/img/お土産.png";
+import maru from "../../assets/img/背景丸.svg";
 
 function Map() {
-    const Sort_List = [Place(), Type(),History(),Culture()];
+    const Sort_List = [Place(), Type(), History(), Culture()];
     const [sort, updateSort] = useState(0);
-    const map_List = [error,yoshi,main_logo]
+    const map_List = [error, yoshi, main_logo];
     const [map, updateMap] = useState(0);
     const [isListOpen, updateIsListOpen] = useState(false);
 
@@ -48,13 +54,16 @@ function Map() {
     return (
         <div>
             <div className="map-main">
-                <img className="map-map" src={map_List[map]}/>
+                <img className="map-map" src={map_List[map]} />
             </div>
             <div className="map-TouchArea">
                 <div className="map-sort">
-                <button className="map-button" onClick={() => updateIsListOpen(!isListOpen)}>
-                    場所設定
-                </button>
+                    <button
+                        className="map-button"
+                        onClick={() => updateIsListOpen(!isListOpen)}
+                    >
+                        場所設定
+                    </button>
                 </div>
                 {isListOpen ? (
                     <div className="map-sort">
@@ -65,15 +74,16 @@ function Map() {
                 ) : (
                     <div></div>
                 )}
-                    <div className="map-sort">
-                        <button onClick={() => updateSort(0)}>場所</button>
-                        <button onClick={() => updateSort(1)}>食べ物</button>
-                        <button onClick={() => updateSort(2)}>歴史</button>
-                        <button onClick={() => updateSort(3)}>文化</button>
-                    </div>
-                <div className="map-topic">
-                    {Sort_List[sort]}
+                <div className="map-sort">
+                    <button onClick={() => updateSort(0)}>
+                        <img className="maru" src={maru} />
+                        <img src={place} />
+                    </button>
+                    <button onClick={() => updateSort(1)}>食べ物</button>
+                    <button onClick={() => updateSort(2)}>歴史</button>
+                    <button onClick={() => updateSort(3)}>文化</button>
                 </div>
+                <div className="map-topic">{Sort_List[sort]}</div>
             </div>
         </div>
     );

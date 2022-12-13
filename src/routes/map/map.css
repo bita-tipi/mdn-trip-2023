@@ -1,28 +1,35 @@
-.map-main{
-    background-color:aqua;
-    top:0;
-    width:100%;
-    height:50%;
-    background-size:cover;
-}
-.map-sort{
-    text-align:center;
-    margin-top:5%;
-}
-.map-button{
-    margin-top:10%;
-}
-.map-topic{
-    text-align:center;
-    margin-bottom:15%;
-}
-.map-map{
-    width:100%;
+.map-main {
+    background-color: aqua;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    margin-bottom: -10%;
 }
 
-.map-TouchArea{
-    background-color:green;
-    background-size:cover;
-    bottom:0;
-    height:100%;
+.map-sort {
+    text-align: center;
+    margin-top: 5%;
 }
+
+.map-button {
+    margin-top: 10%;
+}
+
+.map-topic {
+    text-align: center;
+    padding-bottom: 20%;
+}
+
+.map-map {
+    width: 100%;
+}
+
+.map-TouchArea {
+    background-color: green;
+    background-size: cover;
+    bottom: 0;
+    height: 100%;
+}
+
+.maru {}
