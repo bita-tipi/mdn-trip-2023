@@ -9,9 +9,6 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import _ from "lodash";
 import "./header.css";
-import title_logo from "../../assets/img/title-logo.svg";
-import wave from "../../assets/img/wave.svg";
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 

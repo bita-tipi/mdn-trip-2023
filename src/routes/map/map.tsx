@@ -7,11 +7,13 @@ import food from "../../assets/img/食べ物.png";
 import language from "../../assets/img/方言.png";
 import place from "../../assets/img/場所.png";
 import history from "../../assets/img/歴史.png";
-import omiyage from "../../assets/img/お土産.png";
-import maru from "../../assets/img/背景丸.svg";
+import omiyage from "../../assets/img/おみやげ.png";
+import area from "../../assets/img/境界.png";
+import topic from "../../assets/img/topic-box.png";
+import { boxSizing } from "@mui/system";
 
 function Map() {
-    const Sort_List = [Place(), Type(), History(), Culture()];
+    const Sort_List = [Place(), Food(), Gift(), Language(), History()];
     const [sort, updateSort] = useState(0);
     const map_List = [error, yoshi, main_logo];
     const [map, updateMap] = useState(0);
@@ -22,20 +24,6 @@ function Map() {
         updateMap(i);
     }
 
-    function History() {
-        return (
-            <div>
-                <p>History</p>
-            </div>
-        );
-    }
-    function Culture() {
-        return (
-            <div>
-                <p>Culture</p>
-            </div>
-        );
-    }
     function Place() {
         return (
             <div>
@@ -43,19 +31,41 @@ function Map() {
             </div>
         );
     }
-    function Type() {
+    function Food() {
         return (
             <div>
-                <p>Type</p>
+                <p>Food</p>
+            </div>
+        );
+    }
+    function Gift() {
+        return (
+            <div>
+                <p>Gift</p>
+            </div>
+        );
+    }
+    function Language() {
+        return (
+            <div>
+                <p>Language</p>
+            </div>
+        );
+    }
+    function History() {
+        return (
+            <div>
+                <p>History</p>
             </div>
         );
     }
 
     return (
-        <div>
+        <div className="map-body">
             <div className="map-main">
                 <img className="map-map" src={map_List[map]} />
             </div>
+            <img src={area} className="map-area" />
             <div className="map-TouchArea">
                 <div className="map-sort">
                     <button
@@ -74,14 +84,33 @@ function Map() {
                 ) : (
                     <div></div>
                 )}
-                <div className="map-sort">
-                    <button onClick={() => updateSort(0)}>
-                        <img className="maru" src={maru} />
-                        <img src={place} />
-                    </button>
-                    <button onClick={() => updateSort(1)}>食べ物</button>
-                    <button onClick={() => updateSort(2)}>歴史</button>
-                    <button onClick={() => updateSort(3)}>文化</button>
+                <img src={topic} className="map-topic-box" />
+                <div className="map-icon-sort">
+                    <img
+                        className="map-icon"
+                        src={place}
+                        onClick={() => updateSort(0)}
+                    />
+                    <img
+                        className="map-icon"
+                        src={food}
+                        onClick={() => updateSort(1)}
+                    />
+                    <img
+                        className="map-icon"
+                        src={omiyage}
+                        onClick={() => updateSort(2)}
+                    />
+                    <img
+                        className="map-icon"
+                        src={language}
+                        onClick={() => updateSort(3)}
+                    />
+                    <img
+                        className="map-icon"
+                        src={history}
+                        onClick={() => updateSort(4)}
+                    />
                 </div>
                 <div className="map-topic">{Sort_List[sort]}</div>
             </div>

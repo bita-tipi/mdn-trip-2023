@@ -5,7 +5,7 @@ import yoshii from "../../assets/img/yoshi.png";
 function Load2() {
     return (
         <div>
-        <div className="animation-box2"></div>
+            <div className="animation-box2"></div>
         </div>
     );
 }
