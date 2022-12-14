@@ -6,6 +6,7 @@
 
 .schedule_hinichi {
     width: 100%;
+    background-color:aqua;
 }
 
 .schedule_place {
@@ -14,4 +15,5 @@
 
 .timeschedule {
     background-color: aqua;
+    text-align:center;
 }
