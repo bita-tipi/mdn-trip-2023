@@ -33,13 +33,24 @@
 
 .map-icon {
     margin-top: 0%;
-    margin-right: 1%;
-    margin-left: 1%;
-    zoom: 0.8;
+    margin-right: 2%;
+    margin-left: 2%;
+    zoom: 0.5;
 }
 
 .map-icon-sort {
     text-align: center;
+    margin-top: 5%;
+    overflow: scroll;
+    background-color: #7F9366;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 4%;
+    padding-bottom: 0%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 20px;
+    display: flex;
 }
 
 .map-area {
@@ -54,4 +65,10 @@
 
 .map-body {
     text-align: center;
+}
+
+.map-text {
+    color: white;
+    font-size: 3vh;
+    margin-top: -2%;
 }

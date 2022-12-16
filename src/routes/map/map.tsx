@@ -84,33 +84,27 @@ function Map() {
                 ) : (
                     <div></div>
                 )}
-                <img src={topic} className="map-topic-box" />
                 <div className="map-icon-sort">
-                    <img
-                        className="map-icon"
-                        src={place}
-                        onClick={() => updateSort(0)}
-                    />
-                    <img
-                        className="map-icon"
-                        src={food}
-                        onClick={() => updateSort(1)}
-                    />
-                    <img
-                        className="map-icon"
-                        src={omiyage}
-                        onClick={() => updateSort(2)}
-                    />
-                    <img
-                        className="map-icon"
-                        src={language}
-                        onClick={() => updateSort(3)}
-                    />
-                    <img
-                        className="map-icon"
-                        src={history}
-                        onClick={() => updateSort(4)}
-                    />
+                    <div className="map-icon">
+                        <img src={place} onClick={() => updateSort(0)} />
+                        <p className="map-text">場所</p>
+                    </div>
+                    <div className="map-icon">
+                        <img src={food} onClick={() => updateSort(1)} />
+                        <p className="map-text">食べ物</p>
+                    </div>
+                    <div className="map-icon">
+                        <img src={omiyage} onClick={() => updateSort(2)} />
+                        <p className="map-text">お土産</p>
+                    </div>
+                    <div className="map-icon">
+                        <img src={language} onClick={() => updateSort(3)} />
+                        <p className="map-text">方言</p>
+                    </div>
+                    <div className="map-icon">
+                        <img src={history} onClick={() => updateSort(4)} />
+                        <p className="map-text">歴史</p>
+                    </div>
                 </div>
                 <div className="map-topic">{Sort_List[sort]}</div>
             </div>
