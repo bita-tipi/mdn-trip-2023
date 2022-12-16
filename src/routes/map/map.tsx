@@ -9,7 +9,7 @@ import place from "../../assets/img/場所.png";
 import history from "../../assets/img/歴史.png";
 import omiyage from "../../assets/img/おみやげ.png";
 import area from "../../assets/img/境界.png";
-import topic from "../../assets/img/topic-box.png";
+import map_svg from "../../assets/img/地図.png";
 import { boxSizing } from "@mui/system";
 
 function Map() {
@@ -67,23 +67,33 @@ function Map() {
             </div>
             <img src={area} className="map-area" />
             <div className="map-TouchArea">
-                <div className="map-sort">
-                    <button
-                        className="map-button"
-                        onClick={() => updateIsListOpen(!isListOpen)}
-                    >
-                        場所設定
-                    </button>
-                </div>
-                {isListOpen ? (
+                <div className="map-pick">
                     <div className="map-sort">
-                        <button onClick={() => Sort(0)}>広島</button>
-                        <button onClick={() => Sort(1)}>岡山</button>
-                        <button onClick={() => Sort(2)}>ユニバ</button>
+                        <img src={map_svg} className="map-svg" />
+                        <div
+                            className="map-button"
+                            onClick={() => updateIsListOpen(!isListOpen)}
+                        >
+                            場所設定
+                        </div>
                     </div>
-                ) : (
-                    <div></div>
-                )}
+                    {isListOpen ? (
+                        <div className="map-moji">
+                            <p onClick={() => Sort(0)} className="map-pull">
+                                広島
+                            </p>
+                            <p onClick={() => Sort(1)} className="map-pull">
+                                岡山
+                            </p>
+                            <p onClick={() => Sort(2)} className="map-pull">
+                                ユニバ
+                            </p>
+                        </div>
+                    ) : (
+                        <div></div>
+                    )}
+                </div>
+                <p className="map-text-color">TOPICS</p>
                 <div className="map-icon-sort">
                     <div className="map-icon">
                         <img src={place} onClick={() => updateSort(0)} />
