@@ -10,6 +10,7 @@ import history from "../../assets/img/歴史.png";
 import omiyage from "../../assets/img/おみやげ.png";
 import area from "../../assets/img/境界.png";
 import map_svg from "../../assets/img/地図.png";
+import his_kura from "../../assets/img/倉敷歴史.png";
 import { boxSizing } from "@mui/system";
 
 function Map() {
@@ -27,35 +28,70 @@ function Map() {
     function Place() {
         return (
             <div>
-                <p>Place</p>
+                <p className="map-text-color">TOPICS詳細　場所</p>
+                <div className="map-topic-area">
+                    <div className="map-topic-in">
+                        <img src={place} onClick={() => updateSort(0)} className=""/>
+                        <p className="map-topic-text">場所</p>
+                    </div>
+
+                </div>
             </div>
         );
     }
     function Food() {
         return (
             <div>
-                <p>Food</p>
+                <p className="map-text-color">TOPICS詳細　食べ物</p>
+                <div className="map-topic-area">
+                    <div className="map-topic-in">
+                        <img src={food} onClick={() => updateSort(0)} className=""/>
+                        <p className="map-topic-text">食べ物</p>
+                    </div>
+                
+                </div>
             </div>
         );
     }
     function Gift() {
         return (
             <div>
-                <p>Gift</p>
+                <p className="map-text-color">TOPICS詳細　お土産</p>
+                <div className="map-topic-area">
+                    <div className="map-topic-in">
+                        <img src={omiyage} onClick={() => updateSort(0)} className=""/>
+                        <p className="map-topic-text">お土産</p>
+                    </div>
+                
+                </div>
             </div>
         );
     }
     function Language() {
         return (
             <div>
-                <p>Language</p>
+                <p className="map-text-color">TOPICS詳細　方言</p>
+                <div className="map-topic-area">
+                    <div className="map-topic-in">
+                        <img src={language} onClick={() => updateSort(0)} className=""/>
+                        <p className="map-topic-text">方言</p>
+                    </div>
+                
+                </div>
             </div>
         );
     }
     function History() {
         return (
             <div>
-                <p>History</p>
+                <p className="map-text-color">TOPICS詳細　歴史</p>
+                <div className="map-topic-area">
+                    <div className="map-topic-in">
+                        <img src={history} onClick={() => updateSort(0)} className=""/>
+                        <p className="map-topic-text">歴史</p>
+                    </div>
+                    <img src={his_kura} className="topic-img-map"/>
+                </div>
             </div>
         );
     }
