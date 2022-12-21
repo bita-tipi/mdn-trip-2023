@@ -4,8 +4,10 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import Loading from "../load/loading";
-import img from "../../assets/img/icon-kari.png";
-import schedule from "../../assets/img/schedule-kari.jpg"
+import img from "../../assets/img/kari-icon.png";
+import schedule from "../../assets/img/kari-schedule.jpg"
+import mainvisual1 from "../../assets/img/kari-mainvisual-pc.jpg";
+import mainvisual2 from "../../assets/img/kari-mainvisual-sp.jpg";
 
 function Top() {
     useEffect(() => {
@@ -16,6 +18,14 @@ function Top() {
 
     return (
         <div className="background_top">
+            <header className="header">
+                <img src={img}/>
+            </header>
+
+            <div className="mainvisual">
+                    <img src={schedule}/>
+            </div>
+
             <section className="schedule">
                 <div className="title">
                     <img src={img}/>
