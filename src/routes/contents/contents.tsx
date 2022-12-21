@@ -2,6 +2,7 @@ import React, { useState, useEffect, useLayoutEffect } from "react";
 import { Link } from "react-router-dom";
 import { useRecoilState, useSetRecoilState } from "recoil";
 import { CLASS, PassClass, PassSuccess } from "../../assets/atom";
+import "./contents.css";
 
 function Contents() {
     const updatePassClassData = useSetRecoilState(PassClass);
@@ -21,6 +22,7 @@ function Contents() {
     const [ClassName, SetClassName] = useState("");
     const [CheckName, SetCheckName] = useState("");
     const [Text, SetText] = useState("");
+    const [isClickedsetIsclicked] = useState(true);
     let TF = false;
 
     function handleOnClick(): void {
@@ -29,11 +31,10 @@ function Contents() {
     }
 
     return (
-        <div className="background">
+        <div className="contents-background">
             <button
-                type="button"
                 onClick={() => setIsListOpen(!isListOpen)}
-                className="select"
+                className="contents-pull-box"
             >
                 学科
             </button>
@@ -41,7 +42,7 @@ function Contents() {
             {isListOpen ? (
                 <ul className="select_ul">
                     <button
-                        className="b"
+                         className="contents-check-box"
                         onClick={() => {
                             SetCheck(true);
                             SetCheckName("普通科");
@@ -50,24 +51,23 @@ function Contents() {
                         普通科
                     </button>
                     <button
-                        className="b"
+                        className="contents-check-box"
                         onClick={() => {
                             SetCheck(false);
-                            SetCheckName("情報科");
+                            SetCheckName("専門科");
                         }}
                     >
-                        情報科
+                        専門科
                     </button>
                 </ul>
             ) : (
                 <div></div>
             )}
-            {CheckName}
             <div>
                 <button
                     type="button"
                     onClick={() => setIsListOpen2(!isListOpen2)}
-                    className="select"
+                    className="contents-pull-box"
                 >
                     クラス
                 </button>
@@ -77,7 +77,7 @@ function Contents() {
                         {Check ? (
                             <ul className="select_ul">
                                 <button
-                                    className="b"
+                                    className="contents-check-box"
                                     onClick={() => {
                                         SetClassDate(g2a);
                                         SetClassName("G2A");
@@ -87,7 +87,7 @@ function Contents() {
                                     G2A
                                 </button>
                                 <button
-                                    className="b"
+                                    className="contents-check-box"
                                     onClick={() => {
                                         SetClassDate(g2b);
                                         SetClassName("G2B");
@@ -97,7 +97,7 @@ function Contents() {
                                     G2B
                                 </button>
                                 <button
-                                    className="b"
+                                    className="contents-check-box"
                                     onClick={() => {
                                         SetClassDate(g2c);
                                         SetClassName("G2C");
@@ -110,7 +110,7 @@ function Contents() {
                         ) : (
                             <ul className="select_ul">
                                 <button
-                                    className="b"
+                                    className="contents-check-box"
                                     onClick={() => {
                                         SetClassDate(j2a);
                                         SetClassName("J2A");
@@ -120,7 +120,7 @@ function Contents() {
                                     J2A
                                 </button>
                                 <button
-                                    className="b"
+                                    className="contents-check-box"
                                     onClick={() => {
                                         SetClassDate(j2b);
                                         SetClassName("J2B");
@@ -130,7 +130,7 @@ function Contents() {
                                     J2B
                                 </button>
                                 <button
-                                    className="b"
+                                    className="contents-check-box"
                                     onClick={() => {
                                         SetClassDate(t2a);
                                         SetClassName("T2A");
@@ -155,9 +155,10 @@ function Contents() {
                     value={Text}
                     type="number"
                     onChange={(event) => SetText(event.target.value)}
+                    className="contents-text-box"
                 ></input>
                 <Link to={TF ? "/room" : "/contents"}>
-                    <button onClick={() => handleOnClick()}>確定</button>
+                    <button className="contents-button-box" onClick={() => handleOnClick()}>確定</button>
                 </Link>
             </div>
         </div>
