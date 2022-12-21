@@ -14,11 +14,18 @@
 .load_top{
   width:100%;
   height:100%;
-  margin-top:-14%;
+  margin-top:-110%;
   text-align:center;
   position:absolute;
+  animation:load-top;
+  animation-duration:3s ;
+  animation-fill-mode: forwards;
 }
 
+@keyframes load-top{
+  0%{visibility: visible;}
+  100%{visibility: hidden;}
+}
 .title{
   display:flex;
   align-content: space-between;
