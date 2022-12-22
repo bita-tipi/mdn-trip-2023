@@ -1,50 +1,57 @@
-.contents-background{
+.contents-background {
     background-color: #767C77;
-    height:100vh;
-    padding-top:25%;
-    margin-top:-20%;
+    height: 100vh;
+    padding-top: 25%;
+    margin-top: -20%;
 }
 
-.contents-text-box{
+.contents-text-box {
     border-radius: 9px;
-    border-color:white;
-    background-color:#767C77;
+    border-color: white;
+    background-color: #767C77;
     border-width: 1px;
-    width:40%;
-    padding:2%;
-    margin-left:10%;
-    margin-right:5%;
+    width: 50%;
+    padding: 1%;
+    margin-left: 10%;
+    margin-right: 5%;
     border-style: solid;
-    color:#eee;
+    color: #eee;
 }
 
-.contents-button-box{
+.contents-button-box {
     border-radius: 8px;
     border-style: none;
-    padding-left:4%;
-    padding-right:4%;
-    padding-top:1%;
-    padding-bottom:1%;
-    color:#444;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 0.8%;
+    padding-bottom: 0.8%;
+    color: #444;
 }
 
-.contents-check-box{
-    margin:4%;
+.contents-check-box {
+    margin: 4%;
     border-radius: 8px;
-    border-style: none;
-    padding-left:4%;
-    padding-right:4%;
-    padding-top:1%;
-    padding-bottom:1%;
-    color:#444;
+    border-style: solid;
+    border-color: #ddd;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: #767C77;
+    color: #ddd;
+    border-width: 1px;
 }
-.contents-pull-box{
-    margin:4%;
-    border-radius: 8px;
+
+.contents-pull-box {
+    margin-left: 5%;
+    text-align: center;
     border-style: none;
-    padding-left:4%;
-    padding-right:4%;
-    padding-top:1%;
-    padding-bottom:1%;
-    color:#444;
+    padding-left: 8%;
+    padding-right: 70%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: #eee;
+    background-repeat: no-repeat;
+    background-size: 34%;
+    background-image: url(../../assets/img/list-box.svg);
 }

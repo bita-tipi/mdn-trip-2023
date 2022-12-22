@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useRecoilState, useSetRecoilState } from "recoil";
 import { CLASS, PassClass, PassSuccess } from "../../assets/atom";
 import "./contents.css";
+import classBox from "../../assets/img/list-box.png";
 
 function Contents() {
     const updatePassClassData = useSetRecoilState(PassClass);
@@ -32,17 +33,17 @@ function Contents() {
 
     return (
         <div className="contents-background">
-            <button
+            <p
                 onClick={() => setIsListOpen(!isListOpen)}
                 className="contents-pull-box"
             >
                 学科
-            </button>
+            </p>
 
             {isListOpen ? (
                 <ul className="select_ul">
                     <button
-                         className="contents-check-box"
+                        className="contents-check-box"
                         onClick={() => {
                             SetCheck(true);
                             SetCheckName("普通科");
@@ -64,13 +65,12 @@ function Contents() {
                 <div></div>
             )}
             <div>
-                <button
-                    type="button"
+                <p
                     onClick={() => setIsListOpen2(!isListOpen2)}
                     className="contents-pull-box"
                 >
                     クラス
-                </button>
+                </p>
                 {isListOpen2 ? (
                     <div>
                         {" "}
@@ -158,7 +158,12 @@ function Contents() {
                     className="contents-text-box"
                 ></input>
                 <Link to={TF ? "/room" : "/contents"}>
-                    <button className="contents-button-box" onClick={() => handleOnClick()}>確定</button>
+                    <button
+                        className="contents-button-box"
+                        onClick={() => handleOnClick()}
+                    >
+                        確定
+                    </button>
                 </Link>
             </div>
         </div>
