@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./map.css";
-import error from "../../assets/img/sannkau.png";
+import error from "../../assets/img/地図あいち.svg";
 import yoshi from "../../assets/img/yoshi.png";
 import main_logo from "../../assets/img/main_logo.svg";
 import food from "../../assets/img/食べ物.png";
@@ -31,10 +31,13 @@ function Map() {
                 <p className="map-text-color">TOPICS詳細　場所</p>
                 <div className="map-topic-area">
                     <div className="map-topic-in">
-                        <img src={place} onClick={() => updateSort(0)} className=""/>
+                        <img
+                            src={place}
+                            onClick={() => updateSort(0)}
+                            className=""
+                        />
                         <p className="map-topic-text">場所</p>
                     </div>
-
                 </div>
             </div>
         );
@@ -45,10 +48,13 @@ function Map() {
                 <p className="map-text-color">TOPICS詳細　食べ物</p>
                 <div className="map-topic-area">
                     <div className="map-topic-in">
-                        <img src={food} onClick={() => updateSort(0)} className=""/>
+                        <img
+                            src={food}
+                            onClick={() => updateSort(0)}
+                            className=""
+                        />
                         <p className="map-topic-text">食べ物</p>
                     </div>
-                
                 </div>
             </div>
         );
@@ -59,10 +65,13 @@ function Map() {
                 <p className="map-text-color">TOPICS詳細　お土産</p>
                 <div className="map-topic-area">
                     <div className="map-topic-in">
-                        <img src={omiyage} onClick={() => updateSort(0)} className=""/>
+                        <img
+                            src={omiyage}
+                            onClick={() => updateSort(0)}
+                            className=""
+                        />
                         <p className="map-topic-text">お土産</p>
                     </div>
-                
                 </div>
             </div>
         );
@@ -73,10 +82,13 @@ function Map() {
                 <p className="map-text-color">TOPICS詳細　方言</p>
                 <div className="map-topic-area">
                     <div className="map-topic-in">
-                        <img src={language} onClick={() => updateSort(0)} className=""/>
+                        <img
+                            src={language}
+                            onClick={() => updateSort(0)}
+                            className=""
+                        />
                         <p className="map-topic-text">方言</p>
                     </div>
-                
                 </div>
             </div>
         );
@@ -87,10 +99,14 @@ function Map() {
                 <p className="map-text-color">TOPICS詳細　歴史</p>
                 <div className="map-topic-area">
                     <div className="map-topic-in">
-                        <img src={history} onClick={() => updateSort(0)} className=""/>
+                        <img
+                            src={history}
+                            onClick={() => updateSort(0)}
+                            className=""
+                        />
                         <p className="map-topic-text">歴史</p>
                     </div>
-                    <img src={his_kura} className="topic-img-map"/>
+                    <img src={his_kura} className="topic-img-map" />
                 </div>
             </div>
         );

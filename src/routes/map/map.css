@@ -8,7 +8,7 @@
 
 .map-sort {
     text-align: center;
-    background-color: #7F9366;
+    background-color: #B6B2A7;
     margin-left: 10%;
     margin-right: 40%;
     border-radius: 10px;
@@ -31,7 +31,7 @@
 }
 
 .map-TouchArea {
-    background-color: #5B6B49;
+    background-color: #757B77;
     background-size: cover;
     bottom: 0;
     height: 100%;
@@ -49,7 +49,7 @@
     text-align: center;
     margin-top: 5%;
     overflow: scroll;
-    background-color: #7F9366;
+    background-color: #B6B2A7;
     margin-left: 10%;
     margin-right: 10%;
     padding-top: 4%;
@@ -81,7 +81,7 @@
 }
 
 .map-text-color {
-    color: #7F9366;
+    color: #B6B2A7;
     margin-bottom: -5%;
     text-align: left;
     margin-left: 10%;
@@ -94,7 +94,7 @@
 .map-pull {
     color: white;
     margin-top: -5%;
-    background-color: #7F9366;
+    background-color: #B6B2A7;
     margin-left: 10%;
     margin-right: 40%;
 }
@@ -116,7 +116,7 @@
     text-align: center;
     margin-top: 5%;
     overflow: scroll;
-    background-color: #7F9366;
+    background-color: #B6B2A7;
     margin-left: 10%;
     margin-right: 10%;
     padding-top: 4%;
