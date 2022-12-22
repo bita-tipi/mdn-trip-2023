@@ -43,15 +43,13 @@
 }
 
 .contents-pull-box {
-    margin-left: 5%;
+    margin-left: 8%;
+    margin-right: 55vw;
     text-align: center;
     border-style: none;
-    padding-left: 8%;
-    padding-right: 70%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     color: #eee;
     background-repeat: no-repeat;
-    background-size: 34%;
     background-image: url(../../assets/img/list-box.svg);
 }
