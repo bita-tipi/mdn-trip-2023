@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import { useRecoilState, useSetRecoilState } from "recoil";
 import { CLASS, PassClass, PassSuccess } from "../../assets/atom";
 import "./contents.css";
-import classBox from "../../assets/img/list-box.png";
+import classBox from "../../assets/img/list-box.svg";
+import classListBox from "../../assets/img/list-box-class.svg";
+import checkbox from "../../assets/img/check-box.png";
+import _ from "lodash";
 
 function Contents() {
     const updatePassClassData = useSetRecoilState(PassClass);
@@ -23,8 +26,17 @@ function Contents() {
     const [ClassName, SetClassName] = useState("");
     const [CheckName, SetCheckName] = useState("");
     const [Text, SetText] = useState("");
-    const [isClickedsetIsclicked] = useState(true);
+    const [isClicked, upDateIsClicked] = useState([true, false]);
     let TF = false;
+
+    function IsClicked(index: number) {
+        const copiedList = _.cloneDeep(isClicked);
+        for (let i = 0; i < 2; i++) {
+            copiedList[i] = false;
+        }
+        copiedList[index] = true;
+        upDateIsClicked(copiedList);
+    }
 
     function handleOnClick(): void {
         SetPassword(TF);
@@ -33,44 +45,69 @@ function Contents() {
 
     return (
         <div className="contents-background">
-            <p
+            <img
+                src={classBox}
                 onClick={() => setIsListOpen(!isListOpen)}
                 className="contents-pull-box"
-            >
-                学科
-            </p>
-
+            />
             {isListOpen ? (
                 <ul className="select_ul">
-                    <button
-                        className="contents-check-box"
-                        onClick={() => {
-                            SetCheck(true);
-                            SetCheckName("普通科");
-                        }}
-                    >
-                        普通科
-                    </button>
-                    <button
-                        className="contents-check-box"
-                        onClick={() => {
-                            SetCheck(false);
-                            SetCheckName("専門科");
-                        }}
-                    >
-                        専門科
-                    </button>
+                    {isClicked[0] ? (
+                        <button
+                            className="contents-check-box-clicked"
+                            onClick={() => {
+                                SetCheck(true);
+                                SetCheckName("普通科");
+                                IsClicked(0);
+                            }}
+                        >
+                            普通科
+                        </button>
+                    ) : (
+                        <button
+                            className="contents-check-box"
+                            onClick={() => {
+                                SetCheck(true);
+                                SetCheckName("普通科");
+                                IsClicked(0);
+                            }}
+                        >
+                            普通科
+                        </button>
+                    )}
+                    {isClicked[1] ? (
+                        <button
+                            className="contents-check-box-clicked"
+                            onClick={() => {
+                                SetCheck(false);
+                                SetCheckName("専門科");
+                                IsClicked(1);
+                            }}
+                        >
+                            専門科
+                        </button>
+                    ) : (
+                        <button
+                            className="contents-check-box"
+                            onClick={() => {
+                                SetCheck(false);
+                                SetCheckName("専門科");
+                                IsClicked(1);
+                            }}
+                        >
+                            専門科
+                        </button>
+                    )}
                 </ul>
             ) : (
                 <div></div>
             )}
             <div>
-                <p
+                <img
+                    src={classListBox}
                     onClick={() => setIsListOpen2(!isListOpen2)}
                     className="contents-pull-box"
-                >
-                    クラス
-                </p>
+                />
                 {isListOpen2 ? (
                     <div>
                         {" "}
@@ -150,6 +187,7 @@ function Contents() {
             <div>
                 {Text === ClassDate ? (TF = true) : (TF = false)}
                 {password ? <p></p> : <p>missing</p>}
+                <p className="contents-text-pass">password</p>
                 <input
                     maxLength={Number(4)}
                     value={Text}
@@ -162,7 +200,7 @@ function Contents() {
                         className="contents-button-box"
                         onClick={() => handleOnClick()}
                     >
-                        確定
+                        決定
                     </button>
                 </Link>
             </div>

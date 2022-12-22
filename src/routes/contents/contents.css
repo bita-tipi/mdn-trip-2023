@@ -51,5 +51,26 @@
     padding-bottom: 2%;
     color: #eee;
     background-repeat: no-repeat;
-    background-image: url(../../assets/img/list-box.svg);
+}
+
+.contents-text-pass {
+    color: white;
+    margin-left: 11%;
+    margin-bottom: 0%;
+}
+
+.contents-check-box-clicked {
+    margin: 4%;
+    border-radius: 8px;
+    border-style: none;
+    border-color: #ddd;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: #767C77;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-width: 1px;
+    background-image: url(../../assets/img/check-box.svg);
 }
