@@ -19,19 +19,20 @@
     padding: 10px;
 }
 
-.schedule-tatesen {
-    margin-left: 2px;
-    width: 5px;
-    height: 150px;
-    background-color: brown;
-}
 
 .schedule_place {
     display: flex;
+    
 }
-
+.schedule-tatesen {
+    margin-left: 50px;
+    width: 5px;
+    height: 450px;
+    background-color:#8E627C;
+   
+}
 .schedule-timeschedule {
-    background-color: aqua;
+    color:aliceblue;
     text-align: center;
 
 
