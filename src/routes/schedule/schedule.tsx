@@ -15,6 +15,7 @@ function Schedule() {
             </div>
             <main className="schedule_place">
                 <div className="schedule-tatesen"></div>
+                <div className="schedule-hosotatesen"></div>
                 <div className="schedule-timeschedule">
                     <h3>7:20</h3>
                     <p>7:51</p>
