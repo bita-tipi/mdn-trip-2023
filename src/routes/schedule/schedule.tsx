@@ -14,6 +14,7 @@ function Schedule() {
         <h2 className="schedule_hinichi">4日目</h2>
       </div>
       <main className="schedule_place">
+        <div className="tatesen"></div>
         <div className="timeschedule">
           <h3>7:20</h3>
           <p>7:51</p>

@@ -1,14 +1,26 @@
+body{background-color: #414C3F;}
 .schedule_hiduke {
     display: flex;
     text-align: center;
     width: 100%;
+
 }
+
 
 .schedule_hinichi {
+    color:aliceblue;
     width: 100%;
-    background-color:black;
+    height: 200%;
+    font-weight: 900;
+    background-color:#443D42;
+    padding: 10px;
 }
-
+.tatesen{
+    margin-left: 2px;
+    width: 5px;
+    height: 150px;
+    background-color: brown;
+}
 .schedule_place {
     display: flex;
 }
@@ -16,4 +28,6 @@
 .timeschedule {
     background-color: aqua;
     text-align:center;
+
+
 }
