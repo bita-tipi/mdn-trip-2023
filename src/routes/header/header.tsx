@@ -147,7 +147,7 @@ function Header() {
                 {(["left"] as const).map((anchor) => (
                     <React.Fragment key={anchor}>
                         <Button onClick={toggleDrawer(anchor, true)}>
-                            <img src={button} className="header-menu-button"/>
+                            <img src={button} className="header-menu-button" />
                         </Button>
                         <Drawer
                             anchor={anchor}
