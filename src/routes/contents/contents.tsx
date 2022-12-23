@@ -27,11 +27,37 @@ function Contents() {
     const [CheckName, SetCheckName] = useState("");
     const [Text, SetText] = useState("");
     const [isClicked, upDateIsClicked] = useState([true, false]);
+    const [isClickedClass, upDateIsClickedClass] = useState([
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+    ]);
     let TF = false;
 
     function IsClicked(index: number) {
         const copiedList = _.cloneDeep(isClicked);
         for (let i = 0; i < 2; i++) {
+            copiedList[i] = false;
+        }
+        copiedList[index] = true;
+        upDateIsClicked(copiedList);
+    }
+
+    function IsClickedClass(index: number) {
+        const copiedList = _.cloneDeep(isClicked);
+        for (let i = 0; i < 15; i++) {
             copiedList[i] = false;
         }
         copiedList[index] = true;
