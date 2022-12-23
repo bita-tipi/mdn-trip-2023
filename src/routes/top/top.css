@@ -11,56 +11,63 @@
   background-size: cover;
 }*/
 
-.load_top{
-  width:100%;
-  height:100%;
-  margin-top:-190%;
-  text-align:center;
-  position:absolute;
-  animation:load-top;
-  animation-duration:3s ;
+.load_top {
+  width: 100%;
+  height: 100%;
+  margin-top: -190%;
+  text-align: center;
+  position: absolute;
+  animation: load-top;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
 }
 
-@keyframes load-top{
-  0%{visibility: visible;}
-  100%{visibility: hidden;}
+@keyframes load-top {
+  0% {
+    visibility: visible;
+  }
+
+  100% {
+    visibility: hidden;
+  }
 }
-.title{
-  display:flex;
+
+.title {
+  display: flex;
   align-content: space-between;
   align-items: center;
-  margin-bottom:2%;
-  margin-left:3%;
+  margin-bottom: 2%;
+  margin-left: 3%;
 }
 
-.title img{
-  width:5%;
+.title img {
+  width: 5%;
 }
 
-.background_top h2{
-  margin:0;
+.background_top h2 {
+  margin: 0;
   font-size: calc(10px + 2vmin);
 }
 
-.header img{
-  width:6%;
+.header img {
+  width: 6%;
   margin-left: 92%;
 }
 
-.mainvisual img{
-  margin-left:3%;
-  margin-bottom:15%;
-  width:93%;
+.mainvisual img {
+  margin-left: 3%;
+  margin-bottom: 15%;
+  width: 93%;
 }
-.schedule_main{
-  display:flex;
+
+.schedule_main {
+  display: flex;
   flex-wrap: wrap;
   align-content: space-between;
 }
 
-.schedule_main img{
-  width:45%;
-  margin-left:3%;
-  margin-bottom:3%;
+.schedule_main img {
+  width: 45%;
+  margin-left: 3%;
+  margin-bottom: 3%;
 }
