@@ -80,6 +80,9 @@
     color: white;
     font-size: 7vw;
     margin-top: -2%;
+    font-family: klee-one, sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .map-text-color {
@@ -87,6 +90,9 @@
     margin-bottom: -5%;
     text-align: left;
     margin-left: 10%;
+    font-family: klee-one, sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .map-pick {
@@ -99,6 +105,9 @@
     background-color: #B6B2A7;
     margin-left: 10%;
     margin-right: 40%;
+    font-family: klee-one, sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .map-svg {
@@ -132,6 +141,9 @@
     color: white;
     font-size: 7vw;
     margin-left: 5%;
+    font-family: klee-one, sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .topic-img-map {

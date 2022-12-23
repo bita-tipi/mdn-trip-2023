@@ -56,12 +56,13 @@ function Contents() {
     }
 
     function IsClickedClass(index: number) {
-        const copiedList = _.cloneDeep(isClicked);
+        const copiedListclass = _.cloneDeep(isClickedClass);
         for (let i = 0; i < 15; i++) {
-            copiedList[i] = false;
+            copiedListclass[i] = false;
+            console.log("adw");
         }
-        copiedList[index] = true;
-        upDateIsClicked(copiedList);
+        copiedListclass[index] = true;
+        upDateIsClickedClass(copiedListclass);
     }
 
     function handleOnClick(): void {
@@ -139,69 +140,159 @@ function Contents() {
                         {" "}
                         {Check ? (
                             <ul className="select_ul">
-                                <button
-                                    className="contents-check-box"
-                                    onClick={() => {
-                                        SetClassDate(g2a);
-                                        SetClassName("G2A");
-                                        updatePassClassData(CLASS.G2A);
-                                    }}
-                                >
-                                    G2A
-                                </button>
-                                <button
-                                    className="contents-check-box"
-                                    onClick={() => {
-                                        SetClassDate(g2b);
-                                        SetClassName("G2B");
-                                        updatePassClassData(CLASS.G2B);
-                                    }}
-                                >
-                                    G2B
-                                </button>
-                                <button
-                                    className="contents-check-box"
-                                    onClick={() => {
-                                        SetClassDate(g2c);
-                                        SetClassName("G2C");
-                                        updatePassClassData(CLASS.G2C);
-                                    }}
-                                >
-                                    G2C
-                                </button>
+                                {isClickedClass[0] ? (
+                                    <button
+                                        className="contents-check-box-clicked"
+                                        onClick={() => {
+                                            SetClassDate(g2a);
+                                            SetClassName("G2A");
+                                            updatePassClassData(CLASS.G2A);
+                                            IsClickedClass(0);
+                                        }}
+                                    >
+                                        G2A
+                                    </button>
+                                ) : (
+                                    <button
+                                        className="contents-check-box"
+                                        onClick={() => {
+                                            SetClassDate(g2a);
+                                            SetClassName("G2A");
+                                            updatePassClassData(CLASS.G2A);
+                                            IsClickedClass(0);
+                                        }}
+                                    >
+                                        G2A
+                                    </button>
+                                )}
+                                {isClickedClass[1] ? (
+                                    <button
+                                        className="contents-check-box-clicked"
+                                        onClick={() => {
+                                            SetClassDate(g2b);
+                                            SetClassName("G2B");
+                                            updatePassClassData(CLASS.G2B);
+                                            IsClickedClass(1);
+                                        }}
+                                    >
+                                        G2B
+                                    </button>
+                                ) : (
+                                    <button
+                                        className="contents-check-box"
+                                        onClick={() => {
+                                            SetClassDate(g2b);
+                                            SetClassName("G2B");
+                                            updatePassClassData(CLASS.G2B);
+                                            IsClickedClass(1);
+                                        }}
+                                    >
+                                        G2B
+                                    </button>
+                                )}
+                                {isClickedClass[2] ? (
+                                    <button
+                                        className="contents-check-box-clicked"
+                                        onClick={() => {
+                                            SetClassDate(g2c);
+                                            SetClassName("G2C");
+                                            updatePassClassData(CLASS.G2C);
+                                            IsClickedClass(2);
+                                        }}
+                                    >
+                                        G2C
+                                    </button>
+                                ) : (
+                                    <button
+                                        className="contents-check-box"
+                                        onClick={() => {
+                                            SetClassDate(g2c);
+                                            SetClassName("G2C");
+                                            updatePassClassData(CLASS.G2C);
+                                            IsClickedClass(2);
+                                        }}
+                                    >
+                                        G2C
+                                    </button>
+                                )}
                             </ul>
                         ) : (
                             <ul className="select_ul">
-                                <button
-                                    className="contents-check-box"
-                                    onClick={() => {
-                                        SetClassDate(j2a);
-                                        SetClassName("J2A");
-                                        updatePassClassData(CLASS.J2A);
-                                    }}
-                                >
-                                    J2A
-                                </button>
-                                <button
-                                    className="contents-check-box"
-                                    onClick={() => {
-                                        SetClassDate(j2b);
-                                        SetClassName("J2B");
-                                        updatePassClassData(CLASS.J2B);
-                                    }}
-                                >
-                                    J2B
-                                </button>
-                                <button
-                                    className="contents-check-box"
-                                    onClick={() => {
-                                        SetClassDate(t2a);
-                                        SetClassName("T2A");
-                                        updatePassClassData(CLASS.T2A);
-                                    }}
-                                >
-                                    T2A
-                                </button>
+                                {isClickedClass[3] ? (
+                                    <button
+                                        className="contents-check-box-clicked"
+                                        onClick={() => {
+                                            SetClassDate(j2a);
+                                            SetClassName("J2A");
+                                            updatePassClassData(CLASS.J2A);
+                                            IsClickedClass(3);
+                                        }}
+                                    >
+                                        J2A
+                                    </button>
+                                ) : (
+                                    <button
+                                        className="contents-check-box"
+                                        onClick={() => {
+                                            SetClassDate(j2a);
+                                            SetClassName("J2A");
+                                            updatePassClassData(CLASS.J2A);
+                                            IsClickedClass(3);
+                                        }}
+                                    >
+                                        J2A
+                                    </button>
+                                )}
+                                {isClickedClass[4] ? (
+                                    <button
+                                        className="contents-check-box-clicked"
+                                        onClick={() => {
+                                            SetClassDate(j2b);
+                                            SetClassName("J2B");
+                                            updatePassClassData(CLASS.J2B);
+                                            IsClickedClass(4);
+                                        }}
+                                    >
+                                        J2B
+                                    </button>
+                                ) : (
+                                    <button
+                                        className="contents-check-box"
+                                        onClick={() => {
+                                            SetClassDate(j2b);
+                                            SetClassName("J2B");
+                                            updatePassClassData(CLASS.J2B);
+                                            IsClickedClass(4);
+                                        }}
+                                    >
+                                        J2B
+                                    </button>
+                                )}
+                                {isClickedClass[5] ? (
+                                    <button
+                                        className="contents-check-box-clicked"
+                                        onClick={() => {
+                                            SetClassDate(t2a);
+                                            SetClassName("T2A");
+                                            updatePassClassData(CLASS.T2A);
+                                            IsClickedClass(5);
+                                        }}
+                                    >
+                                        T2B
+                                    </button>
+                                ) : (
+                                    <button
+                                        className="contents-check-box"
+                                        onClick={() => {
+                                            SetClassDate(t2a);
+                                            SetClassName("T2A");
+                                            updatePassClassData(CLASS.T2A);
+                                            IsClickedClass(5);
+                                        }}
+                                    >
+                                        T2B
+                                    </button>
+                                )}
                             </ul>
                         )}
                     </div>
