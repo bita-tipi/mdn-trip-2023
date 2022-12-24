@@ -120,29 +120,49 @@ function Map() {
             <img src={area} className="map-area" />
             <div className="map-TouchArea">
                 <div className="map-pick">
-                    <div className="map-sort">
-                        <img src={map_svg} className="map-svg" />
-                        <div
-                            className="map-button"
-                            onClick={() => updateIsListOpen(!isListOpen)}
-                        >
-                            場所設定
-                        </div>
-                    </div>
                     {isListOpen ? (
                         <div className="map-moji">
-                            <p onClick={() => Sort(0)} className="map-pull">
-                                広島
-                            </p>
-                            <p onClick={() => Sort(1)} className="map-pull">
-                                岡山
-                            </p>
-                            <p onClick={() => Sort(2)} className="map-pull">
-                                ユニバ
-                            </p>
+                            <div className="map-map-list">
+                                <img src={map_svg} className="map-svg-open" />
+                                <div className="map-red-bar"></div>
+                                <div className="map-red-circle"></div>
+                                <div className="map-red-bar"></div>
+                                <div className="map-red-circle"></div>
+                                <div className="map-red-bar"></div>
+                                <div className="map-red-circle"></div>
+                            </div>
+                            <div className="map-bar-open"></div>
+                            <div className="map-pull-list">
+                                <p
+                                    className="map-pull"
+                                    onClick={() =>
+                                        updateIsListOpen(!isListOpen)
+                                    }
+                                >
+                                    場所設定
+                                </p>
+                                <p onClick={() => Sort(0)} className="map-pull">
+                                    広島
+                                </p>
+                                <p onClick={() => Sort(1)} className="map-pull">
+                                    岡山
+                                </p>
+                                <p onClick={() => Sort(2)} className="map-pull">
+                                    ユニバ
+                                </p>
+                            </div>
                         </div>
                     ) : (
-                        <div></div>
+                        <div className="map-sort">
+                            <img src={map_svg} className="map-svg" />
+                            <div className="map-bar"></div>
+                            <div
+                                className="map-button"
+                                onClick={() => updateIsListOpen(!isListOpen)}
+                            >
+                                場所設定
+                            </div>
+                        </div>
                     )}
                 </div>
                 <p className="map-text-color">TOPICS</p>

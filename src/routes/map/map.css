@@ -11,19 +11,23 @@
     background-color: #B6B2A7;
     margin-left: 10%;
     margin-right: 40%;
-    border-radius: 10px;
-    ;
-
+    border-radius: 5px;
     display: flex;
+    margin-bottom: 2%;
 }
 
 .map-button {
     color: white;
+    margin-top: 1%;
+    font-family: klee-one, sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .map-topic {
     text-align: center;
     padding-bottom: 20%;
+
 }
 
 .map-map {
@@ -100,20 +104,30 @@
 }
 
 .map-pull {
+    padding-bottom: 8%;
+    margin-bottom: -5%;
     color: white;
-    margin-top: -5%;
-    background-color: #B6B2A7;
-    margin-left: 10%;
-    margin-right: 40%;
+    margin-top: 3%;
+    font-size: 16px;
     font-family: klee-one, sans-serif;
     font-weight: 600;
     font-style: normal;
 }
 
 .map-svg {
-    height: 3vh;
-    width: 3vh;
-    margin-left: 10%;
+    margin-top: 2%;
+    zoom: 0.5;
+    margin-bottom: 2%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.map-svg-open {
+    margin-top: 22%;
+    zoom: 0.5;
+    margin-bottom: -25%;
+    margin-right: 5%;
+    margin-left: 50%;
 }
 
 .map-topic-in {
@@ -151,4 +165,73 @@
     width: 50%;
     height: 50%;
     border-radius: 8px;
+}
+
+.map-bar {
+    background-color: #757B77;
+    width: 1%;
+    margin-right: 4%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 4px;
+}
+
+.map-bar-open {
+    background-color: #757B77;
+    width: 1%;
+    margin-right: 4%;
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+}
+
+.map-moji {
+    background-color: #B6B2A7;
+    margin-left: 10%;
+    margin-right: 40%;
+    border-radius: 4px;
+    display: flex;
+    animation-name: map-pulldown;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transform-origin: top;
+    animation-timing-function: ease;
+}
+
+.map-red-bar {
+    margin-left: 100%;
+    margin-top: 13%;
+    border-radius: 4px;
+    background-color: #EFB9A6;
+    width: 8%;
+    height: 10%;
+}
+
+.map-red-circle {
+    background-color: #EFB9A6;
+    border-radius: 100px;
+    width: 50%;
+    height: 9%;
+    margin-left: 78%;
+    margin-top: 15%;
+}
+
+.map-pull-list {
+    text-align: left;
+}
+
+.map-map-list {
+    text-align: center
+}
+
+@keyframes map-pulldown {
+    0% {
+        transform: scaleY(80%)
+    }
+
+    100% {
+        transform: scaleY(100%)
+    }
+
 }
