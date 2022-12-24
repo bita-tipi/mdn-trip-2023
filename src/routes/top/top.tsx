@@ -18,10 +18,6 @@ function Top() {
 
     return (
         <div className="background_top">
-            <header className="header">
-                <img src={img} />
-            </header>
-
             <div className="mainvisual">
                 <img src={schedule} />
             </div>
