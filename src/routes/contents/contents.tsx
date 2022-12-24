@@ -300,7 +300,6 @@ function Contents() {
                     <div></div>
                 )}
             </div>
-            {ClassName}
             <div>
                 {Text === ClassDate ? (TF = true) : (TF = false)}
                 {password ? <p></p> : <p>missing</p>}

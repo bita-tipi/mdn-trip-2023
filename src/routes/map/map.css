@@ -114,6 +114,7 @@
     font-style: normal;
 }
 
+
 .map-svg {
     margin-top: 2%;
     zoom: 0.5;
@@ -234,4 +235,10 @@
         transform: scaleY(100%)
     }
 
+}
+
+.map-topicArea {
+    zoom: 0.5;
+    margin-top: -10%;
+    margin-bottom: 10%;
 }

@@ -11,7 +11,7 @@ import omiyage from "../../assets/img/おみやげ.png";
 import area from "../../assets/img/境界.png";
 import map_svg from "../../assets/img/地図.png";
 import his_kura from "../../assets/img/倉敷歴史.png";
-import { boxSizing } from "@mui/system";
+import topic_area from "../../assets/img/topic-area.png";
 
 function Map() {
     const Sort_List = [Place(), Food(), Gift(), Language(), History()];
@@ -19,6 +19,8 @@ function Map() {
     const map_List = [error, yoshi, main_logo];
     const [map, updateMap] = useState(0);
     const [isListOpen, updateIsListOpen] = useState(false);
+    const [topicNumber, upDateTopicNumber] = useState(0);
+    const topicList = [topic_area, his_kura];
 
     function Sort(i: number) {
         updateIsListOpen(false);
@@ -189,6 +191,7 @@ function Map() {
                     </div>
                 </div>
                 <div className="map-topic">{Sort_List[sort]}</div>
+                <img src={topicList[topicNumber]} className="map-topicArea" />
             </div>
         </div>
     );
