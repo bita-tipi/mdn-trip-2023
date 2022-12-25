@@ -26,23 +26,31 @@
 }
 .schedule-transparent{
     position:relative;
+    top: -70px;
+    left: 210px;
+    width: 100px;
+    height: 20px;
+    background-color: black;
+}
+.schedule-transparent::before{
+    content: "";
     width: 100px;
     height: 200px;
-    background-color: rgb(168, 66, 66);
+    border-radius: 0 100px 100px 0;
+    background-color: black;
 }
 .schedule-tatesen {
-    position: relative;
-    top: -76px;
-    left: -15px;
+    position: absolute;
+    top:205px;
     margin-left: 50px;
     width: 3px;
     height: 450px;
     background-color: #8E627C;  
 }
 .schedule-hosotatesen {
-    position: relative;
-    top: -76px;
-    left: 60px;
+    position: absolute;
+    top: 205px;
+    left: 160px;
     margin-left: 50px;
     width: 1px;
     height: 450px;
