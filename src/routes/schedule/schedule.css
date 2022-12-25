@@ -24,18 +24,25 @@
     display: flex;
     
 }
+.schedule_transparent {
+    position:relative;
+    width: 400px;
+    height: 201px;
+    background-color: black;
+   
+}
 .schedule-tatesen {
     position: relative;
-    top: -20px;
+    top: -76px;
     left: -15px;
     margin-left: 50px;
     width: 3px;
     height: 450px;
-    background-color:#8E627C;  
+    background-color: #8E627C;  
 }
 .schedule-hosotatesen {
     position: relative;
-    top: -20px;
+    top: -76px;
     left: 60px;
     margin-left: 50px;
     width: 1px;
