@@ -69,8 +69,7 @@ function Schedule() {
                 <div className="schedule-timeschedule">
                     <h3>7:20</h3>
                     <p>7:51</p>
-                    <p>〜6</p>
-                    <p>10:01</p>
+                    <p>~10:01</p>
                     <p>10:20</p>
                     <p></p>
                     <h3>11:00</h3>

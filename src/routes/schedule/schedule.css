@@ -47,7 +47,7 @@
     position: absolute;
     top:205px;
     margin-left: 30px;
-    width: 3px;
+    width: 5px;
     height: 450px;
     background-color: #8E627C;  
 }
@@ -56,17 +56,18 @@
     top: 205px;
     left: 80px;
     margin-left: 50px;
-    width: 1px;
+    width: 2px;
     height: 450px;
     background-color:#8E627C;  
-
 }
 .schedule-timeschedule {
-    display: flex;
-    flex-flow: column;
-    color:aliceblue;
-    text-align: center;
-    font-family: serif;
+ position: relative;
+ top: -60px;
+ left:-30px;
+ color: aliceblue;
+}
+.schedule-time1,.schedule-time1end{
+    color: #8E627C;
 }
 .h3{
     color: #8E627C;
