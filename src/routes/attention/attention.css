@@ -14,7 +14,7 @@
 @keyframes pulldown {
     0% {
         opacity: 0;
-        margin-bottom: -10%;
+        margin-bottom: -10;
     }
 
     50% {

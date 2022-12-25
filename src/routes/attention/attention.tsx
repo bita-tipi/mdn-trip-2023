@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./attention.css";
 import _ from "lodash";
+import genbakudrom from "../../assets/img/attention_genbakudorm.svg";
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
@@ -15,7 +16,7 @@ function Attention() {
     }
 
     return (
-        <body>
+        <body >
             <div>
                 <p>注意事項pic</p>
             </div>
@@ -106,8 +107,11 @@ function Attention() {
                             <li>いいいいいいいいい</li>
                         </div> : <></>}
                 </ul>
-            </div>
 
+            </div>
+            <div>
+                <img src={genbakudrom} />
+           </div>
         </body>
     );
 }
