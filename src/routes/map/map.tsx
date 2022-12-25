@@ -35,7 +35,6 @@ function Map() {
                     <div className="map-topic-in">
                         <img
                             src={place}
-                            onClick={() => updateSort(0)}
                             className=""
                         />
                         <p className="map-topic-text">場所</p>
@@ -52,7 +51,6 @@ function Map() {
                     <div className="map-topic-in">
                         <img
                             src={food}
-                            onClick={() => updateSort(0)}
                             className=""
                         />
                         <p className="map-topic-text">食べ物</p>
@@ -69,7 +67,6 @@ function Map() {
                     <div className="map-topic-in">
                         <img
                             src={omiyage}
-                            onClick={() => updateSort(0)}
                             className=""
                         />
                         <p className="map-topic-text">お土産</p>
@@ -86,7 +83,6 @@ function Map() {
                     <div className="map-topic-in">
                         <img
                             src={language}
-                            onClick={() => updateSort(0)}
                             className=""
                         />
                         <p className="map-topic-text">方言</p>
@@ -103,12 +99,13 @@ function Map() {
                     <div className="map-topic-in">
                         <img
                             src={history}
-                            onClick={() => updateSort(0)}
                             className=""
                         />
                         <p className="map-topic-text">歴史</p>
                     </div>
-                    <img src={his_kura} className="topic-img-map" />
+                    <button onClick={() => upDateTopicNumber(1)}>
+                            倉敷
+                    </button>
                 </div>
             </div>
         );
