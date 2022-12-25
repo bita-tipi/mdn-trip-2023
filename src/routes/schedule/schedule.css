@@ -24,12 +24,11 @@
     display: flex;
     
 }
-.schedule_transparent {
+.schedule-transparent{
     position:relative;
-    width: 400px;
-    height: 201px;
-    background-color: black;
-   
+    width: 100px;
+    height: 200px;
+    background-color: rgb(168, 66, 66);
 }
 .schedule-tatesen {
     position: relative;
