@@ -66,9 +66,19 @@
  left:-30px;
  color: aliceblue;
 }
-.schedule-time1,.schedule-time1end{
-    color: #8E627C;
+.schedule-time1{
+    position: relative;
+    left: 5px;
 }
+.schedule-time1end,.schedule-time2end,.schedule-time3end,.schedule-time4end,.schedule-time5end,.schedule-time6end{
+    position: relative;
+    left:-7px;
+}
+.schedule-time1,.schedule-time1end,.schedule-time2,.schedule-time2end,.schedule-time3,.schedule-time3end,
+.schedule-time4,.schedule-time4end,.schedule-time5,.schedule-time5end,.schedule-time6,.schedule-time6end{
+    font-size: 10px;
+}
+
 .h3{
     color: #8E627C;
     font-weight: 900px;

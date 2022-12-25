@@ -68,21 +68,21 @@ function Schedule() {
                 <div className="schedule-hosotatesen"></div>
                 <div className="schedule-timeschedule">
                     <h3>7:20</h3>
-                    <p>7:51</p>
-                    <p>~10:01</p>
-                    <p>10:20</p>
-                    <p></p>
+                    <p className="schedule-time1">7:51</p>
+                    <p className="schedule-time1end">~10:01</p>
+                    <p className="schedule-time2">10:20</p>
+                    <p className="schedule-time2end">~11:00</p>
+                    <p className="schedule-time3">11:20</p>
+                    <p className="schedule-time3end">~11:30</p>
                     <h3>11:00</h3>
-                    <p>11:20</p>
-                    <p></p>
-                    <p>11:30</p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
+                    <p className="schedule-time4">13:30</p>
+                    <p className="schedule-time4end">~13:40</p>
+                    <p className="schedule-time5">13:40</p>
+                    <p className="schedule-time5end">~14:30</p>
+                    <h3>14:30</h3>
+                    <p className="schedule-time6">14:00</p>
+                    <p className="schedule-time6end">~15:00</p>
+                    <h3>17:15</h3>
                     <p></p>
                     <p></p>
                     <p></p>
