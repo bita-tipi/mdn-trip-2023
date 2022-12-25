@@ -63,6 +63,7 @@ function Schedule() {
             {dayList[clickedDay]}
             <main className="schedule_place">
                 <div className="schedule-transparent"></div>
+                <div className="schedule-circle"></div>
                 <div className="schedule-tatesen"></div>
                 <div className="schedule-hosotatesen"></div>
                 <div className="schedule-timeschedule">

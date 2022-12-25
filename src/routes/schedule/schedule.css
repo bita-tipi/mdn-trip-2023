@@ -27,22 +27,26 @@
 .schedule-transparent{
     position:relative;
     top: -70px;
-    left: 210px;
+    left: 130px;
     width: 100px;
     height: 20px;
     background-color: black;
+    opacity: 0.5;
 }
-.schedule-transparent::before{
-    content: "";
-    width: 100px;
-    height: 200px;
+.schedule-circle{
+    position: relative;
+    top:-70px;
+    left:130px;
+    width: 10px;
+    height:20px;
     border-radius: 0 100px 100px 0;
     background-color: black;
+    opacity: 0.5;
 }
 .schedule-tatesen {
     position: absolute;
     top:205px;
-    margin-left: 50px;
+    margin-left: 30px;
     width: 3px;
     height: 450px;
     background-color: #8E627C;  
@@ -50,7 +54,7 @@
 .schedule-hosotatesen {
     position: absolute;
     top: 205px;
-    left: 160px;
+    left: 80px;
     margin-left: 50px;
     width: 1px;
     height: 450px;
