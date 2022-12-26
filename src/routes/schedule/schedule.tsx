@@ -37,8 +37,8 @@ function Schedule() {
                       <p className="schedule-tatesen"></p>
                       <p id="schedule-text" className="schedule-nagoya1">名古屋</p>
                       <p id="schedule-text" className="schedule-nagoyasyou1">Nagoya</p>
-                      <p className="schedule-sannkaku1"></p>
                       </section>
+                      <p className="schedule-sannkaku1"></p>
                       <p className="schedule-tatesen2"></p>
                       <p id="schedule-text" className="schedule-hirosima1">広島</p>
                       <p id="schedule-text" className="schedule-hirosimasyou1">hiroshima</p>
