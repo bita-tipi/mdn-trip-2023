@@ -43,28 +43,28 @@
     background-color: black;
     opacity: 0.5;
 }
-.schedule-tatesen {
-    position: absolute;
-    top:205px;
-    margin-left: 30px;
-    width: 5px;
-    height: 450px;
-    background-color: #8E627C;  
-}
-.schedule-hosotatesen {
-    position: absolute;
-    top: 205px;
-    left: 80px;
-    margin-left: 50px;
-    width: 2px;
-    height: 450px;
-    background-color:#8E627C;  
+
+
+
+.schedule-haiirosikaku{
+    position: relative;
+    top: -75px;
+    left: -80px;
+    width: 169px;
+    height: 70px;
+ 
+    background-color:#6c6d69 ;
 }
 .schedule-timeschedule {
  position: relative;
- top: -60px;
+ top: -70px;
  left:-30px;
  color: aliceblue;
+}
+.schedule-720,.schedule-1001,.schedule-1101,.schedule-1430,.schedule-1715{
+    position: relative;
+    top: 100px;
+    left: -100px;
 }
 .schedule-time1{
     position: relative;
