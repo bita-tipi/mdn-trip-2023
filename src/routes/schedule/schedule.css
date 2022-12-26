@@ -1,5 +1,8 @@
 .schedule-body {
     background-color: #414C3F;
+    padding-top:15%;
+    margin-top:-20%;
+    padding-bottom:20%;
 }
 
 .schedule_hiduke {
@@ -19,89 +22,38 @@
     padding: 15px;
 }
 
-
-.schedule_place {
-    display: flex;
-    
-}
-.schedule-transparent{
-    position:relative;
-    top: -70px;
-    left: 100px;
-    width: 100px;
-    height: 20px;
-    background-color: black;
-    opacity: 0.5;
-}
-.schedule-circle{
-    position: relative;
-    top:-70px;
-    left:100px;
-    width: 10px;
-    height:20px;
-    border-radius: 0 100px 100px 0;
-    background-color: black;
-    opacity: 0.5;
+.schedule_place{
+    display:flex;
+    background-color:#767C77;
+    border-radius: 10px;
 }
 
-
-
-.schedule-haiirosikaku{
-    position: relative;
-    top: -75px;
-    left: -90px;
-    width: 140px;
-    height: 70px;
- 
-    background-color:#6c6d69 ;
-}
-.schedule-timeschedule {
- position: relative;
- top: -70px;
- left:-30px;
- color: aliceblue;
-}
-.schedule-720,.schedule-1001,.schedule-1100,.schedule-1430,.schedule-1715{
-    position: relative;
-    top: 0px;
-    left: -130px;
-    font-weight: 300;
-}
-.schedule-time1{
-    position: relative;
-    left: -85px;
-    font-size: 10px;
-    font-weight: 200;
-}
-.schedule-time2,.schedule-time3.schedule-time4,.schedule-time5,.schedule-time6{
-    position: relative;
-    left: -90px;
-    font-size: 10px;
-    font-weight: 200;
-}
-.schedule-time1end,.schedule-time2end,.schedule-time3end,
-.schedule-time4end,.schedule-time5end,.schedule-time6end{
-    position: relative;
-    left: -95px;
-    font-size: 10px;
-    font-weight: 200;
-}
-.schedule-syuugou{
-    position: relative;
-    top: -134px;
-    left: -110px;
-    color: aliceblue;
-    font-size: smaller;
-    font-weight: 100;
-}
-.schedule-transparentdai{
-    position: relative;
-    top: -70px;
-    left: 100px;
-    width: 100px;
-    height: 20px;
-    background-color: black;
-    opacity: 0.5;
-   
+#schedule-text{
+    color:white;
 }
 
+.schedule-time{
+    margin-left:10%;
+    margin-right:10%;
+    font-size: 30px;
+}
+
+.schedule-area{
+    background-color: aqua;
+    padding-right:55%;
+    padding-bottom:10%
+}
+.schedule-area-do{
+    font-size: 15px;
+    background-color: #443D42;
+    padding-left: 10%;
+}
+
+.schedule-area-text{
+    padding-left: 10%;
+    padding-right:15%;
+    margin-right:-40%;
+    font-size: 25px;
+    margin-top:-12%;
+    background-color: #443D42;
+}
