@@ -29,11 +29,19 @@ function Schedule() {
                         <p id="schedule-text" className="schedule-area-text">名古屋駅</p>
                     </div>
                 </section>
-                <section className="schedule_place">
-                <p id="schedule-text" className="schedule-time">7:20</p>
-                    <div className="schedule-area">
-                        <p id="schedule-text" className="schedule-area-do">集合</p>
-                        <p id="schedule-text" className="schedule-area-text">名古屋駅</p>
+                <section className="schedule_place2">
+                     <p id="schedule-text" className="schedule-time2">7:51<span> ~ </span>10:01</p>
+                    <div className="schedule-area2">
+                      <p id="schedule-text" className="schedule-norimono">新幹線-のぞみ3号</p>
+                      <section className="schedule-place3">
+                      <p className="schedule-tatesen"></p>
+                      <p id="schedule-text" className="schedule-nagoya1">名古屋</p>
+                      <p id="schedule-text" className="schedule-nagoyasyou1">Nagoya</p>
+                      <p className="schedule-sannkaku1"></p>
+                      </section>
+                      <p className="schedule-tatesen2"></p>
+                      <p id="schedule-text" className="schedule-hirosima1">広島</p>
+                      <p id="schedule-text" className="schedule-hirosimasyou1">hiroshima</p>
                     </div>
                 </section>
             </main>
