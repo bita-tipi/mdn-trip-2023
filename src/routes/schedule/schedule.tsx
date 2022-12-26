@@ -45,10 +45,10 @@ function Schedule() {
                     </div>
                 </section>
                 <section className="schedule_place">
-                    <p id="schedule-text" className="schedule-time">7:20</p>
+                    <p id="schedule-text" className="schedule-time">10:01</p>
                     <div className="schedule-area">
-                        <p id="schedule-text" className="schedule-area-do">集合</p>
-                        <p id="schedule-text" className="schedule-area-text">名古屋駅</p>
+                        <p id="schedule-text" className="schedule-area-do">乗り換え</p>
+                        <p id="schedule-text" className="schedule-area-text">広島駅</p>
                     </div>
                 </section>
 
