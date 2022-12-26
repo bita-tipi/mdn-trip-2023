@@ -33,6 +33,7 @@
 }
 
 .schedule-time{
+    margin-top: 50px;
     margin-left:10%;
     margin-right:10%;
     font-size: 30px;
@@ -44,16 +45,24 @@
     padding-bottom:10%
 }
 .schedule-area-do{
+    white-space: nowrap;
     font-size: 15px;
-    background-color: #443D42;
+    background-color:black;
+    background: rgba(0, 0, 0, 0.4);
     padding-left: 10%;
+    padding-right: 150%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px;
+    
 }
-
 .schedule-area-text{
     padding-left: 10%;
     padding-right:15%;
-    margin-right:-40%;
+    margin-right:-400%;
     font-size: 25px;
     margin-top:-12%;
-    background-color: #443D42;
+    background-color:black;
+    background: rgba(0, 0, 0, 0.4);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius:30px;
 }
