@@ -26,8 +26,8 @@ function Schedule() {
                 <div className="schedule-transparent"></div>
                 <div className="schedule-circle"></div>
                 <div className="schedule-haiirosikaku"></div>
-                <div className="schedule-transparent2"></div>
-                <div className="schedule-circle2"></div>
+                <div className="schedule-transparentdai"></div>
+                <div className="schedule-circledai"></div>
                 <div className="schedule-haiirosikaku2"></div>
                 <div className="schedule-timeschedule">
                     <h3 className="schedule-720">7:20</h3>
@@ -54,7 +54,7 @@ function Schedule() {
                 </div>
                 <div>
                     <h3>名古屋駅</h3>
-                    <p>集合</p>
+                    <p className="schedule-syuugou">集合</p>
                     <p>新幹線・のぞみ3号</p>
                     <h4>名古屋▶️広島</h4>
                     <h4>広島駅▶️宮島口</h4>
