@@ -44,6 +44,14 @@ function Schedule() {
                       <p id="schedule-text" className="schedule-hirosimasyou1">hiroshima</p>
                     </div>
                 </section>
+                <section className="schedule_place">
+                    <p id="schedule-text" className="schedule-time">7:20</p>
+                    <div className="schedule-area">
+                        <p id="schedule-text" className="schedule-area-do">集合</p>
+                        <p id="schedule-text" className="schedule-area-text">名古屋駅</p>
+                    </div>
+                </section>
+
             </main>
             </div>
               
