@@ -166,6 +166,28 @@ function Check() {
                                 <button onClick={getClick}>呼び出す</button>
                                 <button onClick={removeClick}>削除する</button>
                             </li>
+                            <li>
+                                <Checkbox />
+                                <input
+                                    type="text"
+                                    value={text}
+                                    onChange={handleChange}
+                                />
+                                <button onClick={setClick}>保存する</button>
+                                <button onClick={getClick}>呼び出す</button>
+                                <button onClick={removeClick}>削除する</button>
+                            </li>
+                            <li>
+                                <Checkbox />
+                                <input
+                                    type="text"
+                                    value={text}
+                                    onChange={handleChange}
+                                />
+                                <button onClick={setClick}>保存する</button>
+                                <button onClick={getClick}>呼び出す</button>
+                                <button onClick={removeClick}>削除する</button>
+                            </li>
                         </ul>
                     </div>
                 ) : (
