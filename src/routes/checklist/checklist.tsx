@@ -63,7 +63,6 @@ function Check() {
                         ListSelect(0);
                     }}
                 >
-                    <hr />
                     必要なもの
                 </div>
                 {isListOpen[0] ? (
@@ -106,7 +105,6 @@ function Check() {
                         ListSelect(1);
                     }}
                 >
-                    <hr />
                     あると便利
                 </div>
                 {isListOpen[1] ? (
@@ -149,7 +147,6 @@ function Check() {
                         ListSelect(2);
                     }}
                 >
-                    <hr />
                     自分だけの持ち物
                 </div>
                 {isListOpen[2] ? (
@@ -171,10 +168,8 @@ function Check() {
                 ) : (
                     <div></div>
                 )}
-                <hr />
             </main>
         </div>
     );
 }
-
 export default Check;
