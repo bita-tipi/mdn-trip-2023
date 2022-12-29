@@ -32,6 +32,15 @@
 
 }
 
+.my-list-pulldown {
+  animation-name: pulldown;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  margin-left: auto;
+  margin-right: auto;
+  width: 28em
+}
+
 @keyframes pulldown {
   0% {
     opacity: 0;

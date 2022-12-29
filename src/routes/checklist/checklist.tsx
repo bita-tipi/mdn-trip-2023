@@ -153,7 +153,7 @@ function Check() {
                     自分だけの持ち物
                 </div>
                 {isListOpen[2] ? (
-                    <div className="list-pulldown">
+                    <div className="my-list-pulldown">
                         <ul>
                             <li>
                                 <Checkbox />
