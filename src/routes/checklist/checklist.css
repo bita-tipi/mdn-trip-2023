@@ -2,6 +2,10 @@
   width: 65px
 }
 
+.checklist-body{
+  background-color: #617f7d;
+}
+
 .list-title {
   text-align: center;
   padding: 10px;

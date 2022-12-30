@@ -55,146 +55,148 @@ function Check() {
     const [isListOpen, updateIsListOpen] = useState([false, false, false]);
 
     return (
-        <div>
-            <h1 className="list-title">
-                <img src={checklist} className="logo"/>
-                持ち物リスト</h1>
-            <main>
-                <div
-                    className="list-title"
-                    onClick={() => {
-                        ListSelect(0);
-                    }}
-                >
-                    必要なもの
-                </div>
-                {isListOpen[0] ? (
-                    <div className="list-pulldown">
-                        <FormGroup>
-                            <FormControlLabel
-                                control={<Checkbox />}
-                                label="制服"
-                            />
-                            <FormControlLabel
-                                control={<Checkbox />}
-                                label="財布"
-                            />
-                        </FormGroup>
-                        <FormGroup>
-                            <FormControlLabel
-                                control={<Checkbox />}
-                                label="あ"
-                            />
-                            <FormControlLabel
-                                control={<Checkbox />}
-                                label="あ"
-                            />
-                            <FormControlLabel
-                                control={<Checkbox />}
-                                label="あ"
-                            />
-                            <FormControlLabel
-                                control={<Checkbox />}
-                                label="あ"
-                            />
-                        </FormGroup>
+        <body className="checklist-body">
+            <div>
+                <h1 className="list-title">
+                    <img src={checklist} className="logo"/>
+                    持ち物リスト</h1>
+                <main>
+                    <div
+                        className="list-title"
+                        onClick={() => {
+                            ListSelect(0);
+                        }}
+                    >
+                        必要なもの
                     </div>
-                ) : (
-                    <div></div>
-                )}
-                <div
-                    className="list-title"
-                    onClick={() => {
-                        ListSelect(1);
-                    }}
-                >
-                    あると便利
-                </div>
-                {isListOpen[1] ? (
-                    <div className="list-pulldown">
-                        <FormGroup>
-                            <FormControlLabel
-                                control={<Checkbox />}
-                                label="制服"
-                            />
-                            <FormControlLabel
-                                control={<Checkbox />}
-                                label="財布"
-                            />
-                        </FormGroup>
-                        <FormGroup>
-                            <FormControlLabel
-                                control={<Checkbox />}
-                                label="あ"
-                            />
-                            <FormControlLabel
-                                control={<Checkbox />}
-                                label="あ"
-                            />
-                            <FormControlLabel
-                                control={<Checkbox />}
-                                label="あ"
-                            />
-                            <FormControlLabel
-                                control={<Checkbox />}
-                                label="あ"
-                            />
-                        </FormGroup>
+                    {isListOpen[0] ? (
+                        <div className="list-pulldown">
+                            <FormGroup>
+                                <FormControlLabel
+                                    control={<Checkbox />}
+                                    label="制服"
+                                />
+                                <FormControlLabel
+                                    control={<Checkbox />}
+                                    label="財布"
+                                />
+                            </FormGroup>
+                            <FormGroup>
+                                <FormControlLabel
+                                    control={<Checkbox />}
+                                    label="あ"
+                                />
+                                <FormControlLabel
+                                    control={<Checkbox />}
+                                    label="あ"
+                                />
+                                <FormControlLabel
+                                    control={<Checkbox />}
+                                    label="あ"
+                                />
+                                <FormControlLabel
+                                    control={<Checkbox />}
+                                    label="あ"
+                                />
+                            </FormGroup>
+                        </div>
+                    ) : (
+                        <div></div>
+                    )}
+                    <div
+                        className="list-title"
+                        onClick={() => {
+                            ListSelect(1);
+                        }}
+                    >
+                        あると便利
                     </div>
-                ) : (
-                    <div></div>
-                )}
-                <div
-                    className="list-title"
-                    onClick={() => {
-                        ListSelect(2);
-                    }}
-                >
-                    自分だけの持ち物
-                </div>
-                {isListOpen[2] ? (
-                    <div className="my-list-pulldown">
-                        <ul>
-                            <li>
-                                <Checkbox />
-                                <input
-                                    type="text"
-                                    value={text}
-                                    onChange={handleChange}
+                    {isListOpen[1] ? (
+                        <div className="list-pulldown">
+                            <FormGroup>
+                                <FormControlLabel
+                                    control={<Checkbox />}
+                                    label="制服"
                                 />
-                                <button onClick={setClick}>保存する</button>
-                                <button onClick={getClick}>呼び出す</button>
-                                <button onClick={removeClick}>削除する</button>
-                            </li>
-                            <li>
-                                <Checkbox />
-                                <input
-                                    type="text"
-                                    value={text}
-                                    onChange={handleChange}
+                                <FormControlLabel
+                                    control={<Checkbox />}
+                                    label="財布"
                                 />
-                                <button onClick={setClick}>保存する</button>
-                                <button onClick={getClick}>呼び出す</button>
-                                <button onClick={removeClick}>削除する</button>
-                            </li>
-                            <li>
-                                <Checkbox />
-                                <input
-                                    type="text"
-                                    value={text}
-                                    onChange={handleChange}
+                            </FormGroup>
+                            <FormGroup>
+                                <FormControlLabel
+                                    control={<Checkbox />}
+                                    label="あ"
                                 />
-                                <button onClick={setClick}>保存する</button>
-                                <button onClick={getClick}>呼び出す</button>
-                                <button onClick={removeClick}>削除する</button>
-                            </li>
-                        </ul>
+                                <FormControlLabel
+                                    control={<Checkbox />}
+                                    label="あ"
+                                />
+                                <FormControlLabel
+                                    control={<Checkbox />}
+                                    label="あ"
+                                />
+                                <FormControlLabel
+                                    control={<Checkbox />}
+                                    label="あ"
+                                />
+                            </FormGroup>
+                        </div>
+                    ) : (
+                        <div></div>
+                    )}
+                    <div
+                        className="list-title"
+                        onClick={() => {
+                            ListSelect(2);
+                        }}
+                    >
+                        自分だけの持ち物
                     </div>
-                ) : (
-                    <div></div>
-                )}
-            </main>
-        </div>
+                    {isListOpen[2] ? (
+                        <div className="my-list-pulldown">
+                            <ul>
+                                <li>
+                                    <Checkbox />
+                                    <input
+                                        type="text"
+                                        value={text}
+                                        onChange={handleChange}
+                                    />
+                                    <button onClick={setClick}>保存する</button>
+                                    <button onClick={getClick}>呼び出す</button>
+                                    <button onClick={removeClick}>削除する</button>
+                                </li>
+                                <li>
+                                    <Checkbox />
+                                    <input
+                                        type="text"
+                                        value={text}
+                                        onChange={handleChange}
+                                    />
+                                    <button onClick={setClick}>保存する</button>
+                                    <button onClick={getClick}>呼び出す</button>
+                                    <button onClick={removeClick}>削除する</button>
+                                </li>
+                                <li>
+                                    <Checkbox />
+                                    <input
+                                        type="text"
+                                        value={text}
+                                        onChange={handleChange}
+                                    />
+                                    <button onClick={setClick}>保存する</button>
+                                    <button onClick={getClick}>呼び出す</button>
+                                    <button onClick={removeClick}>削除する</button>
+                                </li>
+                            </ul>
+                        </div>
+                    ) : (
+                        <div></div>
+                    )}
+                </main>
+            </div>
+        </body>
     );
 }
 export default Check;
