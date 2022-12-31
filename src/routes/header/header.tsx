@@ -143,7 +143,7 @@ function Header() {
 
     return (
         <div>
-            <div>
+            <div className="header-background">
                 {(["left"] as const).map((anchor) => (
                     <React.Fragment key={anchor}>
                         <Button onClick={toggleDrawer(anchor, true)}>
