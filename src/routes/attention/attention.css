@@ -29,6 +29,49 @@
 }
 
 .tyuuititle {
-    text-decoration: underline solid 3px orange;
     margin-left: -15px;
+    font-size: 20px;
+    color: white;
+    display: flex
+}
+
+
+.explanation-container {
+    display: flex;
+    align-items: center;
+}
+
+
+.explanation-container div {
+    color: white;
+    font-size: 15px
+}
+
+.explanation-container img {
+
+    height: 150px;
+    width: auto;
+}
+
+@media only screen and (max-width: 750px) {
+    .explanation-container {
+        display: relative;
+        align-items: center;
+    }
+
+    .explanation-container img {
+
+        position: absolute;
+        right: 0px;
+        padding: 10px;
+        height: 100px;
+        width: auto;
+    }
+}
+.attentionbody{
+    background-color: #767c77;
+}
+
+.arrow-character {
+    color: #e5b3a0;
 }
