@@ -68,13 +68,10 @@
         width: auto;
     }
 }
-.attentionbody{
-    margin-top: 0%;
-    background-color: #767C77   ;
-    height: 100vh;
-    height: 100dvh;
-    margin: 0;
-    height: 100%;
+body{
+    background-color: #767C77;
+    height: 100%; 
+
   
     
 }

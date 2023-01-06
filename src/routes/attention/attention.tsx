@@ -25,7 +25,7 @@ function Attention() {
                         <div className="arrow-character">
                             v
                         </div>    
-                        &emsp;ころなについて
+                        &emsp;title
                     </h2>
                     {isListOpen[0] ?
                         <div className="pulldown explanation-container">
@@ -46,7 +46,7 @@ function Attention() {
                         <div className="arrow-character">
                             v
                         </div>   
-                        &emsp;ドコモ光ご利用時
+                        &emsp;タイトル
                     </h2>
                     {isListOpen[1] ?
                         <div className="pulldown explanation-container">
@@ -67,7 +67,7 @@ function Attention() {
                     <div className="arrow-character">
                             v
                         </div>   
-                        &emsp;aaaa
+                        &emsp;たいとる
                     </h2>
                     {isListOpen[2] ?
                         <div className="pulldown explanation-container">
@@ -88,7 +88,7 @@ function Attention() {
                         <div className="arrow-character">
                             v
                         </div>   
-                        &emsp;bbb
+                        &emsp;鯛取る
                     </h2>
                     {isListOpen[3] ?
                         <div className="pulldown explanation-container">
@@ -108,7 +108,7 @@ function Attention() {
                     <div className="arrow-character">
                             v
                         </div>   
-                        &emsp;bsdd
+                        &emsp;対トルコ
                     </h2>
                     {isListOpen[4] ?
                         <div className="pulldown explanation-container">
@@ -128,7 +128,7 @@ function Attention() {
                     <div className="arrow-character">
                             v
                         </div>   
-                        &emsp;tiele
+                        &emsp;台撮る
                     </h2>
                     {isListOpen[5] ?
                         <div className="pulldown explanation-container">
@@ -148,7 +148,7 @@ function Attention() {
                     <div className="arrow-character">
                             v
                         </div>   
-                        &emsp;bbsfghj
+                        &emsp;taitoru
                         </h2>
                     {isListOpen[6] ?
                         <div className="pulldown explanation-container">
