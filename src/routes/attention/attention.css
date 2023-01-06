@@ -69,7 +69,14 @@
     }
 }
 .attentionbody{
-    background-color: #767c77;
+    margin-top: 0%;
+    background-color: #767C77   ;
+    height: 100vh;
+    height: 100dvh;
+    margin: 0;
+    height: 100%;
+  
+    
 }
 
 .arrow-character {

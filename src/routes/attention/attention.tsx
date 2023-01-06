@@ -18,9 +18,7 @@ function Attention() {
 
     return (
         <body className="attentionbody">
-            <div>
-                <p>注意事項pic</p>
-            </div>
+           {/*ってかpulldownいる？僕が見る人だったら注意事項ごときのためにアコーディオン開きたくない。めんどくさいもん*/}
             <div>
                 <ul className="tyui">
                     <h2 onClick={() => (ListSelect(0))} className="tyuuititle">
@@ -44,7 +42,12 @@ function Attention() {
                 </ul>
 
                 <ul className="tyui">
-                    <h2 onClick={() => (ListSelect(1))} className="tyuuititle">ドコモ光ご利用時</h2>
+                    <h2 onClick={() => (ListSelect(1))} className="tyuuititle">
+                        <div className="arrow-character">
+                            v
+                        </div>   
+                        &emsp;ドコモ光ご利用時
+                    </h2>
                     {isListOpen[1] ?
                         <div className="pulldown explanation-container">
                             <div>
@@ -60,7 +63,12 @@ function Attention() {
                       
                 </ul>
                 <ul className="tyui">
-                    <h2 onClick={() => (ListSelect(2))} className="tyuuititle">服装について</h2>
+                    <h2 onClick={() => (ListSelect(2))} className="tyuuititle">
+                    <div className="arrow-character">
+                            v
+                        </div>   
+                        &emsp;aaaa
+                    </h2>
                     {isListOpen[2] ?
                         <div className="pulldown explanation-container">
                             <div>
@@ -76,7 +84,12 @@ function Attention() {
                 </ul>
 
                 <ul className="tyui">
-                    <h2 onClick={() => (ListSelect(3))} className="tyuuititle">ヒョウドウについて</h2>
+                    <h2 onClick={() => (ListSelect(3))} className="tyuuititle">
+                        <div className="arrow-character">
+                            v
+                        </div>   
+                        &emsp;bbb
+                    </h2>
                     {isListOpen[3] ?
                         <div className="pulldown explanation-container">
                             <div>
@@ -91,7 +104,12 @@ function Attention() {
                         </div> : <></>}
                 </ul>
                 <ul className="tyui">
-                    <h2 onClick={() => (ListSelect(4))} className="tyuuititle">ゆうまについて</h2>
+                    <h2 onClick={() => (ListSelect(4))} className="tyuuititle">
+                    <div className="arrow-character">
+                            v
+                        </div>   
+                        &emsp;bsdd
+                    </h2>
                     {isListOpen[4] ?
                         <div className="pulldown explanation-container">
                             <div>
@@ -106,7 +124,12 @@ function Attention() {
                         </div> : <></>}
                 </ul>
                 <ul className="tyui">
-                    <h2 onClick={() => (ListSelect(5))} className="tyuuititle">ながのについて</h2>
+                    <h2 onClick={() => (ListSelect(5))} className="tyuuititle">
+                    <div className="arrow-character">
+                            v
+                        </div>   
+                        &emsp;tiele
+                    </h2>
                     {isListOpen[5] ?
                         <div className="pulldown explanation-container">
                             <div>
@@ -121,7 +144,12 @@ function Attention() {
                         </div> : <></>}
                 </ul>
                 <ul className="tyui">
-                    <h2 onClick={() => (ListSelect(6))} className="tyuuititle">しばたについて</h2>
+                    <h2 onClick={() => (ListSelect(6))} className="tyuuititle">
+                    <div className="arrow-character">
+                            v
+                        </div>   
+                        &emsp;bbsfghj
+                        </h2>
                     {isListOpen[6] ?
                         <div className="pulldown explanation-container">
                             <div>
