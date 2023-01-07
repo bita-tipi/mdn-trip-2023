@@ -1,6 +1,6 @@
 .yellow {
     text-decoration: none;
-    background-image: url("/public/assets/img/flame_list.svg");
+    background-image: var(--img-flame-list-svg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -14,7 +14,7 @@
     color: #999;
     padding-top: 5%;
     text-decoration: none;
-    background-image: url("/public/assets/img/flame_list.svg");
+    background-image: var(--img-flame-list-svg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;

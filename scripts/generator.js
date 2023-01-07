@@ -33,7 +33,7 @@ filesPath.forEach((filePath) => {
     filesInAssets.push(fileName);
 
     defScriptTypeList.push(`\t| "${fileName}"`);
-    defStyleTypeList.push(`\t--${styleKey}: "${styleVal}";`);
+    defStyleTypeList.push(`\t--${styleKey}: url("${styleVal}");`);
 
     console.log(`\x1b[2m[･] ${fileName}\x1b[0m`);
 });

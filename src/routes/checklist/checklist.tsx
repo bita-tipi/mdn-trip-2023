@@ -10,7 +10,7 @@ import "./checklist.css";
 import Checkbox from "@mui/material/Checkbox";
 import { FormControlLabel, FormGroup } from "@mui/material";
 import _ from "lodash";
-import { getImg } from "../../model/assets";
+import { getImg } from "model/assets";
 
 const imgChecklist = getImg("checklist-logo.png");
 

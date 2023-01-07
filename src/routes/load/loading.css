@@ -17,7 +17,7 @@
 .animation-box1 {
     animation-name: animation-logo;
     animation-duration: 3s;
-    background-image: url("/public/assets/img/main_logo.svg");
+    background-image: var(--img-main-logo-svg);
     animation-iteration-count: 1;
     position: absolute;
     animation-fill-mode: forwards;
@@ -29,7 +29,7 @@
 .animation-box2 {
     animation-name: animation-logo;
     animation-duration: 4s;
-    background-image: url("/public/assets/img/load2.png");
+    background-image: var(--img-load2-png);
     animation-iteration-count: 1;
     position: absolute;
     animation-fill-mode: forwards;
@@ -53,7 +53,7 @@
     animation-name: flame;
     animation-duration: 3s;
     background-color: #fff;
-    background-image: url("/public/assets/img/flame.png");
+    background-image: var(--img-flame-png);
     animation-iteration-count: 1;
     position: absolute;
     animation-fill-mode: forwards;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./map.css";
-import { getImg } from "../../model/assets";
+import { getImg } from "model/assets";
 
 const imgMapAichi = getImg("地図あいち.svg");
 const imgYoshi = getImg("yoshi.png");

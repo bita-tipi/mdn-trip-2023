@@ -11,7 +11,7 @@ import _ from "lodash";
 import "./header.css";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { getImg } from "../../model/assets";
+import { getImg } from "model/assets";
 
 const imgHamburgerButton = getImg("humberger_button.png");
 

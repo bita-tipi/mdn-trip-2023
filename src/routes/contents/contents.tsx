@@ -4,7 +4,7 @@ import { useRecoilState, useSetRecoilState } from "recoil";
 import { CLASS, PassClass, PassSuccess } from "../../assets/atom";
 import "./contents.css";
 import _ from "lodash";
-import { getImg } from "../../model/assets";
+import { getImg } from "model/assets";
 
 const imgListBox = getImg("list-box.svg");
 const imgListBoxClass = getImg("list-box-class.svg");

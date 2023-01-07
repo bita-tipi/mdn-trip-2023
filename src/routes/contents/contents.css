@@ -90,5 +90,5 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-width: 1px;
-    background-image: url("/public/assets/img/check-box.svg");
+    background-image: var(--img-check-box-svg);
 }

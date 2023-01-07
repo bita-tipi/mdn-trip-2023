@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import Loading from "../load/loading";
-import { getImg } from "../../model/assets";
+import { getImg } from "model/assets";
 
 const imgScheduleLogo = getImg("schedule-logo.svg");
 const imgRoomLogo = getImg("room-logo.svg");
