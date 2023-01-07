@@ -1,8 +1,5 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./top.css";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
 import Loading from "../load/loading";
 import { getImg } from "model/assets";
 

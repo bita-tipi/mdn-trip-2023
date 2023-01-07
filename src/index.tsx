@@ -1,16 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
 import "./index.css";
 import "assets-def.css";
 import Top from "./routes/top/top";
-import Loading from "./routes/load/loading";
 import Contents from "./routes/contents/contents";
 import ClassRoom from "./routes/room/room";
 import Attention from "./routes/attention/attention";
 import Checklist from "./routes/checklist/checklist";
 import Schedule from "./routes/schedule/schedule";
 import Map from "./routes/map/map";
-import reportWebVitals from "./reportWebVitals";
 import { Routes } from "react-router-dom";
 import { createRoot } from "react-dom/client";
 import { Route, BrowserRouter } from "react-router-dom";
@@ -34,6 +31,6 @@ if (container) {
                     <Route path="/schedule" element={<Schedule />} />
                 </Routes>
             </BrowserRouter>
-        </RecoilRoot>
+        </RecoilRoot>,
     );
 }

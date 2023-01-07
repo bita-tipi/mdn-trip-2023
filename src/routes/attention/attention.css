@@ -1,7 +1,6 @@
 .tyui {
     font-size: 80%;
     padding: 0 10%;
-
 }
 
 .pulldown {
@@ -32,23 +31,20 @@
     margin-left: -15px;
     font-size: 20px;
     color: white;
-    display: flex
+    display: flex;
 }
-
 
 .explanation-container {
     display: flex;
     align-items: center;
 }
 
-
 .explanation-container div {
     color: white;
-    font-size: 15px
+    font-size: 15px;
 }
 
 .explanation-container img {
-
     height: 150px;
     width: auto;
 }
@@ -60,7 +56,6 @@
     }
 
     .explanation-container img {
-
         position: absolute;
         right: 0px;
         padding: 10px;
@@ -68,12 +63,9 @@
         width: auto;
     }
 }
-body{
-    background-color: #767C77;
-    height: 100%; 
-
-  
-    
+body {
+    background-color: #767c77;
+    height: 100%;
 }
 
 .arrow-character {

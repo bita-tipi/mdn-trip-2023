@@ -1,5 +1,5 @@
 import "./loading.css";
-import React, { useState } from "react";
+import React from "react";
 
 function Load3() {
     return (

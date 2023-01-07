@@ -3,8 +3,6 @@ import "./attention.css";
 import _ from "lodash";
 import { getImg } from "model/assets";
 
-const label = { inputProps: { "aria-label": "Checkbox demo" } };
-
 const imgGembakuDome = getImg("attention_genbakudorm.svg");
 const imgTemple = getImg("attention_temple.svg");
 

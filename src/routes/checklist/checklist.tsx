@@ -1,11 +1,5 @@
 import { useEffect, useState } from "react";
-import {
-    KEYS,
-    setItem,
-    getItem,
-    removeItem,
-} from "../../assets/data/localstorage";
-import { Link } from "react-router-dom";
+import { KEYS, setItem, getItem, removeItem } from "assets/data/localstorage";
 import "./checklist.css";
 import Checkbox from "@mui/material/Checkbox";
 import { FormControlLabel, FormGroup } from "@mui/material";

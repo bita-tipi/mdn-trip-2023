@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useRecoilState, useSetRecoilState } from "recoil";
-import { CLASS, PassClass, PassSuccess } from "../../assets/atom";
+import { useSetRecoilState } from "recoil";
+import { CLASS, PassClass, PassSuccess } from "assets/atom";
 import "./contents.css";
 import _ from "lodash";
 import { getImg } from "model/assets";
