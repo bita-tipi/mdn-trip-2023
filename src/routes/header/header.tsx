@@ -11,7 +11,9 @@ import _ from "lodash";
 import "./header.css";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import button from "../../assets/img/humberger_button.png";
+import { getImg } from "../../model/assets";
+
+const imgHamburgerButton = getImg("humberger_button.png");
 
 type Anchor = "top" | "left" | "bottom" | "right";
 
@@ -147,7 +149,10 @@ function Header() {
                 {(["left"] as const).map((anchor) => (
                     <React.Fragment key={anchor}>
                         <Button onClick={toggleDrawer(anchor, true)}>
-                            <img src={button} className="header-menu-button" />
+                            <img
+                                src={imgHamburgerButton}
+                                className="header-menu-button"
+                            />
                         </Button>
                         <Drawer
                             anchor={anchor}

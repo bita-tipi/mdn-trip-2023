@@ -1,20 +1,20 @@
 .yellow {
     text-decoration: none;
-    background-image: url(../../assets/img/flame_list.svg);
+    background-image: url("/public/assets/img/flame_list.svg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
     font-size: 100%;
     text-align: center;
     padding-top: 5%;
-    color: #612D30;
+    color: #612d30;
 }
 
 .red {
     color: #999;
     padding-top: 5%;
     text-decoration: none;
-    background-image: url(../../assets/img/flame_list.svg);
+    background-image: url("/public/assets/img/flame_list.svg");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -30,11 +30,11 @@
 
 .header_title_menu {
     text-align: center;
-    color: #612D30;
+    color: #612d30;
 }
 
 .padding-menu {
-    background-color: #FEFFF5;
+    background-color: #fefff5;
     height: 100vh;
     height: 100dvh;
     opacity: 1;
@@ -44,12 +44,11 @@
     opacity: 1;
 }
 
-.header-menu-button{
-    margin-left:-27%;
-    margin-top:-11%;
+.header-menu-button {
+    margin-left: -27%;
+    margin-top: -11%;
 }
 
-.header-background{
-    background-color: #767C77;
+.header-background {
+    background-color: #767c77;
 }
-

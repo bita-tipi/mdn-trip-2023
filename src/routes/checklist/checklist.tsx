@@ -10,7 +10,9 @@ import "./checklist.css";
 import Checkbox from "@mui/material/Checkbox";
 import { FormControlLabel, FormGroup } from "@mui/material";
 import _ from "lodash";
-import checklist from "../../assets/img/checklist-logo.png";
+import { getImg } from "../../model/assets";
+
+const imgChecklist = getImg("checklist-logo.png");
 
 function Check() {
     const [text, setText] = useState("");
@@ -58,8 +60,9 @@ function Check() {
         <body className="checklist-body">
             <div>
                 <h1 className="list-title">
-                    <img src={checklist} className="logo"/>
-                    持ち物リスト</h1>
+                    <img src={imgChecklist} className="logo" />
+                    持ち物リスト
+                </h1>
                 <main>
                     <div
                         className="list-title"
@@ -165,7 +168,9 @@ function Check() {
                                     />
                                     <button onClick={setClick}>保存する</button>
                                     <button onClick={getClick}>呼び出す</button>
-                                    <button onClick={removeClick}>削除する</button>
+                                    <button onClick={removeClick}>
+                                        削除する
+                                    </button>
                                 </li>
                                 <li>
                                     <Checkbox />
@@ -176,7 +181,9 @@ function Check() {
                                     />
                                     <button onClick={setClick}>保存する</button>
                                     <button onClick={getClick}>呼び出す</button>
-                                    <button onClick={removeClick}>削除する</button>
+                                    <button onClick={removeClick}>
+                                        削除する
+                                    </button>
                                 </li>
                                 <li>
                                     <Checkbox />
@@ -187,7 +194,9 @@ function Check() {
                                     />
                                     <button onClick={setClick}>保存する</button>
                                     <button onClick={getClick}>呼び出す</button>
-                                    <button onClick={removeClick}>削除する</button>
+                                    <button onClick={removeClick}>
+                                        削除する
+                                    </button>
                                 </li>
                             </ul>
                         </div>

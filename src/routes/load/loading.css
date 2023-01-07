@@ -17,7 +17,7 @@
 .animation-box1 {
     animation-name: animation-logo;
     animation-duration: 3s;
-    background-image: url("../../assets/img/main_logo.svg");
+    background-image: url("/public/assets/img/main_logo.svg");
     animation-iteration-count: 1;
     position: absolute;
     animation-fill-mode: forwards;
@@ -29,7 +29,7 @@
 .animation-box2 {
     animation-name: animation-logo;
     animation-duration: 4s;
-    background-image: url("../../assets/img/load2.png");
+    background-image: url("/public/assets/img/load2.png");
     animation-iteration-count: 1;
     position: absolute;
     animation-fill-mode: forwards;
@@ -38,7 +38,6 @@
     width: 100%;
 }
 
-
 .load_animation {
     animation-name: animation;
     animation-fill-mode: forwards;
@@ -46,17 +45,15 @@
     animation-duration: 2s;
 }
 
-
 .null {
     display: none;
 }
-
 
 .load_flame {
     animation-name: flame;
     animation-duration: 3s;
     background-color: #fff;
-    background-image: url("../../assets/img/flame.png");
+    background-image: url("/public/assets/img/flame.png");
     animation-iteration-count: 1;
     position: absolute;
     animation-fill-mode: forwards;
@@ -87,7 +84,6 @@
         transform: translateY(-100%);
         visibility: hidden;
     }
-
 }
 
 @keyframes animation-logo {
