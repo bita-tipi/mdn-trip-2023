@@ -2,6 +2,7 @@
   "name": "mdn-trip-2023",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
@@ -51,6 +52,7 @@
   },
   "devDependencies": {
     "@types/jquery": "^3.5.14",
-    "@types/react-burger-menu": "^2.8.3"
+    "@types/react-burger-menu": "^2.8.3",
+    "globby": "^13.1.3"
   }
 }

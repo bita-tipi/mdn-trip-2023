@@ -1,10 +1,12 @@
+import { ASSETS, IMG } from "./assets-def";
+
 export const assert = (val: boolean) => {
     if (!val) {
         throw new Error("Assertion Error!");
     }
 };
 
-export const getAssets = (path: string): string => {
+export const getAssets = (path: ASSETS): string => {
     const assetsUrl = process.env.REACT_APP_API_URL as string;
     const containerId = process.env.REACT_APP_CONTAINER_ID as string;
 
@@ -18,6 +20,6 @@ export const getAssets = (path: string): string => {
     }
 };
 
-export const getImg = (imgPath: string): string => {
+export const getImg = (imgPath: IMG): string => {
     return getAssets(`img/${imgPath}`);
 };
