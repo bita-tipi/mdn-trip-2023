@@ -1,5 +1,5 @@
 import React from "react";
-import { PassClass, PassSuccess } from "../../assets/atom";
+import { PassClass, PassSuccess } from "assets/atom";
 import { useRecoilValue } from "recoil";
 import RoomHTML from "./roomHTML";
 

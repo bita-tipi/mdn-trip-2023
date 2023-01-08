@@ -1,6 +1,5 @@
 import "./loading.css";
-import React, { useState } from "react";
-import yoshii from "../../assets/img/yoshi.png";
+import React from "react";
 
 function Load3() {
     return (

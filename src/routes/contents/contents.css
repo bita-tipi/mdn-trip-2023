@@ -1,5 +1,5 @@
 .contents-background {
-    background-color: #767C77;
+    background-color: #767c77;
     height: 90vh;
     padding-top: 25%;
     margin-top: -20%;
@@ -8,7 +8,7 @@
 .contents-text-box {
     border-radius: 9px;
     border-color: white;
-    background-color: #767C77;
+    background-color: #767c77;
     border-width: 1px;
     width: 50%;
     padding: 1%;
@@ -16,7 +16,6 @@
     margin-right: 5%;
     border-style: solid;
     color: #eee;
-
 }
 
 .contents-button-box {
@@ -43,7 +42,7 @@
     padding-right: 6%;
     padding-top: 1.5%;
     padding-bottom: 1.5%;
-    background-color: #767C77;
+    background-color: #767c77;
     color: #ddd;
     border-width: 1px;
     font-family: klee-one, sans-serif;
@@ -87,9 +86,9 @@
     padding-right: 6%;
     padding-top: 1.7%;
     padding-bottom: 1.7%;
-    color: #767C77;
+    color: #767c77;
     background-repeat: no-repeat;
     background-size: cover;
     border-width: 1px;
-    background-image: url(../../assets/img/check-box.svg);
+    background-image: var(--img-check-box-svg);
 }

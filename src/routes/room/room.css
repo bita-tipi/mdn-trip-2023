@@ -1,27 +1,27 @@
 .room_pulldown {
-  animation-name: pulldown;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  margin-bottom: -10%;
+    animation-name: pulldown;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    margin-bottom: -10%;
 }
 
 @keyframes pulldown {
-  0% {
-    opacity: 0;
-    margin-bottom: -10%;
-  }
+    0% {
+        opacity: 0;
+        margin-bottom: -10%;
+    }
 
-  50% {
-    opacity: 1;
-    margin-bottom: 0%;
-  }
+    50% {
+        opacity: 1;
+        margin-bottom: 0%;
+    }
 
-  100% {
-    opacity: 1;
-    margin-bottom: 0%;
-  }
+    100% {
+        opacity: 1;
+        margin-bottom: 0%;
+    }
 }
 
 .heya-itibanue {
-  display: flex;
+    display: flex;
 }

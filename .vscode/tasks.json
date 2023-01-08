@@ -1,0 +1,13 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Generate Assets Definition",
+            "type": "npm",
+            "script": "generate:assets-def",
+            "group": "build",
+            "detail": "Generate TypeScript union Type and CSS global Valiables base on assets.",
+            "problemMatcher": []
+        }
+    ]
+}

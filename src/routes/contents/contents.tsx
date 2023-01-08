@@ -1,12 +1,13 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useRecoilState, useSetRecoilState } from "recoil";
-import { CLASS, PassClass, PassSuccess } from "../../assets/atom";
+import { useSetRecoilState } from "recoil";
+import { CLASS, PassClass, PassSuccess } from "assets/atom";
 import "./contents.css";
-import classBox from "../../assets/img/list-box.svg";
-import classListBox from "../../assets/img/list-box-class.svg";
-import checkbox from "../../assets/img/check-box.png";
 import _ from "lodash";
+import { getImg } from "model/assets";
+
+const imgListBox = getImg("list-box.svg");
+const imgListBoxClass = getImg("list-box-class.svg");
 
 function Contents() {
     const updatePassClassData = useSetRecoilState(PassClass);
@@ -73,7 +74,7 @@ function Contents() {
     return (
         <div className="contents-background">
             <img
-                src={classBox}
+                src={imgListBox}
                 onClick={() => setIsListOpen(!isListOpen)}
                 className="contents-pull-box"
             />
@@ -131,7 +132,7 @@ function Contents() {
             )}
             <div>
                 <img
-                    src={classListBox}
+                    src={imgListBoxClass}
                     onClick={() => setIsListOpen2(!isListOpen2)}
                     className="contents-pull-box"
                 />

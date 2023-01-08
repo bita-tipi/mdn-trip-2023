@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Load1 from "./load1";
 import Load2 from "./load2";
 import Load3 from "./load3";
 import "./loading.css";
-
-let index = 0;
 
 function Loading() {
     let LoadingIndex = 0;
