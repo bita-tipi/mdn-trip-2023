@@ -27,7 +27,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run prepare & react-scripts start",
     "prepare": "npm run generate:assets-def",
     "build": "npm run generate:assets-def & react-scripts build",
     "test": "react-scripts test",
