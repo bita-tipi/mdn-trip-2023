@@ -1,8 +1,3 @@
-.tyui {
-    font-size: 80%;
-    padding: 0 10%;
-}
-
 .pulldown {
     animation-name: pulldown;
     animation-duration: 0.5s;
@@ -28,7 +23,6 @@
 }
 
 .tyuuititle {
-    margin-left: -15px;
     font-size: 20px;
     color: white;
     display: flex;
@@ -63,11 +57,23 @@
         width: auto;
     }
 }
-body {
+
+.attentionBody {
     background-color: #767c77;
     height: 100%;
+    display: flex;
+    padding-bottom: 32%;
 }
 
 .arrow-character {
     color: #e5b3a0;
+}
+
+.attentionLine {
+    height: 80vh;
+    width: 5px;
+    background-color: #9BABA3;
+    margin-top: 7%;
+    margin-left: 8%;
+    margin-right: -3%;
 }

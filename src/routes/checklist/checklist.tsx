@@ -7,13 +7,14 @@ import _ from "lodash";
 import { getImg } from "model/assets";
 
 const imgChecklist = getImg("checklist-logo.png");
+const v = getImg("v.svg");
 
 function Check() {
     const [text, setText] = useState("");
     const [label, setLabel] = useState("");
 
     useEffect(() => {
-        updateLabel();
+        getClick();
     }, []);
 
     const updateLabel = () => {
@@ -57,49 +58,58 @@ function Check() {
                     <img src={imgChecklist} className="logo" />
                     持ち物リスト
                 </h1>
-                <main>
-                    <div
-                        className="list-title"
-                        onClick={() => {
-                            ListSelect(0);
-                        }}
-                    >
-                        必要なもの
-                    </div>
-                    {isListOpen[0] ? (
-                        <div className="list-pulldown">
-                            <FormGroup>
-                                <FormControlLabel
-                                    control={<Checkbox />}
-                                    label="制服"
-                                />
-                                <FormControlLabel
-                                    control={<Checkbox />}
-                                    label="財布"
-                                />
-                            </FormGroup>
-                            <FormGroup>
-                                <FormControlLabel
-                                    control={<Checkbox />}
-                                    label="あ"
-                                />
-                                <FormControlLabel
-                                    control={<Checkbox />}
-                                    label="あ"
-                                />
-                                <FormControlLabel
-                                    control={<Checkbox />}
-                                    label="あ"
-                                />
-                                <FormControlLabel
-                                    control={<Checkbox />}
-                                    label="あ"
-                                />
-                            </FormGroup>
+                <main className="checklist-main">
+                    <div className="checklist-subTitle">
+                        {isListOpen[0] ? (
+                            <img src={v} className="checkList-V" />
+                        ) : (
+                            <img src={v} className="checkList-VR" />
+                        )}
+                        <div>
+                            <div
+                                className="list-title"
+                                onClick={() => {
+                                    ListSelect(0);
+                                }}
+                            >
+                                必要なもの
+                            </div>
+                            {isListOpen[0] ? (
+                                <div className="list-pulldown">
+                                    <FormGroup>
+                                        <FormControlLabel
+                                            control={<Checkbox />}
+                                            label="制服"
+                                        />
+                                        <FormControlLabel
+                                            control={<Checkbox />}
+                                            label="財布"
+                                        />
+                                    </FormGroup>
+                                    <FormGroup>
+                                        <FormControlLabel
+                                            control={<Checkbox />}
+                                            label="あ"
+                                        />
+                                        <FormControlLabel
+                                            control={<Checkbox />}
+                                            label="あ"
+                                        />
+                                        <FormControlLabel
+                                            control={<Checkbox />}
+                                            label="あ"
+                                        />
+                                        <FormControlLabel
+                                            control={<Checkbox />}
+                                            label="あ"
+                                        />
+                                    </FormGroup>
+                                </div>
+                            ) : (
+                                <div></div>
+                            )}
                         </div>
-                    ) : (
-                        <div></div>
-                    )}
+                    </div>
                     <div
                         className="list-title"
                         onClick={() => {

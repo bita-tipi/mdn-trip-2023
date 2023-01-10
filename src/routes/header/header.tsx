@@ -75,7 +75,7 @@ function Header() {
                             </li>
 
                             <li>
-                                <Link to="/contents" className="header_link">
+                                <Link to="/room" className="header_link">
                                     <p
                                         onClick={() => ListSelect(1)}
                                         className={onPage[1] ? "yellow" : "red"}
@@ -144,10 +144,11 @@ function Header() {
                 {(["left"] as const).map((anchor) => (
                     <React.Fragment key={anchor}>
                         <Button onClick={toggleDrawer(anchor, true)}>
-                            <img
-                                src={imgHamburgerButton}
-                                className="header-menu-button"
-                            />
+                            <div className="header-back">
+                                <div className="header-bar"></div>
+                                <div className="header-bar"></div>
+                                <div className="header-bar"></div>
+                            </div>
                         </Button>
                         <Drawer
                             anchor={anchor}

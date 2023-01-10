@@ -3,7 +3,7 @@
 }
 
 .checklist-body {
-    background-color: #617f7d;
+    background-color: #767c77;
     padding-top: 15%;
     margin-top: -20%;
     padding-bottom: 30%;
@@ -63,4 +63,23 @@
         opacity: 1;
         margin-bottom: 0%;
     }
+}
+
+.checklist-subTitle {
+    display: flex;
+    text-align: center;
+    margin-left: 33%;
+}
+
+.checkList-V {
+    margin-top: 10%;
+    height: 8%;
+    width: 8%;
+    transform: rotate(180deg);
+}
+
+.checkList-VR {
+    margin-top: 10%;
+    height: 8%;
+    width: 8%;
 }

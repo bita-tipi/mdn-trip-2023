@@ -11,6 +11,7 @@ function Schedule() {
     ]);
     const dayList = [Day1(), Day2(), Day3(), Day4()];
     const [clickedDay, updateClickedDay] = useState(0);
+    const pickList = [];
 
     function Clicked(index: number) {
         updateClickedDay(index);
@@ -25,6 +26,23 @@ function Schedule() {
     function Day1() {
         return (
             <div>
+                <div className="schedule_hiduke">
+                    <h2
+                        className="schedule_hinichi-pick"
+                        onClick={() => Clicked(0)}
+                    >
+                        1日目
+                    </h2>
+                    <h2 className="schedule_hinichi" onClick={() => Clicked(1)}>
+                        2日目
+                    </h2>
+                    <h2 className="schedule_hinichi" onClick={() => Clicked(2)}>
+                        3日目
+                    </h2>
+                    <h2 className="schedule_hinichi" onClick={() => Clicked(3)}>
+                        4日目
+                    </h2>
+                </div>
                 <main>
                     <section className="schedule_place">
                         <p id="schedule-text" className="schedule-time">
@@ -105,7 +123,23 @@ function Schedule() {
     function Day2() {
         return (
             <div>
-                <p>2日目</p>
+                <div className="schedule_hiduke">
+                    <h2 className="schedule_hinichi" onClick={() => Clicked(0)}>
+                        1日目
+                    </h2>
+                    <h2
+                        className="schedule_hinichi-pick"
+                        onClick={() => Clicked(1)}
+                    >
+                        2日目
+                    </h2>
+                    <h2 className="schedule_hinichi" onClick={() => Clicked(2)}>
+                        3日目
+                    </h2>
+                    <h2 className="schedule_hinichi" onClick={() => Clicked(3)}>
+                        4日目
+                    </h2>
+                </div>
             </div>
         );
     }
@@ -113,7 +147,23 @@ function Schedule() {
     function Day3() {
         return (
             <div>
-                <p>3日目</p>
+                <div className="schedule_hiduke">
+                    <h2 className="schedule_hinichi" onClick={() => Clicked(0)}>
+                        1日目
+                    </h2>
+                    <h2 className="schedule_hinichi" onClick={() => Clicked(1)}>
+                        2日目
+                    </h2>
+                    <h2
+                        className="schedule_hinichi-pick"
+                        onClick={() => Clicked(2)}
+                    >
+                        3日目
+                    </h2>
+                    <h2 className="schedule_hinichi" onClick={() => Clicked(3)}>
+                        4日目
+                    </h2>
+                </div>
             </div>
         );
     }
@@ -121,30 +171,28 @@ function Schedule() {
     function Day4() {
         return (
             <div>
-                <p>4日目</p>
+                <div className="schedule_hiduke">
+                    <h2 className="schedule_hinichi" onClick={() => Clicked(0)}>
+                        1日目
+                    </h2>
+                    <h2 className="schedule_hinichi" onClick={() => Clicked(1)}>
+                        2日目
+                    </h2>
+                    <h2 className="schedule_hinichi" onClick={() => Clicked(2)}>
+                        3日目
+                    </h2>
+                    <h2
+                        className="schedule_hinichi-pick"
+                        onClick={() => Clicked(3)}
+                    >
+                        4日目
+                    </h2>
+                </div>
             </div>
         );
     }
 
-    return (
-        <body className="schedule-body">
-            <div className="schedule_hiduke">
-                <h2 className="schedule_hinichi" onClick={() => Clicked(0)}>
-                    1日目
-                </h2>
-                <h2 className="schedule_hinichi" onClick={() => Clicked(1)}>
-                    2日目
-                </h2>
-                <h2 className="schedule_hinichi" onClick={() => Clicked(2)}>
-                    3日目
-                </h2>
-                <h2 className="schedule_hinichi" onClick={() => Clicked(3)}>
-                    4日目
-                </h2>
-            </div>
-            {dayList[clickedDay]}
-        </body>
-    );
+    return <body className="schedule-body">{dayList[clickedDay]}</body>;
 }
 
 export default Schedule;
