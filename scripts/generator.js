@@ -12,7 +12,14 @@ const assetsPath = `${root}/public/assets`;
 const outputScriptPath = `${root}/src/model/assets-def.ts`;
 const outputStylePath = `${root}/src/assets-def.css`;
 
-const filesPath = await globby(`${assetsPath}/**/*`);
+const isWindows = process.platform === "win32";
+
+const makePathForPlatform = (path) => {
+    return isWindows ? path.replace(/\\/g, "/") : path;
+};
+
+const filesPath = await globby(`${makePathForPlatform(assetsPath)}`);
+
 const assetKinds = await fs.readdir(assetsPath);
 const aa = _.sample(AA);
 
