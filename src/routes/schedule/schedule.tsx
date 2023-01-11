@@ -1,3 +1,4 @@
+import { getImg } from "model/assets";
 import React, { useState } from "react";
 import "./schedule.css";
 import _ from "lodash";

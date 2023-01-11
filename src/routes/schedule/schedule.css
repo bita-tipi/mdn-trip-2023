@@ -1,103 +1,88 @@
 .schedule-body {
-    background-color: #414c3f;
-    margin-top:-17%;
-    padding-top: 10%;
-    padding-bottom: 100%;
+    background-color: #414C3F;
+    padding-top:15%;
+    margin-top:-20%;
+    padding-bottom:20%;
 }
 
 .schedule_hiduke {
     display: flex;
     text-align: center;
     width: 100%;
+
 }
+
 
 .schedule_hinichi {
     color: aliceblue;
     width: 100%;
     height: 200%;
-    font-weight: 600;
-    background-color: #443d42;
+    font-weight: 900;
+    background-color: #443D42;
     padding: 15px;
-    white-space: nowrap;
 }
-
-.schedule_hinichi-pick {
-    color: aliceblue;
-    width: 100%;
-    height: 200%;
-    font-weight: 600;
-    background-color: #B1CA6A;
-    padding: 15px;
-    white-space: nowrap;
-}
-
 /*一段目*/
-.schedule_place {
-    display: flex;
+.schedule_place{
+    display:flex;
     height: 120px;
-    background-color: #767c77;
+    background-color:#767C77;
     border-radius: 10px;
 }
 
-#schedule-text {
-    color: white;
+#schedule-text{
+    color:white;
 }
 
-.schedule-time {
+.schedule-time{
     margin-top: 40px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left:10%;
+    margin-right:10%;
     font-size: 30px;
     font-weight: 200;
 }
 
-.schedule-area {
+.schedule-area{
     background-color: rgb(5, 72, 72);
-    padding-right: 45%;
-    padding-bottom: 10%;
+    padding-right:45%;
+    padding-bottom:10%
 }
-
-.schedule-area-do {
+.schedule-area-do{
     white-space: nowrap;
     font-size: 15px;
-    background-color: black;
+    background-color:black;
     background: rgba(0, 0, 0, 0.4);
     padding-left: 10%;
     padding-right: 10%;
     border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-right-radius:10px;
+    
 }
-
-.schedule-area-text {
+.schedule-area-text{
     padding-left: 10%;
-    padding-right: 15%;
-    margin-right: -100%;
+    padding-right:15%;
+    margin-right:-100%;
     font-size: 25px;
-    margin-top: -12%;
-    background-color: black;
+    margin-top:-12%;
+    background-color:black;
     background: rgba(0, 0, 0, 0.4);
     border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+    border-bottom-right-radius:30px;
 }
-
 /* 二段目*/
-.schedule_place2 {
+.schedule_place2{
     display: flex;
 }
-
-.schedule-time2 {
+.schedule-time2{
     padding-left: 90px;
     padding-top: 20px;
     font-weight: 200;
 }
-
-.schedule-norimono {
+.schedule-norimono{
     padding-top: 15px;
     padding-left: 30px;
     text-decoration: underline solid 3px #8e627c;
 }
-
-.schedule-tatesen {
+.schedule-tatesen{
     width: 4px;
     height: 30px;
     margin-left: 30px;
@@ -106,32 +91,28 @@
     border-radius: 2px;
 }
 
-.schedule-nagoya1 {
+.schedule-nagoya1{
     white-space: nowrap;
     padding-left: 5px;
     margin-top: -18px;
     font-size: 20px;
 }
-
-.schedule-nagoyasyou1 {
+.schedule-nagoyasyou1{
     margin-left: -58px;
     margin-top: 6px;
     font-size: 10px;
 }
-
-.schedule-place3 {
+.schedule-place3{
     display: flex;
 }
-
-.schedule-sannkaku1 {
+.schedule-sannkaku1{
     border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
+    border-bottom:10px solid transparent;
     border-left: 14px solid #6dc9e2;
-    margin-left: 105px;
+    margin-left:105px;
     margin-top: -40px;
 }
-
-.schedule-tatesen2 {
+.schedule-tatesen2{
     width: 4px;
     height: 30px;
     margin-left: 125px;
@@ -139,26 +120,16 @@
     background-color: #d7d8cc;
     border-radius: 2px;
 }
-
-.schedule-hirosima1 {
+.schedule-hirosima1{
     padding-left: 135px;
     margin-top: -50px;
-    font-size: 20px;
+    font-size: 20px; 
 }
-
-.schedule-hirosimasyou1 {
+.schedule-hirosimasyou1{
     padding-left: 135px;
     margin-top: -25px;
     font-size: 10px;
 }
-
-span {
-    display: block;
-}
-
-.schedule-title{
-    text-align: center;
-    margin-top:-6% ;
-    margin-bottom:-7%;
-    color: #d7d8cc;
+span{
+    display:block;
 }
