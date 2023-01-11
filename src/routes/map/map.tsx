@@ -87,7 +87,7 @@ function Map() {
                 <p className="map-text-color">TOPICS詳細　歴史</p>
                 <div className="map-topic-area">
                     <div className="map-topic-in">
-                        <img src={imgHistory} className="" />
+                        <img src={imgHistory} className="map-history-icon" />
                         <p className="map-topic-text">歴史</p>
                     </div>
                     <button onClick={() => upDateTopicNumber(1)}>倉敷</button>

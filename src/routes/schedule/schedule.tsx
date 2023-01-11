@@ -26,6 +26,7 @@ function Schedule() {
     function Day1() {
         return (
             <div>
+                <h1 className="schedule-title"> スケジュール</h1>
                 <div className="schedule_hiduke">
                     <h2
                         className="schedule_hinichi-pick"
