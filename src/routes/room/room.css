@@ -1,27 +1,44 @@
 .room_pulldown {
-    animation-name: pulldown;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    margin-bottom: -10%;
+  animation-name: pulldown;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  margin-bottom: -10%;
 }
 
 @keyframes pulldown {
-    0% {
-        opacity: 0;
-        margin-bottom: -10%;
-    }
+  0% {
+    opacity: 0;
+    margin-bottom: -10%;
+  }
 
-    50% {
-        opacity: 1;
-        margin-bottom: 0%;
-    }
+  50% {
+    opacity: 1;
+    margin-bottom: 0%;
+  }
 
-    100% {
-        opacity: 1;
-        margin-bottom: 0%;
-    }
+  100% {
+    opacity: 1;
+    margin-bottom: 0%;
+  }
 }
-
-.heya-itibanue {
-    display: flex;
+.hizuke {
+  display: flex;
+  justify-content: space-evenly;
+}
+.hoterunonamae {
+  border: 1px solid #9aa9a1;
+  padding: 10px;
+  background-color: #9aa9a1;
+  border-radius: 10px;
+  display: inline-block;
+}
+.heyabanngou {
+  display: flex;
+}
+.mennba-nowaku {
+  border: 1px solid #9aa9a1;
+  padding: 25px;
+  background-color: #757b77;
+  border-radius: 10px;
+  display: inline-block;
 }
