@@ -80,7 +80,7 @@
 
 .map-text {
     color: white;
-    font-size: 7vw;
+    font-size: 25px;
     margin-top: -2%;
     font-family: klee-one, sans-serif;
     font-weight: 600;
@@ -151,7 +151,7 @@
 
 .map-topic-text {
     color: white;
-    font-size: 7vw;
+    font-size: 25px;
     margin-left: 5%;
     font-family: klee-one, sans-serif;
     font-weight: 600;
@@ -240,7 +240,7 @@
     width: 80%;
 }
 
-.map-history-icon{
-    width:100px;
-    height:100px;
+.map-topic-icon {
+    width: 90px;
+    height: 90px;
 }

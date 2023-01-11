@@ -35,7 +35,7 @@ function Map() {
                 <p className="map-text-color">TOPICS詳細　場所</p>
                 <div className="map-topic-area">
                     <div className="map-topic-in">
-                        <img src={imgPlace} className="" />
+                        <img src={imgPlace} className="map-topic-icon" />
                         <p className="map-topic-text">場所</p>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ function Map() {
                 <p className="map-text-color">TOPICS詳細　食べ物</p>
                 <div className="map-topic-area">
                     <div className="map-topic-in">
-                        <img src={imgFoods} className="" />
+                        <img src={imgFoods} className="map-topic-icon" />
                         <p className="map-topic-text">食べ物</p>
                     </div>
                 </div>
@@ -61,7 +61,7 @@ function Map() {
                 <p className="map-text-color">TOPICS詳細　お土産</p>
                 <div className="map-topic-area">
                     <div className="map-topic-in">
-                        <img src={imgGift} className="" />
+                        <img src={imgGift} className="map-topic-icon" />
                         <p className="map-topic-text">お土産</p>
                     </div>
                 </div>
@@ -74,7 +74,7 @@ function Map() {
                 <p className="map-text-color">TOPICS詳細　方言</p>
                 <div className="map-topic-area">
                     <div className="map-topic-in">
-                        <img src={imgHogen} className="" />
+                        <img src={imgHogen} className="map-topic-icon" />
                         <p className="map-topic-text">方言</p>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ function Map() {
                 <p className="map-text-color">TOPICS詳細　歴史</p>
                 <div className="map-topic-area">
                     <div className="map-topic-in">
-                        <img src={imgHistory} className="map-history-icon" />
+                        <img src={imgHistory} className="map-topic-icon" />
                         <p className="map-topic-text">歴史</p>
                     </div>
                     <button onClick={() => upDateTopicNumber(1)}>倉敷</button>
