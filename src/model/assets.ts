@@ -10,20 +10,15 @@ export const assert = (val: boolean, message?: string): void | never => {
 
 export const getAssets = (path: ASSETS): string => {
     const envMode = process.env.NODE_ENV;
-    const assetsUrl = process.env.REACT_APP_API_URL;
-    const containerId = process.env.REACT_APP_CONTAINER_ID;
+    const assetsUrl = process.env.REACT_APP_ASSETS_URL;
 
     if (envMode === "production") {
         assert(
             assetsUrl !== undefined,
-            "REACT_APP_API_URL is undefined.  Check your environment file available",
-        );
-        assert(
-            containerId !== undefined,
-            "REACT_APP_CONTAINER_ID is undefined.  Check your environment file available",
+            "REACT_APP_ASSETS_URL is undefined.  Check your environment file available",
         );
     } else {
-        if (assetsUrl === undefined || containerId === undefined) {
+        if (assetsUrl === undefined) {
             console.warn("[･] Environment file not found... (dev)");
         }
     }
@@ -38,7 +33,7 @@ export const getAssets = (path: ASSETS): string => {
     );
 
     if (envMode === "production") {
-        return `${assetsUrl}/${containerId}/get/inst_file_url/${path}`;
+        return `${assetsUrl}/${path}`;
     } else {
         return `/assets/${path}`;
     }

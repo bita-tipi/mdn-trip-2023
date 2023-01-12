@@ -32,6 +32,13 @@ let filesInAssets = [];
 console.log("\n\x1b[33m == Assets Definition Generator v1 == \x1b[0m\n");
 await new Promise((resolve) => setTimeout(resolve, 300));
 
+if (!filesPath.length) {
+    console.log(
+        "\n\x1b[31m[32m ✗ Failed to generate Assets Definition...\x1b[0m",
+    );
+    throw new Error("Assets Not Found\n");
+}
+
 filesPath.forEach((filePath) => {
     const fileName = filePath.substring(assetsPath.length + 1);
     const styleKey = fileName.replace(/\/|\.|_/g, "-");
@@ -47,10 +54,6 @@ filesPath.forEach((filePath) => {
 
 defScript = `\
 /* 
- * Copyright (c) 2023 wappon_28_dev
- * Released under the MIT license
- * https://opensource.org/licenses/mit-license.php
- *
  *  == Assets Definition Generator v1 == 
  *  generated file; do not edit
  */\n
