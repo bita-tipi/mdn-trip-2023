@@ -3,7 +3,7 @@ import "./schedule.css";
 import _ from "lodash";
 import { getImg } from "model/assets";
 const imgStationNagoya = getImg("名古屋駅.png");
-
+const imgStationHirosima=getImg("広島駅.png");
 function Schedule() {
     const [clickedList, updateClickedList] = useState([
         true,
@@ -110,6 +110,7 @@ function Schedule() {
                             10:01
                         </p>
                         <div className="schedule-area">
+                            <img src={imgStationHirosima}className="schedule-Hirosimastation"></img>
                             <p id="schedule-text" className="schedule-area-norikae">
                                 乗り換え
                             </p>

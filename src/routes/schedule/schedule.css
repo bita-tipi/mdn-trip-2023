@@ -180,21 +180,27 @@ span {
     background-color: black;
     background: rgba(0, 0, 0, 0.4);
     padding-left: 10%;
-    margin-right:-70%;
+    margin-right:60%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    margin-top:15%;
+    margin-top:-28%;
 }
 .schedule-area-hirosimaeki{
     position: relative;
     padding-left: 10%;
     padding-right: 15%;
-    margin-right: -180%;
+    margin-right: 30%;
     font-size: 25px;
-    margin-top:-10%;
+    margin-top:-2%;
     background-color: black;
     background: rgba(0, 0, 0, 0.4);
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 
+}
+.schedule-Hirosimastation{
+    width: 300px;
+    height: 90px;
+    object-fit: cover;
+    object-position:10% 70%;
 }
