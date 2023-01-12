@@ -1,7 +1,8 @@
-import { getImg } from "model/assets";
 import React, { useState } from "react";
 import "./schedule.css";
 import _ from "lodash";
+import { getImg } from "model/assets";
+const imgStationNagoya = getImg("名古屋駅.png");
 
 function Schedule() {
     const [clickedList, updateClickedList] = useState([
@@ -51,6 +52,8 @@ function Schedule() {
                             7:20
                         </p>
                         <div className="schedule-area">
+                            <img src={imgStationNagoya}className="schedule-nagoyastation" />
+                            <div className="schedule-text">
                             <p id="schedule-text" className="schedule-area-do">
                                 集合
                             </p>
@@ -60,6 +63,7 @@ function Schedule() {
                             >
                                 名古屋駅
                             </p>
+                            </div>
                         </div>
                     </section>
                     <section className="schedule_place2">
@@ -106,12 +110,12 @@ function Schedule() {
                             10:01
                         </p>
                         <div className="schedule-area">
-                            <p id="schedule-text" className="schedule-area-do">
+                            <p id="schedule-text" className="schedule-area-norikae">
                                 乗り換え
                             </p>
                             <p
                                 id="schedule-text"
-                                className="schedule-area-text"
+                                className="schedule-area-hirosimaeki"
                             >
                                 広島駅
                             </p>
