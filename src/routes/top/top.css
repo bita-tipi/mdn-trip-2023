@@ -1,17 +1,17 @@
 .background_top {
-    background-color: #767c77;
-    /*width:100%;
-  height:100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  background-repeat: no-repeat;
-  background-size: cover;*/
-}
-
-.load_top {
+    background-color: #767C77;
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .load_top {
     width: 100%;
     height: 100%;
     margin-top: -190%;
@@ -20,72 +20,115 @@
     animation: load-top;
     animation-duration: 3s;
     animation-fill-mode: forwards;
-}
-
-@keyframes load-top {
+  }
+  
+  @keyframes load-top {
     0% {
-        visibility: visible;
+      visibility: visible;
     }
-
+  
     100% {
-        visibility: hidden;
+      visibility: hidden;
     }
-}
-
-.title {
+  }
+  
+  .title {
     display: flex;
     align-content: space-between;
     align-items: center;
     margin-bottom: 2%;
     margin-left: 3%;
-}
-
-.title img {
+  }
+  
+  .title img {
     width: 5%;
-}
-
-.background_top h2 {
+  }
+  
+  .background_top h2 {
     margin: 0;
     font-size: calc(10px + 2vmin);
-}
-
-.header img {
+  }
+  
+  .header img {
     width: 6%;
     margin-left: 92%;
-}
-
-.mainvisual img {
+  }
+  
+  .mainvisual img {
     margin-left: 3%;
     margin-bottom: 15%;
     width: 93%;
-}
-
-.schedule_main {
+  }
+  
+  .schedule_main {
+    display: flex;
+  }
+  
+  .border_schedule{
+    height: 29vh;
+    width: 25px;
+    background-color: #9BABA3;
+    margin-left: 8%;
+    margin-bottom: 1%;
+  }
+  
+  .schedule_img {
+    margin-top: 3%;
     display: flex;
     flex-wrap: wrap;
-    align-content: space-between;
-}
-
-.schedule_main img {
+  }
+  
+  .schedule_main img {
     width: 45%;
     margin-left: 3%;
     margin-bottom: 3%;
-}
-
-.topic_main {
+  }
+  
+  .border_room{
+    height: 5vh;
+    width: 4px;
+    background-color: #9BABA3;
+    margin-top: 1%;
+    margin-left: 8%;
+    margin-bottom: 2%;
+  }
+  
+  .topic_main {
+    display: flex;
+  }
+  
+  .border_topic{
+    height: 14vh;
+    width: 25px;
+    background-color: #9BABA3;
+    margin-left: 8%;
+    margin-bottom: 0;
+  }
+  
+  .topic_img{
     display: flex;
     overflow-x: scroll;
     scrollbar-width: none;
     -ms-overfrow-style: none;
-}
-
-.topic_main ::-webkit-scrollbar {
+  }
+  
+  .topic_img ::-webkit-scrollbar{
     display: none;
-}
-
-.topic_main img {
+  }
+  
+  .topic_main img{
     width: 45%;
     margin-left: 3%;
+    margin-top: 2%;
     margin-bottom: 3%;
     flex-shrink: 0;
-}
+  }
+  
+  .border_attention{
+    height: 5vh;
+    width: 4px;
+    background-color: #9BABA3;
+    margin-top: 1%;
+    margin-left: 8%;
+    margin-bottom: 10%;
+  }

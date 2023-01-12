@@ -28,10 +28,13 @@ function Top() {
                     <h2>日程</h2>
                 </div>
                 <main className="schedule_main">
-                    <img src={imgSchedule} />
-                    <img src={imgSchedule} />
-                    <img src={imgSchedule} />
-                    <img src={imgSchedule} />
+                    <div className="border_schedule"/>
+                    <div className="schedule_img">
+                        <img src={imgSchedule} />
+                        <img src={imgSchedule} />
+                        <img src={imgSchedule} />
+                        <img src={imgSchedule} />
+                    </div>
                 </main>
             </section>
 
@@ -40,6 +43,7 @@ function Top() {
                     <img src={imgRoomLogo} />
                     <h2>部屋割り</h2>
                 </div>
+                <div className="border_room"/>
             </section>
 
             <section className="topic">
@@ -48,10 +52,13 @@ function Top() {
                     <h2>トピック</h2>
                 </div>
                 <main className="topic_main">
-                    <img src={imgSchedule} />
-                    <img src={imgSchedule} />
-                    <img src={imgSchedule} />
-                    <img src={imgSchedule} />
+                    <div className="border_topic"/>
+                    <div className="topic_img">
+                        <img src={imgSchedule} />
+                        <img src={imgSchedule} />
+                        <img src={imgSchedule} />
+                        <img src={imgSchedule} />
+                    </div>
                 </main>
             </section>
 
@@ -60,6 +67,7 @@ function Top() {
                     <img src={imgAttentionLogo} />
                     <h2>注意事項</h2>
                 </div>
+                <div className="border_attention"/>
             </section>
 
             {isLoading ? (
