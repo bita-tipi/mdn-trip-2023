@@ -19,12 +19,9 @@ function RoomHTML() {
     const textList = ["１日目", "二日目", "三日目"];
     const DayList = [Day1(), Day2(), Day3()];
     const [clickedDay, updateClickedDay] = useState(0);
-    console.log(clickedDay);
 
-    function ListSelect(index: number) {
-        const copiedList = _.cloneDeep(isListOpen);
-        copiedList[index] = !copiedList[index];
-        updateIsListOpen(copiedList);
+    function ChangeDay(index: number) {
+        updateClickedDay(index);
     }
 
     function Day1() {
@@ -37,7 +34,7 @@ function RoomHTML() {
                 <section>
                     <p>部屋</p>
                     <div className="heyabanngou">
-                        <h3 className="hoterunonamae">222</h3>
+                        <h3 className="hoterunonamae">111</h3>
                         <p>号室</p>
                     </div>
                 </section>
@@ -129,17 +126,17 @@ function RoomHTML() {
     return (
         <body>
             <header>
-                <select>
-                    <option value={0} onClick={() => updateClickedDay(0)}>
+                <div>
+                    <button value={0} onClick={() => ChangeDay(0)}>
                         １日目
-                    </option>
-                    <option value={1} onClick={() => updateClickedDay(1)}>
+                    </button>
+                    <button value={1} onClick={() => ChangeDay(1)}>
                         ２日目
-                    </option>
-                    <option value={2} onClick={() => updateClickedDay(2)}>
+                    </button>
+                    <button value={2} onClick={() => ChangeDay(2)}>
                         ３日目
-                    </option>
-                </select>
+                    </button>
+                </div>
             </header>
             {DayList[clickedDay]}
         </body>
