@@ -1,0 +1,28 @@
+name: Asset Server Sync
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "public/assets/**"
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🎉 Checkout
+        uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+
+      - name: 🚚 Asset Server Sync
+        uses: opspresso/action-s3-sync@master
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.SYNC_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.SYNC_SECRET_ACCESS_KEY }}
+          DEST_PATH: ${{ secrets.SYNC_DEST_PATH }}
+          AWS_REGION: ""
+          FROM_PATH: "./public/assets/"
+          OPTIONS: "--delete --acl public-read --endpoint-url ${{ secrets.SYNC_ENDPOINT_URL }}"
