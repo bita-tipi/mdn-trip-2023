@@ -26,6 +26,7 @@
     font-size: 20px;
     color: white;
     display: flex;
+    padding-left: -15%;
 }
 
 .explanation-container {
@@ -58,11 +59,10 @@
     }
 }
 
-.attentionBody {
+Body {
     background-color: #767c77;
     height: 100%;
     display: flex;
-    padding-bottom: 32%;
 }
 
 .arrow-character {
@@ -70,10 +70,16 @@
 }
 
 .attentionLine {
-    height: 80vh;
+    height: auto;
     width: 5px;
-    background-color: #9BABA3;
-    margin-top: 7%;
-    margin-left: 8%;
-    margin-right: -3%;
+    background-color: #413b2f;
+    margin-top: 20px;
+    margin-left: 3%;
+    margin-right: 0%;
+    margin-bottom: 50px;
 }
+.attentiontext{
+
+    margin-left: 25px;
+}
+

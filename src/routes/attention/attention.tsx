@@ -8,14 +8,15 @@ const imgTemple = getImg("attention_temple.svg");
 
 function Attention() {
     const [isListOpen, updateIsListOpen] = useState([
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
     ]);
 
     function ListSelect(index: number) {
@@ -26,9 +27,7 @@ function Attention() {
 
     return (
         <body className="attentionBody">
-            {/*ってかpulldownいる？僕が見る人だったら注意事項ごときのためにアコーディオン開きたくない。めんどくさいもん
-                気になることがあるならちゃんと人に言ってくれ　言ってくれたら普通に考えるから
-            */}
+        
             <div className="attentionLine"></div>
             <div>
                 <ul className="tyui">
@@ -38,17 +37,13 @@ function Attention() {
                     </h2>
                     {isListOpen[0] ? (
                         <div className="pulldown explanation-container">
-                            <div>
-                                <li>
-                                    感染者と他の同居者の部屋を可能な限り分ける
-                                </li>
-                                <li>
-                                    感染者の世話をする人は、できるだけ限られた方（一人が望ましい）にする
-                                </li>
-                                <li>できるだけ全員がマスクを使用する</li>
-                                <li>小まめにうがい・手洗いをする</li>
-                                <li>いいいいいいいいい</li>
-                                <li>いいいいいいいいい</li>
+                            <div className="attentiontext">
+                                <li>翼を持たずに生まれてきたのなら、翼をはやすためにどんな障害も乗り越えなさい  </li>
+                                <li>追いかけ続ける勇気さえあれば、夢は必ず叶います </li>
+                                <li>時に、バラバラに壊れてしまうこともあるかもしれません。でもそのおかげで、それ以上に良いことが訪れるんです</li>
+                                <li>もし飛べないなら走ればいい。走れないのなら歩けばいい。歩けないのであれば、這っていけばいい。何があっても前に進み続けなければならなのです</li>
+                                <li>時には、問いが複雑になっているだけで、答えはごくシンプルなことだったりします</li>
+                                <li>世の中には辛いことがたくさんありますが、それに打ち勝つことでも溢れています</li>
                             </div>
                             <img src={imgGembakuDome} />
                         </div>
@@ -64,13 +59,9 @@ function Attention() {
                     </h2>
                     {isListOpen[1] ? (
                         <div className="pulldown explanation-container">
-                            <div>
-                                <li>
-                                    感染者と他の同居者の部屋を可能な限り分ける
-                                </li>
-                                <li>
-                                    感染者の世話をする人は、できるだけ限られた方（一人が望ましい）にする
-                                </li>
+                            <div className="attentiontext">
+                                <li> 私たちがここにいるのには理由があります。 松明を掲げて、暗闇の中にいる人々を導く役割があると信じています  </li>
+                                <li>人間が授かった大いなる才能、それは共感する力です </li>
                                 <li>できるだけ全員がマスクを使用する</li>
                                 <li>小まめにうがい・手洗いをする</li>
                                 <li>いいいいいいいいい</li>
@@ -89,13 +80,9 @@ function Attention() {
                     </h2>
                     {isListOpen[2] ? (
                         <div className="pulldown explanation-container">
-                            <div>
-                                <li>
-                                    感染者と他の同居者の部屋を可能な限り分ける
-                                </li>
-                                <li>
-                                    感染者の世話をする人は、できるだけ限られた方（一人が望ましい）にする
-                                </li>
+                              <div className="attentiontext">
+                                <li> 感染者あああと他の同居者の部屋を可能な限り分ける  </li>
+                                <li>感染者の世話をする人は、できるだけ限られた方（一人が望ましい）にする </li>
                                 <li>できるだけ全員がマスクを使用する</li>
                                 <li>小まめにうがい・手洗いをする</li>
                                 <li>いいいいいいいいい</li>
@@ -115,13 +102,9 @@ function Attention() {
                     </h2>
                     {isListOpen[3] ? (
                         <div className="pulldown explanation-container">
-                            <div>
-                                <li>
-                                    感染者と他の同居者の部屋を可能な限り分ける
-                                </li>
-                                <li>
-                                    感染者の世話をする人は、できるだけ限られた方（一人が望ましい）にする
-                                </li>
+                             <div className="attentiontext">
+                                <li> 感染者あああと他の同居者の部屋を可能な限り分ける  </li>
+                                <li>感染者の世話をする人は、できるだけ限られた方（一人が望ましい）にする </li>
                                 <li>できるだけ全員がマスクを使用する</li>
                                 <li>小まめにうがい・手洗いをする</li>
                                 <li>いいいいいいいいい</li>
@@ -140,13 +123,9 @@ function Attention() {
                     </h2>
                     {isListOpen[4] ? (
                         <div className="pulldown explanation-container">
-                            <div>
-                                <li>
-                                    感染者と他の同居者の部屋を可能な限り分ける
-                                </li>
-                                <li>
-                                    感染者の世話をする人は、できるだけ限られた方（一人が望ましい）にする
-                                </li>
+                              <div className="attentiontext">
+                                <li> 感染者あああと他の同居者の部屋を可能な限り分ける  </li>
+                                <li>感染者の世話をする人は、できるだけ限られた方（一人が望ましい）にする </li>
                                 <li>できるだけ全員がマスクを使用する</li>
                                 <li>小まめにうがい・手洗いをする</li>
                                 <li>いいいいいいいいい</li>
@@ -165,13 +144,9 @@ function Attention() {
                     </h2>
                     {isListOpen[5] ? (
                         <div className="pulldown explanation-container">
-                            <div>
-                                <li>
-                                    感染者と他の同居者の部屋を可能な限り分ける
-                                </li>
-                                <li>
-                                    感染者の世話をする人は、できるだけ限られた方（一人が望ましい）にする
-                                </li>
+                               <div className="attentiontext">
+                                <li> 感染者あああと他の同居者の部屋を可能な限り分ける  </li>
+                                <li>感染者の世話をする人は、できるだけ限られた方（一人が望ましい）にする </li>
                                 <li>できるだけ全員がマスクを使用する</li>
                                 <li>小まめにうがい・手洗いをする</li>
                                 <li>いいいいいいいいい</li>
@@ -190,13 +165,9 @@ function Attention() {
                     </h2>
                     {isListOpen[6] ? (
                         <div className="pulldown explanation-container">
-                            <div>
-                                <li>
-                                    感染者と他の同居者の部屋を可能な限り分ける
-                                </li>
-                                <li>
-                                    感染者の世話をする人は、できるだけ限られた方（一人が望ましい）にする
-                                </li>
+                               <div className="attentiontext">
+                                <li> 感染者あああと他の同居者の部屋を可能な限り分ける  </li>
+                                <li>感染者の世話をする人は、できるだけ限られた方（一人が望ましい）にする </li>
                                 <li>できるだけ全員がマスクを使用する</li>
                                 <li>小まめにうがい・手洗いをする</li>
                                 <li>いいいいいいいいい</li>
@@ -215,13 +186,9 @@ function Attention() {
                     </h2>
                     {isListOpen[7] ? (
                         <div className="pulldown explanation-container">
-                            <div>
-                                <li>
-                                    感染者と他の同居者の部屋を可能な限り分ける
-                                </li>
-                                <li>
-                                    感染者の世話をする人は、できるだけ限られた方（一人が望ましい）にする
-                                </li>
+                               <div className="attentiontext">
+                                <li> 感染者あああと他の同居者の部屋を可能な限り分ける  </li>
+                                <li>感染者の世話をする人は、できるだけ限られた方（一人が望ましい）にする </li>
                                 <li>できるだけ全員がマスクを使用する</li>
                                 <li>小まめにうがい・手洗いをする</li>
                                 <li>いいいいいいいいい</li>
@@ -240,13 +207,9 @@ function Attention() {
                     </h2>
                     {isListOpen[8] ? (
                         <div className="pulldown explanation-container">
-                            <div>
-                                <li>
-                                    感染者と他の同居者の部屋を可能な限り分ける
-                                </li>
-                                <li>
-                                    感染者の世話をする人は、できるだけ限られた方（一人が望ましい）にする
-                                </li>
+                             <div className="attentiontext">
+                                <li> 感染者あああと他の同居者の部屋を可能な限り分ける  </li>
+                                <li>感染者の世話をする人は、できるだけ限られた方（一人が望ましい）にする </li>
                                 <li>できるだけ全員がマスクを使用する</li>
                                 <li>小まめにうがい・手洗いをする</li>
                                 <li>いいいいいいいいい</li>
