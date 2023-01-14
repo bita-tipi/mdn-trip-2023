@@ -122,6 +122,84 @@ function Schedule() {
                             </p>
                         </div>
                     </section>
+                    <section className="schedule_place2">
+                        <p id="schedule-text" className="schedule-time3">
+                            10:20<span> ~ </span>11:00
+                        </p>
+                        <div className="schedule-area2">
+                            <p id="schedule-text" className="schedule-norimono">
+                                バス
+                            </p>
+                            <section className="schedule-place3">
+                                <p className="schedule-tatesen"></p>
+                                <p
+                                    id="schedule-text"
+                                    className="schedule-nagoya1"
+                                >
+                                    広島駅
+                                </p>
+                                <p
+                                    id="schedule-text"
+                                    className="schedule-nagoyasyou1"
+                                >
+                                    Hiroshima 
+                                </p>
+                            </section>
+                            <p className="schedule-sannkaku2"></p>
+                            <p className="schedule-tatesen2"></p>
+                            <p
+                                id="schedule-text"
+                                className="schedule-hirosima1"
+                            >
+                                宮島口
+                            </p>
+                            <p
+                                id="schedule-text"
+                                className="schedule-hirosimasyou1"
+                            >
+                                Miyajimaguchi
+                            </p>
+                        </div>
+                    </section>
+                    <section className="schedule_place2">
+                        <p id="schedule-text" className="schedule-time3">
+                            10:20<span> ~ </span>11:00
+                        </p>
+                        <div className="schedule-area3">
+                            <p id="schedule-text" className="schedule-norimono">
+                                バス
+                            </p>
+                            <section className="schedule-place3">
+                                <p className="schedule-tatesen"></p>
+                                <p
+                                    id="schedule-text"
+                                    className="schedule-nagoya1"
+                                >
+                                    広島駅
+                                </p>
+                                <p
+                                    id="schedule-text"
+                                    className="schedule-nagoyasyou1"
+                                >
+                                    Hiroshima 
+                                </p>
+                            </section>
+                            <p className="schedule-sannkaku2"></p>
+                            <p className="schedule-tatesen2"></p>
+                            <p
+                                id="schedule-text"
+                                className="schedule-hirosima1"
+                            >
+                                宮島口
+                            </p>
+                            <p
+                                id="schedule-text"
+                                className="schedule-hirosimasyou1"
+                            >
+                                Miyajimaguchi
+                            </p>
+                        </div>
+                    </section>
                 </main>
             </div>
         );
