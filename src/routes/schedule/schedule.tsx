@@ -4,6 +4,7 @@ import _ from "lodash";
 import { getImg } from "model/assets";
 const imgStationNagoya = getImg("名古屋駅.png");
 const imgStationHirosima=getImg("広島駅.png");
+const imgStationMiyajima=getImg("宮島.png");
 function Schedule() {
     const [clickedList, updateClickedList] = useState([
         true,
@@ -205,7 +206,7 @@ function Schedule() {
                             11:00
                         </p>
                         <div className="schedule-area">
-                            <img src={imgStationHirosima}className="schedule-Hirosimastation"></img>
+                            <img src={imgStationMiyajima}className="schedule-station-miyajima"></img>
                             <p id="schedule-text" className="schedule-area-norikae">
                                 観光
                             </p>

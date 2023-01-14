@@ -250,3 +250,9 @@ span {
     font-size: 10px; 
 }
 /*六段目*/
+.schedule-station-miyajima{
+    width: 250px;
+    height: 90px;
+    object-fit: cover;
+    object-position:10% 70%;
+}
