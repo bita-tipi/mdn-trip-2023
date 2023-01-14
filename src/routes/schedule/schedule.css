@@ -3,12 +3,13 @@
     padding-top: 15%;
     margin-top: -20%;
     padding-bottom: 20%;
+    width: 105%;
 }
 
 .schedule_hiduke {
     display: flex;
     text-align: center;
-    width: 100%;
+    width: 105%;
 
 }
 
@@ -80,7 +81,7 @@
 
 }
 .schedule-nagoyastation{
-    width: 240px;
+    width: 260px;
     height: 90px;
     padding-left: -20%;
     
@@ -199,7 +200,7 @@ span {
 
 }
 .schedule-Hirosimastation{
-    width: 230px;
+    width: 250px;
     height: 90px;
     object-fit: cover;
     object-position:10% 70%;
@@ -215,9 +216,37 @@ span {
 /*五段目*/
 .schedule-time3{
     padding-left: 90px;
-    padding-top: -40px;
+    padding-top: -0px;
     font-weight: 200;
 }
-.schedule-area3{
-    
+.schedule-norimono2{
+    padding-top: 0px;
+    padding-left: 30px;
+    text-decoration: underline solid 3px #8e627c; 
 }
+.schedule-sannkaku3{
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 14px solid #6dc9e2;
+    margin-left: 115px;
+    margin-top: -40px;
+}
+.schedule-miyajima{
+    padding-left: 145px;
+    margin-top: -50px;
+    font-size: 20px;
+}
+.schedule-tatesen3{
+    width: 4px;
+    height: 30px;
+    margin-left: 135px;
+    margin-top: -42px;
+    background-color: #d7d8cc;
+    border-radius: 2px;
+}
+.schedule-miyajimasyou{
+    padding-left: 145px;
+    margin-top: -25px;
+    font-size: 10px; 
+}
+/*六段目*/
