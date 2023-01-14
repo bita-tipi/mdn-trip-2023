@@ -83,3 +83,16 @@
     height: 8%;
     width: 8%;
 }
+
+.checkListFlex{
+    display: flex;
+}
+
+.checkListLabel{
+
+}
+
+.checkListArea{
+    display: flex;
+    margin-right:30%;
+}

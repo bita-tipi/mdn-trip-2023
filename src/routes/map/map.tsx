@@ -23,10 +23,13 @@ function Map() {
     const [isListOpen, updateIsListOpen] = useState(false);
     const [topicNumber, upDateTopicNumber] = useState(0);
     const topicList = [imgTopicArea, imgHistoryKurashiki];
+    const areaList = ["広島","倉敷","ユニバ","嵐山","清水坂","北野天満宮"];
+    const [areaNumber,upDataNumber] = useState(0);
 
     function Sort(i: number) {
         updateIsListOpen(false);
         updateMap(i);
+        upDataNumber(i);
     }
 
     function Place() {
@@ -129,7 +132,7 @@ function Map() {
                                     広島
                                 </p>
                                 <p onClick={() => Sort(1)} className="map-pull">
-                                    岡山
+                                    倉敷
                                 </p>
                                 <p onClick={() => Sort(2)} className="map-pull">
                                     ユニバ
@@ -144,7 +147,7 @@ function Map() {
                                 className="map-button"
                                 onClick={() => updateIsListOpen(!isListOpen)}
                             >
-                                場所設定
+                                {areaList[areaNumber]}
                             </div>
                         </div>
                     )}

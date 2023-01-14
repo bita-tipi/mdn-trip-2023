@@ -12,10 +12,19 @@ const v = getImg("v.svg");
 function Check() {
     const [text, setText] = useState("");
     const [label, setLabel] = useState("");
+    const [localStorageIndex,upDataLocalStorageIndex] = useState(0); 
 
     useEffect(() => {
-        getClick();
-    }, []);
+        if(localStorageIndex == 1){
+            setClick();
+            getClick();
+        }
+        else{
+            getClick();
+            setClick();
+        }
+        upDataLocalStorageIndex(1);
+    }, [text]);
 
     const updateLabel = () => {
         setLabel(getItem(KEYS.SAMPLE_TEXT));
@@ -76,34 +85,23 @@ function Check() {
                             </div>
                             {isListOpen[0] ? (
                                 <div className="list-pulldown">
-                                    <FormGroup>
-                                        <FormControlLabel
+                                    <div className="checkListFlex">
+                                        <div className="checkListArea">
+                                            <FormControlLabel
                                             control={<Checkbox />}
-                                            label="制服"
-                                        />
-                                        <FormControlLabel
+                                            label=""
+                                            />
+                                            <p className="checkListLabel">敷物</p>
+                                        </div>
+                                            <FormControlLabel
                                             control={<Checkbox />}
-                                            label="財布"
+                                            label=""
                                         />
-                                    </FormGroup>
-                                    <FormGroup>
-                                        <FormControlLabel
+                                            <FormControlLabel
                                             control={<Checkbox />}
-                                            label="あ"
-                                        />
-                                        <FormControlLabel
-                                            control={<Checkbox />}
-                                            label="あ"
-                                        />
-                                        <FormControlLabel
-                                            control={<Checkbox />}
-                                            label="あ"
-                                        />
-                                        <FormControlLabel
-                                            control={<Checkbox />}
-                                            label="あ"
-                                        />
-                                    </FormGroup>
+                                            label=""
+                                            />
+                                    </div>
                                 </div>
                             ) : (
                                 <div></div>
@@ -163,45 +161,12 @@ function Check() {
                     {isListOpen[2] ? (
                         <div className="my-list-pulldown">
                             <ul>
-                                <li>
                                     <Checkbox />
                                     <input
                                         type="text"
                                         value={text}
                                         onChange={handleChange}
                                     />
-                                    <button onClick={setClick}>保存する</button>
-                                    <button onClick={getClick}>呼び出す</button>
-                                    <button onClick={removeClick}>
-                                        削除する
-                                    </button>
-                                </li>
-                                <li>
-                                    <Checkbox />
-                                    <input
-                                        type="text"
-                                        value={text}
-                                        onChange={handleChange}
-                                    />
-                                    <button onClick={setClick}>保存する</button>
-                                    <button onClick={getClick}>呼び出す</button>
-                                    <button onClick={removeClick}>
-                                        削除する
-                                    </button>
-                                </li>
-                                <li>
-                                    <Checkbox />
-                                    <input
-                                        type="text"
-                                        value={text}
-                                        onChange={handleChange}
-                                    />
-                                    <button onClick={setClick}>保存する</button>
-                                    <button onClick={getClick}>呼び出す</button>
-                                    <button onClick={removeClick}>
-                                        削除する
-                                    </button>
-                                </li>
                             </ul>
                         </div>
                     ) : (
