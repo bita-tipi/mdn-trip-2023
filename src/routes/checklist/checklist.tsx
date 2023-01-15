@@ -85,22 +85,20 @@ function Check() {
                             </div>
                             {isListOpen[0] ? (
                                 <div className="list-pulldown">
+                                    <div className=""></div>
                                     <div className="checkListFlex">
                                         <div className="checkListArea">
-                                            <FormControlLabel
-                                            control={<Checkbox />}
-                                            label=""
-                                            />
+                                            <Checkbox />
                                             <p className="checkListLabel">敷物</p>
                                         </div>
-                                            <FormControlLabel
-                                            control={<Checkbox />}
-                                            label=""
-                                        />
-                                            <FormControlLabel
-                                            control={<Checkbox />}
-                                            label=""
-                                            />
+                                        <div className="checkListArea">
+                                            <Checkbox />
+                                            <p className="checkListLabel">敷物</p>
+                                        </div>
+                                        <div className="checkListArea">
+                                            <Checkbox />
+                                            <p className="checkListLabel">敷物</p>
+                                        </div>
                                     </div>
                                 </div>
                             ) : (

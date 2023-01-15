@@ -5,6 +5,12 @@
     margin-bottom: -10%;
 }
 
+.attentionBody{
+    background-color: #767c77;
+    height: 100%;
+    display: flex;
+}
+
 @keyframes pulldown {
     0% {
         opacity: 0;
@@ -57,12 +63,6 @@
         height: 100px;
         width: auto;
     }
-}
-
-Body {
-    background-color: #767c77;
-    height: 100%;
-    display: flex;
 }
 
 .arrow-character {

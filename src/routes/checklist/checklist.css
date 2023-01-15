@@ -34,18 +34,15 @@
     animation-name: pulldown;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-    margin-left: auto;
-    margin-right: auto;
-    width: 7em;
+    display: flex;
+    text-align: center;
 }
 
 .my-list-pulldown {
     animation-name: pulldown;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-    margin-left: auto;
-    margin-right: auto;
-    width: 28em;
+
 }
 
 @keyframes pulldown {
@@ -66,9 +63,7 @@
 }
 
 .checklist-subTitle {
-    display: flex;
     text-align: center;
-    margin-left: 33%;
 }
 
 .checkList-V {
@@ -85,7 +80,6 @@
 }
 
 .checkListFlex{
-    display: flex;
 }
 
 .checkListLabel{
@@ -94,5 +88,11 @@
 
 .checkListArea{
     display: flex;
-    margin-right:30%;
+}
+.List-bar{
+    background-color: black;
+    width:2px;
+    height:auto;
+    margin-top:0%;
+    margin-bottom:0%;
 }
