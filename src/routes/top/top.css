@@ -45,8 +45,10 @@
   }
   
   .background_top h2 {
+    color: #f8f3e5;
     margin: 0;
     font-size: calc(10px + 2vmin);
+    text-decoration-color: none;
   }
   
   .header img {

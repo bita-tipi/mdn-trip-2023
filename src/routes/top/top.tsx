@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./top.css";
 import Loading from "../load/loading";
 import { getImg } from "model/assets";
+import { Link } from "react-router-dom";
 
 const imgScheduleLogo = getImg("schedule-logo.svg");
 const imgRoomLogo = getImg("room-logo.svg");
@@ -41,7 +42,7 @@ function Top() {
             <section className="room">
                 <div className="title">
                     <img src={imgRoomLogo} />
-                    <h2>部屋割り</h2>
+                    <Link to="/room"><h2>部屋割り</h2></Link>
                 </div>
                 <div className="border_room"/>
             </section>
@@ -65,7 +66,7 @@ function Top() {
             <section className="attention">
                 <div className="title">
                     <img src={imgAttentionLogo} />
-                    <h2>注意事項</h2>
+                    <Link to="/attention"><h2>注意事項</h2></Link>
                 </div>
                 <div className="border_attention"/>
             </section>
