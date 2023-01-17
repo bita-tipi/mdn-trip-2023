@@ -42,3 +42,12 @@
   border-radius: 10px;
   display: inline-block;
 }
+
+.haikei {
+  background-color: #757b77;
+  color: #f8f3e5;
+  padding-left: 40px;
+}
+.mojinosaizu {
+  font-size: x-large;
+}
