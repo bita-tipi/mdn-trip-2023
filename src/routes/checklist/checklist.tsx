@@ -74,30 +74,66 @@ function Check() {
                         ) : (
                             <img src={v} className="checkList-VR" />
                         )}
-                        <div>
-                            <div
-                                className="list-title"
-                                onClick={() => {
-                                    ListSelect(0);
-                                }}
-                            >
-                                必要なもの
-                            </div>
+                        <div className="List-box">
+                                <div
+                                    className="list-title"
+                                    onClick={() => {
+                                        ListSelect(0);
+                                    }}
+                                >
+                                    必要なもの
+                                </div>
                             {isListOpen[0] ? (
                                 <div className="list-pulldown">
-                                    <div className=""></div>
-                                    <div className="checkListFlex">
-                                        <div className="checkListArea">
-                                            <Checkbox />
-                                            <p className="checkListLabel">敷物</p>
+                                    <div>
+                                        <div className="List-bar"></div>
+                                        <div className="checkListFlex">
+                                            <div className="checkListArea">
+                                                <Checkbox className="List-checkBox"/>
+                                                <p className="checkListLabel">敷物</p>
+                                            </div>
+                                            <div className="checkListArea">
+                                                <Checkbox className="List-checkBox"/>
+                                                <p className="checkListLabel">敷物</p>
+                                            </div>
+                                            <div className="checkListArea">
+                                                <Checkbox className="List-checkBox"/>
+                                                <p className="checkListLabel">敷物</p>
+                                            </div>
                                         </div>
-                                        <div className="checkListArea">
-                                            <Checkbox />
-                                            <p className="checkListLabel">敷物</p>
+                                    </div>
+                                    <div>
+                                        <div className="List-bar"></div>
+                                        <div className="checkListFlex">
+                                            <div className="checkListArea">
+                                                <Checkbox className="List-checkBox"/>
+                                                <p className="checkListLabel">敷物</p>
+                                            </div>
+                                            <div className="checkListArea">
+                                                <Checkbox className="List-checkBox"/>
+                                                <p className="checkListLabel">敷物</p>
+                                            </div>
+                                            <div className="checkListArea">
+                                                <Checkbox className="List-checkBox"/>
+                                                <p className="checkListLabel">敷物</p>
+                                            </div>
                                         </div>
-                                        <div className="checkListArea">
-                                            <Checkbox />
-                                            <p className="checkListLabel">敷物</p>
+                                    </div>
+                                    <div>
+                                        <div className="List-bar"></div>
+                                        <div className="checkListFlex">
+                                            <div className="checkListArea">
+                                                <Checkbox />
+                                                <p className="checkListLabel">敷物</p>
+                                            </div>
+                                            <div className="checkListArea">
+                                                <Checkbox />
+                                                <p className="checkListLabel">敷物</p>
+                                            </div>
+                                            <div className="checkListArea">
+                                                <Checkbox />
+                                                <p className="checkListLabel">敷物</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
