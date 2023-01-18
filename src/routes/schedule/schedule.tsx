@@ -106,11 +106,11 @@ function Schedule() {
                             </p>
                         </div>
                     </section>
-                    <section className="schedule_place">
-                        <p id="schedule-text" className="schedule-time">
+                    <section className="schedule_place3">
+                        <p id="schedule-text" className="schedule-time3">
                             10:01
                         </p>
-                        <div className="schedule-area">
+                        <div className="schedule-area2">
                             <img src={imgStationHirosima}className="schedule-Hirosimastation"></img>
                             <p id="schedule-text" className="schedule-area-norikae">
                                 乗り換え
@@ -124,15 +124,15 @@ function Schedule() {
                         </div>
                     </section>
                     <section className="schedule_place2">
-                        <p id="schedule-text" className="schedule-time2">
+                        <p id="schedule-text" className="schedule-time4">
                             10:20<span> ~ </span>11:00
                         </p>
                         <div className="schedule-area2">
-                            <p id="schedule-text" className="schedule-norimono">
+                            <p id="schedule-text" className="schedule-norimono-bus">
                                 バス
                             </p>
                             <section className="schedule-place3">
-                                <p className="schedule-tatesen"></p>
+                                <p className="schedule-tatesen4"></p>
                                 <p
                                     id="schedule-text"
                                     className="schedule-nagoya1"
@@ -141,29 +141,29 @@ function Schedule() {
                                 </p>
                                 <p
                                     id="schedule-text"
-                                    className="schedule-nagoyasyou1"
+                                    className="schedule-Hiroshima1"
                                 >
                                     Hiroshima 
                                 </p>
                             </section>
                             <p className="schedule-sannkaku2"></p>
-                            <p className="schedule-tatesen2"></p>
+                            <p className="schedule-tatesen5"></p>
                             <p
                                 id="schedule-text"
-                                className="schedule-hirosima1"
+                                className="schedule-miyajimaguchi"
                             >
                                 宮島口
                             </p>
                             <p
                                 id="schedule-text"
-                                className="schedule-hirosimasyou1"
+                                className="schedule-miyajimasyou1"
                             >
                                 Miyajimaguchi
                             </p>
                         </div>
                     </section>
                     <section className="schedule_place2">
-                        <p id="schedule-text" className="schedule-time3">
+                        <p id="schedule-text" className="schedule-time5">
                             10:20<span> ~ </span>11:00
                         </p>
                         <div className="schedule-area3">
@@ -202,17 +202,18 @@ function Schedule() {
                         </div>
                     </section>
                     <section className="schedule_place">
+                        
                         <p id="schedule-text" className="schedule-time">
                             11:00
                         </p>
                         <div className="schedule-area">
                             <img src={imgStationMiyajima}className="schedule-station-miyajima"></img>
-                            <p id="schedule-text" className="schedule-area-norikae">
+                            <p id="schedule-text" className="schedule-area-kannkou">
                                 観光
                             </p>
                             <p
                                 id="schedule-text"
-                                className="schedule-area-hirosimaeki"
+                                className="schedule-area-miyajima"
                             >
                                 宮島
                             </p>

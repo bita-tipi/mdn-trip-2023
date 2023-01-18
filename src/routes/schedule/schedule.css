@@ -37,7 +37,7 @@
 /*一段目*/
 .schedule_place {
     display: flex;
-    height: 90px;
+    height: 10%;
     background-color: #767C77;
     border-radius: 10px;
 }
@@ -63,16 +63,18 @@
     margin-right:60%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    margin-top:-35%;
+    padding-top: -50%;
+    margin-top:-25%;
 }
 
 .schedule-area-text {
     position: relative;
     padding-left: 10%;
     padding-right: 15%;
+    padding: auto;
     margin-right: 20%;
     font-size: 25px;
-    margin-top:-3%;
+    margin-top:-5%;
     background-color: black;
     background: rgba(0, 0, 0, 0.4);
     border-top-right-radius: 30px;
@@ -92,36 +94,36 @@
 }
 
 .schedule-time2 {
-    padding-left: 90px;
-    padding-top: 20px;
+    padding-left: 20%;
+    padding-top: 4%;
     font-weight: 200;
 }
 
 .schedule-norimono {
-    padding-top: 15px;
-    padding-left: 30px;
+    padding-top: 9%;
+    padding-left: 20%;
     text-decoration: underline solid 3px #8e627c;
 }
 
 .schedule-tatesen {
-    width: 4px;
-    height: 30px;
-    margin-left: 30px;
-    margin-top: -14px;
+    width: 2%;
+    height: -20%;
+    margin-left: 15%;
+    margin-top: -8%;
     background-color: #00b9f7;
     border-radius: 2px;
 }
 
 .schedule-nagoya1 {
     white-space: nowrap;
-    padding-left: 5px;
-    margin-top: -18px;
+    padding-left: 3%;
+    margin-top: -10%;
     font-size: 20px;
 }
 
 .schedule-nagoyasyou1 {
-    margin-left: -58px;
-    margin-top: 6px;
+    margin-left: -33%;
+    margin-top: 3%;
     font-size: 10px;
 }
 
@@ -133,24 +135,26 @@
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 14px solid #6dc9e2;
-    margin-left: 105px;
-    margin-top: -40px;
+    margin-left: 57%;
+    margin-top: -22%;
 }
 
 .schedule-tatesen2 {
-    width: 4px;
-    height: 30px;
-    margin-left: 125px;
-    margin-top: -42px;
+    width: 2%;
+    height: 28%;
+    margin-left: 69%;
+    margin-top: -23%;
     background-color: #d7d8cc;
     border-radius: 2px;
 }
 
 .schedule-hirosima1 {
-    padding-left: 135px;
-    margin-top: -50px;
-    font-size: 20px;
+    padding-left: 75%;
+    margin-top: -27%;
+    font-size: 120%;
 }
+
+
 
 .schedule-hirosimasyou1 {
     padding-left: 135px;
@@ -173,6 +177,23 @@ span {
     margin-top:-30%;
 }
 /*三段目*/
+.schedule_place3{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    background-color: #767C77;
+    border-radius: 10px;
+    
+}
+.schedule-area2{
+   height: -100%;
+}
+.schedule-time3{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size: 30px;
+    font-weight: 100;
+}
 .schedule-area-norikae{
      position: relative;
     white-space: nowrap;
@@ -180,18 +201,19 @@ span {
     background-color: black;
     background: rgba(0, 0, 0, 0.4);
     padding-left: 10%;
-    margin-right:60%;
+    margin-right:10%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
-    margin-top:-36%;
+    margin-top:-70%;
 }
 .schedule-area-hirosimaeki{
     position: relative;
     padding-left: 10%;
     padding-right: 15%;
-    margin-right: 30%;
+    padding: auto;
+    margin-right: -50%;
     font-size: 25px;
-    margin-top:-2%;
+    margin-top:-5%;
     background-color: black;
     background: rgba(0, 0, 0, 0.4);
     border-top-right-radius: 30px;
@@ -199,22 +221,71 @@ span {
 
 }
 .schedule-Hirosimastation{
-    width: 194%;
+    width: 175%;
     height: 100%;
+    padding-left:-20%;
     object-fit: cover;
     object-position:10% 70%;
 }
+
+
 /*四段目*/
 .schedule-sannkaku2 {
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-left: 14px solid #6dc9e2;
-    margin-left: 105px;
-    margin-top: -40px;
+    margin-left: 51%;
+    margin-top: -22%;
 }
+.schedule-tatesen4{
+    width: 2%;
+    height: -20%;
+    margin-left: 13%;
+    margin-top: -8%;
+    background-color: #00b9f7;
+    border-radius: 2px;
+}
+.schedule-norimono-bus{
+    padding-top: -30%;
+    padding-left: 16%;
+    text-decoration: underline solid 3px #8e627c;
+}
+.schedule-time4{
+    padding-left: 11%;
+    margin-left: 10%;
+    padding-top: -0px;
+    font-weight: 200;
+}
+.schedule-miyajimaguchi{
+    padding-left: 67%;
+    margin-top: -22%;
+    margin-right: -40%;
+    font-size: 120%;
+}
+.schedule-miyajimasyou1{
+    padding-left: 135px;
+    margin-top: -25px;
+    margin-left: 2%;
+    font-size: 10px;
+}
+.schedule-Hiroshima1{
+    padding-left: -200px;
+    margin-left: -30%;
+    margin-top: 5px;
+    font-size: 10px;
+}
+.schedule-tatesen5{
+    width: 2%;
+    height: 28%;
+    margin-left: 62%;
+    margin-top: -18%;
+    background-color: #d7d8cc;
+    border-radius: 2px;
+}
+
 /*五段目*/
-.schedule-time3{
-    padding-left: 90px;
+.schedule-time5{
+    padding-left: 21%;
     padding-top: -0px;
     font-weight: 200;
 }
@@ -250,8 +321,24 @@ span {
 }
 /*六段目*/
 .schedule-station-miyajima{
-    width: 194%;
-    height: 100%;
+    width: 100%;
+    height: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    padding-left:-20%;
     object-fit: cover;
     object-position:10% 70%;
+}
+.schedule-area-kannkou{
+    position: relative;
+    white-space: nowrap;
+    font-size: 15px;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.4);
+    padding-left: 10%;
+    margin-right:10%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: -50%;
+    margin-top: -30%;
 }
