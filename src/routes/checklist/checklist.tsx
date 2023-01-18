@@ -67,122 +67,122 @@ function Check() {
                     <img src={imgChecklist} className="logo" />
                     持ち物リスト
                 </h1>
-                <main className="checklist-main">
-                    <div className="checklist-subTitle">
-                        {isListOpen[0] ? (
-                            <img src={v} className="checkList-V" />
-                        ) : (
-                            <img src={v} className="checkList-VR" />
-                        )}
-                        <div className="List-box">
-                                <div
-                                    className="list-title"
-                                    onClick={() => {
-                                        ListSelect(0);
-                                    }}
-                                >
-                                    必要なもの
+                    <div    className="list-title"
+                            onClick={() => {
+                            ListSelect(0);
+                        }}>
+                        必要な持ち物
+                    </div>
+                    {isListOpen[0] ?(
+                    <div className="my-list-pulldown">
+                        <div className="List-flexSet">
+                            <div className="List-bar"></div>
+                            <div>
+                                <div className="List-OneSet">
+                                    <Checkbox/>
+                                    <p>財布</p>
                                 </div>
-                            {isListOpen[0] ? (
-                                <div className="list-pulldown">
-                                    <div>
-                                        <div className="List-bar"></div>
-                                        <div className="checkListFlex">
-                                            <div className="checkListArea">
-                                                <Checkbox className="List-checkBox"/>
-                                                <p className="checkListLabel">敷物</p>
-                                            </div>
-                                            <div className="checkListArea">
-                                                <Checkbox className="List-checkBox"/>
-                                                <p className="checkListLabel">敷物</p>
-                                            </div>
-                                            <div className="checkListArea">
-                                                <Checkbox className="List-checkBox"/>
-                                                <p className="checkListLabel">敷物</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="List-bar"></div>
-                                        <div className="checkListFlex">
-                                            <div className="checkListArea">
-                                                <Checkbox className="List-checkBox"/>
-                                                <p className="checkListLabel">敷物</p>
-                                            </div>
-                                            <div className="checkListArea">
-                                                <Checkbox className="List-checkBox"/>
-                                                <p className="checkListLabel">敷物</p>
-                                            </div>
-                                            <div className="checkListArea">
-                                                <Checkbox className="List-checkBox"/>
-                                                <p className="checkListLabel">敷物</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div className="List-bar"></div>
-                                        <div className="checkListFlex">
-                                            <div className="checkListArea">
-                                                <Checkbox />
-                                                <p className="checkListLabel">敷物</p>
-                                            </div>
-                                            <div className="checkListArea">
-                                                <Checkbox />
-                                                <p className="checkListLabel">敷物</p>
-                                            </div>
-                                            <div className="checkListArea">
-                                                <Checkbox />
-                                                <p className="checkListLabel">敷物</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div className="List-OneSet">
+                                    <Checkbox/>
+                                    <p>財布</p>
                                 </div>
-                            ) : (
-                                <div></div>
-                            )}
+                                <div className="List-OneSet">
+                                    <Checkbox/>
+                                    <p>財布</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="List-flexSet">
+                            <div className="List-bar"></div>
+                            <div>
+                                <div className="List-OneSet">
+                                    <Checkbox/>
+                                    <p>財布</p>
+                                </div>
+                                <div className="List-OneSet">
+                                    <Checkbox/>
+                                    <p>財布</p>
+                                </div>
+                                <div className="List-OneSet">
+                                    <Checkbox/>
+                                    <p>財布</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="List-flexSet">
+                            <div className="List-bar"></div>
+                            <div>
+                                <div className="List-OneSet">
+                                    <Checkbox/>
+                                    <p>財布</p>
+                                </div>
+                                <div className="List-OneSet">
+                                    <Checkbox/>
+                                    <p>財布</p>
+                                </div>
+                                <div className="List-OneSet">
+                                    <Checkbox/>
+                                    <p>財布</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div
-                        className="list-title"
-                        onClick={() => {
-                            ListSelect(1);
-                        }}
-                    >
-                        あると便利
-                    </div>
-                    {isListOpen[1] ? (
-                        <div className="list-pulldown">
-                            <FormGroup>
-                                <FormControlLabel
-                                    control={<Checkbox />}
-                                    label="制服"
-                                />
-                                <FormControlLabel
-                                    control={<Checkbox />}
-                                    label="財布"
-                                />
-                            </FormGroup>
-                            <FormGroup>
-                                <FormControlLabel
-                                    control={<Checkbox />}
-                                    label="あ"
-                                />
-                                <FormControlLabel
-                                    control={<Checkbox />}
-                                    label="あ"
-                                />
-                                <FormControlLabel
-                                    control={<Checkbox />}
-                                    label="あ"
-                                />
-                                <FormControlLabel
-                                    control={<Checkbox />}
-                                    label="あ"
-                                />
-                            </FormGroup>
+                    ) :(
+                    <div className="List-closeAnimation">
+                        <div className="My-List-pulldown">
+                            <div className="List-flexSet">
+                                <div className="List-bar"></div>
+                                <div>
+                                    <div className="List-OneSet">
+                                        <Checkbox/>
+                                        <p>財布</p>
+                                    </div>
+                                    <div className="List-OneSet">
+                                        <Checkbox/>
+                                        <p>財布</p>
+                                    </div>
+                                    <div className="List-OneSet">
+                                        <Checkbox/>
+                                        <p>財布</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="List-flexSet">
+                                <div className="List-bar"></div>
+                                <div>
+                                    <div className="List-OneSet">
+                                        <Checkbox/>
+                                        <p>財布</p>
+                                    </div>
+                                    <div className="List-OneSet">
+                                        <Checkbox/>
+                                        <p>財布</p>
+                                    </div>
+                                    <div className="List-OneSet">
+                                        <Checkbox/>
+                                        <p>財布</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="List-flexSet">
+                                <div className="List-bar"></div>
+                                <div>
+                                    <div className="List-OneSet">
+                                        <Checkbox/>
+                                        <p>財布</p>
+                                    </div>
+                                    <div className="List-OneSet">
+                                        <Checkbox/>
+                                        <p>財布</p>
+                                    </div>
+                                    <div className="List-OneSet">
+                                        <Checkbox/>
+                                        <p>財布</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    ) : (
-                        <div></div>
+                    </div>
                     )}
                     <div
                         className="list-title"
@@ -206,7 +206,6 @@ function Check() {
                     ) : (
                         <div></div>
                     )}
-                </main>
             </div>
         </body>
     );

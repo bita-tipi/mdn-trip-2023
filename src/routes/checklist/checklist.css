@@ -15,71 +15,69 @@
     padding: 10px;
 }
 
-.List-checkBox {
-    background-color: white;
-}
-
-.list-container {
-    display: flex;
-}
-
-.list-pulldown {
-    animation-name: pulldown;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    display: flex;
-}
 
 .my-list-pulldown {
     animation-name: pulldown;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-    
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 @keyframes pulldown {
     0% {
         opacity: 0;
-        margin-bottom: -10%;
-    }
-
-    50% {
-        opacity: 1;
-        margin-bottom: 0%;
+        transform: translateY(-30%);
+        margin-bottom: -30%;
     }
 
     100% {
         opacity: 1;
         margin-bottom: 0%;
+        transform: translateY(0%);
     }
 }
 
-
-
-.checkList-V {
-    margin-top: 10%;
-    height: 8%;
-    width: 8%;
-    transform: rotate(180deg);
+.List-OneSet{
+    display: flex;
+    justify-content: center;
 }
 
-.checkList-VR {
-    margin-top: 10%;
-    height: 8%;
-    width: 8%;
+.List-bar{
+    background-color: #98A99F;
+    width:2px;
+    height:auto;
+    margin-top: 13%;
+    margin-bottom:13%;
 }
 
-.checkListArea{
+.List-flexSet{
     display: flex;
 }
-.List-bar{
-    background-color: black;
-    width:10px;
-    height:auto;
-    margin-top:0%;
-    margin-bottom:0%;
+
+.List-closeAnimation{
+    animation-name: pulldown-close;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
-.List-box{
+@keyframes pulldown-close{
+    0%{
+        opacity: 1;
+        margin-bottom: 0%;
+        transform: translateY(0%);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-30%);
+        margin-bottom: -30%;
+        visibility: hidden;
+    }
+}
+
+.My-List-pulldown {
     text-align: center;
+    display: flex;
+    justify-content: space-around;
 }

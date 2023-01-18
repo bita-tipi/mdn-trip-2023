@@ -342,3 +342,8 @@ span {
     padding-top: -50%;
     margin-top: -30%;
 }
+
+.schedule-OneBox{
+    display: flex;
+    
+}
