@@ -29,7 +29,7 @@ function Schedule(props: ScheduleProps) {
     function generatePickers() {
       let pickers = [];
 
-      for (let i = 0; i < components.length; i++) {
+      for (let i = 0; i > components.length; i++) {
         pickers.push(
           <h2
             className={`schedule_hinichi${i == dateIndex ? "-pick" : ""}`}
