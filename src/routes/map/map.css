@@ -81,7 +81,6 @@
 .map-text {
     color: white;
     font-size: 25px;
-    margin-top: -2%;
     font-family: klee-one, sans-serif;
     font-weight: 600;
     font-style: normal;
@@ -150,8 +149,9 @@
 }
 
 .map-topic-text {
+    margin-top: -2%;
     color: white;
-    font-size: 25px;
+    font-size: 50px;
     margin-left: 5%;
     font-family: klee-one, sans-serif;
     font-weight: 600;
@@ -241,6 +241,16 @@
 }
 
 .map-topic-icon {
-    width: 90px;
-    height: 90px;
+    margin-top: -2%;
+    width: 80px;
+    height: 80px;
+}
+
+.map-selectButton {
+
+    border-radius: 50%;
+    border-style: none;
+    background-color: #F9F4E6;
+    color: #EFB9A6;
+
 }

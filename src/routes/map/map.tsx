@@ -23,8 +23,8 @@ function Map() {
     const [isListOpen, updateIsListOpen] = useState(false);
     const [topicNumber, upDateTopicNumber] = useState(0);
     const topicList = [imgTopicArea, imgHistoryKurashiki];
-    const areaList = ["広島","倉敷","ユニバ","嵐山","清水坂","北野天満宮"];
-    const [areaNumber,upDataNumber] = useState(0);
+    const areaList = ["広島", "倉敷", "ユニバ", "嵐山", "清水坂", "北野天満宮"];
+    const [areaNumber, upDataNumber] = useState(0);
 
     function Sort(i: number) {
         updateIsListOpen(false);
@@ -93,7 +93,14 @@ function Map() {
                         <img src={imgHistory} className="map-topic-icon" />
                         <p className="map-topic-text">歴史</p>
                     </div>
-                    <button onClick={() => upDateTopicNumber(1)}>倉敷</button>
+                    <div>
+                        <button
+                            onClick={() => upDateTopicNumber(1)}
+                            className="map-selectButton"
+                        >
+                            倉敷
+                        </button>
+                    </div>
                 </div>
             </div>
         );
