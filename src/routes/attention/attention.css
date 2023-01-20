@@ -25,14 +25,32 @@
     100% {
         opacity: 1;
         margin-bottom: 0%;
+        
     }
+    
+}
+
+.attentionBody{
+    overflow-x: hidden;
+}
+
+.attention-header-container {
+    display: flex;
+    align-items: center;
 }
 
 .tyuuititle {
+    width: max-content;
     font-size: 20px;
     color: white;
     display: flex;
-    padding-left: -15%;
+}
+
+.attention-header {
+    padding-left: 20px;
+    height: 1em;
+    width: 3000px;
+
 }
 
 .explanation-container {
@@ -63,6 +81,29 @@
         height: 100px;
         width: auto;
     }
+
+    .attentionBody{
+    overflow-x: hidden;
+}
+
+.attention-header-container {
+    display: flex;
+    align-items: center;
+}
+
+.tyuuititle {
+    width: max-content;
+    font-size: 20px;
+    color: white;
+    display: flex;
+}
+
+.attention-header {
+    padding-left: 20px;
+    height: 1em;
+    width: 3000px;
+
+}
 }
 
 .arrow-character {
@@ -81,5 +122,19 @@
 .attentiontext{
 
     margin-left: 25px;
+}
+
+.titledesign{
+    width: 25px;
+    margin-left: 25px;
+}
+
+.separator{
+    background-image:var(--img-attention-sikiri-svg);
+   
+    width: 1000px;
+    height: 20px;
+    margin-left: 5%;
+    background-repeat: repeat-x;
 }
 

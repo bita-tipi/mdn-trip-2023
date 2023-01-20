@@ -3,9 +3,17 @@ import "./attention.css";
 import _ from "lodash";
 import { getImg } from "model/assets";
 
+const imgkodo = getImg("attention/koudoulogo.svg");
+const imgfukusou = getImg("attention/fukusoulogo.svg");
+const imgmotimono = getImg("attention/motimonologo.svg");
+const imgsinkansen = getImg("attention/sinnkansenlogo.svg");
+const imghantyo = getImg("attention/hantyoulogo.svg");
+const imgkesseki = getImg("attention/kessekilogo.svg");
+const imgsyukuhaku = getImg("attention/syukuhakulogo.svg");
+const imgsumaho = getImg("attention/sumahologo.svg");
 const imgGembakuDome = getImg("attention_genbakudorm.svg");
 const imgTemple = getImg("attention_temple.svg");
-
+const imgseparator= getImg("attention/sikiri.svg");
 function Attention() {
     const [isListOpen, updateIsListOpen] = useState([
         true,
@@ -56,7 +64,7 @@ function Attention() {
                                     世の中には辛いことがたくさんありますが、それに打ち勝つことでも溢れています
                                 </li>
                             </div>
-                            <img src={imgGembakuDome} />
+                           
                         </div>
                     ) : (
                         <></>
@@ -64,10 +72,20 @@ function Attention() {
                 </ul>
 
                 <ul className="tyui">
-                    <h2 onClick={() => ListSelect(1)} className="tyuuititle">
-                        <div className="arrow-character">v</div>
-                        &emsp;服装
-                    </h2>
+                <div className="attention-header-container">
+            <h2 onClick={() => ListSelect(1)} className="tyuuititle">
+              <div className="arrow-character">
+                v
+            </div>
+              &emsp;服装            
+            <div >
+            <img className="titledesign" src={imgfukusou} />
+            </div>
+            <div className="separator">
+              
+            </div>
+            </h2>
+          </div>
                     {isListOpen[1] ? (
                         <div className="pulldown explanation-container">
                             <div className="attentiontext">
@@ -110,10 +128,22 @@ function Attention() {
                     )}
                 </ul>
                 <ul className="tyui">
-                    <h2 onClick={() => ListSelect(2)} className="tyuuititle">
-                        <div className="arrow-character">v</div>
-                        &emsp;持ち物
-                    </h2>
+                <div className="attention-header-container">
+            <h2 onClick={() => ListSelect(2)} className="tyuuititle">
+              <div className="arrow-character">
+                v
+            </div>
+            <div className="titletext">
+              &emsp;持ち物    
+            </div>       
+            <div >
+            <img className="titledesign" src={imgmotimono} />
+            </div>
+            <div className="separator">
+              
+            </div>
+            </h2>
+          </div>
                     {isListOpen[2] ? (
                         <div className="pulldown explanation-container">
                             <div className="attentiontext">
@@ -137,10 +167,22 @@ function Attention() {
                 </ul>
 
                 <ul className="tyui">
-                    <h2 onClick={() => ListSelect(3)} className="tyuuititle">
-                        <div className="arrow-character">v</div>
-                        &emsp;新幹線・バス
-                    </h2>
+                <div className="attention-header-container">
+            <h2 onClick={() => ListSelect(3)} className="tyuuititle">
+              <div className="arrow-character">
+                v
+            </div>
+            <div className="titletext">
+              &emsp;新幹線・バス    
+            </div>       
+            <div >
+            <img className="titledesign" src={imgsinkansen} />
+            </div>
+            <div className="separator">
+              
+            </div>
+            </h2>
+          </div>
                     {isListOpen[3] ? (
                         <div className="pulldown explanation-container">
                             <div className="attentiontext">
@@ -163,10 +205,22 @@ function Attention() {
                     )}
                 </ul>
                 <ul className="tyui">
-                    <h2 onClick={() => ListSelect(4)} className="tyuuititle">
-                        <div className="arrow-character">v</div>
-                        &emsp;対トル
-                    </h2>
+                <div className="attention-header-container">
+            <h2 onClick={() => ListSelect(4)} className="tyuuititle">
+              <div className="arrow-character">
+                v
+            </div>
+            <div className="titletext">
+              &emsp;班長・部屋長 
+            </div>       
+            <div >
+            <img className="titledesign" src={imghantyo} />
+            </div>
+            <div className="separator">
+              
+            </div>
+            </h2>
+          </div>
                     {isListOpen[4] ? (
                         <div className="pulldown explanation-container">
                             <div className="attentiontext">
@@ -189,10 +243,22 @@ function Attention() {
                     )}
                 </ul>
                 <ul className="tyui">
-                    <h2 onClick={() => ListSelect(5)} className="tyuuititle">
-                        <div className="arrow-character">v</div>
-                        &emsp;班長・部屋長
-                    </h2>
+                <div className="attention-header-container">
+            <h2 onClick={() => ListSelect(5)} className="tyuuititle">
+              <div className="arrow-character">
+                v
+            </div>
+            <div className="titletext">
+              &emsp;欠席    
+            </div>       
+            <div >
+            <img className="titledesign" src={imgkesseki} />
+            </div>
+            <div className="separator">
+              
+            </div>
+            </h2>
+          </div>
                     {isListOpen[5] ? (
                         <div className="pulldown explanation-container">
                             <div className="attentiontext">
@@ -215,10 +281,22 @@ function Attention() {
                     )}
                 </ul>
                 <ul className="tyui">
-                    <h2 onClick={() => ListSelect(6)} className="tyuuititle">
-                        <div className="arrow-character">v</div>
-                        &emsp;欠席
-                    </h2>
+                <div className="attention-header-container">
+            <h2 onClick={() => ListSelect(6)} className="tyuuititle">
+              <div className="arrow-character">
+                v
+            </div>
+            <div className="titletext">
+              &emsp;宿泊  
+            </div>       
+            <div >
+            <img className="titledesign" src={imgsyukuhaku} />
+            </div>
+            <div className="separator">
+              
+            </div>
+            </h2>
+          </div>
                     {isListOpen[6] ? (
                         <div className="pulldown explanation-container">
                             <div className="attentiontext">
@@ -241,10 +319,22 @@ function Attention() {
                     )}
                 </ul>
                 <ul className="tyui">
-                    <h2 onClick={() => ListSelect(7)} className="tyuuititle">
-                        <div className="arrow-character">v</div>
-                        &emsp;宿泊
-                    </h2>
+                <div className="attention-header-container">
+            <h2 onClick={() => ListSelect(7)} className="tyuuititle">
+              <div className="arrow-character">
+                v
+            </div>
+            <div className="titletext">
+              &emsp;スマホ  
+            </div>       
+            <div >
+            <img className="titledesign" src={imgsumaho} />
+            </div>
+            <div className="separator">
+              
+            </div>
+            </h2>
+          </div>
                     {isListOpen[7] ? (
                         <div className="pulldown explanation-container">
                             <div className="attentiontext">
