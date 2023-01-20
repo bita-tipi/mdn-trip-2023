@@ -1,28 +1,13 @@
 import { getImg } from "model/assets";
 
 const imgStationNagoya = getImg("名古屋駅.png");
-const imgStationHirosima = getImg("広島駅.png");
+const imgStationHirosima = getImg("広島駅.jpeg");
 const imgStationMiyajima = getImg("宮島.png");
 
 export function ScheduleDay1() {
   return (
     <main>
-      <section className="schedule_place">
-        <p id="schedule-text" className="schedule-time">
-          7:20
-        </p>
-        <div className="schedule-area">
-          <img src={imgStationNagoya} className="schedule-nagoyastation" />
-          <div className="schedule-text">
-            <p id="schedule-text" className="schedule-area-do">
-              集合
-            </p>
-            <p id="schedule-text" className="schedule-area-text">
-              名古屋駅
-            </p>
-          </div>
-        </div>
-      </section>
+  
       <section className="schedule_place2">
         <p id="schedule-text" className="schedule-time2">
           7:51<span> ~ </span>10:01
@@ -39,7 +24,7 @@ export function ScheduleDay1() {
             <p id="schedule-text" className="schedule-nagoyasyou1">
               Nagoya
             </p>
-          </section>
+          </section> 
           <p className="schedule-sannkaku1"></p>
           <p className="schedule-tatesen2"></p>
           <p id="schedule-text" className="schedule-hirosima1">
@@ -58,13 +43,14 @@ export function ScheduleDay1() {
           <img
             src={imgStationHirosima}
             className="schedule-Hirosimastation"
-          ></img>
-          <p id="schedule-text" className="schedule-area-norikae">
-            乗り換え
-          </p>
-          <p id="schedule-text" className="schedule-area-hirosimaeki">
-            広島駅
-          </p>
+          ><p id="schedule-text" className="schedule-area-norikae">
+          乗り換え
+        </p>
+        <p id="schedule-text" className="schedule-area-hirosimaeki">
+          広島駅
+        </p>
+        </img>
+         
         </div>
       </section>
       <section className="schedule_place2">
