@@ -43,13 +43,14 @@ export function ScheduleDay1() {
           <img
             src={imgStationHirosima}
             className="schedule-Hirosimastation"
-          ><p id="schedule-text" className="schedule-area-norikae">
+          >
+          </img>
+            <p id="schedule-text" className="schedule-area-norikae">
           乗り換え
         </p>
         <p id="schedule-text" className="schedule-area-hirosimaeki">
           広島駅
         </p>
-        </img>
          
         </div>
       </section>
