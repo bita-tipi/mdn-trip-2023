@@ -2,7 +2,7 @@ import { getImg } from "model/assets";
 
 const imgStationNagoya = getImg("名古屋駅.png");
 const imgStationHirosima = getImg("広島駅.jpeg");
-const imgStationMiyajima = getImg("宮島.png");
+
 
 export function ScheduleDay1() {
   return (
