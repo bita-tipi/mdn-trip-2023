@@ -137,7 +137,7 @@ export function Attention() {
               <div className="arrow-character">v</div>
               <div className="tyuititletext">&emsp;新幹線/バス</div>
               <div>
-                <img className="titledesign" src={img.shinkansen} />
+                <img className="titledesignshin" src={img.shinkansen} />
               </div>
               <div className="separator"></div>
             </h2>
