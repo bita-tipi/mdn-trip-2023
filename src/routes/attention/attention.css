@@ -79,6 +79,8 @@ body{
         padding: 10px;
         height: 100px;
         width: auto;
+
+        
     }
 
     
@@ -89,7 +91,8 @@ body{
 }
 
 .tyuuititle {
-    width: max-content;
+    /*width: max-content;*/
+    width: 10px;
     font-size: 25px;
     color: white;
     display: flex;
@@ -101,6 +104,8 @@ body{
     width: 3000px;
 
 }
+
+
 }
 
 .arrow-character {
@@ -127,11 +132,15 @@ body{
 }
 
 .separator{
-    background-image:var(--img-attention-shikiri-svg);
-   
-    width: 1000px;
-    height: 20px;
-    margin-left: 5%;
-    background-repeat: repeat-x;
-    overflow-x: hidden;}
-
+        background-image:var(--img-attention-shikiri-svg);
+    
+        width: 1000px;
+        height: 20px;
+        margin-left: 3%;
+        padding-right: 20%;
+        background-repeat: repeat-x;
+        overflow-x: hidden;
+}
+.tyuititletext{
+    white-space: nowrap
+}

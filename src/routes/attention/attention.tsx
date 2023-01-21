@@ -41,7 +41,7 @@ export function Attention() {
         <ul className="tyui">
           <h2 onClick={() => ListSelect(0)} className="tyuuititle">
             <div className="arrow-character">v</div>
-            &emsp;行動
+            <div className="tyuititletext">&emsp;行動</div>
             <div>
               <img className="titledesign" src={img.kodo} />
             </div>
@@ -78,7 +78,7 @@ export function Attention() {
           <div className="attention-header-container">
             <h2 onClick={() => ListSelect(1)} className="tyuuititle">
               <div className="arrow-character">v</div>
-              &emsp;服装
+              <div className="tyuititletext">&emsp;服装</div>
               <div>
                 <img className="titledesign" src={img.fukuso} />
               </div>
@@ -106,7 +106,7 @@ export function Attention() {
           <div className="attention-header-container">
             <h2 onClick={() => ListSelect(2)} className="tyuuititle">
               <div className="arrow-character">v</div>
-              <div className="titletext">&emsp;持ち物</div>
+              <div className="tyuititletext">&emsp;持ち物</div>
               <div>
                 <img className="titledesign" src={img.mochimono} />
               </div>
@@ -135,7 +135,7 @@ export function Attention() {
           <div className="attention-header-container">
             <h2 onClick={() => ListSelect(3)} className="tyuuititle">
               <div className="arrow-character">v</div>
-              <div className="titletext">&emsp;新幹線・バス</div>
+              <div className="tyuititletext">&emsp;新幹線/バス</div>
               <div>
                 <img className="titledesign" src={img.shinkansen} />
               </div>
@@ -164,7 +164,7 @@ export function Attention() {
           <div className="attention-header-container">
             <h2 onClick={() => ListSelect(4)} className="tyuuititle">
               <div className="arrow-character">v</div>
-              <div className="titletext">&emsp;班長・部屋長</div>
+              <div className="tyuititletext">&emsp;部屋長</div>
               <div>
                 <img className="titledesign" src={img.hancho} />
               </div>
@@ -196,7 +196,7 @@ export function Attention() {
           <div className="attention-header-container">
             <h2 onClick={() => ListSelect(5)} className="tyuuititle">
               <div className="arrow-character">v</div>
-              <div className="titletext">&emsp;宿泊</div>
+              <div className="tyuititletext">&emsp;宿泊</div>
               <div>
                 <img className="titledesign" src={img.shukuhaku} />
               </div>
@@ -221,15 +221,21 @@ export function Attention() {
                   就寝前点呼から起床時間までは自分の部屋からの出入りは禁止する。
                 </li>
                 <li>
-                  ホテルは貸し切りではないので、マナーやエチケットに注意し、移動は静かにするなど、他の客の迷惑にならないよう気をつけること。
+                  ホテルは貸し切りではないので、マナーやエチケットに注意し、
+                  <span>
+                    移動は静かにするなど、他の客の迷惑にならないよう気をつけること。
+                  </span>
                 </li>
                 <li>
                   事故や近隣住民への迷惑となる恐れがあるので、部活動の早朝練習は禁止とする。
                 </li>
                 <li>
-                  部屋のお風呂を使用する際、
-                  熱いお湯が出るかもしれないのでやけどには注意する。
-                  シャワーカーテンをバスタブの内側に入れ、外にお湯がこぼれないようにすること。
+                  <span>
+                    部屋のお風呂を使用する際、熱いお湯が出るかもしれないのでやけどには注意する。
+                  </span>
+                  <span>
+                    シャワーカーテンをバスタブの内側に入れ、外にお湯がこぼれないようにすること。
+                  </span>
                 </li>
               </div>
             </div>
@@ -241,7 +247,7 @@ export function Attention() {
           <div className="attention-header-container">
             <h2 onClick={() => ListSelect(6)} className="tyuuititle">
               <div className="arrow-character">v</div>
-              <div className="titletext">&emsp;欠席</div>
+              <div className="tyuititletext">&emsp;欠席</div>
               <div>
                 <img className="titledesign" src={img.kesseki} />
               </div>
@@ -267,7 +273,7 @@ export function Attention() {
           <div className="attention-header-container">
             <h2 onClick={() => ListSelect(7)} className="tyuuititle">
               <div className="arrow-character">v</div>
-              <div className="titletext">&emsp;スマホ</div>
+              <div className="tyuititletext">&emsp;スマホ</div>
               <div>
                 <img className="titledesign" src={img.sumaho} />
               </div>
@@ -278,9 +284,10 @@ export function Attention() {
             <div className="pulldown explanation-container">
               <div className="attentiontext">
                 <li>
-                  {" "}
-                  緊急連絡・撮影用として携帯電話やスマートフォンの持ち込みを許可するただし不適切・不必要な使用は絶対にしないこと。
-                  (ゲームも含む)
+                  <span>
+                    緊急連絡・撮影用として携帯電話やスマートフォンの持ち込みを許可する
+                  </span>
+                  ただし不適切・不必要な使用は絶対にしないこと。 (ゲームも含む)
                 </li>
                 <li>
                   個人情報 (承諾を得ていない動画 画像を含む)
