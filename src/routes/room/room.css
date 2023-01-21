@@ -46,8 +46,24 @@
 .haikei {
   background-color: #757b77;
   color: #f8f3e5;
-  padding-left: 40px;
 }
 .mojinosaizu {
   font-size: x-large;
+}
+.sennsubeya {
+  display:flex;
+  flex-direction: row-reverse;
+  justify-content: space-between; 
+}
+.sennsu1 {
+  background-repeat:  no-repeat;  
+  background-position: center ;                
+  width:auto;                                   
+  height:40pX;  
+  display:flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;                               
+}
+.heya {
+  display: flex;
 }

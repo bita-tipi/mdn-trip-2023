@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import _ from "lodash";
 import "./room.css";
+import { getImg } from "model/assets";
 
+
+const sennsu = getImg("扇子.svg");
 function RoomHTML() {
     const [isListOpen, updateIsListOpen] = useState([
         false,
@@ -32,7 +35,12 @@ function RoomHTML() {
                     <h3 className="hoterunonamae">〇〇ホテル</h3>
                 </section>
                 <section>
-                    <p>部屋</p>
+                <p className="heya">
+                 <img src={sennsu} className="sennsu1" />
+                 部屋
+                </p>
+                    <div className="sennsubeya">
+                    </div>
                     <div className="heyabanngou">
                         <h3 className="hoterunonamae">111</h3>
                         <p className="mojinosaizu">号室</p>
@@ -50,7 +58,7 @@ function RoomHTML() {
                     <div>
                         <p>メンバー</p>
                         <h3 className="mennba-nowaku">
-                            ・メンバーの名前 ・メンバーの名前
+                            ・メンバーの名前 
                         </h3>
                     </div>
                 </section>
@@ -116,7 +124,8 @@ function RoomHTML() {
                     <div>
                         <p>メンバー</p>
                         <h3 className="mennba-nowaku">
-                            ・メンバーの名前 ・メンバーの名前
+                            ・メンバーの名前 
+                            ・メンバーの名前
                         </h3>
                     </div>
                 </section>
@@ -124,7 +133,7 @@ function RoomHTML() {
         );
     }
     return (
-        <body className="haikei">
+        <body className="botan">
             <header>
                 <div>
                     <button value={0} onClick={() => ChangeDay(0)}>
