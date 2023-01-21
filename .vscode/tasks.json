@@ -1,13 +1,28 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Generate Assets Definition",
-            "type": "npm",
-            "script": "generate:assets-def",
-            "group": "build",
-            "detail": "Generate TypeScript union Type and CSS global Valiables base on assets.",
-            "problemMatcher": []
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Generate Assets Definition",
+      "type": "npm",
+      "script": "generate:assets-def",
+      "group": "build",
+      "detail": "Generate TypeScript union Type and CSS global Valiables base on assets.",
+      "problemMatcher": []
+    },
+    {
+      "label": "Automatic git pull",
+      "detail": "おまいらがどうせ pull 忘れるだろうから自動でやるよ",
+      "type": "shell",
+      "command": "git",
+      "args": ["pull"],
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
 }
