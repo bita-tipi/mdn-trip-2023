@@ -65,9 +65,9 @@ function Top() {
 
             <section className="room">
                 <div className="title">
-                    <img src={imgRoomLogo} />
-                    <Link to="/room">
-                        <h2>部屋割り</h2>
+                    <img src={imgRoomLogo}/>
+                    <Link to="/room" className="link">
+                        <h2>部屋割り ＞</h2>
                     </Link>
                 </div>
                 <div className="border_room" />
@@ -92,8 +92,8 @@ function Top() {
             <section className="attention">
                 <div className="title">
                     <img src={imgAttentionLogo} />
-                    <Link to="/attention">
-                        <h2>注意事項</h2>
+                    <Link to="/attention" className="link">
+                        <h2>注意事項 ＞</h2>
                     </Link>
                 </div>
                 <div className="border_attention" />

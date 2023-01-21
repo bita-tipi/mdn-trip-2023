@@ -48,7 +48,7 @@
     color: #f8f3e5;
     margin: 0;
     font-size: calc(10px + 2vmin);
-    text-decoration-color: none;
+    text-decoration: none;
   }
   
   .header img {
@@ -67,7 +67,7 @@
   }
   
   .border_schedule{
-    height: 29vh;
+    height: 46vh;
     width: 25px;
     background-color: #9BABA3;
     margin-left: 8%;
@@ -88,7 +88,7 @@
   
   .border_room{
     height: 5vh;
-    width: 4px;
+    width: 5px;
     background-color: #9BABA3;
     margin-top: 1%;
     margin-left: 8%;
@@ -100,7 +100,7 @@
   }
   
   .border_topic{
-    height: 14vh;
+    height: 23vh;
     width: 25px;
     background-color: #9BABA3;
     margin-left: 8%;
@@ -128,9 +128,13 @@
   
   .border_attention{
     height: 5vh;
-    width: 4px;
+    width: 5px;
     background-color: #9BABA3;
     margin-top: 1%;
     margin-left: 8%;
     margin-bottom: 10%;
+  }
+
+  .link{
+    text-decoration: none;
   }
