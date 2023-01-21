@@ -7,7 +7,26 @@ const imgStationMiyajima = getImg("宮島.png");
 export function ScheduleDay1() {
   return (
     <main>
-  
+      <section className="schedule_place">
+        <p id="schedule-text" className="schedule-time">
+        7:20
+        </p>
+        <div className="schedule-area2">
+          <img
+            src={imgStationNagoya}
+            className="schedule-nagoyastation"
+          >
+          </img>
+            <p id="schedule-text" className="schedule-area-do">
+         集合
+        </p>
+        <p id="schedule-text" className="schedule-area-text">
+          名古屋駅
+        </p>
+         
+        </div>
+      </section>
+      
       <section className="schedule_place2">
         <p id="schedule-text" className="schedule-time2">
           7:51<span> ~ </span>10:01
@@ -108,23 +127,8 @@ export function ScheduleDay1() {
           </p>
         </div>
       </section>
-      <section className="schedule_place">
-        <p id="schedule-text" className="schedule-time">
-          11:00
-        </p>
-        <div className="schedule-area">
-          <img
-            src={imgStationMiyajima}
-            className="schedule-station-miyajima"
-          ></img>
-          <p id="schedule-text" className="schedule-area-kannkou">
-            観光
-          </p>
-          <p id="schedule-text" className="schedule-area-miyajima">
-            宮島
-          </p>
-        </div>
-      </section>
+
+      
     </main>
   );
 }
