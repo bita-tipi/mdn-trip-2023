@@ -11,6 +11,10 @@
     display: flex;
 }
 
+body{
+    background-color: #767c77;
+}
+
 @keyframes pulldown {
     0% {
         opacity: 0;
@@ -30,9 +34,7 @@
     
 }
 
-.attentionBody{
-    overflow-x: hidden;
-}
+
 
 .attention-header-container {
     display: flex;
@@ -82,9 +84,7 @@
         width: auto;
     }
 
-    .attentionBody{
-    overflow-x: hidden;
-}
+    
 
 .attention-header-container {
     display: flex;
@@ -93,7 +93,7 @@
 
 .tyuuititle {
     width: max-content;
-    font-size: 20px;
+    font-size: 25px;
     color: white;
     display: flex;
 }
@@ -130,11 +130,11 @@
 }
 
 .separator{
-    background-image:var(--img-attention-sikiri-svg);
+    background-image:var(--img-attention-shikiri-svg);
    
     width: 1000px;
     height: 20px;
     margin-left: 5%;
     background-repeat: repeat-x;
-}
+    overflow-x: hidden;}
 

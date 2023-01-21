@@ -45,6 +45,7 @@ export function Attention() {
             <div>
               <img className="titledesign" src={img.kodo} />
             </div>
+            <div className="separator"></div>
           </h2>
           {isListOpen[0] ? (
             <div className="pulldown explanation-container">
