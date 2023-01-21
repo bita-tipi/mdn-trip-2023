@@ -341,7 +341,18 @@ span {
     padding-top: -50%;
     margin-top: -30%;
 }
-
+.schedule-text-miyajima{
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    padding-left: 0%;
+    padding-right: 35%;
+    font-size: 25px;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.4);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
 .schedule-OneBox{
     display: flex;
     

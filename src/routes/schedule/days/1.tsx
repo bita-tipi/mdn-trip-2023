@@ -2,7 +2,7 @@ import { getImg } from "model/assets";
 
 const imgStationNagoya = getImg("名古屋駅.png");
 const imgStationHirosima = getImg("広島駅.jpeg");
-
+const imgStationMiyajima= getImg("宮島.jpeg");
 
 export function ScheduleDay1() {
   return (
@@ -127,7 +127,25 @@ export function ScheduleDay1() {
           </p>
         </div>
       </section>
-
+      <section className="schedule_place">
+        <p id="schedule-text" className="schedule-time">
+        11:00
+        </p>
+        <div className="schedule-area2">
+          <img
+            src={imgStationMiyajima}
+            className="schedule-nagoyastation"
+          >
+          </img>
+            <p id="schedule-text" className="schedule-area-do">
+         観光
+        </p>
+        <p id="schedule-text" className="schedule-text-miyajima">
+        　宮島
+        </p>
+         
+        </div>
+      </section>
       
     </main>
   );
