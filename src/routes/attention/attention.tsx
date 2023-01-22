@@ -132,12 +132,12 @@ export function Attention() {
         </ul>
 
         <ul className="tyui">
-          <div className="attention-header-container">
-            <h2 onClick={() => ListSelect(3)} className="tyuuititle">
+        <div className="attention-header-container">
+            <h2 onClick={() => ListSelect(2)} className="tyuuititle">
               <div className="arrow-character">v</div>
-              <div className="tyuititletext">&emsp;新幹線/バス</div>
+              <div className="tyuititletext">&emsp;新幹線</div>
               <div>
-                <img className="titledesignshin" src={img.shinkansen} />
+                <img className="titledesign" src={img.shinkansen} />
               </div>
               <div className="separator"></div>
             </h2>
