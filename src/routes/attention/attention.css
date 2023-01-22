@@ -130,6 +130,8 @@ body{
     height: 25px;
     width: auto;
     margin-left: 25px;
+   
+
 }
 
 .separator{
@@ -141,6 +143,8 @@ body{
         padding-right: 20%;
         background-repeat: repeat-x;
         overflow-x: hidden;
+        background-position: right 10% bottom 10%;
+        background-color: aqua;
 }
 .tyuititletext{
     white-space: nowrap
