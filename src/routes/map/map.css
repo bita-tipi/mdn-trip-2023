@@ -18,7 +18,7 @@
 }
 
 .map-button {
-    color: white;
+    color: #4D3326;
     margin-top: 1%;
     font-family: klee-one, sans-serif;
     font-weight: 600;
@@ -61,6 +61,7 @@
     padding-right: 5%;
     border-radius: 8px;
     display: flex;
+    justify-content: center;
 }
 
 .map-area {
@@ -166,7 +167,7 @@
 }
 
 .map-bar {
-    background-color: #9C1E29;
+    background-color: #D47878;
     width: 1%;
     margin-right: 4%;
     margin-top: 2%;
@@ -175,7 +176,7 @@
 }
 
 .map-bar-open {
-    background-color: #9C1E29;
+    background-color: #D47878;
     width: 1%;
     margin-right: 4%;
     margin-left: 10%;
@@ -237,7 +238,7 @@
     zoom: 0.5;
     margin-top: -10%;
     margin-bottom: 10%;
-    width: 80%;
+    width: 100%;
 }
 
 .map-topic-icon {
@@ -247,12 +248,13 @@
 }
 
 .map-selectButton {
-
-    border-radius: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 25px;
+    color: #FCEBBE;
+    border-radius: 200px;
     border-style: none;
-    background-color: #F9F4E6;
-    color: #EFB9A6;
-
+    background-color: #D68B81;
 }
 
 .map-TouchArea {

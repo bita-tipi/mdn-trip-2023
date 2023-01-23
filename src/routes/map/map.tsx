@@ -6,7 +6,6 @@ const imgMapAichi = getImg("地図あいち.svg");
 const imgYoshi = getImg("yoshi.png");
 const imgMainLogo = getImg("main_logo.svg");
 const imgFoods = getImg("食べ物.png");
-const imgHogen = getImg("方言.png");
 const imgPlace = getImg("場所.png");
 const imgHistory = getImg("歴史.png");
 const imgGift = getImg("おみやげ.png");
@@ -16,7 +15,7 @@ const imgHistoryKurashiki = getImg("倉敷歴史.png");
 const imgTopicArea = getImg("topic-area.png");
 
 function Map() {
-    const Sort_List = [Place(), Food(), Gift(), Language(), History()];
+    const Sort_List = [Place(), Food(), Gift(), History()];
     const [sort, updateSort] = useState(0);
     const map_List = [imgMapAichi, imgYoshi, imgMainLogo];
     const [map, updateMap] = useState(0);
@@ -66,19 +65,6 @@ function Map() {
                     <div className="map-topic-in">
                         <img src={imgGift} className="map-topic-icon" />
                         <p className="map-topic-text">お土産</p>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-    function Language() {
-        return (
-            <div>
-                <p className="map-text-color">TOPICS詳細　方言</p>
-                <div className="map-topic-area">
-                    <div className="map-topic-in">
-                        <img src={imgHogen} className="map-topic-icon" />
-                        <p className="map-topic-text">方言</p>
                     </div>
                 </div>
             </div>
@@ -174,11 +160,7 @@ function Map() {
                         <p className="map-text">お土産</p>
                     </div>
                     <div className="map-icon">
-                        <img src={imgHogen} onClick={() => updateSort(3)} />
-                        <p className="map-text">方言</p>
-                    </div>
-                    <div className="map-icon">
-                        <img src={imgHistory} onClick={() => updateSort(4)} />
+                        <img src={imgHistory} onClick={() => updateSort(3)} />
                         <p className="map-text">歴史</p>
                     </div>
                 </div>
