@@ -9,7 +9,7 @@
 
 .map-sort {
     text-align: center;
-    background-color: #b6b2a7;
+    background-color: #EBD497;
     margin-left: 10%;
     margin-right: 40%;
     border-radius: 5px;
@@ -35,7 +35,7 @@
 }
 
 .map-TouchArea {
-    background-color: #757b77;
+    background-color: #EBD497;
     background-size: cover;
     bottom: 0;
     height: 100%;
@@ -52,7 +52,7 @@
     text-align: center;
     margin-top: 5%;
     overflow: scroll;
-    background-color: #b6b2a7;
+    background-color: #EBD497;
     margin-left: 10%;
     margin-right: 10%;
     padding-top: 4%;
@@ -75,11 +75,11 @@
 
 .map-body {
     text-align: center;
-    background-color: #b6b2a7;
+    background-color: #EBD497;
 }
 
 .map-text {
-    color: white;
+    color: #4D3326;
     font-size: 25px;
     font-family: klee-one, sans-serif;
     font-weight: 600;
@@ -87,7 +87,7 @@
 }
 
 .map-text-color {
-    color: #b6b2a7;
+    color: #9C1E29;
     margin-bottom: -5%;
     text-align: left;
     margin-left: 10%;
@@ -103,7 +103,7 @@
 .map-pull {
     padding-bottom: 8%;
     margin-bottom: -5%;
-    color: white;
+    color: #4D3326;
     margin-top: 3%;
     font-size: 16px;
     font-family: klee-one, sans-serif;
@@ -138,7 +138,7 @@
     text-align: center;
     margin-top: 5%;
     overflow: scroll;
-    background-color: #b6b2a7;
+    background-color: #EBD497;
     margin-left: 10%;
     margin-right: 10%;
     padding-top: 4%;
@@ -150,7 +150,7 @@
 
 .map-topic-text {
     margin-top: -2%;
-    color: white;
+    color: #4D3326;
     font-size: 50px;
     margin-left: 5%;
     font-family: klee-one, sans-serif;
@@ -166,7 +166,7 @@
 }
 
 .map-bar {
-    background-color: #757b77;
+    background-color: #9C1E29;
     width: 1%;
     margin-right: 4%;
     margin-top: 2%;
@@ -175,7 +175,7 @@
 }
 
 .map-bar-open {
-    background-color: #757b77;
+    background-color: #9C1E29;
     width: 1%;
     margin-right: 4%;
     margin-left: 10%;
@@ -185,7 +185,7 @@
 }
 
 .map-moji {
-    background-color: #b6b2a7;
+    background-color: #EBD497;
     margin-left: 10%;
     margin-right: 40%;
     border-radius: 4px;
@@ -201,13 +201,13 @@
     margin-left: 100%;
     margin-top: 13%;
     border-radius: 4px;
-    background-color: #efb9a6;
+    background-color: #D47878;
     width: 8%;
     height: 10%;
 }
 
 .map-red-circle {
-    background-color: #efb9a6;
+    background-color: #D47878;
     border-radius: 100px;
     width: 50%;
     height: 9%;
@@ -253,4 +253,8 @@
     background-color: #F9F4E6;
     color: #EFB9A6;
 
+}
+
+.map-TouchArea {
+    background-color: #FCEBBE;
 }
