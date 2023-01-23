@@ -353,6 +353,12 @@ span {
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
 }
+.schedule-text-tyuusyoku{
+    margin-left: 42%;
+    margin-top: 5%;
+    text-decoration: underline solid 3px #8e627c;
+}
+
 .schedule-OneBox{
     display: flex;
     

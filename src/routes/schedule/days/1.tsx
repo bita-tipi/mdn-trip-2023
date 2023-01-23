@@ -146,6 +146,11 @@ export function ScheduleDay1() {
          
         </div>
       </section>
+      <div id="schedule-text"className="schedule-text-tyuusyoku">
+       昼食は各自で
+      </div>
+     
+
       
     </main>
   );
