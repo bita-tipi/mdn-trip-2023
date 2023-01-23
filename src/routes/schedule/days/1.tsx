@@ -149,8 +149,34 @@ export function ScheduleDay1() {
       <div id="schedule-text"className="schedule-text-tyuusyoku">
        昼食は各自で
       </div>
-     
-
+      <section className="schedule_place2">
+        <p id="schedule-text" className="schedule-time5">
+          13:30<span> ~ </span>13:40
+        </p>
+        <div className="schedule-area3">
+          <p id="schedule-text" className="schedule-norimono2">
+            船
+          </p>
+          <section className="schedule-place3">
+            <p className="schedule-tatesen"></p>
+            <p id="schedule-text" className="schedule-nagoya1">
+              宮島
+            </p>
+            <p id="schedule-text" className="schedule-miyajimasyou2">
+              miyajima
+            </p>
+          </section>
+          <p className="schedule-sannkaku3"></p>
+          <p className="schedule-tatesen3"></p>
+          <p id="schedule-text" className="schedule-miyajima">
+            宮島口
+          </p>
+          <p id="schedule-text" className="schedule-miyajimasyou">
+            Miyajimaguchi
+          </p>
+        </div>
+      </section>
+    
       
     </main>
   );
