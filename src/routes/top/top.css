@@ -1,5 +1,5 @@
 .background_top {
-    background-color: #767C77;
+    background-color: #ffeec0;
     width:100%;
     height:100%;
     display: flex;
@@ -45,7 +45,7 @@
   }
   
   .background_top h2 {
-    color: #f8f3e5;
+    color: #4e3427;
     margin: 0;
     font-size: calc(10px + 2vmin);
     text-decoration: none;
@@ -66,16 +66,17 @@
     display: flex;
   }
   
-  .border_schedule{
+  /*.border_schedule{
     height: 46vh;
     width: 25px;
     background-color: #9BABA3;
     margin-left: 8%;
     margin-bottom: 1%;
-  }
+  }*/
   
   .schedule_img {
-    margin-top: 3%;
+    border-left: solid 6px #a41a29;
+    margin-left:8%;
     display: flex;
     flex-wrap: wrap;
   }
@@ -83,13 +84,14 @@
   .schedule_main img {
     width: 45%;
     margin-left: 3%;
-    margin-bottom: 3%;
+    margin-top:2%;
+    margin-bottom: 2%;
   }
   
   .border_room{
     height: 5vh;
     width: 5px;
-    background-color: #9BABA3;
+    background-color: #a41a29;
     margin-top: 1%;
     margin-left: 8%;
     margin-bottom: 2%;
@@ -99,15 +101,17 @@
     display: flex;
   }
   
-  .border_topic{
+  /*.border_topic{
     height: 23vh;
     width: 25px;
     background-color: #9BABA3;
     margin-left: 8%;
     margin-bottom: 0;
-  }
+  }*/
   
   .topic_img{
+    border-left: solid 6px #a41a29;
+    margin-left: 8%;
     display: flex;
     overflow-x: scroll;
     scrollbar-width: none;
@@ -128,8 +132,8 @@
   
   .border_attention{
     height: 5vh;
-    width: 5px;
-    background-color: #9BABA3;
+    width: 6px;
+    background-color: #a41a29;
     margin-top: 1%;
     margin-left: 8%;
     margin-bottom: 10%;
