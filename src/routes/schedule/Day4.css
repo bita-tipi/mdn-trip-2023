@@ -1,0 +1,85 @@
+.Day-box{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+}
+
+.Day-main{
+    text-align: center;
+}
+
+.Day-busArea{
+    text-align: left;
+    margin-left:10%;
+}
+
+.Day-leftLineArea{
+    display: flex;
+    margin-top:-10%;
+}
+
+.Day-leftLineAreaSmall{
+    display: flex;
+    margin-left:10%;
+}
+.Day-leftLine{
+    background-color: aqua;
+    width:3px;
+    height:auto;
+    margin-right: 5px;
+    margin-top: 17px;
+    margin-bottom: 24px;
+}
+
+.Day-time{
+    font-size: 30px;
+    margin-left:5%;
+    color: white;
+}
+
+.Day-timeSmall{
+    font-size: 15px;
+    margin-left:5%;
+    color: white;
+}
+
+.Day-textArea{
+color: white;
+text-align: left;
+margin-top:2%;
+}
+
+.Day-Rome{
+    margin-top:-10%;
+}
+
+.Day-textName{
+    margin-bottom:-10%;
+}
+
+.Day-textNameSmall{
+    margin-bottom:-40%;
+}
+
+.Day-textNameSmall2{
+    margin-bottom:-20%;
+}
+
+
+.Day-BusLine{
+    text-decoration: underline solid 2px aqua;
+    color:white;
+}
+
+.Day-BusLineSmall{
+    text-decoration: underline solid 2px aqua;
+    color:white;
+    margin-bottom:-10%;
+}
+
+.Day-routeIf{
+    padding-left:5%;
+    text-align: left;
+    background-color: blue;
+    color: white;
+}
