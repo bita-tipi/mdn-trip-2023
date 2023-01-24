@@ -33,6 +33,7 @@
   }
   
   .title {
+    font-family: "筑紫a丸ゴシック";
     display: flex;
     align-content: space-between;
     align-items: center;
@@ -55,11 +56,13 @@
     width: 6%;
     margin-left: 92%;
   }
-  
-  .mainvisual img {
-    margin-left: 3%;
-    margin-bottom: 15%;
-    width: 93%;
+
+  .mainvisual img{
+    width:100vw;
+  }
+
+  .mainvisual source{
+    margin-left: 0.5%;
   }
   
   .schedule_main {
@@ -87,16 +90,19 @@
     margin-top:2%;
     margin-bottom: 2%;
   }
-  
-  .border_room{
-    height: 5vh;
-    width: 5px;
-    background-color: #a41a29;
-    margin-top: 1%;
-    margin-left: 8%;
+
+  .map_main img{
+    width: 93%;
+    margin-left:3%;
+    margin-top:2%;
     margin-bottom: 2%;
   }
-  
+
+  .map_img{
+    border-left: solid 6px #a41a29;
+    margin-left: 8%;
+  }
+
   .topic_main {
     display: flex;
   }

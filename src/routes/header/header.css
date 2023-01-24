@@ -50,12 +50,12 @@
 }
 
 .header-background {
-    background-color: #767c77;
+    background-color: #ffeec0;
 }
 
 .header-back {
     padding-top: 12%;
-    background-color: #98A99F;
+    background-color: #a41a29;
     height: 35px;
     width: 40px;
     margin-top: -12%;
@@ -67,7 +67,7 @@
 .header-bar {
     margin-left: 25%;
     margin-top: 15%;
-    background-color: #F9F3E7;
+    background-color: #ffeec0;
     width: 20px;
     height: 1px;
 }
