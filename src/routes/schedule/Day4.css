@@ -1,85 +1,89 @@
-.Day-box{
+.Day-box {
     display: flex;
-    justify-content: center ;
+    justify-content: left;
+    margin-left: 10%;
     align-items: center;
 }
 
-.Day-main{
+.Day-main {
     text-align: center;
 }
 
-.Day-busArea{
+.Day-busArea {
     text-align: left;
-    margin-left:10%;
+    margin-left: 10%;
 }
 
-.Day-leftLineArea{
+.Day-leftLineArea {
     display: flex;
-    margin-top:-10%;
+    margin-top: -10%;
 }
 
-.Day-leftLineAreaSmall{
+.Day-leftLineAreaSmall {
     display: flex;
-    margin-left:10%;
+    margin-left: 10%;
 }
-.Day-leftLine{
-    background-color: aqua;
-    width:3px;
-    height:auto;
+
+.Day-leftLine {
+    background-color: #4E3427;
+    width: 3px;
+    height: auto;
     margin-right: 5px;
     margin-top: 17px;
     margin-bottom: 24px;
 }
 
-.Day-time{
+.Day-time {
     font-size: 30px;
-    margin-left:5%;
-    color: white;
+    color: #4E3427;
 }
 
-.Day-timeSmall{
+.Day-timeSmall {
     font-size: 15px;
-    margin-left:5%;
-    color: white;
+    color: #4E3427;
 }
 
-.Day-textArea{
-color: white;
-text-align: left;
-margin-top:2%;
-}
-
-.Day-Rome{
-    margin-top:-10%;
-}
-
-.Day-textName{
-    margin-bottom:-10%;
-}
-
-.Day-textNameSmall{
-    margin-bottom:-40%;
-}
-
-.Day-textNameSmall2{
-    margin-bottom:-20%;
-}
-
-
-.Day-BusLine{
-    text-decoration: underline solid 2px aqua;
-    color:white;
-}
-
-.Day-BusLineSmall{
-    text-decoration: underline solid 2px aqua;
-    color:white;
-    margin-bottom:-10%;
-}
-
-.Day-routeIf{
-    padding-left:5%;
+.Day-textArea {
+    color: #4E3427;
     text-align: left;
-    background-color: blue;
-    color: white;
+    margin-top: 2%;
+}
+
+.Day-Rome {
+    margin-top: -10%;
+}
+
+.Day-textName {
+    margin-bottom: -10%;
+}
+
+.Day-textNameSmall {
+    margin-bottom: -40%;
+}
+
+.Day-textNameSmall2 {
+    margin-bottom: -20%;
+}
+
+
+.Day-BusLine {
+    text-decoration: underline solid 2px #4E3427;
+    color: #4E3427;
+}
+
+.Day-BusLineSmall {
+    text-decoration: underline solid 2px #4E3427;
+    color: #4E3427;
+    margin-bottom: -10%;
+}
+
+.Day-routeIf {
+    padding-left: 5%;
+    text-align: left;
+    background-color: #DF7C7C;
+    color: #4E3427;
+}
+
+.Day-underLineRed {
+    text-decoration: underline solid 2px #DF7C7C;
 }
