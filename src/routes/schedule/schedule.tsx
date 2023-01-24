@@ -12,10 +12,10 @@ export type ScheduleProps = {
 };
 
 const components = [
-    <ScheduleDay1/>,
-    <ScheduleDay2/>,
-    <ScheduleDay3/>,
-    <ScheduleDay4/>,
+    <ScheduleDay1 />,
+    <ScheduleDay2 />,
+    <ScheduleDay3 />,
+    <ScheduleDay4 />,
 ];
 
 function Schedule() {
@@ -44,7 +44,7 @@ function Schedule() {
                         onClick={() => updateDateIndex(index)}
                     >
                         {index + 1}日目
-                    </h2>,
+                    </h2>
                 );
             }
 
@@ -55,7 +55,6 @@ function Schedule() {
 
     return (
         <div className="schedule-body">
-            <h1 className="schedule-title"> スケジュール</h1>
             {datePicker()}
             {components[dateIndex]}
         </div>

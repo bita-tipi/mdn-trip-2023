@@ -5,13 +5,21 @@
     align-items: center;
 }
 
+.Day-box-picture {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px;
+    align-items: center;
+    background-color: #FFCF59;
+}
+
 .Day-main {
     text-align: center;
 }
 
 .Day-busArea {
     text-align: left;
-    margin-left: 10%;
+    margin-left: 20%;
 }
 
 .Day-leftLineArea {
@@ -21,7 +29,7 @@
 
 .Day-leftLineAreaSmall {
     display: flex;
-    margin-left: 10%;
+    margin-left: 20%;
 }
 
 .Day-leftLine {
@@ -34,7 +42,7 @@
 }
 
 .Day-time {
-    font-size: 30px;
+    font-size: 15px;
     color: #4E3427;
 }
 
@@ -69,21 +77,195 @@
 .Day-BusLine {
     text-decoration: underline solid 2px #4E3427;
     color: #4E3427;
+    margin-bottom: 4%;
 }
 
 .Day-BusLineSmall {
     text-decoration: underline solid 2px #4E3427;
     color: #4E3427;
-    margin-bottom: -10%;
+    margin-bottom: -17%;
+
 }
 
 .Day-routeIf {
     padding-left: 5%;
-    text-align: left;
     background-color: #DF7C7C;
-    color: #4E3427;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 5%;
 }
 
 .Day-underLineRed {
     text-decoration: underline solid 2px #DF7C7C;
+    margin-left: 20%;
+}
+
+.Day-RedLine {
+    background-color: #DF7C7C;
+    height: 10px;
+    width: 100%;
+}
+
+.Day-picture {
+    width: 76%;
+    object-fit: cover;
+}
+
+.Day-pictureText {
+    color: white;
+    margin-top: -30%;
+}
+
+.Day-pictureTextBackground {
+    padding-left: 5%;
+    text-align: left;
+    background: black;
+}
+
+.Day-pictureBox {
+    align-items: stretch;
+    margin-left: 10%;
+}
+
+.Day-timePicture {
+    margin-left: 6%;
+    margin-right: 4%;
+    color: white;
+    font-size: 20px;
+}
+
+.Day-triangle {
+    height: 5%;
+    width: 5%;
+    margin-right: 5%;
+    animation-name: rotate;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.Day-triangle3 {
+    height: 5%;
+    width: 5%;
+    margin-right: 5%;
+
+}
+
+.Day-triangle2 {
+    height: 5%;
+    transform: rotate(90deg);
+    width: 5%;
+    margin-right: 5%;
+    animation-name: rotate2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(90deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(90deg);
+    }
+}
+
+.Day-pulldown {
+    animation-name: pulldown;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+}
+
+@keyframes pulldown {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+        margin-bottom: -350px;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+        margin-bottom: 0px;
+    }
+}
+
+.Day-pulldownClose {
+    animation-name: pulldownClose;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+}
+
+@keyframes pulldownClose {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+        margin-bottom: 0px;
+        visibility: visible;
+    }
+
+    100% {
+        transform: translateY(-10px);
+        opacity: 0;
+        margin-bottom: -90%;
+        visibility: hidden;
+    }
+}
+
+.Day-pulldown2 {
+    animation-name: pulldown2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+}
+
+@keyframes pulldown2 {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+        margin-bottom: -350px;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+        margin-bottom: 0px;
+    }
+}
+
+.Day-pulldownClose2 {
+    animation-name: pulldownClose2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    overflow: hidden;
+}
+
+@keyframes pulldownClose2 {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+        margin-bottom: 0px;
+        visibility: visible;
+    }
+
+    100% {
+        transform: translateY(-10px);
+        opacity: 0;
+        margin-bottom: -100%;
+        visibility: hidden;
+    }
 }
