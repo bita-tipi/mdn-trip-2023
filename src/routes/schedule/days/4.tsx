@@ -56,7 +56,7 @@ export function ScheduleDay4() {
             </div>
             {isListOpenDays[0] ? (
                 <div className="Day-pulldown">
-                    <img className="Day-triangle3" src={triangle}></img>
+                    <img className="Day-triangle3" src={triangle}/>
                     <div className="Day-box">
                         <p className="Day-timeSmall">10:00</p>
                         <div className="Day-leftLineAreaSmall">
@@ -72,7 +72,7 @@ export function ScheduleDay4() {
                         <img className="Day-picture" src={arashiyama} />
                     </div>
                     <div>
-                        <p>昼食は各自</p>
+                        <p className="Day-lunch">昼食は各自</p>
                     </div>
                     <div className="Day-box">
                         <p className="Day-timeSmall">13:50</p>
@@ -106,7 +106,7 @@ export function ScheduleDay4() {
                         <img className="Day-picture" src={arashiyama} />
                     </div>
                     <div>
-                        <p>昼食は各自</p>
+                        <p className="Day-lunch">昼食は各自</p>
                     </div>
                     <div className="Day-box">
                         <p className="Day-timeSmall">13:50</p>
@@ -138,8 +138,8 @@ export function ScheduleDay4() {
                         <div className="Day-leftLineAreaSmall">
                             <div className="Day-leftLine"></div>
                             <div className="Day-textArea">
-                                <p className="Day-textNameSmall2">北野天満宮</p>
-                                <h6>Kitano Tennmannguu</h6>
+                                <p className="Day-textNameSmall2">円山公園</p>
+                                <h6>Maruyama Park</h6>
                             </div>
                         </div>
                     </div>
@@ -148,7 +148,7 @@ export function ScheduleDay4() {
                         <img className="Day-picture" src={ninen} />
                     </div>
                     <div>
-                        <p>昼食は自由</p>
+                        <p className="Day-lunch">昼食は自由</p>
                     </div>
                     <div className="Day-box">
                         <p className="Day-timeSmall">14:10</p>
@@ -178,16 +178,12 @@ export function ScheduleDay4() {
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <p>10:15</p>
-                        <div>
-                            <p>観光</p>
-                            <p>北野天満宮</p>
-                            <img></img>
-                        </div>
+                    <div className="Day-box-picture">
+                        <p className="Day-timePicture">10:15</p>
+                        <img className="Day-picture" src={ninen} />
                     </div>
                     <div>
-                        <p>昼食は自由</p>
+                        <p className="Day-lunch">昼食は自由</p>
                     </div>
                     <div className="Day-box">
                         <p className="Day-timeSmall">14:10</p>
@@ -219,13 +215,13 @@ export function ScheduleDay4() {
             </div>
             {isListOpenDays[2] ? (
                 <div className="Day-pulldown2">
-                    <div>
-                        <p>10:15</p>
-                        <div>
-                            <div></div>
-                            <div>
-                                <p>北野天満宮</p>
-                                <p>Kitano Tennmannguu</p>
+                    <div className="Day-box">
+                        <p className="Day-timeSmall">10:15</p>
+                        <div className="Day-leftLineAreaSmall">
+                            <div className="Day-leftLine"></div>
+                            <div className="Day-textArea">
+                                <p className="Day-textNameSmall2">北野天満宮</p>
+                                <h6>Kitano Tennmannguu</h6>
                             </div>
                         </div>
                     </div>
@@ -234,37 +230,38 @@ export function ScheduleDay4() {
                         <img className="Day-picture" src={kitano} />
                     </div>
                     <div className="Day-box-picture">
-                        <p className="Day-timePicture">11:30</p>
+                        <p className="Day-timePicture">11:15</p>
                         <img className="Day-picture" src={kitano} />
                     </div>
                     <div>
-                        <p>昼食は自由</p>
+                        <p className="Day-lunch">昼食は自由</p>
                     </div>
-                    <div>
-                        <p>14:10</p>
-                        <div>
-                            <div>
-                                <p>バス</p>
-                                <div></div>
-                            </div>
-                            <div></div>
-                            <div>
-                                <p>清水駐車場</p>
-                                <p>KiyomizuParking</p>
-                            </div>
+            <div className="Day-box">
+                <p className="Day-time">14:10</p>
+                <div className="Day-busArea">
+                    <h5 className="Day-BusLine">バス</h5>
+                    <div className="Day-leftLineArea">
+                        <div className="Day-leftLine"></div>
+                        <div className="Day-textArea">
+                            <p className="Day-textName">錦市場</p>
+                            <h6 className="">
+                                Nishiki Itiba
+                            </h6>
                         </div>
                     </div>
+                </div>
+            </div>
                     <div className="Day-RedLine"></div>
                 </div>
             ) : (
                 <div className="Day-pulldownClose2">
-                    <div>
-                        <p>10:15</p>
-                        <div>
-                            <div></div>
-                            <div>
-                                <p>北野天満宮</p>
-                                <p>Kitano Tennmannguu</p>
+                    <div className="Day-box">
+                        <p className="Day-timeSmall">10:15</p>
+                        <div className="Day-leftLineAreaSmall">
+                            <div className="Day-leftLine"></div>
+                            <div className="Day-textArea">
+                                <p className="Day-textNameSmall2">北野天満宮</p>
+                                <h6>Kitano Tennmannguu</h6>
                             </div>
                         </div>
                     </div>
@@ -277,22 +274,23 @@ export function ScheduleDay4() {
                         </div>
                     </div>
                     <div>
-                        <p>昼食は自由</p>
+                        <p className="Day-lunch">昼食は自由</p>
                     </div>
-                    <div>
-                        <p>14:10</p>
-                        <div>
-                            <div>
-                                <p>バス</p>
-                                <div></div>
-                            </div>
-                            <div></div>
-                            <div>
-                                <p>清水駐車場</p>
-                                <p>KiyomizuParking</p>
-                            </div>
+                    <div className="Day-box">
+                <p className="Day-time">14:10</p>
+                <div className="Day-busArea">
+                    <h5 className="Day-BusLine">バス</h5>
+                    <div className="Day-leftLineArea">
+                        <div className="Day-leftLine"></div>
+                        <div className="Day-textArea">
+                            <p className="Day-textName">錦市場</p>
+                            <h6 className="">
+                                Nishiki Itiba
+                            </h6>
                         </div>
                     </div>
+                </div>
+            </div>
                     <div className="Day-RedLine"></div>
                 </div>
             )}

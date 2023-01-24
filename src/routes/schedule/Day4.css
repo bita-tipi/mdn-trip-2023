@@ -11,6 +11,7 @@
     border-radius: 20px;
     align-items: center;
     background-color: #FFCF59;
+    margin-bottom:10%
 }
 
 .Day-main {
@@ -265,7 +266,12 @@
     100% {
         transform: translateY(-10px);
         opacity: 0;
-        margin-bottom: -100%;
+        margin-bottom: -83%;
         visibility: hidden;
     }
+}
+
+.Day-lunch{
+    text-decoration: underline solid 2px aqua;
+    color: #4E3427;
 }
