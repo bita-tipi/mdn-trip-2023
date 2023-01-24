@@ -1,5 +1,20 @@
 import "../Day4.css";
+import _ from "lodash";
+import React, { useState } from "react";
+
 export function ScheduleDay4() {
+    const [isListOpenDays, updateIsListOpenDays] = useState([
+        false,
+        false,
+        false,
+      ]);
+    
+      function ListSelectDays(index: number) {
+        const copiedList = _.cloneDeep(isListOpenDays);
+        copiedList[index] = !copiedList[index];
+        updateIsListOpenDays(copiedList);
+      }
+
     return (
         <main className="Day-main">
             <div className="Day-box">
@@ -21,8 +36,11 @@ export function ScheduleDay4() {
                 </div>
             </div>
             <div className="Day-routeIf">
-                <h2>1.嵐山ルート</h2>
+                <h2 onClick={() => ListSelectDays(0)}>1.嵐山ルート</h2>
             </div>
+            {isListOpenDays[0] ? 
+                (
+                    <div>
             <div className="Day-box">
                 <p className="Day-timeSmall">10:00</p>
                 <div className="Day-leftLineAreaSmall">
@@ -56,6 +74,10 @@ export function ScheduleDay4() {
                     </div>
                 </div>
             </div>
+                    </div>
+                ) :(
+                    <div></div>
+                )}
             <div className="Day-routeIf">
                 <h2>2.二年坂/清水寺</h2>
             </div>
