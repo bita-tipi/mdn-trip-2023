@@ -6,14 +6,14 @@
 }
 
 .attentionBody{
-    background-color: #767c77;
+    background-color: #ffecc4;
     height: 100%;
     display: flex;
  
 }
 
 body{
-    background-color: #767c77;
+    background-color: #ffecc4;
 }
 
 @keyframes pulldown {
@@ -42,7 +42,7 @@ body{
 .tyuuititle {
     width: max-content;
     font-size: 20px;
-    color: white;
+    color: #4c3425;
     display: flex;
 }
 
