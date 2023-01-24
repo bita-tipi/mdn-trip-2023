@@ -12,10 +12,10 @@ export type ScheduleProps = {
 };
 
 const components = [
-    ScheduleDay1(),
-    ScheduleDay2(),
-    ScheduleDay3(),
-    ScheduleDay4(),
+    <ScheduleDay1/>,
+    <ScheduleDay2/>,
+    <ScheduleDay3/>,
+    <ScheduleDay4/>,
 ];
 
 function Schedule() {

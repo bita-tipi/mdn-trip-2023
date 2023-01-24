@@ -79,9 +79,11 @@ export function ScheduleDay4() {
                     <div></div>
                 )}
             <div className="Day-routeIf">
-                <h2>2.二年坂/清水寺</h2>
+                <h2 onClick={() => ListSelectDays(1)}>2.二年坂/清水寺</h2>
             </div>
-            <div className="Day-box">
+            {isListOpenDays[1] ?(
+                <div>
+                    <div className="Day-box">
                 <p className="Day-timeSmall">10:15</p>
                 <div className="Day-leftLineAreaSmall">
                     <div  className="Day-leftLine"></div>
@@ -115,11 +117,17 @@ export function ScheduleDay4() {
                     </div>
                 </div>
             </div>
-            --------------------------
+                </div>
+            ):(
+                <div></div>
+            )}
+
             <div className="Day-routeIf">
-                <h2>3.北野天満宮/錦市場ルート</h2>
+                <h2 onClick={() => ListSelectDays(2)}>3.北野天満宮/錦市場ルート</h2>
             </div>
-            <div>
+            {isListOpenDays[2] ? (
+                <div>
+                     <div>
                 <p>10:15</p>
                 <div>
                     <div></div>
@@ -154,6 +162,11 @@ export function ScheduleDay4() {
                     </div>
                 </div>
             </div>
+                </div>
+            ) :(
+                <div></div>
+            )}
+           
         </main>
     );
 }
