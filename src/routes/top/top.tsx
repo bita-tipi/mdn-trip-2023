@@ -12,7 +12,7 @@ const imgSchedule = getImg("kari-schedule.jpg");
 const imgDecolation = getImg("decolation1.svg");
 const imgMainLogo = getImg("main-logo.svg");
 const imgMainvisual = getImg("kari-mainvisual.svg");
-const imgMainvisual1 = getImg("kari-mainvisual1.svg");
+const imgBackground = getImg("top-background.svg");
 
 const scheduleImagesPath = [imgSchedule, imgSchedule, imgSchedule, imgSchedule];
 
@@ -50,17 +50,25 @@ function Top() {
 
   return (
     <div className="background_top">
+      <img className="decolation" src={imgDecolation} />
+
       <div className="mainvisual">
-        <picture>
-          <source media="(max-width: 640px)" srcSet={imgMainvisual} />
-          <img src={imgMainvisual1} />
-        </picture>
+        <div className="box">
+          <picture>
+            <source media="(max-width: 640px)" srcSet={imgMainvisual} />
+            <img className="mainvisual_img" src={imgSchedule} />
+          </picture>
+          <img className="main_logo" src={imgMainLogo} />
+        </div>
       </div>
 
+      <div className="box" />
       <section className="schedule">
         <div className="title">
           <img src={imgScheduleLogo} />
-          <h2>日程</h2>
+          <Link to="/schedule" className="link">
+            <h2>日程</h2>
+          </Link>
         </div>
         <main className="schedule_main">
           <div className="schedule_img">{generateScheduleImages()}</div>
@@ -76,7 +84,9 @@ function Top() {
         </div>
         <main className="map_main">
           <div className="map_img">
-            <img src={imgSchedule} />
+            <Link to="/map">
+              <img src={imgSchedule} />
+            </Link>
           </div>
         </main>
       </section>
@@ -84,7 +94,9 @@ function Top() {
       <section className="topic">
         <div className="title">
           <img src={imgTopicLogo} />
-          <h2>トピック</h2>
+          <Link to="/map" className="link">
+            <h2>トピック</h2>
+          </Link>
         </div>
         <main className="topic_main">
           <div className="topic_img">
