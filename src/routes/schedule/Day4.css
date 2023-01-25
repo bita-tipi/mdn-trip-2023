@@ -8,7 +8,7 @@
 .Day-box-picture {
     display: flex;
     justify-content: space-between;
-    border-radius: 20px;
+    border-radius: 15px;
     align-items: center;
     background-color: #FFCF59;
     margin-bottom: 10%
@@ -26,6 +26,10 @@
 .Day-leftLineArea {
     display: flex;
     margin-top: -10%;
+}
+
+.Day-leftLineArea2 {
+    display: flex;
 }
 
 .Day-leftLineAreaSmall {
@@ -95,6 +99,14 @@
 
 }
 
+.Day-BusLineSmall2 {
+    text-decoration: underline solid 2px #4E3427;
+    color: #4E3427;
+    margin-bottom: -6%;
+    margin-left: -16%;
+
+}
+
 .Day-routeIf {
     padding-left: 5%;
     background-color: #DF7C7C;
@@ -108,6 +120,10 @@
 .Day-underLineRed {
     text-decoration: underline solid 2px #DF7C7C;
     margin-left: 20%;
+}
+
+.Day-underLineRed2 {
+    text-decoration: underline solid 2px #DF7C7C;
 }
 
 .Day-RedLine {
@@ -158,6 +174,14 @@
     width: 5%;
     margin-right: 5%;
 
+}
+
+.Day-triangle4 {
+    transform: rotate(-90deg);
+    height: 5%;
+    width: 5%;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 .Day-triangle2 {
@@ -279,7 +303,7 @@
 }
 
 .Day-lunch {
-    text-decoration: underline solid 2px aqua;
+    text-decoration: underline solid 2px #DF7C7C;
     color: #4E3427;
 }
 
@@ -288,10 +312,84 @@
     margin-bottom: 0%;
 }
 
+.Day-backScheduleSmall {
+    margin-bottom: 0%;
+    color: #4E3427;
+    font-size: 15px;
+}
+
+.Day-backSchedule2Small {
+    margin-top: 0%;
+    color: #4E3427;
+}
+
 .Day-backSchedule {
-    margin-top: -42%;
+    margin-bottom: 0%;
+    color: #4E3427;
 }
 
 .Day-backSchedule2 {
-    margin-top: 35%;
+    margin-top: 0%;
+    color: #4E3427;
+}
+
+.Day-timeBar {
+    height: 20px;
+    width: 4%;
+    margin-left: 47.5%;
+    background-color: #4E3427;
+}
+
+.Day-timeBarArea {
+    text-align: center;
+}
+
+.Day-timeSmallBar {
+    margin-bottom: 5%;
+}
+
+.Day-timeSmallBar2 {
+    margin-top: 5%;
+}
+
+.Day-underBox {
+    margin-left: 20%;
+    text-decoration: underline solid 2px #DF7C7C;
+}
+
+.Day-lunchSet {
+    width: 3%;
+    height: 3%;
+}
+
+.Day-lunchBox {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.Day-Boxbreak {
+    display: flex;
+    justify-content: left;
+    margin-left: 10%;
+    align-items: flex-start;
+}
+
+.Day-morning {
+    text-align: left;
+    margin-left: 20%;
+}
+
+.Day-timeList {
+    display: flex;
+}
+
+.Day-change {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Day-changeBox {
+    text-align: center;
 }

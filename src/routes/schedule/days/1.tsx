@@ -1,183 +1,137 @@
+import "../Day4.css";
 import { getImg } from "model/assets";
 
-const imgStationNagoya = getImg("名古屋駅.png");
-const imgStationHirosima = getImg("広島駅.jpeg");
-const imgStationMiyajima= getImg("宮島.jpeg");
+const triangle = getImg("triangle.svg");
+const univa = getImg("ユニバ.png");
+const univaa = getImg("ユニバア.png");
 
 export function ScheduleDay1() {
-  return (
-    <main>
-      <section className="schedule_place">
-        <p id="schedule-text" className="schedule-time">
-        7:20
-        </p>
-        <div className="schedule-area2">
-          <img
-            src={imgStationNagoya}
-            className="schedule-nagoyastation"
-          >
-          </img>
-            <p id="schedule-text" className="schedule-area-do">
-         集合
-        </p>
-        <p id="schedule-text" className="schedule-area-text">
-          名古屋駅
-        </p>
-         
-        </div>
-      </section>
-      
-      <section className="schedule_place2">
-        <p id="schedule-text" className="schedule-time2">
-          7:51<span> ~ </span>10:01
-        </p>
-        <div className="schedule-area2">
-          <p id="schedule-text" className="schedule-norimono">
-            新幹線-のぞみ3号
-          </p>
-          <section className="schedule-place3">
-            <p className="schedule-tatesen"></p>
-            <p id="schedule-text" className="schedule-nagoya1">
-              名古屋
-            </p>
-            <p id="schedule-text" className="schedule-nagoyasyou1">
-              Nagoya
-            </p>
-          </section> 
-          <p className="schedule-sannkaku1"></p>
-          <p className="schedule-tatesen2"></p>
-          <p id="schedule-text" className="schedule-hirosima1">
-            広島
-          </p>
-          <p id="schedule-text" className="schedule-hirosimasyou1">
-            hiroshima
-          </p>
-        </div>
-      </section>
-      <section className="schedule_place3">
-        <p id="schedule-text" className="schedule-time3">
-          10:01
-        </p>
-        <div className="schedule-area2">
-          <img
-            src={imgStationHirosima}
-            className="schedule-Hirosimastation"
-          >
-          </img>
-            <p id="schedule-text" className="schedule-area-norikae">
-          乗り換え
-        </p>
-        <p id="schedule-text" className="schedule-area-hirosimaeki">
-          広島駅
-        </p>
-         
-        </div>
-      </section>
-      <section className="schedule_place2">
-        <p id="schedule-text" className="schedule-time4">
-          10:20<span> ~ </span>11:00
-        </p>
-        <div className="schedule-area2">
-          <p id="schedule-text" className="schedule-norimono-bus">
-            バス
-          </p>
-          <section className="schedule-place3">
-            <p className="schedule-tatesen4"></p>
-            <p id="schedule-text" className="schedule-nagoya1">
-              広島駅
-            </p>
-            <p id="schedule-text" className="schedule-Hiroshima1">
-              Hiroshima
-            </p>
-          </section>
-          <p className="schedule-sannkaku2"></p>
-          <p className="schedule-tatesen5"></p>
-          <p id="schedule-text" className="schedule-miyajimaguchi">
-            宮島口
-          </p>
-          <p id="schedule-text" className="schedule-miyajimasyou1">
-            Miyajimaguchi
-          </p>
-        </div>
-      </section>
-      <section className="schedule_place2">
-        <p id="schedule-text" className="schedule-time5">
-          10:20<span> ~ </span>11:00
-        </p>
-        <div className="schedule-area3">
-          <p id="schedule-text" className="schedule-norimono2">
-            船
-          </p>
-          <section className="schedule-place3">
-            <p className="schedule-tatesen"></p>
-            <p id="schedule-text" className="schedule-nagoya1">
-              宮島口
-            </p>
-            <p id="schedule-text" className="schedule-nagoyasyou1">
-              miyajimaguchi
-            </p>
-          </section>
-          <p className="schedule-sannkaku3"></p>
-          <p className="schedule-tatesen3"></p>
-          <p id="schedule-text" className="schedule-miyajima">
-            宮島
-          </p>
-          <p id="schedule-text" className="schedule-miyajimasyou">
-            Miyajima
-          </p>
-        </div>
-      </section>
-      <section className="schedule_place">
-        <p id="schedule-text" className="schedule-time">
-        11:00
-        </p>
-        <div className="schedule-area2">
-          <img
-            src={imgStationMiyajima}
-            className="schedule-nagoyastation"
-          >
-          </img>
-            <p id="schedule-text" className="schedule-area-do">
-         観光
-        </p>
-        <p id="schedule-text" className="schedule-text-miyajima">
-        　宮島
-        </p>
-         
-        </div>
-      </section>
-      <div id="schedule-text"className="schedule-text-tyuusyoku">
-       昼食は各自で
-      </div>
-      <section className="schedule_place2">
-        <p id="schedule-text" className="schedule-time5">
-          13:30<span> ~ </span>13:40
-        </p>
-        <div className="schedule-area3">
-          <p id="schedule-text" className="schedule-norimono2">
-            船
-          </p>
-          <section className="schedule-place3">
-            <p className="schedule-tatesen"></p>
-            <p id="schedule-text" className="schedule-nagoya1">
-              宮島
-            </p>
-            <p id="schedule-text" className="schedule-miyajimasyou2">
-              miyajima
-            </p>
-          </section>
-          <p className="schedule-sannkaku3"></p>
-          <p className="schedule-tatesen3"></p>
-          <p id="schedule-text" className="schedule-miyajima">
-            宮島口
-          </p>
-          <p id="schedule-text" className="schedule-miyajimasyou">
-            Miyajimaguchi
-          </p>
-        </div>
-      </section>
-    
-      
-    </main>
-  );
+    return (
+        <main className="Day-main">
+            <div className="Day-box">
+                <p>07:30</p>
+                <p className="Day-underLineRed">朝食</p>
+            </div>
+
+            <div className="Day-box">
+                <div className="Day-timeBarArea">
+                    <p className="Day-timeSmallBar">08:30</p>
+                    <div className="Day-timeBar"></div>
+                    <p className="Day-timeSmallBar2">09:30</p>
+                </div>
+                <div className="Day-busArea">
+                    <h5 className="Day-BusLine">バス</h5>
+                    <div className="Day-leftLineArea">
+                        <div className="Day-leftLine"></div>
+                        <div className="Day-textArea">
+                            <p className="Day-backSchedule">
+                                シーサイドホテル舞子ビラ
+                            </p>
+                            <h6 className="Day-backSchedule2">
+                                SeaSide Hotel Maiko Villa Kobe
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img className="Day-triangle3" src={triangle} />
+
+            <div className="Day-box">
+                <p className="Day-timeSmall">09:00</p>
+                <div className="Day-leftLineAreaSmall">
+                    <div className="Day-leftLine"></div>
+                    <div className="Day-textArea">
+                        <p className="Day-textName">リーベルホテルアット</p>
+                        <p className="Day-textName">
+                            ユニバーサルスタジオジャパン
+                        </p>
+                        <h6 className="">
+                            Liber Hotel At Universal Studio Japan
+                        </h6>
+                    </div>
+                </div>
+            </div>
+
+            <div className="Day-box">
+                <p className="Day-time">09:30</p>
+                <h5 className="Day-underBox">徒歩</h5>
+            </div>
+
+            <img className="Day-triangle3" src={triangle} />
+
+            <div className="Day-box">
+                <p className="Day-timeSmall">10:00</p>
+                <div className="Day-leftLineAreaSmall">
+                    <div className="Day-leftLine"></div>
+                    <div className="Day-textArea">
+                        <p className="Day-backSchedule">
+                            ユニバーサルスタジオジャパン
+                        </p>
+                        <h6 className="Day-backSchedule2">
+                            Universal Studio Japan
+                        </h6>
+                    </div>
+                </div>
+            </div>
+
+            <div className="Day-box-picture">
+                <p className="Day-timePicture">10:00</p>
+                <img className="Day-picture" src={univa} />
+            </div>
+
+            <div className="Day-box">
+                <p className="Day-time">19:00</p>
+                <div className="Day-busArea">
+                    <h5 className="Day-BusLine">徒歩</h5>
+                    <div className="Day-leftLineArea">
+                        <div className="Day-leftLine"></div>
+                        <div className="Day-textArea">
+                            <p className="Day-backSchedule">
+                                ユニバーサルスタジオジャパン
+                            </p>
+                            <h6 className="Day-backSchedule2">
+                                Universal Studio Japan
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img className="Day-triangle3" src={triangle} />
+
+            <div className="Day-box">
+                <p className="Day-timeSmall">19:30</p>
+                <div className="Day-leftLineAreaSmall">
+                    <div className="Day-leftLine"></div>
+                    <div className="Day-textArea">
+                        <p className="Day-backSchedule">
+                            ユニバーサルスタジオジャパン
+                        </p>
+                        <h6 className="Day-backSchedule2">
+                            Universal Studio Japan
+                        </h6>
+                    </div>
+                </div>
+            </div>
+
+            <div className="Day-box-picture">
+                <p className="Day-timePicture">19:30</p>
+                <img className="Day-picture" src={univaa} />
+            </div>
+
+            <div className="Day-Boxbreak">
+                <p>20:00</p>
+                <p className="Day-underBox">部屋長会議</p>
+            </div>
+            <div className="Day-Boxbreak">
+                <p>22:00</p>
+                <p className="Day-underBox">点呼</p>
+            </div>
+            <div className="Day-Boxbreak">
+                <p>22:30</p>
+                <p className="Day-underBox">消灯</p>
+            </div>
+        </main>
+    );
 }
