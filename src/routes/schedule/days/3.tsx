@@ -2,8 +2,8 @@ import "../Day4.css";
 import { getImg } from "model/assets";
 
 const triangle = getImg("triangle.svg");
-const univa = getImg("ユニバ.png");
-const univaa = getImg("ユニバア.png");
+const univa = getImg("univa.png");
+const univaa = getImg("univaa.png");
 
 export function ScheduleDay3() {
   return (

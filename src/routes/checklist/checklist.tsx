@@ -26,7 +26,7 @@ function Check() {
   }, [text]);
 
   const updateLabel = () => {
-    setLabel(getItem(KEYS.SAMPLE_TEXT));
+    setLabel(getItem(KEYS.FREEAREA));
   };
 
   const handleChange = (e: any) => {
@@ -35,19 +35,19 @@ function Check() {
 
   const removeClick = () => {
     // LocalStorageの値を削除する
-    removeItem(KEYS.SAMPLE_TEXT);
+    removeItem(KEYS.FREEAREA);
     updateLabel();
   };
 
   const setClick = () => {
     // テキストボックスの値をLocalStorageに保存する
-    setItem(KEYS.SAMPLE_TEXT, text);
+    setItem(KEYS.FREEAREA, text);
     updateLabel();
   };
 
   const getClick = () => {
     // LocalStorageの値をテキストボックスに入れる
-    setText(getItem(KEYS.SAMPLE_TEXT));
+    setText(getItem(KEYS.FREEAREA));
     updateLabel();
   };
 

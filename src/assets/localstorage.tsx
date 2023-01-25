@@ -1,11 +1,40 @@
 export enum KEYS {
-    SAMPLE_TEXT = "SAMPLE_TEXT",
+    SAMPLE_TEXT = "",
+    FREEAREA = "",
+    NUMBER ="",
+    CLASS = "G2A",
+    NAME = "",
+    FRIENDsONE = "",
+    FRIENDsTWO = "",
+    FRIENDsTHREE = "",
+    FRIENDsFOUR = "",
 }
 
 export function getItem(key: KEYS) {
     const value = localStorage.getItem(KEYS.SAMPLE_TEXT);
     if (value !== null) {
         return value;
+    }
+    return "";
+}
+export function getName(key: KEYS) {
+    const name = localStorage.getItem(KEYS.NAME);
+    if (name !== null) {
+        return name;
+    }
+    return "";
+}
+export function getClass(key: KEYS) {
+    const className = localStorage.getItem(KEYS.CLASS);
+    if (className!== null) {
+        return className;
+    }
+    return "";
+}
+export function getNumber(key: KEYS) {
+    const number = localStorage.getItem(KEYS.NUMBER);
+    if (number !== null) {
+        return number;
     }
     return "";
 }

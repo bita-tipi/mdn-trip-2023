@@ -393,3 +393,21 @@
 .Day-changeBox {
     text-align: center;
 }
+
+.Day-fontIroha{
+    font-family: irohamaru, sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.Day-fontKree{
+    font-family: klee-one, sans-serif;
+font-weight: 600;
+font-style: normal;
+}
+
+.Day-fontIrohaMid{
+    font-family: irohamaru, sans-serif;
+font-weight: 500;
+font-style: normal;
+}
