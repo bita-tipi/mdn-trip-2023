@@ -11,7 +11,7 @@
     border-radius: 20px;
     align-items: center;
     background-color: #FFCF59;
-    margin-bottom:10%
+    margin-bottom: 10%
 }
 
 .Day-main {
@@ -33,6 +33,12 @@
     margin-left: 20%;
 }
 
+
+.Day-leftLineAreaSmall2 {
+    display: flex;
+}
+
+
 .Day-leftLine {
     background-color: #4E3427;
     width: 3px;
@@ -41,6 +47,7 @@
     margin-top: 17px;
     margin-bottom: 24px;
 }
+
 
 .Day-time {
     font-size: 15px;
@@ -271,7 +278,20 @@
     }
 }
 
-.Day-lunch{
+.Day-lunch {
     text-decoration: underline solid 2px aqua;
     color: #4E3427;
+}
+
+.Day-ifTitle {
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.Day-backSchedule {
+    margin-top: -42%;
+}
+
+.Day-backSchedule2 {
+    margin-top: 35%;
 }
