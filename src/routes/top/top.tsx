@@ -17,7 +17,7 @@ const imgDecolation = getImg("decolation1.svg");
 const imgMainLogo = getImg("main-logo.png");
 const imgMainvisual = getImg("mainvisual.png");
 const imgMainvisual1 = getImg("mainvisual1.png");
-const imgBackground = getImg("top-background.svg");
+const imgBackground = getImg("top-background.png");
 
 const scheduleImagesPath = [
   imgSchedule1,
@@ -72,61 +72,66 @@ function Top() {
         </div>
       </div>
 
-      <div className="box" />
-      <section className="schedule">
-        <div className="title">
-          <img src={imgScheduleLogo} />
-          <Link to="/schedule" className="link">
-            <h2>日程</h2>
-          </Link>
-        </div>
-        <main className="schedule_main">
-          <div className="schedule_img">{generateScheduleImages()}</div>
-        </main>
-      </section>
+      <div className="top-main">
+        <section className="schedule">
+         <div className="title">
+           <img src={imgScheduleLogo} />
+           <Link to="/schedule" className="link">
+              <h2>日程</h2>
+           </Link>
+          </div>
+          <main className="schedule_main">
+            <div className="schedule_img">{generateScheduleImages()}</div>
+          </main>
+        </section>
 
-      <section className="map">
-        <div className="title">
-          <img src={imgMapLogo} />
-          <Link to="/map" className="link">
-            <h2>マップ</h2>
-          </Link>
-        </div>
-        <main className="map_main">
-          <div className="map_img">
-            <Link to="/map">
-              <img src={imgSchedule} />
+        <section className="map">
+          <div className="title">
+            <img src={imgMapLogo} />
+            <Link to="/map" className="link">
+              <h2>マップ</h2>
             </Link>
           </div>
-        </main>
-      </section>
+          <main className="map_main">
+            <div className="map_img">
+              <Link to="/map">
+                <img src={imgSchedule} />
+              </Link>
+            </div>
+          </main>
+        </section>
 
-      <section className="topic">
-        <div className="title">
-          <img src={imgTopicLogo} />
-          <Link to="/map" className="link">
-            <h2>トピック</h2>
-          </Link>
-        </div>
-        <main className="topic_main">
-          <div className="topic_img">
-            <img src={imgSchedule} />
-            <img src={imgSchedule} />
-            <img src={imgSchedule} />
-            <img src={imgSchedule} />
+        <section className="topic">
+          <div className="title">
+            <img src={imgTopicLogo} />
+            <Link to="/map" className="link">
+              <h2>トピック</h2>
+            </Link>
           </div>
-        </main>
-      </section>
+          <main className="topic_main">
+            <div className="topic_img">
+              <img src={imgSchedule} />
+              <img src={imgSchedule} />
+              <img src={imgSchedule} />
+              <img src={imgSchedule} />
+            </div>
+          </main>
+        </section>
+        
 
-      <section className="attention">
-        <div className="title">
-          <img src={imgAttentionLogo} />
-          <Link to="/attention" className="link">
-            <h2>注意事項 ＞</h2>
-          </Link>
-        </div>
-        <div className="border_attention" />
-      </section>
+        <section className="attention">
+          <div className="title">
+            <img src={imgAttentionLogo} />
+            <Link to="/attention" className="link">
+              <h2>注意事項 ＞</h2>
+            </Link>
+          </div>
+          <div className="border_attention" />
+        </section>
+
+      </div>
+
+      <img className="decolation1" src={imgDecolation}/>
 
       {isLoading ? (
         <div className="load_top">
