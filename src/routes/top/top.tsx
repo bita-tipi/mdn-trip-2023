@@ -9,12 +9,22 @@ const imgMapLogo = getImg("map-logo.svg");
 const imgTopicLogo = getImg("topic-logo.svg");
 const imgAttentionLogo = getImg("attention-logo.svg");
 const imgSchedule = getImg("kari-schedule.jpg");
+const imgSchedule1 = getImg("schedule1.png");
+const imgSchedule2 = getImg("schedule2.png");
+const imgSchedule3 = getImg("schedule3.png");
+const imgSchedule4 = getImg("schedule4.png");
 const imgDecolation = getImg("decolation1.svg");
 const imgMainLogo = getImg("main-logo.svg");
-const imgMainvisual = getImg("kari-mainvisual.svg");
+const imgMainvisual = getImg("mainvisual.png");
+const imgMainvisual1 = getImg("mainvisual1.png");
 const imgBackground = getImg("top-background.svg");
 
-const scheduleImagesPath = [imgSchedule, imgSchedule, imgSchedule, imgSchedule];
+const scheduleImagesPath = [
+  imgSchedule1,
+  imgSchedule2,
+  imgSchedule3,
+  imgSchedule4,
+];
 
 function Top() {
   // state
@@ -56,7 +66,7 @@ function Top() {
         <div className="box">
           <picture>
             <source media="(max-width: 640px)" srcSet={imgMainvisual} />
-            <img className="mainvisual_img" src={imgSchedule} />
+            <img className="mainvisual_img" src={imgMainvisual1} />
           </picture>
           <img className="main_logo" src={imgMainLogo} />
         </div>
