@@ -74,11 +74,11 @@ function Top() {
 
       <div className="top-main">
         <section className="schedule">
-         <div className="title">
-           <img src={imgScheduleLogo} />
-           <Link to="/schedule" className="link">
+          <div className="title">
+            <img src={imgScheduleLogo} />
+            <Link to="/schedule" className="link">
               <h2>日程</h2>
-           </Link>
+            </Link>
           </div>
           <main className="schedule_main">
             <div className="schedule_img">{generateScheduleImages()}</div>
@@ -117,7 +117,6 @@ function Top() {
             </div>
           </main>
         </section>
-        
 
         <section className="attention">
           <div className="title">
@@ -128,10 +127,9 @@ function Top() {
           </div>
           <div className="border_attention" />
         </section>
-
       </div>
 
-      <img className="decolation1" src={imgDecolation}/>
+      <img className="decolation1" src={imgDecolation} />
 
       {isLoading ? (
         <div className="load_top">
