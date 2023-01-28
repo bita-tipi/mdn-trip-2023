@@ -79,14 +79,14 @@
 }
 
 .main_logo {
-  width: 55%;
+  width: 65%;
   position: absolute;
   right: 5px;
   bottom: -10px;
 }
 
 .top-main {
-  background-image: url("../../../public/assets/img/top-background_1.png");
+  background-image: var(--img-top-background-1-png);
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 30px;
