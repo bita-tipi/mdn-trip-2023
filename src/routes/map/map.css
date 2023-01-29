@@ -84,6 +84,7 @@
     font-family: klee-one, sans-serif;
     font-weight: 600;
     font-style: normal;
+    margin-top:-10%;
 }
 
 .map-text-color {
@@ -134,29 +135,6 @@
     display: flex;
 }
 
-.map-topic-area {
-    text-align: center;
-    margin-top: 5%;
-    overflow: scroll;
-    background-color: #EBD497;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-top: 4%;
-    padding-bottom: 4%;
-    padding-left: 5%;
-    padding-right: 5%;
-    border-radius: 8px;
-}
-
-.map-topic-text {
-    margin-top: -2%;
-    color: #4D3326;
-    font-size: 50px;
-    margin-left: 5%;
-    font-family: klee-one, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-}
 
 .topic-img-map {
     margin-top: 10%;
@@ -203,14 +181,14 @@
     border-radius: 4px;
     background-color: #D47878;
     width: 8%;
-    height: 10%;
+    height: 6.5%;
 }
 
 .map-red-circle {
     background-color: #D47878;
     border-radius: 100px;
     width: 50%;
-    height: 9%;
+    height: 5%;
     margin-left: 78%;
     margin-top: 15%;
 }
@@ -247,15 +225,43 @@
 }
 
 .map-selectButton {
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 20px;
     color: #FCEBBE;
     border-radius: 200px;
     border-style: none;
     background-color: #D68B81;
+    margin-right: 5%;
 }
 
 .map-TouchArea {
     background-color: #FCEBBE;
+}
+
+.topicButtonAreaSelect{
+    overflow: scroll;
+    white-space: nowrap;
+    margin-top: -5%;
+}
+.map-topic-area {
+    text-align: center;
+    margin-top: 5%;
+    overflow: scroll;
+    background-color: #EBD497;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    border-radius: 8px;
+}
+
+.map-topic-text {
+    margin-top: -2%;
+    color: #4D3326;
+    font-size: 50px;
+    margin-left: 5%;
+    font-family: klee-one, sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
