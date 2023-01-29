@@ -34,7 +34,7 @@
 }
 
 .padding-menu {
-    background-color: #fefff5;
+    background-color: #fcebbe;
     height: 100vh;
     height: 100dvh;
     opacity: 1;
@@ -82,4 +82,77 @@
 .header-menu{
     height: 90%;
     width:90%;
+}
+
+.headerText{
+    font-family: fot-tsukubrdgothic-std, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: #4E3427;
+    padding-left: 3%;
+    text-align: left;
+}
+
+.headerSelector{
+    display: flex;
+    margin-left: 10%;
+}
+
+.headerBarRed{
+    background-color: #e7cd5a;
+    width:4%;
+}
+
+.headerBarYellow{
+    background-color: #9c1e29;
+    width:4%;
+}
+
+.headerTextMain{
+    font-size: 20px;
+    margin-bottom: 0%;
+    margin-top: -20%;
+    white-space: nowrap;
+}
+
+.headerTextMainSub{
+    font-size: 20px;
+    margin-bottom: 0%;
+    margin-top: -6%;
+    white-space: nowrap;
+}
+
+.headerTextMainLong{
+    font-size: 20px;
+    margin-bottom: 5%;
+    margin-top: -8%;
+    white-space: nowrap;
+}
+
+.headerTextMainLong2{
+    font-size: 20px;
+    margin-bottom: 0%;
+    margin-top: -4%;
+    white-space: nowrap;
+}
+
+.headerTextSub{
+    margin-top: -20%;
+    font-size: 15px;
+    margin-bottom: 0%;
+}
+
+.headerTextSubMain{
+    margin-top: -20%;
+    font-size: 15px;
+    margin-bottom: 0%;
+}
+.headerTextSubLong{
+    margin-top: -10%;
+    font-size: 15px;
+    margin-bottom: 0%;
+}
+
+.header-List{
+    margin-top: 10%;
 }

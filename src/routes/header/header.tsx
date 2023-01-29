@@ -62,73 +62,90 @@ function Header() {
                 <List className="List_menu">
                     {
                         <div>
-                            <h2 className="header_title_menu">MENU</h2>
-                            <li>
-                                <Link to="/" className="header_link">
-                                    <p
-                                        onClick={() => ListSelect(0)}
-                                        className={onPage[0] ? "yellow" : "red"}
-                                    >
-                                        HOME
-                                    </p>
+                            <li className="header-List">
+                                <Link to="/" className="header_link" onClick={() => ListSelect(0)}>
+                                    <div className="headerSelector">
+                                        <div className={onPage[0] ? "headerBarYellow" : "headerBarRed"}></div>
+                                        <div className="headerText">
+                                            <p className="headerTextMain">ホーム</p>
+                                            <p className="headerTextSub">Home</p>
+                                        </div>
+                                    </div>
                                 </Link>
                             </li>
 
-                            <li>
-                                <Link to="/room" className="header_link">
-                                    <p
-                                        onClick={() => ListSelect(1)}
-                                        className={onPage[1] ? "yellow" : "red"}
-                                    >
-                                        部屋割り
-                                    </p>
+                            <li className="header-List">
+                                <Link to="/room" className="header_link" onClick={() => ListSelect(1)}>
+                                <div className="headerSelector">
+                                        <div className={onPage[1] ? "headerBarYellow" : "headerBarRed"}></div>
+                                        <div className="headerText">
+                                            <p className="headerTextMainLong">スケジュール</p>
+                                            <p className="headerTextSubMain">schedule</p>
+                                        </div>
+                                    </div>
                                 </Link>
                             </li>
 
-                            <li>
-                                <Link to="/map" className="header_link">
-                                    <p
-                                        onClick={() => ListSelect(2)}
-                                        className={onPage[2] ? "yellow" : "red"}
-                                    >
-                                        MAP
-                                    </p>
+                            <li className="header-List">
+                                <Link to="/map" className="header_link" onClick={() => ListSelect(2)}>
+                                <div className="headerSelector">
+                                        <div className={onPage[2] ? "headerBarYellow" : "headerBarRed"}></div>
+                                        <div className="headerText">
+                                            <p className="headerTextMain">マップ</p>
+                                            <p className="headerTextSub">Map</p>
+                                        </div>
+                                    </div>
                                 </Link>
                             </li>
                         </div>
                     }
                     {
                         <div>
-                            <li>
-                                <Link to="/checklist" className="header_link">
-                                    <p
-                                        onClick={() => ListSelect(3)}
-                                        className={onPage[3] ? "yellow" : "red"}
-                                    >
-                                        持ち物リスト
-                                    </p>
+                            <li className="header-List">
+                                <Link to="/checklist" className="header_link" onClick={() => ListSelect(3)}>
+                                <div className="headerSelector">
+                                        <div className={onPage[3] ? "headerBarYellow" : "headerBarRed"}></div>
+                                        <div className="headerText">
+                                            <p className="headerTextMainSub">部屋割り</p>
+                                            <p className="headerTextSubLong">Room Allocation</p>
+                                        </div>
+                                    </div>
                                 </Link>
                             </li>
 
-                            <li>
-                                <Link to="/attention" className="header_link">
-                                    <p
-                                        onClick={() => ListSelect(4)}
-                                        className={onPage[4] ? "yellow" : "red"}
-                                    >
-                                        注意事項
-                                    </p>
+                            <li className="header-List">
+                                <Link to="/attention" className="header_link" onClick={() => ListSelect(4)}>
+                                <div className="headerSelector">
+                                        <div className={onPage[4] ? "headerBarYellow" : "headerBarRed"}></div>
+                                        <div className="headerText">
+                                            <p className="headerTextMainSub">座席表</p>
+                                            <p className="headerTextSubLong">Seating Chart</p>
+                                        </div>
+                                    </div>
                                 </Link>
                             </li>
 
-                            <li>
-                                <Link to="/schedule" className="header_link">
-                                    <p
-                                        onClick={() => ListSelect(5)}
-                                        className={onPage[5] ? "yellow" : "red"}
-                                    >
-                                        スケジュール
-                                    </p>
+                            <li className="header-List">
+                                <Link to="/attention" className="header_link" onClick={() => ListSelect(5)}>
+                                <div className="headerSelector">
+                                        <div className={onPage[5] ? "headerBarYellow" : "headerBarRed"}></div>
+                                        <div className="headerText">
+                                            <p className="headerTextMainLong2">持ち物リスト</p>
+                                            <p className="headerTextSubLong">Inventory List</p>
+                                        </div>
+                                    </div>
+                                </Link>
+                            </li>
+
+                            <li className="header-List">
+                                <Link to="/schedule" className="header_link" onClick={() => ListSelect(6)}>
+                                <div className="headerSelector">
+                                        <div className={onPage[6] ? "headerBarYellow" : "headerBarRed"}></div>
+                                        <div className="headerText">
+                                            <p className="headerTextMainLong2">注意事項</p>
+                                            <p className="headerTextSub">Notes</p>
+                                        </div>
+                                    </div>
                                 </Link>
                             </li>
                         </div>
