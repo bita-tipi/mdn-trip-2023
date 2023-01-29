@@ -18,6 +18,10 @@ const imgMainLogo = getImg("main-logo.png");
 const imgMainvisual = getImg("mainvisual.png");
 const imgMainvisual1 = getImg("mainvisual1.png");
 const imgBackground = getImg("top-background.png");
+const TopTopic1 = getImg("TopTopic.png");
+const TopTopic2 = getImg("TopTopic2.png");
+const TopTopic3 = getImg("TopTopic3.png");
+const TopTopic4 = getImg("TopTopic4.png");
 
 const scheduleImagesPath = [
   imgSchedule1,
@@ -110,10 +114,10 @@ function Top() {
           </div>
           <main className="topic_main">
             <div className="topic_img">
-              <img src={imgSchedule} />
-              <img src={imgSchedule} />
-              <img src={imgSchedule} />
-              <img src={imgSchedule} />
+              <img src={TopTopic1} />
+              <img src={TopTopic2} />
+              <img src={TopTopic3} />
+              <img src={TopTopic4} />
             </div>
           </main>
         </section>

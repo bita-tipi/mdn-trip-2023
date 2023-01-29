@@ -11,8 +11,6 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    outputs:
-      stdout: ${{ steps.sync.outputs }}
     
     steps:
       - name: 🎉 Checkout
@@ -36,8 +34,8 @@ jobs:
         uses: peter-evans/commit-comment@v1
         with:
           body: |
-            ## 🚚 Succeeded to synced with asset server 🚚
-            $(ls -la public/assets/)
+            ## 🚚 Succeeded to sync with asset server 🚚
+            やったね
 
       
       - name: 📝 Create commit comment (failed)
@@ -46,4 +44,4 @@ jobs:
         with:
           body: |
             ## 💥 Failed to sync with asset server 💥
-            $(ls -la public/assets/)
+            なんでやねん
