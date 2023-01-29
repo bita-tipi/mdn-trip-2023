@@ -16,11 +16,20 @@
 
 .Day-main {
     text-align: center;
+    font-family: fot-tsukubrdgothic-std, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+color: #4E3427;
 }
 
 .Day-busArea {
     text-align: left;
     margin-left: 20%;
+}
+
+.Day-busArea2 {
+    text-align: left;
+    margin-left: 10%;
 }
 
 .Day-leftLineArea {
@@ -52,14 +61,27 @@
     margin-bottom: 24px;
 }
 
+.Day-leftLine2 {
+    background-color: #4E3427;
+    width: 3px;
+    height: auto;
+    margin-right: 5px;
+    margin-top: 22px;
+    margin-bottom: 24px;
+}
+
+.Day-Left{
+    text-align: left;
+    line-height: 110%;
+}
 
 .Day-time {
-    font-size: 15px;
+    font-size: 25px;
     color: #4E3427;
 }
 
 .Day-timeSmall {
-    font-size: 15px;
+    font-size: 25px;
     color: #4E3427;
 }
 
@@ -67,6 +89,7 @@
     color: #4E3427;
     text-align: left;
     margin-top: 2%;
+    line-height: 110%;
 }
 
 .Day-Rome {
@@ -75,14 +98,22 @@
 
 .Day-textName {
     margin-bottom: -10%;
+    font-size: 15px;
+    line-height: 70%;
+}
+.Day-textName2 {
+    margin-bottom: -8%;
+    font-size: 15px;
 }
 
 .Day-textNameSmall {
     margin-bottom: -40%;
+    font-size: 15px;
 }
 
 .Day-textNameSmall2 {
     margin-bottom: -20%;
+    font-size: 15px;
 }
 
 
@@ -90,6 +121,7 @@
     text-decoration: underline solid 2px #4E3427;
     color: #4E3427;
     margin-bottom: 4%;
+    font-size: 17px;
 }
 
 .Day-BusLineSmall {
@@ -120,6 +152,7 @@
 .Day-underLineRed {
     text-decoration: underline solid 2px #DF7C7C;
     margin-left: 20%;
+    font-size: 20px;
 }
 
 .Day-underLineRed2 {
@@ -151,13 +184,6 @@
 .Day-pictureBox {
     align-items: stretch;
     margin-left: 10%;
-}
-
-.Day-timePicture {
-    margin-left: 6%;
-    margin-right: 4%;
-    color: white;
-    font-size: 20px;
 }
 
 .Day-triangle {
@@ -305,6 +331,7 @@
 .Day-lunch {
     text-decoration: underline solid 2px #DF7C7C;
     color: #4E3427;
+    font-size: 25px;
 }
 
 .Day-ifTitle {
@@ -318,19 +345,55 @@
     font-size: 15px;
 }
 
+.Day-backScheduleHiroshima {
+    margin-bottom: 0%;
+    color: #4E3427;
+    font-size: 15px;
+    line-height: 110%;
+}
+
 .Day-backSchedule2Small {
     margin-top: 0%;
     color: #4E3427;
+    font-size: 10px;
 }
 
 .Day-backSchedule {
     margin-bottom: 0%;
     color: #4E3427;
+    font-size: 18px;
+    White-space: nowrap
+}
+
+.Day-backScheduleBig {
+    margin-top: 17%;
+    margin-bottom: 0%;
+    color: #4E3427;
+    font-size: 25px;
+    White-space: nowrap
+}
+
+
+.Day-backScheduleBig2 {
+    margin-top: 17%;
+    margin-bottom: 0%;
+    color: #4E3427;
+    font-size: 21px;
+    White-space: nowrap
 }
 
 .Day-backSchedule2 {
     margin-top: 0%;
     color: #4E3427;
+    White-space: nowrap
+}
+
+.Day-backSchedule2Big {
+    margin-top: 0%;
+    margin-bottom: 18%;
+    color: #4E3427;
+    White-space: nowrap;
+    font-size:15px;
 }
 
 .Day-timeBar {
@@ -342,6 +405,7 @@
 
 .Day-timeBarArea {
     text-align: center;
+    font-size: 25px;
 }
 
 .Day-timeSmallBar {
@@ -354,12 +418,19 @@
 
 .Day-underBox {
     margin-left: 20%;
+    font-size:25px;
+    text-decoration: underline solid 2px #DF7C7C;
+}
+
+.Day-underBox2 {
+    margin-left: 20%;
+    font-size:17px;
     text-decoration: underline solid 2px #DF7C7C;
 }
 
 .Day-lunchSet {
-    width: 3%;
-    height: 3%;
+    width: 5%;
+    height: 5%;
 }
 
 .Day-lunchBox {
@@ -373,6 +444,7 @@
     justify-content: left;
     margin-left: 10%;
     align-items: flex-start;
+    font-size: 25px;
 }
 
 .Day-morning {
@@ -382,16 +454,21 @@
 
 .Day-timeList {
     display: flex;
+    font-size: 15px;
+    margin-top: -20%;
+    margin-bottom: 10%;
 }
 
 .Day-change {
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    margin-left: 20%;
+    margin-top: -5%;
 }
 
 .Day-changeBox {
-    text-align: center;
+    text-align: left;
+    font-size: 20px;
 }
 
 .Day-fontIroha{
@@ -410,4 +487,31 @@ font-style: normal;
     font-family: irohamaru, sans-serif;
 font-weight: 500;
 font-style: normal;
+}
+
+.Day-kama{
+    margin-right: 3%;
+}
+
+.Day-class{
+    margin-bottom: -20%;
+}
+
+.Day-timeListTime{
+    margin-right: 10%;
+}
+
+.Day-timePicture {
+    margin-left: 6%;
+    margin-right: 4%;
+    color: white;
+    font-size: 25px;
+}
+
+.Day-ClassMargin{
+    margin-bottom: -20%;
+}
+
+.Day-ClassMargin2{
+    margin-bottom: -68%;
 }

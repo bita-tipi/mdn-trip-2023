@@ -29,7 +29,7 @@ export function ScheduleDay4() {
     return (
         <main className="Day-main">
             <div className="Day-box">
-                <p>07:30</p>
+                <p className="Day-time">07:30</p>
                 <p className="Day-underLineRed">朝食</p>
             </div>
             <div className="Day-box">
@@ -39,9 +39,9 @@ export function ScheduleDay4() {
                     <div className="Day-leftLineArea">
                         <div className="Day-leftLine"></div>
                         <div className="Day-textArea">
-                            <p className="Day-textName">リーベルホテルアット</p>
+                            <p className="Day-textName2">リーベルホテルアット</p>
                             <p className="Day-textName">
-                                ユニバーサルスタジオジャパン
+                                ユニバーサルスタジオ<br></br>ジャパン
                             </p>
                             <h6 className="">
                                 Liber Hotel At Universal Studio Japan
@@ -66,7 +66,7 @@ export function ScheduleDay4() {
                         <div className="Day-leftLineAreaSmall">
                             <div className="Day-leftLine"></div>
                             <div className="Day-textArea">
-                                <p className="Day-backSchedule">嵐山</p>
+                                <p className="Day-backScheduleBig">嵐山</p>
                                 <h6 className="Day-backSchedule2">
                                     Arashiyama
                                 </h6>
@@ -88,7 +88,7 @@ export function ScheduleDay4() {
                             <div className="Day-leftLineArea">
                                 <div className="Day-leftLine"></div>
                                 <div className="Day-textArea">
-                                    <p className="Day-backSchedule">嵐山</p>
+                                    <p className="Day-backScheduleBig">嵐山</p>
                                     <h6 className="Day-backSchedule2">
                                         Arashiyama
                                     </h6>
@@ -151,8 +151,8 @@ export function ScheduleDay4() {
                         <div className="Day-leftLineAreaSmall">
                             <div className="Day-leftLine"></div>
                             <div className="Day-textArea">
-                                <p className="Day-backSchedule">円山公園</p>
-                                <h6 className="Day-backSchedule2">
+                                <p className="Day-backScheduleBig">円山公園</p>
+                                <h6 className="Day-backSchedule2Big">
                                     Maruyama Park
                                 </h6>
                             </div>
@@ -171,12 +171,12 @@ export function ScheduleDay4() {
                         <div className="Day-busArea">
                             <h5 className="Day-BusLineSmall">バス</h5>
                             <div className="Day-leftLineArea">
-                                <div className="Day-leftLine"></div>
+                                <div className="Day-leftLine2"></div>
                                 <div className="Day-textArea">
-                                    <p className="Day-backSchedule">
+                                    <p className="Day-backScheduleBig2">
                                         清水駐車場
                                     </p>
-                                    <h6 className="Day-backSchedule2">
+                                    <h6 className="Day-backSchedule2Big">
                                         Kiyomizu Parking
                                     </h6>
                                 </div>
@@ -266,7 +266,7 @@ export function ScheduleDay4() {
                             <div className="Day-timeBar"></div>
                             <p className="Day-timeSmallBar2">11:30</p>
                         </div>
-                        <div className="Day-busArea">
+                        <div className="Day-busArea2">
                             <div className="Day-leftLineArea2">
                                 <div className="Day-leftLine"></div>
                                 <div className="Day-textArea">

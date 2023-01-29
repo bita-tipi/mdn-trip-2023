@@ -4,6 +4,7 @@ import { getImg } from "model/assets";
 const triangle = getImg("triangle.svg");
 const kurashiki = getImg("倉敷美観地区.png");
 const bizen = getImg("備前焼き体験.png");
+const lunchi = getImg("ランチセット.svg");
 const maiko = getImg("bira.png");
 
 export function ScheduleDay2() {
@@ -18,23 +19,17 @@ export function ScheduleDay2() {
                 <div className="Day-morning">
                     <p className="Day-underLineRed2">朝食</p>
                     <div className="Day-timeList">
-                        <div>
-                            <p>06:45</p>
-                            <p>06:45</p>
-                            <p>06:45</p>
-                            <p>06:45</p>
+                        <div className="Day-timeListTime">
+                            <p className="Day-ClassMargin2">06:45</p>
+                            <p className="Day-ClassMargin2">06:45</p>
+                            <p className="Day-ClassMargin2">06:45</p>
+                            <p className="Day-ClassMargin2">06:45</p>
                         </div>
                         <div>
-                            <p>T2A,T2B</p>
-                            <p>T2C,J2A</p>
-                            <p>J2B,G2H</p>
-                            <p>G2I,G2J</p>
-                        </div>
-                        <div>
-                            <p>G2A,G2B</p>
-                            <p>G2C,G2D</p>
-                            <p>G2E,G2F</p>
-                            <p>G2G,G2H</p>
+                            <p className="Day-ClassMargin">T2A,T2B,G2A,G2B</p>
+                            <p className="Day-ClassMargin">T2C,J2A,G2C,G2D</p>
+                            <p className="Day-ClassMargin">J2B,G2H,G2E,G2F</p>
+                            <p className="Day-ClassMargin">G2I,G2J,G2G,G2H</p>
                         </div>
                     </div>
                 </div>
@@ -46,12 +41,12 @@ export function ScheduleDay2() {
                     <div className="Day-timeBar"></div>
                     <p className="Day-timeSmallBar2">10:30</p>
                 </div>
-                <div className="Day-busArea">
+                <div className="Day-busArea2">
                     <div className="Day-leftLineArea2">
                         <div className="Day-leftLine"></div>
                         <div className="Day-textArea">
-                            <p className="Day-backScheduleSmall">
-                                ヒルトン広島
+                            <p className="Day-backScheduleHiroshima">
+                                ヒルトン<br></br>広島
                             </p>
                             <h6 className="Day-backSchedule2">
                                 Hilton Hiroshima
@@ -62,8 +57,8 @@ export function ScheduleDay2() {
                 <img className="Day-triangle4" src={triangle}></img>
                 <div className="Day-leftLineAreaSmall2">
                     <div className="Day-leftLine"></div>
-                    <div>
-                        <p className="Day-backScheduleSmall">倉敷美観地区</p>
+                    <div className="Day-Left">
+                        <p className="Day-backScheduleHiroshima">倉敷<br></br>美観地区</p>
                         <h6 className="Day-backSchedule2Small">
                             Kurashiki bikanChiku
                         </h6>
@@ -76,13 +71,18 @@ export function ScheduleDay2() {
                 <img className="Day-picture" src={kurashiki} />
             </div>
 
+            <div className="Day-lunchBox">
+                        <img src={lunchi} className="Day-lunchSet" />
+                        <p className="Day-lunch">昼食は各自</p>
+                    </div>
+
             <div className="Day-box">
                 <div className="Day-timeBarArea">
                     <p className="Day-timeSmallBar">08:15</p>
                     <div className="Day-timeBar"></div>
                     <p className="Day-timeSmallBar2">10:30</p>
                 </div>
-                <div className="Day-busArea">
+                <div className="Day-busArea2">
                     <div className="Day-leftLineArea2">
                         <div className="Day-leftLine"></div>
                         <div className="Day-textArea">
@@ -98,7 +98,7 @@ export function ScheduleDay2() {
                 <img className="Day-triangle4" src={triangle}></img>
                 <div className="Day-leftLineArea2">
                     <div className="Day-leftLine"></div>
-                    <div>
+                    <div className="Day-textArea">
                         <p className="Day-backSchedule">備前市</p>
                         <h6 className="Day-backSchedule2">Bizen City</h6>
                     </div>
@@ -110,19 +110,21 @@ export function ScheduleDay2() {
                 <img className="Day-picture" src={bizen} />
             </div>
             <div className="Day-changeBox">
-                <p className="Day-underBox">備州窯・夢幻庵へ（4クラスずつ）</p>
+                <p className="Day-underBox2">備州窯・夢幻庵へ（4クラスずつ）</p>
                 <div className="Day-change">
-                    <p>備州窯</p>
+                    <p className="Day-kama">備州窯</p>
                     <div>
-                        <p>T2A,T2B,T2C,J2A</p>
+                        <p className="Day-class"
+                        
+                        >T2A,T2B,T2C,J2A</p>
                         <p>G2A,G2B,G2C,G2D</p>
                     </div>
                 </div>
 
                 <div className="Day-change">
-                    <p>夢幻庵</p>
+                    <p className="Day-kama">夢幻庵</p>
                     <div>
-                        <p>J2B,G2H,G2I,G2J</p>
+                        <p className="Day-class">J2B,G2H,G2I,G2J</p>
                         <p>G2E,G2F,G2G,G2H</p>
                     </div>
                 </div>
@@ -134,11 +136,11 @@ export function ScheduleDay2() {
                     <div className="Day-timeBar"></div>
                     <p className="Day-timeSmallBar2">10:30</p>
                 </div>
-                <div className="Day-busArea">
+                <div className="Day-busArea2">
                     <div className="Day-leftLineArea2">
                         <div className="Day-leftLine"></div>
                         <div className="Day-textArea">
-                            <p className="Day-backScheduleSmall">備前市</p>
+                            <p className="Day-backSchedule">備前市</p>
                             <h6 className="Day-backSchedule2">Bizen City</h6>
                         </div>
                     </div>
@@ -146,12 +148,12 @@ export function ScheduleDay2() {
                 <img className="Day-triangle4" src={triangle}></img>
                 <div className="Day-leftLineArea2">
                     <div className="Day-leftLine"></div>
-                    <div>
-                        <p className="Day-backSchedule">
-                            シーサイドホテル舞子ビラ
+                    <div className="Day-Left">
+                        <p className="Day-backScheduleSmall">
+                            シーサイドホテル<br></br>舞子ビラ
                         </p>
                         <h6 className="Day-backSchedule2">
-                            SeaSide Hotel Maiko Villa
+                            SeaSide Hotel<br></br>Maiko Villa
                         </h6>
                     </div>
                 </div>

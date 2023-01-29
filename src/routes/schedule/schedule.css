@@ -1,7 +1,6 @@
 .schedule-body {
     background-color: #FFEEC0;
     padding-top: 15%;
-    margin-top: -20%;
     padding-bottom: 20%;
     width: 100%;
 }
@@ -20,13 +19,15 @@
     background-color: #443D42;
     padding: 15px;
     white-space: nowrap;
+    text-align: center;
 }
 
 .schedule_hinichi-pick {
+    text-align: center;
     color: aliceblue;
     width: 100%;
     height: 200%;
-    font-weight: 600;
+    font-weight: 900;
     background-color: #A51A29;
     padding: 15px;
     white-space: nowrap;

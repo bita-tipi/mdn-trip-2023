@@ -9,7 +9,7 @@ export function ScheduleDay3() {
   return (
     <main className="Day-main">
       <div className="Day-box">
-        <p>07:30</p>
+        <p className="Day-time">07:30</p>
         <p className="Day-underLineRed">朝食</p>
       </div>
 
@@ -24,7 +24,7 @@ export function ScheduleDay3() {
           <div className="Day-leftLineArea">
             <div className="Day-leftLine"></div>
             <div className="Day-textArea">
-              <p className="Day-backSchedule">シーサイドホテル舞子ビラ</p>
+              <p className="Day-backSchedule">シーサイドホテル<br></br>舞子ビラ</p>
               <h6 className="Day-backSchedule2">
                 SeaSide Hotel Maiko Villa Kobe
               </h6>
@@ -40,8 +40,8 @@ export function ScheduleDay3() {
         <div className="Day-leftLineAreaSmall">
           <div className="Day-leftLine"></div>
           <div className="Day-textArea">
-            <p className="Day-textName">リーベルホテルアット</p>
-            <p className="Day-textName">ユニバーサルスタジオジャパン</p>
+            <p className="Day-textName2">リーベルホテルアット</p>
+            <p className="Day-textName">ユニバーサルスタジオ<br></br>ジャパン</p>
             <h6 className="">Liber Hotel At Universal Studio Japan</h6>
           </div>
         </div>
@@ -54,16 +54,6 @@ export function ScheduleDay3() {
 
       <img className="Day-triangle3" src={triangle} />
 
-      <div className="Day-box">
-        <p className="Day-timeSmall">10:00</p>
-        <div className="Day-leftLineAreaSmall">
-          <div className="Day-leftLine"></div>
-          <div className="Day-textArea">
-            <p className="Day-backSchedule">ユニバーサルスタジオジャパン</p>
-            <h6 className="Day-backSchedule2">Universal Studio Japan</h6>
-          </div>
-        </div>
-      </div>
 
       <div className="Day-box-picture">
         <p className="Day-timePicture">10:00</p>
@@ -77,7 +67,7 @@ export function ScheduleDay3() {
           <div className="Day-leftLineArea">
             <div className="Day-leftLine"></div>
             <div className="Day-textArea">
-              <p className="Day-backSchedule">ユニバーサルスタジオジャパン</p>
+              <p className="Day-backSchedule">ユニバーサルスタジオ<br></br>ジャパン</p>
               <h6 className="Day-backSchedule2">Universal Studio Japan</h6>
             </div>
           </div>
@@ -85,17 +75,6 @@ export function ScheduleDay3() {
       </div>
 
       <img className="Day-triangle3" src={triangle} />
-
-      <div className="Day-box">
-        <p className="Day-timeSmall">19:30</p>
-        <div className="Day-leftLineAreaSmall">
-          <div className="Day-leftLine"></div>
-          <div className="Day-textArea">
-            <p className="Day-backSchedule">ユニバーサルスタジオジャパン</p>
-            <h6 className="Day-backSchedule2">Universal Studio Japan</h6>
-          </div>
-        </div>
-      </div>
 
       <div className="Day-box-picture">
         <p className="Day-timePicture">19:30</p>

@@ -50,7 +50,7 @@
 }
 
 .header-background {
-    background-color: #ffeec0;
+    background-color: none;
 }
 
 .header-back {
@@ -70,4 +70,11 @@
     background-color: #ffeec0;
     width: 20px;
     height: 1px;
+}
+
+.textAlignCenter{
+  text-align: right;
+  position: absolute;
+  margin-top: 0%;
+  margin-left: 80%;
 }

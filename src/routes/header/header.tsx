@@ -8,7 +8,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { getImg } from "model/assets";
 
-const imgHamburgerButton = getImg("humberger_button.png");
+const imgHamburgerButton = getImg("menu.svg");
 
 type Anchor = "top" | "left" | "bottom" | "right";
 
@@ -23,7 +23,7 @@ function Header() {
     }
 
     const [state, setState] = React.useState({
-        left: false,
+        right: false,
     });
     const [onPage, updateOnPage] = useState([
         true,
@@ -141,23 +141,22 @@ function Header() {
     return (
         <div>
             <div className="header-background">
-                {(["left"] as const).map((anchor) => (
+                {(["right"] as const).map((anchor) => (
                     <React.Fragment key={anchor}>
-                        <Button onClick={toggleDrawer(anchor, true)}>
-                            <div className="header-back">
-                                <div className="header-bar"></div>
-                                <div className="header-bar"></div>
-                                <div className="header-bar"></div>
-                            </div>
-                        </Button>
-                        <Drawer
+                        <div className="textAlignCenter">
+
+                            <Button onClick={toggleDrawer(anchor, true)}>
+                               <img  src={imgHamburgerButton}></img>
+                            </Button>
+                            <Drawer
                             anchor={anchor}
                             open={state[anchor]}
                             onClose={toggleDrawer(anchor, false)}
                             className="drawer_opacity"
-                        >
-                            {list(anchor)}
-                        </Drawer>
+                            >
+                                {list(anchor)}
+                            </Drawer>
+                            </div>
                     </React.Fragment>
                 ))}
             </div>

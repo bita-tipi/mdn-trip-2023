@@ -9,7 +9,7 @@ export function ScheduleDay1() {
     return (
         <main className="Day-main">
             <div className="Day-box">
-                <p>07:30</p>
+                <p className="Day-timeSmall">07:30</p>
                 <p className="Day-underLineRed">朝食</p>
             </div>
 
@@ -25,7 +25,7 @@ export function ScheduleDay1() {
                         <div className="Day-leftLine"></div>
                         <div className="Day-textArea">
                             <p className="Day-backSchedule">
-                                シーサイドホテル舞子ビラ
+                                シーサイドホテル<br></br>舞子ビラ
                             </p>
                             <h6 className="Day-backSchedule2">
                                 SeaSide Hotel Maiko Villa Kobe
@@ -42,9 +42,9 @@ export function ScheduleDay1() {
                 <div className="Day-leftLineAreaSmall">
                     <div className="Day-leftLine"></div>
                     <div className="Day-textArea">
-                        <p className="Day-textName">リーベルホテルアット</p>
+                        <p className="Day-textName2">リーベルホテルアット</p>
                         <p className="Day-textName">
-                            ユニバーサルスタジオジャパン
+                            ユニバーサル<br></br>スタジオジャパン
                         </p>
                         <h6 className="">
                             Liber Hotel At Universal Studio Japan
@@ -66,7 +66,7 @@ export function ScheduleDay1() {
                     <div className="Day-leftLine"></div>
                     <div className="Day-textArea">
                         <p className="Day-backSchedule">
-                            ユニバーサルスタジオジャパン
+                            ユニバーサル<br></br>スタジオジャパン
                         </p>
                         <h6 className="Day-backSchedule2">
                             Universal Studio Japan
@@ -88,7 +88,7 @@ export function ScheduleDay1() {
                         <div className="Day-leftLine"></div>
                         <div className="Day-textArea">
                             <p className="Day-backSchedule">
-                                ユニバーサルスタジオジャパン
+                                ユニバーサル<br></br>スタジオジャパン
                             </p>
                             <h6 className="Day-backSchedule2">
                                 Universal Studio Japan
@@ -106,7 +106,7 @@ export function ScheduleDay1() {
                     <div className="Day-leftLine"></div>
                     <div className="Day-textArea">
                         <p className="Day-backSchedule">
-                            ユニバーサルスタジオジャパン
+                            ユニバーサル<br></br>スタジオジャパン
                         </p>
                         <h6 className="Day-backSchedule2">
                             Universal Studio Japan
