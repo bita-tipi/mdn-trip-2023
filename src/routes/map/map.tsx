@@ -12,7 +12,6 @@ const imgGift = getImg("おみやげ.png");
 const imgBorder = getImg("境界.png");
 const imgMap = getImg("地図.png");
 
-const imgHistoryKurashiki = getImg("topic/倉敷歴史.png");
 const yuniba1 = getImg("topic/yuniba1.png");
 const yuniba2 = getImg("topic/ゆにばアトラクション2.png");
 const yuniba3 = getImg("topic/ゆにばアトラクション3.png");
