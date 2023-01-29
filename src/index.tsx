@@ -7,6 +7,7 @@ import ClassRoom from "./routes/room/room";
 import Attention from "./routes/attention/attention";
 import Checklist from "./routes/checklist/checklist";
 import Schedule from "./routes/schedule/schedule";
+import Seat from "./routes/Seat/Seat";
 import Map from "./routes/map/map";
 import { Routes } from "react-router-dom";
 import { createRoot } from "react-dom/client";
@@ -29,6 +30,7 @@ if (container) {
                     <Route path="/attention" element={<Attention />} />
                     <Route path="/room" element={<ClassRoom />} />
                     <Route path="/schedule" element={<Schedule />} />
+                    <Route path="/seat" element={<Seat />} />
                 </Routes>
             </BrowserRouter>
         </RecoilRoot>,

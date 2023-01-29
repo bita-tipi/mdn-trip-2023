@@ -11,6 +11,9 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    outputs:
+      stdout: ${{ steps.sync.outputs }}
+    
     steps:
       - name: 🎉 Checkout
         uses: actions/checkout@v1
@@ -18,6 +21,7 @@ jobs:
           fetch-depth: 1
 
       - name: 🚚 Asset Server Sync
+        id: sync
         uses: opspresso/action-s3-sync@master
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.SYNC_ACCESS_KEY_ID }}
@@ -25,4 +29,21 @@ jobs:
           DEST_PATH: ${{ secrets.SYNC_DEST_PATH }}
           AWS_REGION: ""
           FROM_PATH: "./public/assets/"
-          OPTIONS: "--delete --acl public-read --endpoint-url ${{ secrets.SYNC_ENDPOINT_URL }}"
+          OPTIONS: "--size-only --delete --acl public-read --endpoint-url ${{ secrets.SYNC_ENDPOINT_URL }}"
+
+      - name: 📝 Create commit comment (succeeded)
+        if: success()
+        uses: peter-evans/commit-comment@v1
+        with:
+          body: |
+            ## 🚚 Succeeded to synced with asset server 🚚
+            $(ls -la public/assets/)
+
+      
+      - name: 📝 Create commit comment (failed)
+        if: failure()
+        uses: peter-evans/commit-comment@v1
+        with:
+          body: |
+            ## 💥 Failed to sync with asset server 💥
+            $(ls -la public/assets/)

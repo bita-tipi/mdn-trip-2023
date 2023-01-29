@@ -15,7 +15,7 @@ type Anchor = "top" | "left" | "bottom" | "right";
 function Header() {
     function ListSelect(index: number) {
         const copiedPage = _.cloneDeep(onPage);
-        for (let n = 0; n < 6; n++) {
+        for (let n = 0; n < 7; n++) {
             copiedPage[n] = false;
         }
         copiedPage[index] = !copiedPage[index];
@@ -75,7 +75,7 @@ function Header() {
                             </li>
 
                             <li className="header-List">
-                                <Link to="/room" className="header_link" onClick={() => ListSelect(1)}>
+                                <Link to="/schedule" className="header_link" onClick={() => ListSelect(1)}>
                                 <div className="headerSelector">
                                         <div className={onPage[1] ? "headerBarYellow" : "headerBarRed"}></div>
                                         <div className="headerText">
@@ -102,7 +102,7 @@ function Header() {
                     {
                         <div>
                             <li className="header-List">
-                                <Link to="/checklist" className="header_link" onClick={() => ListSelect(3)}>
+                                <Link to="/room" className="header_link" onClick={() => ListSelect(3)}>
                                 <div className="headerSelector">
                                         <div className={onPage[3] ? "headerBarYellow" : "headerBarRed"}></div>
                                         <div className="headerText">
@@ -114,7 +114,7 @@ function Header() {
                             </li>
 
                             <li className="header-List">
-                                <Link to="/attention" className="header_link" onClick={() => ListSelect(4)}>
+                                <Link to="/Seat" className="header_link" onClick={() => ListSelect(4)}>
                                 <div className="headerSelector">
                                         <div className={onPage[4] ? "headerBarYellow" : "headerBarRed"}></div>
                                         <div className="headerText">
@@ -126,7 +126,7 @@ function Header() {
                             </li>
 
                             <li className="header-List">
-                                <Link to="/attention" className="header_link" onClick={() => ListSelect(5)}>
+                                <Link to="/checklist" className="header_link" onClick={() => ListSelect(5)}>
                                 <div className="headerSelector">
                                         <div className={onPage[5] ? "headerBarYellow" : "headerBarRed"}></div>
                                         <div className="headerText">
@@ -138,7 +138,7 @@ function Header() {
                             </li>
 
                             <li className="header-List">
-                                <Link to="/schedule" className="header_link" onClick={() => ListSelect(6)}>
+                                <Link to="/attention" className="header_link" onClick={() => ListSelect(6)}>
                                 <div className="headerSelector">
                                         <div className={onPage[6] ? "headerBarYellow" : "headerBarRed"}></div>
                                         <div className="headerText">
