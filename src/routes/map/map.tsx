@@ -3,6 +3,11 @@ import "./map.css";
 import { getImg } from "model/assets";
 
 const imgMapKiyomizu = getImg("清水寺.png");
+const imgMapKurashiki = getImg("kurashikiMap.png");
+const imgMapHiroshima = getImg("HiroshimaMap.png");
+const imgMapKitano = getImg("kitanoMap.png");
+const imgMapUsj = getImg("univaMap.png");
+
 const imgYoshi = getImg("yoshi.png");
 const imgMainLogo = getImg("main_logo.svg");
 const imgFoods = getImg("食べ物.png");
@@ -36,162 +41,104 @@ const kurashiloHistory2 = getImg("topic/倉敷歴史2.png");
 const miyajima1 = getImg("topic/宮島食べ物.png");
 const miyajima2 = getImg("topic/宮島食べ物2.png");
 
-
 const imgTopicArea = getImg("topic-area.png");
+const YA = getImg("TopicYA.svg");
 
 function Map() {
-    const Sort_List = [Place(), Food(), Gift(), History()];
+    const Sort_List = [Usj(), Kyoto(), Kurashiki(), Hiroshima()];
     const [sort, updateSort] = useState(0);
-    const map_List = [imgMapKiyomizu, imgYoshi, imgMainLogo,imgMainLogo,imgMainLogo,imgMainLogo,imgMainLogo];
+    const map_List = [imgMapHiroshima, imgMapKurashiki, imgMapUsj,imgMapKiyomizu,imgMapKitano,imgMapKitano];
     const [map, updateMap] = useState(0);
     const [isListOpen, updateIsListOpen] = useState(false);
     const [topicNumber, upDateTopicNumber] = useState(0);
-    const topicList = [imgTopicArea,yuniba1,yuniba4,kyotoArea,kyotoHitory,hiroshima1,hiroshimaFood,hiroshimaHistory,kurashikiPlace1,kurashiloFood1,kurashiloHistory1,miyajima1];
-    const areaList = ["広島", "倉敷", "ユニバ", "清水寺", "北野天満宮", "嵐山"];
+    const topicList = [imgTopicArea,yuniba1,yuniba4,kyotoArea,kyotoHitory,hiroshima1,hiroshimaFood,hiroshimaHistory,kurashikiPlace1,kurashiloFood1,kurashiloHistory1,miyajima1,];
+    const areaList = ["広島", "倉敷", "USJ", "清水寺", "北野天満宮", "嵐山"];
+    const topicList2 = ["USJ","京都","倉敷","広島"];
+    const [TopicNumber, updateTopicNumber] = useState(0);
     const [areaNumber, upDataNumber] = useState(0);
+    const [SortPulldown,upDataSortPulldown] = useState(false);
 
     function Sort(i: number) {
         updateIsListOpen(false);
         updateMap(i);
         upDataNumber(i);
     }
+    function SortPick(i: number) {
+        upDataSortPulldown(false);
+        updateSort(i);
+        updateTopicNumber(i);
+    }
 
-    function Place() {
+    function Usj() {
         return (
-            <div>
-                <p className="map-text-color">TOPICS詳細　場所</p>
-                <div className="map-topic-area">
-                    <div className="map-topic-in">
-                        <img src={imgPlace} className="map-topic-icon" />
-                        <p className="map-topic-text">場所</p>
-                    </div>
-                    <div className="topicButtonAreaSelect">
-                        <button
-                            onClick={() => upDateTopicNumber(8)}
-                            className="map-selectButton"
-                        >
-                            倉敷
-                        </button>
-                        <button
-                            onClick={() => upDateTopicNumber(1)}
-                            className="map-selectButton"
-                        >
-                            ユニバ
-                        </button>
-                        <button
-                            onClick={() => upDateTopicNumber(3)}
-                            className="map-selectButton"
-                        >
-                            京都
-                        </button>
-                    </div>
-                </div>
+        <div className="mapIconSort">
+            <div className="map-icon">
+                <img src={imgPlace} onClick={() => upDateTopicNumber(1)} />
+                <p className="map-text">場所</p>
             </div>
+            <div className="map-icon">
+                <img src={imgFoods} onClick={() => upDateTopicNumber(2)} />
+                <p className="map-text">食べ物</p>
+            </div>
+        </div>
         );
     }
-    function Food() {
+    function Kyoto() {
         return (
-            <div>
-                <p className="map-text-color">TOPICS詳細　食べ物</p>
-                <div className="map-topic-area">
-                    <div className="map-topic-in">
-                        <img src={imgFoods} className="map-topic-icon" />
-                        <p className="map-topic-text">食べ物</p>
-                    </div>
-                    <div className="topicButtonAreaSelect">
-                        <button
-                            onClick={() => upDateTopicNumber(9)}
-                            className="map-selectButton"
-                        >
-                            倉敷
-                        </button>
-                        <button
-                            onClick={() => upDateTopicNumber(6)}
-                            className="map-selectButton"
-                        >
-                            広島
-                        </button>
-                        <button
-                            onClick={() => upDateTopicNumber(1)}
-                            className="map-selectButton"
-                        >
-                            京都
-                        </button>
-                        <button
-                            onClick={() => upDateTopicNumber(2)}
-                            className="map-selectButton"
-                        >
-                            ユニバ
-                        </button>
-                    </div>
-                </div>
+            <div className="mapIconSort">
+            <div className="map-icon">
+                <img src={imgPlace} onClick={() => upDateTopicNumber(3)} />
+                <p className="map-text">場所</p>
             </div>
+            <div className="map-icon">
+                <img src={imgFoods} onClick={() => upDateTopicNumber(0)} />
+                <p className="map-text">食べ物</p>
+            </div>
+            <div className="map-icon">
+                <img src={imgHistory} onClick={() => upDateTopicNumber(4)} />
+                <p className="map-text">歴史</p>
+            </div>
+        </div>
         );
     }
-    function Gift() {
+    function Kurashiki() {
         return (
-            <div>
-                <p className="map-text-color">TOPICS詳細　お土産</p>
-                <div className="map-topic-area">
-                    <div className="map-topic-in">
-                        <img src={imgGift} className="map-topic-icon" />
-                        <p className="map-topic-text">お土産</p>
-                    </div>
-                    <div className="topicButtonAreaSelect">
-                        <button
-                            onClick={() => upDateTopicNumber(5)}
-                            className="map-selectButton"
-                        >
-                            広島
-                        </button>
-                        <button
-                            onClick={() => upDateTopicNumber(11)}
-                            className="map-selectButton"
-                        >
-                            宮島
-                        </button>
-                        <button
-                            onClick={() => upDateTopicNumber(2)}
-                            className="map-selectButton"
-                        >
-                            ユニバ
-                        </button>
-                    </div>
-                </div>
+            <div className="mapIconSort">
+            <div className="map-icon">
+                <img src={imgPlace} onClick={() => upDateTopicNumber(8)} />
+                <p className="map-text">場所</p>
             </div>
+            <div className="map-icon">
+                <img src={imgFoods} onClick={() => upDateTopicNumber(9)} />
+                <p className="map-text">食べ物</p>
+            </div>
+            <div className="map-icon">
+                <img src={imgHistory} onClick={() => upDateTopicNumber(10)} />
+                <p className="map-text">歴史</p>
+            </div>
+        </div>
         );
     }
-    function History() {
+    function Hiroshima() {
         return (
-            <div>
-                <p className="map-text-color">TOPICS詳細　歴史</p>
-                <div className="map-topic-area">
-                    <div className="map-topic-in">
-                        <img src={imgHistory} className="map-topic-icon" />
-                        <p className="map-topic-text">歴史</p>
-                    </div>
-                    <div className="topicButtonAreaSelect">
-                        <button
-                            onClick={() => upDateTopicNumber(10)}
-                            className="map-selectButton"
-                        >
-                            倉敷
-                        </button>
-                        <button
-                            onClick={() => upDateTopicNumber(7)}
-                            className="map-selectButton"
-                        >
-                            広島
-                        </button>
-                        <button
-                            onClick={() => upDateTopicNumber(4)}
-                            className="map-selectButton"
-                        >
-                            京都
-                        </button>
-                    </div>
-                </div>
+            <div className="mapIconSort">
+            <div className="map-icon">
+                <img src={imgPlace} onClick={() => upDateTopicNumber(0)} />
+                <p className="map-text">場所</p>
             </div>
+            <div className="map-icon">
+                <img src={imgFoods} onClick={() => upDateTopicNumber(6)} />
+                <p className="map-text">食べ物</p>
+            </div>
+            <div className="map-icon">
+                <img src={imgGift} onClick={() => upDateTopicNumber(5)} />
+                <p className="map-text">お土産</p>
+            </div>
+            <div className="map-icon">
+                <img src={imgHistory} onClick={() => upDateTopicNumber(7)} />
+                <p className="map-text">歴史</p>
+            </div>
+        </div>
         );
     }
 
@@ -202,6 +149,13 @@ function Map() {
             </div>
             <img src={imgBorder} className="map-area" />
             <div className="map-TouchArea">
+                <div className="MapTitleArea">
+                    <div className="MapBarTitle"></div>
+                    <div className="MapTitleText">
+                        <p className="MapTitleMain">エリア選択</p>
+                        <p className="MapTitleSub">Map Selection</p>
+                    </div>
+                </div>
                 <div className="map-pick">
                     {isListOpen ? (
                         <div className="map-moji">
@@ -237,7 +191,7 @@ function Map() {
                                     倉敷
                                 </p>
                                 <p onClick={() => Sort(2)} className="map-pull">
-                                    ユニバ
+                                    USJ
                                 </p>
                                 <p onClick={() => Sort(3)} className="map-pull">
                                     清水寺
@@ -251,38 +205,58 @@ function Map() {
                             </div>
                         </div>
                     ) : (
-                        <div className="map-sort">
+                        <div className="map-sort"                                 onClick={() => updateIsListOpen(!isListOpen)}>
                             <img src={imgMap} className="map-svg" />
                             <div className="map-bar"></div>
                             <div
                                 className="map-button"
-                                onClick={() => updateIsListOpen(!isListOpen)}
                             >
                                 {areaList[areaNumber]}
                             </div>
                         </div>
                     )}
                 </div>
-                <p className="map-text-color">TOPICS</p>
-                <div className="map-icon-sort">
-                    <div className="map-icon">
-                        <img src={imgPlace} onClick={() => updateSort(0)} />
-                        <p className="map-text">場所</p>
-                    </div>
-                    <div className="map-icon">
-                        <img src={imgFoods} onClick={() => updateSort(1)} />
-                        <p className="map-text">食べ物</p>
-                    </div>
-                    <div className="map-icon">
-                        <img src={imgGift} onClick={() => updateSort(2)} />
-                        <p className="map-text">お土産</p>
-                    </div>
-                    <div className="map-icon">
-                        <img src={imgHistory} onClick={() => updateSort(3)} />
-                        <p className="map-text">歴史</p>
+                <div className="MapTitleArea">
+                    <div className="MapBarTitle"></div>
+                    <div className="MapTitleText">
+                        <p className="MapTitleMain">トピック選択</p>
+                        <p className="MapTitleSub">Topic Selection</p>
                     </div>
                 </div>
-                <div className="map-topic">{Sort_List[sort]}</div>
+                <div className="map-icon-sort">
+                    <div>
+                        <div className="MapSelectPulldown" onClick={() => upDataSortPulldown(!SortPulldown)}>
+                            <div className="MapSelectBar"></div>
+                            {SortPulldown ?(<p>行先</p>) :(
+                                <div className="MapAsist">
+                                    <p>{topicList2[TopicNumber]}</p>
+                                    <img src={YA}/>
+                                    <p>Click</p>
+                                </div>
+                            )}
+                            {SortPulldown ? (
+                                <div className="MapSortPullBox">
+                                    <div className="MapSortPullBar"></div>
+                                    <p onClick={()=> SortPick(0)}>USJ</p>
+                                    <div className="MapSortPullBar"></div>
+                                    <p onClick={()=> SortPick(1)}>京都</p>
+                                    <div className="MapSortPullBar"></div>
+                                    <p onClick={()=> SortPick(2)}>倉敷</p>
+                                    <div className="MapSortPullBar"></div>
+                                    <p onClick={()=> SortPick(3)}>広島</p>
+                                </div>
+                            ) :(<></>)}
+                        </div>
+                    </div>
+                    <div className="map-topic">{Sort_List[sort]}</div>
+                </div>
+                <div className="MapTitleArea">
+                    <div className="MapBarTitle"></div>
+                    <div className="MapTitleText">
+                        <p className="MapTitleMain">トピック</p>
+                        <p className="MapTitleSub">Topic</p>
+                    </div>
+                </div>
                 <img src={topicList[topicNumber]} className="map-topicArea" />
             </div>
         </div>
