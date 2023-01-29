@@ -146,7 +146,7 @@ function Header() {
                         <div className="textAlignCenter">
 
                             <Button onClick={toggleDrawer(anchor, true)}>
-                               <img  src={imgHamburgerButton}></img>
+                               <img src={imgHamburgerButton} className="header-menu"></img>
                             </Button>
                             <Drawer
                             anchor={anchor}
