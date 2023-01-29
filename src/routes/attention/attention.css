@@ -135,18 +135,21 @@ body{
 
 }
 
-.separator{
+/*.separator{
         background-image:var(--img-attention-shikiri-svg);
      
-       width: 1000px;
-        
-        height: 30px;
+    
+    
+        height: 100%;
+        width: auto;
         margin-left: 3%;
         padding-right: 20%;
         background-repeat: repeat-x;
         overflow-x: hidden;
-        background-position: right 10% bottom 10%;
-}
+        margin-left: auto;
+       
+
+} */
 .tyuititletext{
     white-space: nowrap
 }
