@@ -9,7 +9,9 @@
     background-color: #ffecc4;
     height: 100%;
     display: flex;
- 
+    font-family: klee-one, sans-serif;
+    font-weight: 600;
+    font-style: normal;
 }
 
 body{
