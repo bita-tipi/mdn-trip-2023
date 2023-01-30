@@ -2,6 +2,7 @@ import "../Day4.css";
 import _ from "lodash";
 import React, { useState } from "react";
 import { getImg } from "model/assets";
+import { Link, useNavigate } from "react-router-dom";
 
 const arashiyama = getImg("嵐山image.png");
 const triangle = getImg("triangle.svg");
@@ -14,6 +15,7 @@ const nishiki = getImg("錦市場.png");
 const lunchi = getImg("ランチセット.svg");
 
 export function ScheduleDay4() {
+    const navigate = useNavigate();
     const [isListOpenDays, updateIsListOpenDays] = useState([
         false,
         false,
@@ -39,7 +41,9 @@ export function ScheduleDay4() {
                     <div className="Day-leftLineArea">
                         <div className="Day-leftLine"></div>
                         <div className="Day-textArea">
-                            <p className="Day-textName2">リーベルホテルアット</p>
+                            <p className="Day-textName2">
+                                リーベルホテルアット
+                            </p>
                             <p className="Day-textName">
                                 ユニバーサルスタジオ<br></br>ジャパン
                             </p>
@@ -75,7 +79,15 @@ export function ScheduleDay4() {
                     </div>
                     <div className="Day-box-picture">
                         <p className="Day-timePicture">10:00</p>
-                        <img className="Day-picture" src={arashiyama} />
+                        <img
+                            className="Day-picture"
+                            src={arashiyama}
+                            onClick={() =>
+                                navigate("/map", {
+                                    state: { MapDateIndex: 5 },
+                                })
+                            }
+                        />
                     </div>
                     <div className="Day-lunchBox">
                         <img src={lunchi} className="Day-lunchSet" />
@@ -160,7 +172,15 @@ export function ScheduleDay4() {
                     </div>
                     <div className="Day-box-picture">
                         <p className="Day-timePicture">10:15</p>
-                        <img className="Day-picture" src={ninen} />
+                        <img
+                            className="Day-picture"
+                            src={ninen}
+                            onClick={() =>
+                                navigate("/map", {
+                                    state: { MapDateIndex: 3 },
+                                })
+                            }
+                        />
                     </div>
                     <div className="Day-lunchBox">
                         <img src={lunchi} className="Day-lunchSet" />
@@ -250,7 +270,15 @@ export function ScheduleDay4() {
                     </div>
                     <div className="Day-box-picture">
                         <p className="Day-timePicture">10:15</p>
-                        <img className="Day-picture" src={kitano} />
+                        <img
+                            className="Day-picture"
+                            src={kitano}
+                            onClick={() =>
+                                navigate("/map", {
+                                    state: { MapDateIndex: 4 },
+                                })
+                            }
+                        />
                     </div>
 
                     <div className="Day-box">

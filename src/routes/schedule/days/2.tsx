@@ -1,5 +1,6 @@
 import "../Day4.css";
 import { getImg } from "model/assets";
+import { Link, useNavigate } from "react-router-dom";
 
 const triangle = getImg("triangle.svg");
 const kurashiki = getImg("倉敷美観地区.png");
@@ -8,6 +9,8 @@ const lunchi = getImg("ランチセット.svg");
 const maiko = getImg("bira.png");
 
 export function ScheduleDay2() {
+    const navigate = useNavigate();
+
     return (
         <main className="Day-main">
             <div className="Day-Boxbreak">
@@ -58,7 +61,9 @@ export function ScheduleDay2() {
                 <div className="Day-leftLineAreaSmall2">
                     <div className="Day-leftLine"></div>
                     <div className="Day-Left">
-                        <p className="Day-backScheduleHiroshima">倉敷<br></br>美観地区</p>
+                        <p className="Day-backScheduleHiroshima">
+                            倉敷<br></br>美観地区
+                        </p>
                         <h6 className="Day-backSchedule2Small">
                             Kurashiki bikanChiku
                         </h6>
@@ -68,13 +73,21 @@ export function ScheduleDay2() {
 
             <div className="Day-box-picture">
                 <p className="Day-timePicture">10:30</p>
-                <img className="Day-picture" src={kurashiki} />
+                <img
+                    className="Day-picture"
+                    src={kurashiki}
+                    onClick={() =>
+                        navigate("/map", {
+                            state: { MapDateIndex: 1 },
+                        })
+                    }
+                />
             </div>
 
             <div className="Day-lunchBox">
-                        <img src={lunchi} className="Day-lunchSet" />
-                        <p className="Day-lunch">昼食は各自</p>
-                    </div>
+                <img src={lunchi} className="Day-lunchSet" />
+                <p className="Day-lunch">昼食は各自</p>
+            </div>
 
             <div className="Day-box">
                 <div className="Day-timeBarArea">
@@ -114,9 +127,7 @@ export function ScheduleDay2() {
                 <div className="Day-change">
                     <p className="Day-kama">備州窯</p>
                     <div>
-                        <p className="Day-class"
-                        
-                        >T2A,T2B,T2C,J2A</p>
+                        <p className="Day-class">T2A,T2B,T2C,J2A</p>
                         <p>G2A,G2B,G2C,G2D</p>
                     </div>
                 </div>
@@ -161,7 +172,15 @@ export function ScheduleDay2() {
 
             <div className="Day-box-picture">
                 <p className="Day-timePicture">19:30</p>
-                <img className="Day-picture" src={maiko} />
+                <img
+                    className="Day-picture"
+                    src={maiko}
+                    onClick={() =>
+                        navigate("/room", {
+                            state: { DayDateIndex: 1 },
+                        })
+                    }
+                />
             </div>
 
             <div className="Day-Boxbreak">

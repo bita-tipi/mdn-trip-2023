@@ -1,6 +1,12 @@
 import React, { useState } from "react";
 import "./map.css";
 import { getImg } from "model/assets";
+import { useLocation } from "react-router-dom";
+
+export type MapProps = {
+    MapDateIndex: number;
+    TopicDateIndex: number;
+};
 
 const imgMapKiyomizu = getImg("清水寺.png");
 const imgMapKurashiki = getImg("kurashikiMap.png");
@@ -45,23 +51,45 @@ const imgTopicArea = getImg("topic-area.png");
 const YA = getImg("TopicYA.svg");
 
 function Map() {
+    const { state } = useLocation() as { state: MapProps | undefined };
+    const MapDateIndex = state?.MapDateIndex;
+    const TopicDateIndex = state?.TopicDateIndex;
+
     const Sort_List = [Usj(), Kyoto(), Kurashiki(), Hiroshima()];
     const [sort, updateSort] = useState(0);
-    const map_List = [imgMapHiroshima, imgMapKurashiki, imgMapUsj,imgMapKiyomizu,imgMapKitano,imgMapKitano];
-    const [map, updateMap] = useState(0);
+    const map_List = [
+        imgMapHiroshima,
+        imgMapKurashiki,
+        imgMapUsj,
+        imgMapKiyomizu,
+        imgMapKitano,
+        imgMapKitano,
+    ];
+    const [map, updateMap] = useState(MapDateIndex ?? 0);
     const [isListOpen, updateIsListOpen] = useState(false);
-    const [topicNumber, upDateTopicNumber] = useState(0);
-    const topicList = [imgTopicArea,yuniba1,yuniba4,kyotoArea,kyotoHitory,hiroshima1,hiroshimaFood,hiroshimaHistory,kurashikiPlace1,kurashiloFood1,kurashiloHistory1,miyajima1,];
+    const [topicNumber, upDateTopicNumber] = useState(TopicDateIndex ?? 0);
+    const topicList = [
+        imgTopicArea,
+        yuniba1,
+        yuniba4,
+        kyotoArea,
+        kyotoHitory,
+        hiroshima1,
+        hiroshimaFood,
+        hiroshimaHistory,
+        kurashikiPlace1,
+        kurashiloFood1,
+        kurashiloHistory1,
+        miyajima1,
+    ];
     const areaList = ["広島", "倉敷", "USJ", "清水寺", "北野天満宮", "嵐山"];
-    const topicList2 = ["USJ","京都","倉敷","広島"];
+    const topicList2 = ["USJ", "京都", "倉敷", "広島"];
     const [TopicNumber, updateTopicNumber] = useState(0);
-    const [areaNumber, upDataNumber] = useState(0);
-    const [SortPulldown,upDataSortPulldown] = useState(false);
+    const [SortPulldown, upDataSortPulldown] = useState(false);
 
     function Sort(i: number) {
         updateIsListOpen(false);
         updateMap(i);
-        upDataNumber(i);
     }
     function SortPick(i: number) {
         upDataSortPulldown(false);
@@ -71,74 +99,83 @@ function Map() {
 
     function Usj() {
         return (
-        <div className="mapIconSort">
-            <div className="map-icon">
-                <img src={imgPlace} onClick={() => upDateTopicNumber(1)} />
-                <p className="map-text">場所</p>
+            <div className="mapIconSort">
+                <div className="map-icon">
+                    <img src={imgPlace} onClick={() => upDateTopicNumber(1)} />
+                    <p className="map-text">場所</p>
+                </div>
+                <div className="map-icon">
+                    <img src={imgFoods} onClick={() => upDateTopicNumber(2)} />
+                    <p className="map-text">食べ物</p>
+                </div>
             </div>
-            <div className="map-icon">
-                <img src={imgFoods} onClick={() => upDateTopicNumber(2)} />
-                <p className="map-text">食べ物</p>
-            </div>
-        </div>
         );
     }
     function Kyoto() {
         return (
             <div className="mapIconSort">
-            <div className="map-icon">
-                <img src={imgPlace} onClick={() => upDateTopicNumber(3)} />
-                <p className="map-text">場所</p>
+                <div className="map-icon">
+                    <img src={imgPlace} onClick={() => upDateTopicNumber(3)} />
+                    <p className="map-text">場所</p>
+                </div>
+                <div className="map-icon">
+                    <img src={imgFoods} onClick={() => upDateTopicNumber(0)} />
+                    <p className="map-text">食べ物</p>
+                </div>
+                <div className="map-icon">
+                    <img
+                        src={imgHistory}
+                        onClick={() => upDateTopicNumber(4)}
+                    />
+                    <p className="map-text">歴史</p>
+                </div>
             </div>
-            <div className="map-icon">
-                <img src={imgFoods} onClick={() => upDateTopicNumber(0)} />
-                <p className="map-text">食べ物</p>
-            </div>
-            <div className="map-icon">
-                <img src={imgHistory} onClick={() => upDateTopicNumber(4)} />
-                <p className="map-text">歴史</p>
-            </div>
-        </div>
         );
     }
     function Kurashiki() {
         return (
             <div className="mapIconSort">
-            <div className="map-icon">
-                <img src={imgPlace} onClick={() => upDateTopicNumber(8)} />
-                <p className="map-text">場所</p>
+                <div className="map-icon">
+                    <img src={imgPlace} onClick={() => upDateTopicNumber(8)} />
+                    <p className="map-text">場所</p>
+                </div>
+                <div className="map-icon">
+                    <img src={imgFoods} onClick={() => upDateTopicNumber(9)} />
+                    <p className="map-text">食べ物</p>
+                </div>
+                <div className="map-icon">
+                    <img
+                        src={imgHistory}
+                        onClick={() => upDateTopicNumber(10)}
+                    />
+                    <p className="map-text">歴史</p>
+                </div>
             </div>
-            <div className="map-icon">
-                <img src={imgFoods} onClick={() => upDateTopicNumber(9)} />
-                <p className="map-text">食べ物</p>
-            </div>
-            <div className="map-icon">
-                <img src={imgHistory} onClick={() => upDateTopicNumber(10)} />
-                <p className="map-text">歴史</p>
-            </div>
-        </div>
         );
     }
     function Hiroshima() {
         return (
             <div className="mapIconSort">
-            <div className="map-icon">
-                <img src={imgPlace} onClick={() => upDateTopicNumber(0)} />
-                <p className="map-text">場所</p>
+                <div className="map-icon">
+                    <img src={imgPlace} onClick={() => upDateTopicNumber(0)} />
+                    <p className="map-text">場所</p>
+                </div>
+                <div className="map-icon">
+                    <img src={imgFoods} onClick={() => upDateTopicNumber(6)} />
+                    <p className="map-text">食べ物</p>
+                </div>
+                <div className="map-icon">
+                    <img src={imgGift} onClick={() => upDateTopicNumber(5)} />
+                    <p className="map-text">お土産</p>
+                </div>
+                <div className="map-icon">
+                    <img
+                        src={imgHistory}
+                        onClick={() => upDateTopicNumber(7)}
+                    />
+                    <p className="map-text">歴史</p>
+                </div>
             </div>
-            <div className="map-icon">
-                <img src={imgFoods} onClick={() => upDateTopicNumber(6)} />
-                <p className="map-text">食べ物</p>
-            </div>
-            <div className="map-icon">
-                <img src={imgGift} onClick={() => upDateTopicNumber(5)} />
-                <p className="map-text">お土産</p>
-            </div>
-            <div className="map-icon">
-                <img src={imgHistory} onClick={() => upDateTopicNumber(7)} />
-                <p className="map-text">歴史</p>
-            </div>
-        </div>
         );
     }
 
@@ -205,14 +242,13 @@ function Map() {
                             </div>
                         </div>
                     ) : (
-                        <div className="map-sort"                                 onClick={() => updateIsListOpen(!isListOpen)}>
+                        <div
+                            className="map-sort"
+                            onClick={() => updateIsListOpen(!isListOpen)}
+                        >
                             <img src={imgMap} className="map-svg" />
                             <div className="map-bar"></div>
-                            <div
-                                className="map-button"
-                            >
-                                {areaList[areaNumber]}
-                            </div>
+                            <div className="map-button">{areaList[map]}</div>
                         </div>
                     )}
                 </div>
@@ -225,27 +261,34 @@ function Map() {
                 </div>
                 <div className="map-icon-sort">
                     <div>
-                        <div className="MapSelectPulldown" onClick={() => upDataSortPulldown(!SortPulldown)}>
+                        <div
+                            className="MapSelectPulldown"
+                            onClick={() => upDataSortPulldown(!SortPulldown)}
+                        >
                             <div className="MapSelectBar"></div>
-                            {SortPulldown ?(<p>行先</p>) :(
+                            {SortPulldown ? (
+                                <p>行先</p>
+                            ) : (
                                 <div className="MapAsist">
                                     <p>{topicList2[TopicNumber]}</p>
-                                    <img src={YA}/>
+                                    <img src={YA} />
                                     <p>Click</p>
                                 </div>
                             )}
                             {SortPulldown ? (
                                 <div className="MapSortPullBox">
                                     <div className="MapSortPullBar"></div>
-                                    <p onClick={()=> SortPick(0)}>USJ</p>
+                                    <p onClick={() => SortPick(0)}>USJ</p>
                                     <div className="MapSortPullBar"></div>
-                                    <p onClick={()=> SortPick(1)}>京都</p>
+                                    <p onClick={() => SortPick(1)}>京都</p>
                                     <div className="MapSortPullBar"></div>
-                                    <p onClick={()=> SortPick(2)}>倉敷</p>
+                                    <p onClick={() => SortPick(2)}>倉敷</p>
                                     <div className="MapSortPullBar"></div>
-                                    <p onClick={()=> SortPick(3)}>広島</p>
+                                    <p onClick={() => SortPick(3)}>広島</p>
                                 </div>
-                            ) :(<></>)}
+                            ) : (
+                                <></>
+                            )}
                         </div>
                     </div>
                     <div className="map-topic">{Sort_List[sort]}</div>

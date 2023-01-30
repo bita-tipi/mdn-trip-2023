@@ -1,11 +1,13 @@
 import "../Day4.css";
 import { getImg } from "model/assets";
+import { Link, useNavigate } from "react-router-dom";
 
 const triangle = getImg("triangle.svg");
 const univa = getImg("univa.png");
 const univaa = getImg("univaa.png");
 
 export function ScheduleDay1() {
+    const navigate = useNavigate();
     return (
         <main className="Day-main">
             <div className="Day-box">
