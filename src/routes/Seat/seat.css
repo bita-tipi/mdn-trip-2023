@@ -16,7 +16,10 @@
     margin-right: 10%;
     margin-top: 5%;
     margin-bottom: 0%;
-    text-decoration: underline solid 3px #d47878;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #D47878;
+    text-decoration-style: solid;
+    text-decoration-line: underline;
 }
 .SeatTopText{
     margin-top: 5%;

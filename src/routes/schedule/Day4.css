@@ -118,21 +118,30 @@ color: #4E3427;
 
 
 .Day-BusLine {
-    text-decoration: underline solid 2px #4E3427;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #4E3427;
+    text-decoration-style: solid;
+    text-decoration-line: underline;
     color: #4E3427;
     margin-bottom: 4%;
     font-size: 17px;
 }
 
 .Day-BusLineSmall {
-    text-decoration: underline solid 2px #4E3427;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #4E3427;
+    text-decoration-style: solid;
+    text-decoration-line: underline;
     color: #4E3427;
     margin-bottom: -17%;
 
 }
 
 .Day-BusLineSmall2 {
-    text-decoration: underline solid 2px #4E3427;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #4E3427;
+    text-decoration-style: solid;
+    text-decoration-line: underline;
     color: #4E3427;
     margin-bottom: -6%;
     margin-left: -16%;
@@ -150,13 +159,19 @@ color: #4E3427;
 }
 
 .Day-underLineRed {
-    text-decoration: underline solid 2px #DF7C7C;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #DF7C7C;
+    text-decoration-style: solid;
+    text-decoration-line: underline;
     margin-left: 20%;
     font-size: 20px;
 }
 
 .Day-underLineRed2 {
-    text-decoration: underline solid 2px #DF7C7C;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #DF7C7C;
+    text-decoration-style: solid;
+    text-decoration-line: underline;
 }
 
 .Day-RedLine {
@@ -329,7 +344,10 @@ color: #4E3427;
 }
 
 .Day-lunch {
-    text-decoration: underline solid 2px #DF7C7C;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #DF7C7C;
+    text-decoration-style: solid;
+    text-decoration-line: underline;
     color: #4E3427;
     font-size: 25px;
 }
@@ -419,13 +437,20 @@ color: #4E3427;
 .Day-underBox {
     margin-left: 20%;
     font-size:25px;
-    text-decoration: underline solid 2px #DF7C7C;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #DF7C7C;
+    text-decoration-style: solid;
+    text-decoration-line: underline;
 }
 
 .Day-underBox2 {
     margin-left: 20%;
     font-size:17px;
-    text-decoration: underline solid 2px #DF7C7C;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #DF7C7C;
+    text-decoration-style: solid;
+    text-decoration-line: underline;
+    color: #4E3427;
 }
 
 .Day-lunchSet {
