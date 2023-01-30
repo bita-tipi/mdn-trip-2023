@@ -65,11 +65,6 @@
   margin-left: 3%;
 }
 
-/*.header img {
-    width: 6%;
-    margin-left: 92%;
-  }*/
-
 .mainvisual_img {
   width: 100vw;
   margin-top: 5%;
@@ -96,14 +91,6 @@
 .schedule_main {
   display: flex;
 }
-
-/*.border_schedule{
-    height: 46vh;
-    width: 25px;
-    background-color: #9BABA3;
-    margin-left: 8%;
-    margin-bottom: 1%;
-  }*/
 
 .schedule_img {
   border-left: solid 2px #a41a29;
@@ -134,14 +121,6 @@
 .topic_main {
   display: flex;
 }
-
-/*.border_topic{
-    height: 23vh;
-    width: 25px;
-    background-color: #9BABA3;
-    margin-left: 8%;
-    margin-bottom: 0;
-  }*/
 
 .topic_img {
   border-left: solid 2px #a41a29;
