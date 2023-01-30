@@ -1,5 +1,5 @@
-.pulldown {
-    animation-name: pulldown;
+.pulldownAttention {
+    animation-name: pulldownAttention;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
     margin-bottom: -10%;
@@ -18,16 +18,12 @@ body{
     background-color: #ffecc4;
 }
 
-@keyframes pulldown {
+@keyframes pulldownAttention {
     0% {
         opacity: 0;
         margin-bottom: -10%;
     }
 
-    50% {
-        opacity: 1;
-        margin-bottom: 0%;
-    }
 
     100% {
         opacity: 1;

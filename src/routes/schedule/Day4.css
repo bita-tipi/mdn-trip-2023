@@ -181,8 +181,7 @@ color: #4E3427;
 }
 
 .Day-picture {
-    width: 76%;
-    object-fit: cover;
+    width: 100%;
 }
 
 .Day-pictureText {
@@ -380,7 +379,7 @@ color: #4E3427;
     margin-bottom: 0%;
     color: #4E3427;
     font-size: 18px;
-    White-space: nowrap
+    White-space: nowrap;
 }
 
 .Day-backScheduleBig {
@@ -468,13 +467,27 @@ color: #4E3427;
     display: flex;
     justify-content: left;
     margin-left: 10%;
+    align-items: center;
+    font-size: 25px;
+}
+
+.Day-BoxBreak {
+    display: flex;
+    justify-content: left;
+    margin-left: 10%;
     align-items: flex-start;
     font-size: 25px;
 }
 
+
 .Day-morning {
     text-align: left;
     margin-left: 20%;
+}
+
+.Day-morning2 {
+    text-align: left;
+    margin-left: 10%;
 }
 
 .Day-timeList {
@@ -537,6 +550,44 @@ font-style: normal;
     margin-bottom: -20%;
 }
 
+.Day-ClassMargin3{
+    margin-bottom: -5%;
+}
+
+.Day-ClassMargin4{
+    margin-top: 38%;
+    margin-bottom: 100%;
+}
+
 .Day-ClassMargin2{
     margin-bottom: -68%;
+}
+
+.Day-TextBig{
+    font-size: 23px;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    white-space: nowrap;
+}
+
+.Day-TextBigSub{
+    font-size: 15px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.Day-LeftLineBig{
+    background-color: #4E3427;
+    width: 3px;
+    margin-right: 5px;
+}
+
+.Day-textSmall{
+    font-size: 17px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.Day-TextSmallSub{
+    font-size:8px;
 }

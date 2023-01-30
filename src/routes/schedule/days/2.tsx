@@ -17,16 +17,16 @@ export function ScheduleDay2() {
                 <p>06:45</p>
                 <p className="Day-underBox">起床</p>
             </div>
-            <div className="Day-Boxbreak">
-                <p>06:45</p>
+            <div className="Day-BoxBreak">
+                <p>07:00</p>
                 <div className="Day-morning">
                     <p className="Day-underLineRed2">朝食</p>
                     <div className="Day-timeList">
                         <div className="Day-timeListTime">
                             <p className="Day-ClassMargin2">06:45</p>
-                            <p className="Day-ClassMargin2">06:45</p>
-                            <p className="Day-ClassMargin2">06:45</p>
-                            <p className="Day-ClassMargin2">06:45</p>
+                            <p className="Day-ClassMargin2">06:55</p>
+                            <p className="Day-ClassMargin2">07:05</p>
+                            <p className="Day-ClassMargin2">07:15</p>
                         </div>
                         <div>
                             <p className="Day-ClassMargin">T2A,T2B,G2A,G2B</p>

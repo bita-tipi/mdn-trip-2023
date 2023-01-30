@@ -17,15 +17,15 @@ const img = {
 };
 export function Attention() {
   const [isListOpen, updateIsListOpen] = useState([
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
-    true,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
   ]);
 
   function ListSelect(index: number) {
@@ -40,7 +40,7 @@ export function Attention() {
       <div>
         <ul className="tyui">
           <h2 onClick={() => ListSelect(0)} className="tyuuititle">
-            <div className="arrow-character">v</div>
+            <div className="arrow-characte]r">v</div>
             <div className="tyuititletext">&emsp;行動</div>
             <div>
               <img className="titledesign" src={img.kodo} />
@@ -48,7 +48,7 @@ export function Attention() {
             <div className="separator"></div>
           </h2>
           {isListOpen[0] ? (
-            <div className="pulldown explanation-container">
+            <div className="pulldownAttention explanation-container">
               <div className="attentiontext">
                 <li>
                   集団の秩序を乱したり、他の人の迷惑になる自分勝手な行動をしない。
@@ -86,7 +86,7 @@ export function Attention() {
             </h2>
           </div>
           {isListOpen[1] ? (
-            <div className="pulldown explanation-container">
+            <div className="pulldownAttention explanation-container">
               <div className="attentiontext">
                 <li>
                   服装は本校指定の制服とする。 (ホテル内の私服着用は認める。)。
@@ -114,7 +114,7 @@ export function Attention() {
             </h2>
           </div>
           {isListOpen[2] ? (
-            <div className="pulldown explanation-container">
+            <div className="pulldownAttention explanation-container">
               <div className="attentiontext">
                 <li>
                   金銭は必要最小限にすること。
@@ -143,7 +143,7 @@ export function Attention() {
             </h2>
           </div>
           {isListOpen[3] ? (
-            <div className="pulldown explanation-container">
+            <div className="pulldownAttention explanation-container">
               <div className="attentiontext">
                 <li>停車時間が短いので、全員が乗車することを最優先とする。</li>
                 <li>
@@ -172,7 +172,7 @@ export function Attention() {
             </h2>
           </div>
           {isListOpen[4] ? (
-            <div className="pulldown explanation-container">
+            <div className="pulldownAttention explanation-container">
               <div className="attentiontext">
                 <li>
                   ホテルに到着後、
@@ -202,7 +202,7 @@ export function Attention() {
             </h2>
           </div>
           {isListOpen[5] ? (
-            <div className="pulldown explanation-container">
+            <div className="pulldownAttention explanation-container">
               <div className="attentiontext">
                 <li>
                   非常口・避難場所など、 緊急時における避難経路を確認すること。
@@ -250,7 +250,7 @@ export function Attention() {
             </h2>
           </div>
           {isListOpen[6] ? (
-            <div className="pulldown explanation-container">
+            <div className="pulldownAttention explanation-container">
               <div className="attentiontext">
                 <li>
                   宿泊当日に緊急連絡が発生した場合、学校へ8:00までに電話orすぐーるで連絡すること。
@@ -276,7 +276,7 @@ export function Attention() {
             </h2>
           </div>
           {isListOpen[7] ? (
-            <div className="pulldown explanation-container">
+            <div className="pulldownAttention explanation-container">
               <div className="attentiontext">
                 <li>
                   <span>

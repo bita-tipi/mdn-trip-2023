@@ -12,7 +12,7 @@ export function ScheduleDay3() {
         <main className="Day-main">
             <div className="Day-box">
                 <p className="Day-time">07:30</p>
-                <p className="Day-underLineRed">朝食</p>
+                <p className="Day-underBox">朝食</p>
             </div>
 
             <div className="Day-box">
