@@ -18,7 +18,7 @@ export function getText(key: KEYS) {
     return "";
 }
 export function getName(key: KEYS) {
-    const roomUserName = localStorage.getItem(key);
+    const roomUserName = localStorage.getItem(KEYS.NAME);
     if (roomUserName !== null) {
         return roomUserName;
     }
