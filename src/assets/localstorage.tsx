@@ -1,7 +1,7 @@
 export enum KEYS {
     SAMPLE_TEXT = "",
     FREEAREA = "",
-    NUMBER ="",
+    NUMBER = "",
     CLASS = "G2A",
     NAME = "",
     FRIENDsONE = "",
@@ -10,31 +10,10 @@ export enum KEYS {
     FRIENDsFOUR = "",
 }
 
-export function getText(key: KEYS) {
-    const value = localStorage.getItem(KEYS.SAMPLE_TEXT);
-    if (value !== null) {
-        return value;
-    }
-    return "";
-}
-export function getName(key: KEYS) {
-    const roomUserName = localStorage.getItem(KEYS.NAME);
-    if (roomUserName !== null) {
-        return roomUserName;
-    }
-    return "";
-}
-export function getClass(key: KEYS) {
-    const roomClassName = localStorage.getItem(KEYS.CLASS);
-    if (roomClassName!== null) {
-        return roomClassName;
-    }
-    return "";
-}
-export function getNumber(key: KEYS) {
-    const roomNumber = localStorage.getItem(KEYS.NUMBER);
-    if (roomNumber !== null) {
-        return roomNumber;
+export function getItem(key: KEYS) {
+    const Value = localStorage.getItem(key);
+    if (Value !== null) {
+        return Value;
     }
     return "";
 }
