@@ -18,21 +18,21 @@ export function getItem(key: KEYS) {
     return "";
 }
 export function getName(key: KEYS) {
-    const name = localStorage.getName(KEYS.NAME);
+    const name = localStorage.getItem(KEYS.NAME);
     if (name !== null) {
         return name;
     }
     return "";
 }
 export function getClass(key: KEYS) {
-    const className = localStorage.getClass(KEYS.CLASS);
+    const className = localStorage.getItem(KEYS.CLASS);
     if (className!== null) {
         return className;
     }
     return "";
 }
 export function getNumber(key: KEYS) {
-    const number = localStorage.getNumber(KEYS.NUMBER);
+    const number = localStorage.getItem(KEYS.NUMBER);
     if (number !== null) {
         return number;
     }
