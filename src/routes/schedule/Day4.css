@@ -597,7 +597,6 @@ font-style: normal;
     opacity: 0.3;
     position: absolute;
     transform: translate(40%,-40%);
-    transform:translateZ(1px)
 }
 
 .Day-bus{
@@ -605,7 +604,6 @@ font-style: normal;
     opacity: 0.3;
     position: absolute;
     transform: translate(40%,-40%);
-    transform:translateZ(1px)
 }
 
 .Day-hune{
@@ -613,7 +611,6 @@ font-style: normal;
     opacity: 0.3;
     position: absolute;
     transform: translate(40%,-40%);
-    transform:translateZ(1px)
 }
 
 .Day-hito{
@@ -621,7 +618,6 @@ font-style: normal;
     opacity: 0.3;
     position: absolute;
     transform: translate(40%,-40%);
-    transform:translateZ(1px)
 }
 
 .Day-TextSmallSub{
@@ -633,5 +629,4 @@ font-style: normal;
     opacity: 0.7;
 z-index: -1;
     position: fixed;
-    transform:translateZ(1px)
-}
+    }
