@@ -5,7 +5,7 @@ import { getImg } from "model/assets";
 import {
     KEYS,
     setItem,
-    getItem,
+    getText,
     removeItem,
     getName,
     getNumber,
@@ -25,9 +25,9 @@ const turu = getImg("turu.svg");
 const next = getImg("矢印.svg");
 
 function RoomHTML() {
-    const [Number, setNumber] = useState("000");
-    const [Class, setClass] = useState("G2A");
-    const [Name, setName] = useState("名電太郎");
+    const [roomNumber, setNumber] = useState("000");
+    const [roomClassName, setClass] = useState("G2A");
+    const [roomUserName, setName] = useState("名電太郎");
 
     const [label, setLabel] = useState("");
     const [localStorageIndex, upDataLocalStorageIndex] = useState(0);
@@ -44,13 +44,7 @@ function RoomHTML() {
             setClick();
         }
         upDataLocalStorageIndex(1);
-    }, [Name, Class]);
-
-    const updateLabel = () => {
-        setLabel(getNumber(KEYS.NUMBER));
-        setLabel(getName(KEYS.NAME));
-        setLabel(getClass(KEYS.CLASS));
-    };
+    }, [roomUserName, roomClassName,roomNumber]);
 
     const handleChange = (e: any) => {
         setNumber(e.target.value);
@@ -62,26 +56,18 @@ function RoomHTML() {
         setClass(e.target.value);
     };
 
-    const removeClick = () => {
-        // LocalStorageの値を削除する
-        removeItem(KEYS.SAMPLE_TEXT);
-        updateLabel();
-    };
-
     const setClick = () => {
         // テキストボックスの値をLocalStorageに保存する
-        setItem(KEYS.NUMBER, Number);
-        setItem(KEYS.CLASS, Class);
-        setItem(KEYS.NAME, Name);
-        updateLabel();
+        setItem(KEYS.NUMBER, roomNumber);
+        setItem(KEYS.CLASS, roomClassName);
+        setItem(KEYS.NAME, roomUserName);
     };
 
     const getClick = () => {
         // LocalStorageの値をテキストボックスに入れる
         setNumber(getNumber(KEYS.NUMBER))
-        setName(getItem(KEYS.NAME))
+        setName(getName(KEYS.NAME))
         setClass(getClass(KEYS.CLASS))
-        updateLabel();
     };
 
     const [clickedDay, updateClickedDay] = useState(DayDateIndex ?? 0);
@@ -133,7 +119,7 @@ function RoomHTML() {
                                 <input
                                     className="roomNumber"
                                     type="text"
-                                    value={Number}
+                                    value={roomNumber}
                                     onChange={handleChange}
                                 />
                                 <p className="roomText">号室</p>
@@ -157,7 +143,7 @@ function RoomHTML() {
                                 <input
                                     className="roomClassSecond2"
                                     type="text"
-                                    value={Class}
+                                    value={roomClassName}
                                     onChange={handleChange2}
                                 />
                             </div>
@@ -166,7 +152,7 @@ function RoomHTML() {
                                 <input
                                     className="roomClassSecond"
                                     type="text"
-                                    value={Name}
+                                    value={roomUserName}
                                     onChange={handleChange3}
                                 />
                             </div>

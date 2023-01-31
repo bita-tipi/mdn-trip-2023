@@ -10,7 +10,7 @@ export enum KEYS {
     FRIENDsFOUR = "",
 }
 
-export function getItem(key: KEYS) {
+export function getText(key: KEYS) {
     const value = localStorage.getItem(KEYS.SAMPLE_TEXT);
     if (value !== null) {
         return value;
@@ -18,23 +18,23 @@ export function getItem(key: KEYS) {
     return "";
 }
 export function getName(key: KEYS) {
-    const name = localStorage.getItem(KEYS.NAME);
-    if (name !== null) {
-        return name;
+    const roomUserName = localStorage.getItem(key);
+    if (roomUserName !== null) {
+        return roomUserName;
     }
     return "";
 }
 export function getClass(key: KEYS) {
-    const className = localStorage.getItem(KEYS.CLASS);
-    if (className!== null) {
-        return className;
+    const roomClassName = localStorage.getItem(KEYS.CLASS);
+    if (roomClassName!== null) {
+        return roomClassName;
     }
     return "";
 }
 export function getNumber(key: KEYS) {
-    const number = localStorage.getItem(KEYS.NUMBER);
-    if (number !== null) {
-        return number;
+    const roomNumber = localStorage.getItem(KEYS.NUMBER);
+    if (roomNumber !== null) {
+        return roomNumber;
     }
     return "";
 }
