@@ -1,3 +1,4 @@
+
 import "../Day4.css";
 import { getImg } from "model/assets";
 import { Link, useNavigate } from "react-router-dom";
@@ -16,6 +17,7 @@ const hune = getImg("hune.png");
 const hito = getImg("hito.png");
 const bus = getImg("bus.png");
 const smoke = getImg("smoke.png");
+
 
 export function ScheduleDay1() {
     const navigate = useNavigate();
