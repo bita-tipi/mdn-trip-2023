@@ -88,7 +88,7 @@ function RoomHTML() {
     const HotelList = ["ヒルトン広島","舞子ビラ","リーベルホテル"]
 
     function ChangeDay(index: number) {
-        if(index > 0){
+        if(index >= 0){
             if(index < 3){
                 updateClickedDay(index);
             }
