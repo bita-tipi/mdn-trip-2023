@@ -40,7 +40,7 @@ export function Attention() {
       <div>
         <ul className="tyui">
           <h2 onClick={() => ListSelect(0)} className="tyuuititle">
-            <div className="arrow-characte]r">v</div>
+            <div className="arrow-character">v</div>
             <div className="tyuititletext">&emsp;行動</div>
             <div>
               <img className="titledesign" src={img.kodo} />
