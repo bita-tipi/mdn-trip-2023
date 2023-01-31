@@ -84,16 +84,20 @@ function RoomHTML() {
         updateLabel();
     };
 
-    const DayList = [Day1(), Day2(), Day3()];
     const [clickedDay, updateClickedDay] = useState(DayDateIndex ?? 0);
+    const HotelList = ["ヒルトン広島","舞子ビラ","リーベルホテル"]
 
     function ChangeDay(index: number) {
-        updateClickedDay(index);
+        if(index > 0){
+            if(index < 3){
+                updateClickedDay(index);
+            }
+        }
+        else{}
     }
 
-    function Day1() {
-        return (
-            <div className="roomMain">
+    return <body className="roomBackGround">
+        <div className="roomMain">
                 <div className="roomOneBox">
                     <div className="roomLeftAreaFirst">
                         <img src={lantern} className="roomLantern"></img>
@@ -101,11 +105,16 @@ function RoomHTML() {
                     </div>
                     <div className="roomRightArea">
                         <div className="roomDayArea">
-                            <p className="roomDay">一日目</p>
+                        <img
+                                className="roomNext2"
+                                src={next}
+                                onClick={() => ChangeDay(clickedDay-1)}
+                            />
+                            <p className="roomDay">{clickedDay+1}日目</p>
                             <img
                                 className="roomNext"
                                 src={next}
-                                onClick={() => ChangeDay(1)}
+                                onClick={() => ChangeDay(clickedDay+1)}
                             />
                         </div>
                         <div>
@@ -113,7 +122,7 @@ function RoomHTML() {
                                 <img className="roomTorii" src={torii}></img>
                                 <p className="roomText">ホテル</p>
                             </div>
-                            <p className="roomHotelName">ヒルトン広島</p>
+                            <p className="roomHotelName">{HotelList[clickedDay]}</p>
                         </div>
                         <div>
                             <div className="roomBox">
@@ -176,158 +185,7 @@ function RoomHTML() {
                     </div>
                 </div>
             </div>
-        );
-    }
-    function Day2() {
-        return (
-            <div className="roomMain">
-                <div className="roomOneBox">
-                    <div className="roomLeftArea">
-                        <img src={lantern} className="roomLantern"></img>
-                        <div className="roomBarSecond"></div>
-                    </div>
-                    <div className="roomRightArea">
-                        <div className="roomDayArea">
-                            <img
-                                className="roomNext2"
-                                src={next}
-                                onClick={() => ChangeDay(0)}
-                            />
-                            <p className="roomDay">二日目</p>
-                            <img
-                                className="roomNext"
-                                src={next}
-                                onClick={() => ChangeDay(2)}
-                            />
-                        </div>
-                        <div>
-                            <div className="roomBox">
-                                <img className="roomTorii" src={torii}></img>
-                                <p className="roomText">ホテル</p>
-                            </div>
-                            <p className="roomHotelName">ホテル舞子ビラ</p>
-                        </div>
-                        <div>
-                            <div className="roomBox">
-                                <img src={sennsu} className="roomSennsu"></img>
-                                <p className="roomText">部屋</p>
-                            </div>
-                            <div className="roomNumberSelect">
-                                <p className="roomNumber">805</p>
-                                <p className="roomText">号室</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="roomTwoBox">
-                    <div className="roomLeftAreaSecond">
-                        <img
-                            src={Redlantern}
-                            className="roomLanternSecond"
-                        ></img>
-                        <div className="roomBar"></div>
-                    </div>
-                    <div>
-                        <div className="roomRightBox">
-                            <div className="roomClass">
-                                <p className="roomTextSecond">クラス</p>
-                                <p className="roomClassSecond">G2D</p>
-                            </div>
-                            <div className="roomClass">
-                                <p className="roomTextSecond">名前</p>
-                                <p className="roomClassSecond">深見吉良</p>
-                            </div>
-                            <div className="roomNameArea">
-                                <div className="roomMemberTitle">
-                                    <img src={turu} className="roomTuru" />
-                                    <p>メンバー</p>
-                                </div>
-                                <div className="roomMemberArea">
-                                    <p className="roomFriendsName">おれ</p>
-                                    <p className="roomFriendsName">わたし</p>
-                                    <p className="roomFriendsName">わし</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-    function Day3() {
-        return (
-            <div className="roomMain">
-                <div className="roomOneBox">
-                    <div className="roomLeftAreaFirst">
-                        <img src={lantern} className="roomLantern"></img>
-                        <div className="roomBar"></div>
-                    </div>
-                    <div className="roomRightArea">
-                        <div className="roomDayArea">
-                            <img
-                                className="roomNext2"
-                                src={next}
-                                onClick={() => ChangeDay(1)}
-                            />
-                            <p className="roomDay">三日目</p>
-                        </div>
-                        <div>
-                            <div className="roomBox">
-                                <img className="roomTorii" src={torii}></img>
-                                <p className="roomText">ホテル</p>
-                            </div>
-                            <p className="roomHotelName">リーベルホテル</p>
-                        </div>
-                        <div>
-                            <div className="roomBox">
-                                <img src={sennsu} className="roomSennsu"></img>
-                                <p className="roomText">部屋</p>
-                            </div>
-                            <div className="roomNumberSelect">
-                                <p className="roomNumber">805</p>
-                                <p className="roomText">号室</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="roomTwoBox">
-                    <div className="roomLeftAreaSecond">
-                        <img
-                            src={Redlantern}
-                            className="roomLanternSecond"
-                        ></img>
-                        <div className="roomBar"></div>
-                    </div>
-                    <div>
-                        <div className="roomRightBox">
-                            <div className="roomClass">
-                                <p className="roomTextSecond">クラス</p>
-                                <p className="roomClassSecond">G2D</p>
-                            </div>
-                            <div className="roomClass">
-                                <p className="roomTextSecond">名前</p>
-                                <p className="roomClassSecond">深見吉良</p>
-                            </div>
-                            <div className="roomNameArea">
-                                <div className="roomMemberTitle">
-                                    <img src={turu} className="roomTuru" />
-                                    <p>メンバー</p>
-                                </div>
-                                <div className="roomMemberArea">
-                                    <p className="roomFriendsName">おれ</p>
-                                    <p className="roomFriendsName">わたし</p>
-                                    <p className="roomFriendsName">わし</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-    return <body className="roomBackGround">{DayList[clickedDay]}</body>;
+    </body>;
 }
 
 export default RoomHTML;
