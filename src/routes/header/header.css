@@ -72,19 +72,18 @@
     height: 1px;
 }
 
-.textAlignCenter{
-  text-align: right;
-  position: absolute;
-  margin-top: 0%;
-  margin-left: 80%;
+.textAlignCenter {
+    text-align: right;
 }
 
-.header-menu{
-    height: 90%;
-    width:90%;
+.header-menu {
+    margin-right: 0%;
+    margin-top: 10%;
+    width: 10%;
+    position: fixed;
 }
 
-.headerText{
+.headerText {
     font-family: fot-tsukubrdgothic-std, sans-serif;
     font-weight: 800;
     font-style: normal;
@@ -93,66 +92,67 @@
     text-align: left;
 }
 
-.headerSelector{
+.headerSelector {
     display: flex;
     margin-left: 10%;
 }
 
-.headerBarRed{
+.headerBarRed {
     background-color: #e7cd5a;
-    width:4%;
+    width: 4%;
 }
 
-.headerBarYellow{
+.headerBarYellow {
     background-color: #9c1e29;
-    width:4%;
+    width: 4%;
 }
 
-.headerTextMain{
+.headerTextMain {
     font-size: 20px;
     margin-bottom: 0%;
     margin-top: -20%;
     white-space: nowrap;
 }
 
-.headerTextMainSub{
+.headerTextMainSub {
     font-size: 20px;
     margin-bottom: 0%;
     margin-top: -6%;
     white-space: nowrap;
 }
 
-.headerTextMainLong{
+.headerTextMainLong {
     font-size: 20px;
     margin-bottom: 5%;
     margin-top: -8%;
     white-space: nowrap;
 }
 
-.headerTextMainLong2{
+.headerTextMainLong2 {
     font-size: 20px;
     margin-bottom: 0%;
     margin-top: -4%;
     white-space: nowrap;
 }
 
-.headerTextSub{
+.headerTextSub {
     margin-top: -20%;
     font-size: 15px;
     margin-bottom: 0%;
 }
 
-.headerTextSubMain{
+.headerTextSubMain {
     margin-top: -20%;
     font-size: 15px;
     margin-bottom: 0%;
 }
-.headerTextSubLong{
+
+.headerTextSubLong {
     margin-top: -10%;
     font-size: 15px;
     margin-bottom: 0%;
 }
 
-.header-List{
+.header-List {
     margin-top: 10%;
 }
