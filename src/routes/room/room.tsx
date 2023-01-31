@@ -78,9 +78,9 @@ function RoomHTML() {
 
     const getClick = () => {
         // LocalStorageの値をテキストボックスに入れる
-        Number = getNumber(KEYS.NUMBER)
-        name = getItem(KEYS.NAME);
-        Class = getClass(KEYS.CLASS);
+        setNumber(getNumber(KEYS.NUMBER))
+        setName(getItem(KEYS.NAME))
+        setClass(getClass(KEYS.CLASS))
         updateLabel();
     };
 
