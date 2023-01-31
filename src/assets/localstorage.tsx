@@ -1,14 +1,18 @@
-export enum KEYS {
-    SAMPLE_TEXT = "",
-    FREEAREA = "",
-    NUMBER = "",
-    CLASS = "G2A",
-    NAME = "",
-    FRIENDsONE = "",
-    FRIENDsTWO = "",
-    FRIENDsTHREE = "",
-    FRIENDsFOUR = "",
-}
+export const KEYS = {
+    SAMPLE_TEXT : "",
+    FREEAREA : "",
+    NUMBER : "",
+    CLASS : "G2A",
+    NAME : "",
+    FRIENDsONE : "",
+    FRIENDsTWO : "",
+    FRIENDsTHREE : "",
+    FRIENDsFOUR : "",
+}   as const;
+
+export type valueOf<T> = T[keyof T];
+
+type KEYS = valueOf<typeof KEYS>;
 
 export function getItem(key: KEYS) {
     const Value = localStorage.getItem(key);

@@ -92,6 +92,7 @@
 
 .box {
   position: relative;
+  z-index: -1;
 }
 
 .main_logo {

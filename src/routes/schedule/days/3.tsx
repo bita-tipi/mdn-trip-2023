@@ -62,9 +62,7 @@ export function ScheduleDay3() {
 
             <img className="Day-triangle3" src={triangle} />
 
-            <div className="Day-box-picture">
-                <p className="Day-timePicture">10:00</p>
-                <img
+            <img
                     className="Day-picture"
                     src={univa}
                     onClick={() =>
@@ -73,7 +71,6 @@ export function ScheduleDay3() {
                         })
                     }
                 />
-            </div>
 
             <div className="Day-box">
                 <p className="Day-time">19:00</p>
@@ -94,9 +91,6 @@ export function ScheduleDay3() {
             </div>
 
             <img className="Day-triangle3" src={triangle} />
-
-            <div className="Day-box-picture">
-                <p className="Day-timePicture">19:30</p>
                 <img
                     className="Day-picture"
                     src={univaa}
@@ -106,7 +100,6 @@ export function ScheduleDay3() {
                         })
                     }
                 />
-            </div>
 
             <div className="Day-Boxbreak">
                 <p>20:00</p>

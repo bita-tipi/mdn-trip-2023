@@ -11,6 +11,11 @@ const Hilton = getImg("Hilton.png");
 const Miyazima = getImg("Miyazima.png");
 const Siryoukan = getImg("Siryoukan.png");
 const lunchi = getImg("ランチセット.svg");
+const sinkansen = getImg("sinkansen.png");
+const hune = getImg("hune.png");
+const hito = getImg("hito.png");
+const bus = getImg("bus.png");
+const smoke = getImg("smoke.png");
 
 export function ScheduleDay1() {
     const navigate = useNavigate();
@@ -22,6 +27,7 @@ export function ScheduleDay1() {
 
             <div className="Day-box">
                 <div className="Day-timeBarArea">
+                <img src={smoke} className="Day-smoke"/>
                     <p className="Day-timeSmallBar">07:51</p>
                     <div className="Day-timeBar"></div>
                     <p className="Day-timeSmallBar2">10:01</p>
@@ -45,6 +51,7 @@ export function ScheduleDay1() {
                     <div className="Day-textArea">
                         <p className="Day-TextBig">広島</p>
                         <h6 className="Day-TextBigSub">Hiroshima</h6>
+                        <img src={sinkansen} className="Day-sin"/>
                     </div>
                 </div>
             </div>
@@ -76,6 +83,7 @@ export function ScheduleDay1() {
                     <div className="Day-textArea">
                         <p className="Day-TextBig">宮島口</p>
                         <h6 className="Day-TextBigSub">Miyajima</h6>
+                        <img src={smoke} className="Day-smoke"/>
                     </div>
                 </div>
             </div>

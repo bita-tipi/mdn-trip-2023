@@ -70,9 +70,6 @@ export function ScheduleDay2() {
                     </div>
                 </div>
             </div>
-
-            <div className="Day-box-picture">
-                <p className="Day-timePicture">10:30</p>
                 <img
                     className="Day-picture"
                     src={kurashiki}
@@ -81,8 +78,7 @@ export function ScheduleDay2() {
                             state: { MapDateIndex: 1 },
                         })
                     }
-                />
-            </div>
+                    />
 
             <div className="Day-lunchBox">
                 <img src={lunchi} className="Day-lunchSet" />
@@ -118,10 +114,7 @@ export function ScheduleDay2() {
                 </div>
             </div>
 
-            <div className="Day-box-picture">
-                <p className="Day-timePicture">14:00</p>
-                <img className="Day-picture" src={bizen} />
-            </div>
+            <img className="Day-picture" src={bizen} />
             <div className="Day-changeBox">
                 <p className="Day-underBox2">備州窯・夢幻庵へ（4クラスずつ）</p>
                 <div className="Day-change">
@@ -170,8 +163,6 @@ export function ScheduleDay2() {
                 </div>
             </div>
 
-            <div className="Day-box-picture">
-                <p className="Day-timePicture">19:30</p>
                 <img
                     className="Day-picture"
                     src={maiko}
@@ -181,7 +172,6 @@ export function ScheduleDay2() {
                         })
                     }
                 />
-            </div>
 
             <div className="Day-Boxbreak">
                 <p>18:30</p>

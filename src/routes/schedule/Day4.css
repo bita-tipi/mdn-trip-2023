@@ -433,6 +433,10 @@ color: #4E3427;
     margin-top: 5%;
 }
 
+.TextSmall{
+    font-size: 15px !important;
+}
+
 .Day-underBox {
     margin-left: 20%;
     font-size:25px;
@@ -583,11 +587,46 @@ font-style: normal;
 }
 
 .Day-textSmall{
-    font-size: 17px;
+    font-size: 15px;
     margin-top: 0%;
     margin-bottom: 0%;
 }
 
+.Day-sin{
+    zoom: 0.5;
+    opacity: 0.3;
+    position: absolute;
+    transform: translate(40%,-40%);
+}
+
+.Day-bus{
+    zoom: 0.5;
+    opacity: 0.3;
+    position: absolute;
+    transform: translate(40%,-40%);
+}
+
+.Day-hune{
+    zoom: 0.5;
+    opacity: 0.3;
+    position: absolute;
+    transform: translate(40%,-40%);
+}
+
+.Day-hito{
+    zoom: 0.5;
+    opacity: 0.3;
+    position: absolute;
+    transform: translate(40%,-40%);
+}
+
 .Day-TextSmallSub{
     font-size:8px;
+}
+
+.Day-smoke{
+    zoom: 0.5;
+    opacity: 0.7;
+z-index: -1;
+    position: fixed;
 }
