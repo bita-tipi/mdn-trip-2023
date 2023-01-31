@@ -54,8 +54,9 @@
 }
 
 .decolation {
-  width: 25%;
-  margin: 3%;
+  width: 40%;
+  margin-left: 3%;
+  margin-top: 4%;
 }
 
 .decolation1 {
@@ -65,9 +66,28 @@
   margin-left: 3%;
 }
 
-.mainvisual_img {
-  width: 100vw;
-  margin-top: 5%;
+.mainvisual_pc {
+  width: 98%;
+  margin-left: 1%;
+  margin-top: 4%;
+  display: block !important;
+}
+
+.mainvisual_sp {
+  width: 98%;
+  margin-left: 1%;
+  margin-top: 4%;
+  display: none !important;
+}
+
+@media only screen and (max-width: 640px) {
+  .mainvisual_pc {
+    display: none !important;
+  }
+
+  .mainvisual_sp {
+    display: block !important;
+  }
 }
 
 .box {
@@ -79,6 +99,25 @@
   position: absolute;
   right: 5px;
   bottom: -10px;
+  display: none !important;
+}
+
+.main_logo2 {
+  width: 45%;
+  position: absolute;
+  right: 5px;
+  bottom: -10px;
+  display: block !important;
+}
+
+@media only screen and (max-width: 640px) {
+  .main_logo {
+    display: block !important;
+  }
+
+  .main_logo2 {
+    display: none !important;
+  }
 }
 
 .top-main {
