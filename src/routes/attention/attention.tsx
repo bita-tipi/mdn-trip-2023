@@ -4,27 +4,6 @@ import _ from "lodash";
 import { getImg } from "model/assets";
 import { MemoData } from "assets/storage";
 
-class MemoDataRepo {
-    private key = "hotel_data";
-
-    public get(): MemoData | undefined {
-        const data = localStorage.getItem(this.key);
-        if (data) {
-            return JSON.parse(data) as MemoData;
-        }
-    }
-
-    public set(data: MemoData) {
-        localStorage.setItem(this.key, JSON.stringify(data));
-    }
-
-    public clear() {
-        localStorage.removeItem(this.key);
-    }
-}
-
-type MemoDataKey = keyof MemoData;
-
 const base = "attention/logo";
 const img = {
     kodo: getImg(`${base}/kodo.svg`),
@@ -38,34 +17,11 @@ const img = {
     temple: getImg("attention/temple.svg"),
 };
 export function Attention() {
-    const [MemoData, setMemoData] = useState<MemoData>();
 
     useEffect(() => {
-        // ここで localStorage からデータを取得して、
-        const data = new MemoDataRepo().get();
-        // undefined チェック (初めてページを開いたときも undefined になるね)
-        if (!data) return;
 
-        // それぞれの値が undefined でなければ、state にセットする
-        if (data.MemoText) {
-            setMemoData(data);
-        } else {
-            console.error(
-                "[x] data in `hotel_data` of localStorage is invalid"
-            );
-        }
     }, []);
 
-    function handleChanged(
-        // key: 更新したいのは, "roomNumber" or "className" or "personName" のどれですか
-        key: MemoDataKey,
-        event: React.ChangeEvent<HTMLInputElement>
-    ) {
-        const value = event.target.value;
-        const newMemoData = { ...MemoData, [key]: value };
-        setMemoData(newMemoData);
-        new MemoDataRepo().set(newMemoData);
-    }
 
     const [isListOpen, updateIsListOpen] = useState([
         false,
@@ -385,13 +341,6 @@ export function Attention() {
                         <p>川越(２班)070-1773-0587</p>
                     </div>
                 </div>
-                <input
-                    className="AttentionMemo"
-                    type="text"
-                    value={MemoData?.MemoText ?? ""}
-                    placeholder="めも"
-                    onChange={(event) => handleChanged("MemoText", event)}
-                />
             </div>
         </div>
     );

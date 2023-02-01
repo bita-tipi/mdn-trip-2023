@@ -3,7 +3,6 @@ import "./top.css";
 import Loading from "../load/loading";
 import { getImg } from "model/assets";
 import { Link, useNavigate } from "react-router-dom";
-import { LoadData} from "assets/storage";
 
 const imgScheduleLogo = getImg("schedule-logo.svg");
 const imgMapLogo = getImg("map-logo.svg");
@@ -40,50 +39,13 @@ const topicImagesPath = [
 
 const topicIndex = [6,1,4,8]
 
-type LoadDataKey = keyof LoadData;
-
-class LoadDataRepo {
-  // タイプミスが怖いから, ここで1回だけ定義しておく
-  private key = "hotel_data";
-
-  public get(): LoadData | undefined {
-    const data = localStorage.getItem(this.key);
-    if (data) {
-      return JSON.parse(data) as LoadData;
-    }
-  }
-
-  public set(data: LoadData) {
-    localStorage.setItem(this.key, JSON.stringify(data));
-  }
-
-  public clear() {
-    localStorage.removeItem(this.key);
-  }
-}
 
 function Top() {
 
 
-  const [loadData, setLoadData] = useState<LoadData>();
 
   useEffect(() => {
-    // ここで localStorage からデータを取得して、
-    const data = new LoadDataRepo().get();
-    // undefined チェック (初めてページを開いたときも undefined になるね)
-    if (!data) return;
 
-    // それぞれの値が undefined でなければ、state にセットする
-    if (data.IsLoading && data.Loading) {
-      setLoadData(data);
-    } else {
-      console.error("[x] data in `hotel_data` of localStorage is invalid");
-    }
-
-      const value = true;
-      const newloadData = { ...loadData, LoadDataKey: value };
-      setLoadData(newloadData);
-      new LoadDataRepo().set(newloadData);
   }, []);
   // state
   const [isLoading, SetLoading] = useState(false);

@@ -46,6 +46,7 @@ const kurashiloHistory1 = getImg("topic/倉敷歴史.png");
 const kurashiloHistory2 = getImg("topic/倉敷歴史2.png");
 const miyajima1 = getImg("topic/宮島食べ物.png");
 const miyajima2 = getImg("topic/宮島食べ物2.png");
+const decoy = getImg("decoy.png");
 
 const imgTopicArea = getImg("topic-area.png");
 const YA = getImg("TopicYA.svg");
@@ -58,6 +59,12 @@ function Map() {
     const Sort_List = [Usj(), Kyoto(), Kurashiki(), Hiroshima()];
     const [sort, updateSort] = useState(0);
     const map_List = [
+        decoy,
+        decoy,
+        decoy,
+        decoy,
+        decoy,
+        decoy,
         imgMapHiroshima,
         imgMapKurashiki,
         imgMapUsj,
