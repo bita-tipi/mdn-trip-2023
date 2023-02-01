@@ -266,13 +266,13 @@
     0% {
         transform: translateY(-10px);
         opacity: 0;
-        margin-bottom: -10px;
+        margin-bottom: 0px;
     }
 
     100% {
-        transform: translateY(0px);
+        transform: translateY(20px);
         opacity: 1;
-        margin-bottom: 0px;
+        margin-bottom: 100px;
     }
 }
 
@@ -310,13 +310,13 @@
     0% {
         transform: translateY(-10px);
         opacity: 0;
-        margin-bottom: -350px;
+        margin-bottom: 0px;
     }
 
     100% {
-        transform: translateY(0px);
+        transform: translateY(20px);
         opacity: 1;
-        margin-bottom: 0px;
+        margin-bottom: 100px;
     }
 }
 
@@ -639,12 +639,11 @@
     position: fixed;
 }
 
-.DaySpace {
+.DaySpace2 {
     display: flex;
-    justify-content: center;
 }
 
-.DaySpace p {
+.DaySpace2 p {
     margin-top: 0%;
     margin-bottom: 0%;
 }
@@ -652,4 +651,28 @@
 .DayTextPreset {
     margin-top: 0%;
     margin-bottom: 0%;
+}
+
+.DayTextPresetSmall {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 17px;
+}
+
+.DayBox {
+    text-align: left;
+}
+.DayTimeMoji{
+    font-size: 17px;
+}
+.DayBox p {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    white-space: nowrap;
+}
+
+.DayFlexBox {
+    display: flex;
+    align-items: center;
+    margin-left: 20%;
 }

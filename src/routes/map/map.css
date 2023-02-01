@@ -89,22 +89,7 @@
 
 .map-pick {}
 
-.map-pull {
-    padding-bottom: 8%;
-    margin-bottom: -5%;
-    color: #4D3326;
-    margin-top: 3%;
-    font-size: 16px;
-    font-family: klee-one, sans-serif;
-    font-weight: 600;
-    font-style: normal;
-}
 
-.map-svg {
-    width: 10%;
-    height: 10%;
-    margin-left: 5%;
-}
 
 .map-svg-open {
     margin-top: 22%;
@@ -162,23 +147,7 @@
     font-size: 25px;
 }
 
-.map-red-bar {
-    margin-left: 100%;
-    margin-top: 13%;
-    border-radius: 4px;
-    background-color: #D47878;
-    width: 8%;
-    height: 6.5%;
-}
 
-.map-red-circle {
-    background-color: #D47878;
-    border-radius: 100px;
-    width: 50%;
-    height: 5%;
-    margin-left: 78%;
-    margin-top: 15%;
-}
 
 .map-pull-list {
     text-align: left;
@@ -384,4 +353,137 @@
     margin-right: 5%;
     height: 40%;
     width: 10%;
+}
+
+.MapBarRed {
+    margin-right: 4%;
+    background-color: #9c1e29;
+    height: auto;
+    width: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.MapPick {
+    display: flex;
+    justify-content: left;
+    background-color: #EBD497;
+    margin-left: 10%;
+    margin-right: 40%;
+    border-radius: 10px;
+}
+
+.MapPick p {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-family: irohamaru, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+    color: #4D3326;
+}
+
+.map-svg {
+    margin-top: 3px;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.mapSelectArea {
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 10px !important;
+}
+
+.mapPulldownAnimation {
+    animation-name: mapPulldown;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    transform-origin: top;
+
+}
+
+@keyframes mapPulldown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+        margin-bottom: -100px;
+    }
+
+    80% {
+        margin-bottom: 0px
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+
+    }
+
+    ;
+}
+
+.mapPulldownAnimation2 {
+    animation-name: mapPulldown2;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    transform-origin: top;
+
+}
+
+@keyframes mapPulldown2 {
+    0% {
+        opacity: 0;
+        transform: scaleY(6%);
+        margin-bottom: -200px;
+    }
+
+    ;
+
+    100% {
+        opacity: 1;
+        transform: scaleY(100%);
+        margin-bottom: 0px
+    }
+
+    ;
+}
+
+.map-pull {
+    color: #4D3326;
+    margin-top: 9px !important;
+    margin-bottom: 9px !important;
+    font-size: 16px !important;
+    font-family: klee-one, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    white-space: nowrap;
+}
+
+.map-red-bar {
+    border-radius: 4px;
+    background-color: #D47878;
+    width: 5%;
+    height: 13px;
+    margin-left: 47.5%;
+}
+
+.map-red-circle {
+    background-color: #D47878;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 15px;
+}
+
+.mapSvgArea {
+    text-align: center;
+}
+
+.circleArea {
+    text-align: center;
 }

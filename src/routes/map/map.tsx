@@ -200,12 +200,13 @@ function Map() {
                         <p className="MapTitleSub">Map Selection</p>
                     </div>
                 </div>
-                <div className="map-pick">
-                    {isListOpen ? (
-                        <div className="map-moji">
-                            <div className="map-map-list">
-                                <img src={imgMap} className="map-svg-open" />
-                                <div className="map-red-bar"></div>
+                <div className="MapPick" onClick={() =>
+                    updateIsListOpen(!isListOpen)
+                }>
+                    <div className="mapSvgArea">
+                        <img src={imgMap} className="map-svg" />
+                        {isListOpen ? (
+                            <div className="circleArea mapPulldownAnimation">                                <div className="map-red-bar"></div>
                                 <div className="map-red-circle"></div>
                                 <div className="map-red-bar"></div>
                                 <div className="map-red-circle"></div>
@@ -218,16 +219,16 @@ function Map() {
                                 <div className="map-red-bar"></div>
                                 <div className="map-red-circle"></div>
                             </div>
-                            <div className="map-bar-open"></div>
-                            <div className="map-pull-list">
-                                <p
-                                    className="map-pull"
-                                    onClick={() =>
-                                        updateIsListOpen(!isListOpen)
-                                    }
-                                >
-                                    場所設定
-                                </p>
+                        ) : (
+                            <></>
+                        )}
+                    </div>
+                    {isListOpen ? (<div className="MapBarRed mapPulldownAnimation2"></div>) : (<div className="MapBarRed"></div>)}
+                    <div>
+                        {isListOpen ? (<p>場所設定</p>) : (<p>{areaList[map]}</p>)}
+
+                        {isListOpen ? (
+                            <div className="mapSelectArea mapPulldownAnimation">
                                 <p onClick={() => Sort(0)} className="map-pull">
                                     広島
                                 </p>
@@ -247,17 +248,10 @@ function Map() {
                                     嵐山
                                 </p>
                             </div>
-                        </div>
-                    ) : (
-                        <div
-                            className="map-sort"
-                            onClick={() => updateIsListOpen(!isListOpen)}
-                        >
-                            <img src={imgMap} className="map-svg" />
-                            <div className="map-bar"></div>
-                            <div className="map-button">{areaList[map]}</div>
-                        </div>
-                    )}
+                        ) : (
+                            <></>
+                        )}
+                    </div>
                 </div>
                 <div className="MapTitleArea">
                     <div className="MapBarTitle"></div>

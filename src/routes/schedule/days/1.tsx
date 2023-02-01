@@ -205,32 +205,36 @@ export function ScheduleDay1() {
                     <div className="Day-timeBar"></div>
                     <p className="Day-timeSmallBar2">17:00</p>
                 </div>
-                <p className="Day-underBox">被爆体験講話</p>
+                <div className="DayBox">
+                    <p className="Day-underBox">被爆体験講話</p>
+                    <div className="DayFlexBox">
+                        <div>
+                            <p>メモリアルホール</p>
+                            <div className="DaySpace2">
+                                <p>会議室１</p>
+                                <p>会議室２</p>
+                            </div>
+                        </div>
+                        <p>(東館地下一階)</p>
+                    </div>
+                    <p className="DayFlexBox">研修室３(追悼平和記念館)</p>
+                </div>
             </div>
 
-            <div>
-                <p>東館地下一階</p>
-                <div className="DaySpace">
-                    <p>メモリアルホール</p>
-                    <p>会議室１</p>
-                    <p>会議室２</p>
-                </div>
-                <p>研修室３(追悼平和記念館)</p>
-            </div>
 
             <img className="Day-picture" src={Hilton} />
 
             <div className="Day-BoxBreak">
-                <p>06:45~</p>
+                <p className="DayTextPreset">18:00~</p>
                 <div className="Day-morning">
-                    <p className="Day-underLineRed2 DayTextPreset">朝食</p>
+                    <p className="Day-underLineRed2 DayTextPreset">夕食</p>
                     <p className="DayTextPreset">二階太田川</p>
                     <div className="Day-timeList">
                         <div className="Day-timeListTime">
-                            <p className="Day-ClassMargin2">06:45</p>
-                            <p className="Day-ClassMargin2">06:55</p>
-                            <p className="Day-ClassMargin2">07:05</p>
-                            <p className="Day-ClassMargin2">07:15</p>
+                            <p className="Day-ClassMargin2">18:00</p>
+                            <p className="Day-ClassMargin2">18:10</p>
+                            <p className="Day-ClassMargin2">18:20</p>
+                            <p className="Day-ClassMargin2">18:30</p>
                         </div>
                         <div>
                             <p className="Day-ClassMargin">T2A,T2B,G2A,G2B</p>

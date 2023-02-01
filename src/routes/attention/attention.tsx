@@ -334,7 +334,7 @@ export function Attention() {
                         <></>
                     )}
                 </ul>
-                <div>
+                <div className="AttentionBox">
                     <p>緊急連絡先</p>
                     <div>
                         <p>大澤(１班) 070-1773-0135</p>

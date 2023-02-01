@@ -90,8 +90,9 @@ export function ScheduleDay4() {
             </div>
             {isListOpenDays[0] ? (
                 <div className="Day-pulldown2">
+                    <img className="Day-triangle3" src={triangle}></img>
                     <p>
-                        1班 1~3号車<br></br>2班 1~4号車
+                        1班 1~3号車  2班 1~4号車
                     </p>
                     <div className="Day-box">
                         <p className="Day-timeSmall">10:15</p>
@@ -169,44 +170,7 @@ export function ScheduleDay4() {
                     </div>
                 </div>
             ) : (
-                <div className="Day-pulldownClose2">
-                    <div className="Day-box">
-                        <p className="Day-timeSmall">10:15</p>
-                        <div className="Day-leftLineAreaSmall">
-                            <div className="Day-leftLine"></div>
-                            <div className="Day-textArea">
-                                <p className="Day-textNameSmall2">北野天満宮</p>
-                                <h6>Kitano Tenmangu Shirine</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <p>10:15</p>
-                        <div>
-                            <p>観光</p>
-                            <p>北野天満宮</p>
-                            <img></img>
-                        </div>
-                    </div>
-                    <div>
-                        <p className="Day-lunch">昼食は自由</p>
-                    </div>
-                    <div className="Day-box">
-                        <p className="Day-time">14:10</p>
-                        <div className="Day-busArea">
-                            <h5 className="Day-BusLine">バス</h5>
-                            <div className="Day-leftLineArea">
-                                <div className="Day-leftLine"></div>
-                                <div className="Day-textArea">
-                                    <p className="Day-backSchedule">錦市場</p>
-                                    <h6 className="Day-backSchedule2">
-                                        Nishiki Itiba
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              <></>
             )}
             <div className="Day-routeIf" onClick={() => ListSelectDays(1)}>
                 {isListOpenDays[1] ? (
@@ -218,6 +182,7 @@ export function ScheduleDay4() {
             </div>
             {isListOpenDays[1] ? (
                 <div className="Day-pulldown2">
+                    <img className="Day-triangle3" src={triangle}></img>
                     <div className="Day-box">
                         <p className="Day-timeSmall">10:00</p>
                         <div className="Day-leftLineAreaSmall">
@@ -262,42 +227,7 @@ export function ScheduleDay4() {
                     </div>
                 </div>
             ) : (
-                <div className="Day-pulldownClose2">
-                    <div className="Day-box">
-                        <p className="Day-timeSmall">10:15</p>
-                        <div className="Day-leftLineAreaSmall">
-                            <div className="Day-leftLine"></div>
-                            <div className="Day-textArea">
-                                <p className="Day-backSchedule">北野天満宮</p>
-                                <h6 className="Day-backSchedule2">
-                                    Kitano Tenmangu Shirine
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                    <img className="Day-picture" src={ninen} />
-                    <div className="Day-lunchBox">
-                        <img src={lunchi} className="Day-lunchSet" />
-                        <p className="Day-lunch">昼食は各自</p>
-                    </div>
-                    <div className="Day-box">
-                        <p className="Day-timeSmall">14:10</p>
-                        <div className="Day-busArea">
-                            <h5 className="Day-BusLineSmall">バス</h5>
-                            <div className="Day-leftLineArea">
-                                <div className="Day-leftLine"></div>
-                                <div className="Day-textArea">
-                                    <p className="Day-backSchedule">
-                                        清水駐車場
-                                    </p>
-                                    <h6 className="Day-backSchedule2">
-                                        Kiyomizu Parking
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <></>
             )}
             <div className="Day-routeIf" onClick={() => ListSelectDays(2)}>
                 {isListOpenDays[2] ? (
@@ -353,43 +283,7 @@ export function ScheduleDay4() {
                     <div className="Day-RedLine"></div>
                 </div>
             ) : (
-                <div className="Day-pulldownClose">
-                    <img className="Day-triangle3" src={triangle}></img>
-                    <div className="Day-box">
-                        <p className="Day-timeSmall">10:00</p>
-                        <div className="Day-leftLineAreaSmall">
-                            <div className="Day-leftLine"></div>
-                            <div className="Day-textArea">
-                                <p className="Day-backSchedule">嵐山</p>
-                                <h6 className="Day-backSchedule2">
-                                    Arashiyama
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="Day-box-picture">
-                        <p className="Day-timePicture">10:00</p>
-                        <img className="Day-picture" src={arashiyama} />
-                    </div>
-                    <div>
-                        <p className="Day-lunch">昼食は各自</p>
-                    </div>
-                    <div className="Day-box">
-                        <p className="Day-timeSmall">13:50</p>
-                        <div className="Day-busArea">
-                            <h5 className="Day-BusLineSmall">バス</h5>
-                            <div className="Day-leftLineArea">
-                                <div className="Day-leftLine"></div>
-                                <div className="Day-textArea">
-                                    <p className="Day-backSchedule">嵐山</p>
-                                    <h6 className="Day-backSchedule2">
-                                        Arashiyama
-                                    </h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <></>
             )}
             <img className="Day-triangle3" src={triangle}></img>
 

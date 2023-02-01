@@ -11,6 +11,8 @@ const IMG18 = getImg("18.png");
 const IMG19 = getImg("19.png");
 const IMG20 = getImg("20.png");
 const LINK = getImg("LINK.svg");
+const sin = getImg("sin1.svg");
+const sin2 = getImg("sin2.svg");
 
 function Seat() {
     const [clickedDay, updateClickedDay] = useState(0);
@@ -25,22 +27,14 @@ function Seat() {
     return (
         <div>
             <div className="SeatTop">
-                <p
-                    className={
-                        clickedDay === 0 ? "SeatTopTextPick" : "SeatTopText"
-                    }
-                    onClick={() => updateClickedDay(0)}
-                >
-                    行き
-                </p>
-                <p
-                    className={
-                        clickedDay === 1 ? "SeatTopTextPick" : "SeatTopText"
-                    }
-                    onClick={() => updateClickedDay(1)}
-                >
-                    帰り
-                </p>
+                <div className="SeatGo" onClick={() => updateClickedDay(0)}>
+                    {clickedDay == 0 ? (<img src={sin2} />) : (<img src={sin} />)}
+                    <p>行き</p>
+                </div>
+                <div className="SeatGo" onClick={() => updateClickedDay(1)}>
+                    {clickedDay == 1 ? (<img src={sin2} />) : (<img src={sin} />)}
+                    <p>帰り</p>
+                </div>
             </div>
 
             <div className="SeatMain">

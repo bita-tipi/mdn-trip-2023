@@ -114,8 +114,8 @@ body {
 
 .attentionLine {
     border-radius: 10px;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 5px;
+    margin-bottom: 5px;
     height: auto;
     width: 5px;
     background-color: #e5b3a0;
@@ -153,4 +153,13 @@ body {
 } */
 .tyuititletext {
     white-space: nowrap
+}
+
+.AttentionBox{
+    margin-left: 10%;
+}
+
+.AttentionBox p{
+    white-space: nowrap;
+    color: #4c3427;
 }

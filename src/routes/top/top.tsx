@@ -22,6 +22,7 @@ const TopTopic1 = getImg("TopTopic.png");
 const TopTopic2 = getImg("TopTopic2.png");
 const TopTopic3 = getImg("TopTopic3.png");
 const TopTopic4 = getImg("TopTopic4.png");
+const decoy = getImg("decoy.png");
 
 const scheduleImagesPath = [
   imgSchedule1,
@@ -136,7 +137,7 @@ function Top() {
           <main className="map_main">
             <div className="map_img">
               <Link to="/map">
-                <img src={imgSchedule} />
+                <img src={decoy} />
               </Link>
             </div>
           </main>

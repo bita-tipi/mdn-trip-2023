@@ -1,11 +1,14 @@
 .SeatTop{
     display: flex;
     font-size:40px;
-    margin-left: 10%;
     font-family: klee-one, sans-serif;
     font-weight: 600;
     font-style: normal;
     color: #4E3427;
+    background-color: #e7cd5a;
+    padding-top: 10%;
+    margin-top: -10%;
+    justify-content: center;
 }
 .SeatTopTextPick{
     display: flex;
@@ -21,18 +24,42 @@
     text-decoration-style: solid;
     text-decoration-line: underline;
 }
+.SeatGo{
+    display: flex;
+    background-color: #f8e8bc;
+    margin-bottom: 4%;
+    margin-left: 4%;
+    margin-right: 4%;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 3px;
+}
+.SeatGo p{
+    white-space:nowrap;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 30px;
+    font-family: klee-one, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    margin-left: 5px;
+}
+.SeatGo img{
+    width: 50px;
+    margin-top: 10px;
+}
 .SeatTopText{
     margin-top: 5%;
     display: flex;
     margin-right: 10%;
     margin-bottom: 0%;
 }
-.SeatSelectBox{
-    margin-left: 10%;
-    margin-top: 5%;
-}
+
 .SeatSelectBox{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
 }
 
 .SeatSelectText{
@@ -40,8 +67,8 @@
     margin-right: 5%;
 }
 .SeatSelectText img{
-    width: 15%;
-    height: 15%;
+    width: 25px;
+    height: 25px;
 }
 
 .SeatSelectTextArea{

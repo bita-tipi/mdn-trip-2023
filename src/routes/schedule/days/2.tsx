@@ -18,10 +18,10 @@ export function ScheduleDay2() {
                 <p className="Day-underBox">起床</p>
             </div>
             <div className="Day-BoxBreak">
-                <p>06:45~</p>
+                <p className="DayTextPreset">06:45~</p>
                 <div className="Day-morning">
-                    <p className="Day-underLineRed2">朝食</p>
-                    <p>二階太田川</p>
+                    <p className="Day-underLineRed2 DayTextPreset">朝食</p>
+                    <p className="DayTextPreset">二階太田川</p>
                     <div className="Day-timeList">
                         <div className="Day-timeListTime">
                             <p className="Day-ClassMargin2">06:45</p>
@@ -43,21 +43,8 @@ export function ScheduleDay2() {
                 <p>07:45~</p>
                 <div className="Day-morning">
                     <p className="Day-underLineRed2">集合時間</p>
-                    <p>二階太田川の前</p>
-                    <div className="Day-timeList">
-                        <div className="Day-timeListTime">
-                            <p className="Day-ClassMargin2">07:45</p>
-                            <p className="Day-ClassMargin2">07:55</p>
-                            <p className="Day-ClassMargin2">08:05</p>
-                            <p className="Day-ClassMargin2">08:15</p>
-                        </div>
-                        <div>
-                            <p className="Day-ClassMargin">T2A,T2B,G2A,G2B</p>
-                            <p className="Day-ClassMargin">T2C,J2A,G2C,G2D</p>
-                            <p className="Day-ClassMargin">J2B,G2H,G2E,G2F</p>
-                            <p className="Day-ClassMargin">G2I,G2J,G2G,G2K</p>
-                        </div>
-                    </div>
+                    <p className="DayTextPresetSmall">朝食の１時間後</p>
+                    <p className="DayTextPreset">二階太田川の前</p>
                 </div>
             </div>
             <div className="Day-box">
