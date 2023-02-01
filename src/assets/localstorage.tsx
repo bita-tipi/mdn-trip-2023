@@ -8,6 +8,7 @@ export const KEYS = {
     FRIENDsTWO : "",
     FRIENDsTHREE : "",
     FRIENDsFOUR : "",
+    IsLoaded : "false",
 }   as const;
 
 export type valueOf<T> = T[keyof T];

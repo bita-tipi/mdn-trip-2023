@@ -3,6 +3,8 @@ import Load1 from "./load1";
 import Load2 from "./load2";
 import Load3 from "./load3";
 import "./loading.css";
+import {KEYS,getItem,setItem} from "assets/localstorage"
+
 
 function Loading() {
     let LoadingIndex = 0;

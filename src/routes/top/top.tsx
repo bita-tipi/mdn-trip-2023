@@ -3,6 +3,7 @@ import "./top.css";
 import Loading from "../load/loading";
 import { getImg } from "model/assets";
 import { Link, useNavigate } from "react-router-dom";
+import { KEYS,setItem, getItem } from "assets/localstorage";
 
 const imgScheduleLogo = getImg("schedule-logo.svg");
 const imgMapLogo = getImg("map-logo.svg");
@@ -38,7 +39,10 @@ function Top() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    SetLoading(true);
+    if(getItem(KEYS.IsLoaded) === "false"){
+      SetLoading(true);
+      setItem(KEYS.IsLoaded,"true")
+    }
   }, []);
 
   // view
