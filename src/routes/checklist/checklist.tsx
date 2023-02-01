@@ -28,7 +28,7 @@ function Check() {
         updateIsListOpen(copiedList);
     }
 
-    const [isListOpen, updateIsListOpen] = useState([false, false, false]);
+    const [isListOpen, updateIsListOpen] = useState([true, false, false]);
 
     return (
         <div className="checklist-body">
@@ -52,32 +52,15 @@ function Check() {
                             <div>
                                 <div className="List-OneSet">
                                     <Checkbox />
-                                    <p>財布</p>
+                                    <p>マスク</p>
                                 </div>
                                 <div className="List-OneSet">
                                     <Checkbox />
-                                    <p>財布</p>
+                                    <p>雨具</p>
                                 </div>
                                 <div className="List-OneSet">
                                     <Checkbox />
-                                    <p>財布</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="List-flexSet">
-                            <div className="List-bar"></div>
-                            <div>
-                                <div className="List-OneSet">
-                                    <Checkbox />
-                                    <p>財布</p>
-                                </div>
-                                <div className="List-OneSet">
-                                    <Checkbox />
-                                    <p>財布</p>
-                                </div>
-                                <div className="List-OneSet">
-                                    <Checkbox />
-                                    <p>財布</p>
+                                    <p>常備薬</p>
                                 </div>
                             </div>
                         </div>
@@ -86,15 +69,32 @@ function Check() {
                             <div>
                                 <div className="List-OneSet">
                                     <Checkbox />
-                                    <p>財布</p>
+                                    <p>筆記用具</p>
                                 </div>
                                 <div className="List-OneSet">
                                     <Checkbox />
-                                    <p>財布</p>
+                                    <p>現金(昼食代含む)</p>
                                 </div>
                                 <div className="List-OneSet">
                                     <Checkbox />
-                                    <p>財布</p>
+                                    <p>着替え</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="List-flexSet">
+                            <div className="List-bar"></div>
+                            <div>
+                                <div className="List-OneSet">
+                                    <Checkbox />
+                                    <p>生徒手帳</p>
+                                </div>
+                                <div className="List-OneSet">
+                                    <Checkbox />
+                                    <p></p>
+                                </div>
+                                <div className="List-OneSet">
+                                    <Checkbox />
+                                    <p></p>
                                 </div>
                             </div>
                         </div>
@@ -162,7 +162,7 @@ function Check() {
                         ListSelect(2);
                     }}
                 >
-                    自分だけの持ち物
+                    あるとべんりなもの
                 </div>
                 {isListOpen[2] ? (
                     <div className="my-list-pulldown">

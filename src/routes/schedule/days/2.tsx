@@ -14,13 +14,14 @@ export function ScheduleDay2() {
     return (
         <main className="Day-main">
             <div className="Day-Boxbreak">
-                <p>06:45</p>
+                <p>朝食の30分前</p>
                 <p className="Day-underBox">起床</p>
             </div>
             <div className="Day-BoxBreak">
-                <p>07:00</p>
+                <p>06:45~</p>
                 <div className="Day-morning">
                     <p className="Day-underLineRed2">朝食</p>
+                    <p>二階太田川</p>
                     <div className="Day-timeList">
                         <div className="Day-timeListTime">
                             <p className="Day-ClassMargin2">06:45</p>
@@ -32,18 +33,40 @@ export function ScheduleDay2() {
                             <p className="Day-ClassMargin">T2A,T2B,G2A,G2B</p>
                             <p className="Day-ClassMargin">T2C,J2A,G2C,G2D</p>
                             <p className="Day-ClassMargin">J2B,G2H,G2E,G2F</p>
-                            <p className="Day-ClassMargin">G2I,G2J,G2G,G2H</p>
+                            <p className="Day-ClassMargin">G2I,G2J,G2G,G2K</p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div className="Day-BoxBreak">
+                <p>07:45~</p>
+                <div className="Day-morning">
+                    <p className="Day-underLineRed2">集合時間</p>
+                    <p>二階太田川の前</p>
+                    <div className="Day-timeList">
+                        <div className="Day-timeListTime">
+                            <p className="Day-ClassMargin2">07:45</p>
+                            <p className="Day-ClassMargin2">07:55</p>
+                            <p className="Day-ClassMargin2">08:05</p>
+                            <p className="Day-ClassMargin2">08:15</p>
+                        </div>
+                        <div>
+                            <p className="Day-ClassMargin">T2A,T2B,G2A,G2B</p>
+                            <p className="Day-ClassMargin">T2C,J2A,G2C,G2D</p>
+                            <p className="Day-ClassMargin">J2B,G2H,G2E,G2F</p>
+                            <p className="Day-ClassMargin">G2I,G2J,G2G,G2K</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className="Day-box">
                 <div className="Day-timeBarArea">
                     <p className="Day-timeSmallBar">08:00</p>
                     <div className="Day-timeBar"></div>
                     <p className="Day-timeSmallBar2">10:30</p>
                 </div>
+                <p></p>
                 <div className="Day-busArea2">
                     <div className="Day-leftLineArea2">
                         <div className="Day-leftLine"></div>
@@ -70,15 +93,15 @@ export function ScheduleDay2() {
                     </div>
                 </div>
             </div>
-                <img
-                    className="Day-picture"
-                    src={kurashiki}
-                    onClick={() =>
-                        navigate("/map", {
-                            state: { MapDateIndex: 1 },
-                        })
-                    }
-                    />
+            <img
+                className="Day-picture"
+                src={kurashiki}
+                onClick={() =>
+                    navigate("/map", {
+                        state: { MapDateIndex: 1 },
+                    })
+                }
+            />
 
             <div className="Day-lunchBox">
                 <img src={lunchi} className="Day-lunchSet" />
@@ -113,6 +136,7 @@ export function ScheduleDay2() {
                     </div>
                 </div>
             </div>
+            <p>5分前にバス降車場所集合</p>
 
             <img className="Day-picture" src={bizen} />
             <div className="Day-changeBox">
@@ -163,24 +187,31 @@ export function ScheduleDay2() {
                 </div>
             </div>
 
-                <img
-                    className="Day-picture"
-                    src={maiko}
-                    onClick={() =>
-                        navigate("/room", {
-                            state: { DayDateIndex: 1 },
-                        })
-                    }
-                />
+            <img
+                className="Day-picture"
+                src={maiko}
+                onClick={() =>
+                    navigate("/room", {
+                        state: { DayDateIndex: 1 },
+                    })
+                }
+            />
 
+            <div className="Day-Boxbreak">
+                <p>到着後すぐ</p>
+                <p className="Day-underBox">部屋長会議</p>
+            </div>
+            <p>本館3階 舞子の間の前</p>
             <div className="Day-Boxbreak">
                 <p>18:30</p>
                 <p className="Day-underBox">夕食</p>
             </div>
+            <p>本館3階 舞子の間</p>
             <div className="Day-Boxbreak">
-                <p>20:00</p>
-                <p className="Day-underBox">部屋長会議</p>
+                <p>~21:30</p>
+                <p className="Day-underBox">自由時間</p>
             </div>
+            <p>これ以降部屋から出ること禁止</p>
             <div className="Day-Boxbreak">
                 <p>22:00</p>
                 <p className="Day-underBox">点呼</p>

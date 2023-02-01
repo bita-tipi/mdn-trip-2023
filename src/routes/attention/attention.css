@@ -12,6 +12,7 @@
     font-family: klee-one, sans-serif;
     font-weight: 600;
     font-style: normal;
+    z-index: -1;
 }
 
 body {
@@ -33,9 +34,7 @@ body {
 
 }
 
-.AttentionMeme{
-    
-}
+.AttentionMeme {}
 
 
 

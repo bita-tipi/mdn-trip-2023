@@ -19,7 +19,7 @@
     font-family: fot-tsukubrdgothic-std, sans-serif;
     font-weight: 800;
     font-style: normal;
-color: #4E3427;
+    color: #4E3427;
 }
 
 .Day-busArea {
@@ -70,7 +70,7 @@ color: #4E3427;
     margin-bottom: 24px;
 }
 
-.Day-Left{
+.Day-Left {
     text-align: left;
     line-height: 110%;
 }
@@ -101,6 +101,7 @@ color: #4E3427;
     font-size: 15px;
     line-height: 70%;
 }
+
 .Day-textName2 {
     margin-bottom: -8%;
     font-size: 15px;
@@ -265,7 +266,7 @@ color: #4E3427;
     0% {
         transform: translateY(-10px);
         opacity: 0;
-        margin-bottom: -350px;
+        margin-bottom: -10px;
     }
 
     100% {
@@ -293,7 +294,7 @@ color: #4E3427;
     100% {
         transform: translateY(-10px);
         opacity: 0;
-        margin-bottom: -90%;
+        margin-bottom: -90px;
         visibility: hidden;
     }
 }
@@ -337,7 +338,7 @@ color: #4E3427;
     100% {
         transform: translateY(-10px);
         opacity: 0;
-        margin-bottom: -83%;
+        margin-bottom: -83px;
         visibility: hidden;
     }
 }
@@ -410,7 +411,7 @@ color: #4E3427;
     margin-bottom: 18%;
     color: #4E3427;
     White-space: nowrap;
-    font-size:15px;
+    font-size: 15px;
 }
 
 .Day-timeBar {
@@ -433,13 +434,13 @@ color: #4E3427;
     margin-top: 5%;
 }
 
-.TextSmall{
+.TextSmall {
     font-size: 15px !important;
 }
 
 .Day-underBox {
     margin-left: 20%;
-    font-size:25px;
+    font-size: 25px;
     text-decoration-thickness: 2px;
     text-decoration-color: #DF7C7C;
     text-decoration-style: solid;
@@ -448,7 +449,7 @@ color: #4E3427;
 
 .Day-underBox2 {
     margin-left: 20%;
-    font-size:17px;
+    font-size: 17px;
     text-decoration-thickness: 2px;
     text-decoration-color: #DF7C7C;
     text-decoration-style: solid;
@@ -501,6 +502,13 @@ color: #4E3427;
     margin-bottom: 10%;
 }
 
+.Day-timeListNight {
+    display: flex;
+    font-size: 15px;
+    margin-bottom: 10%;
+    justify-content: center;
+}
+
 .Day-change {
     display: flex;
     align-items: flex-start;
@@ -513,33 +521,33 @@ color: #4E3427;
     font-size: 20px;
 }
 
-.Day-fontIroha{
+.Day-fontIroha {
     font-family: irohamaru, sans-serif;
-font-weight: 400;
-font-style: normal;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.Day-fontKree{
+.Day-fontKree {
     font-family: klee-one, sans-serif;
-font-weight: 600;
-font-style: normal;
+    font-weight: 600;
+    font-style: normal;
 }
 
-.Day-fontIrohaMid{
+.Day-fontIrohaMid {
     font-family: irohamaru, sans-serif;
-font-weight: 500;
-font-style: normal;
+    font-weight: 500;
+    font-style: normal;
 }
 
-.Day-kama{
+.Day-kama {
     margin-right: 3%;
 }
 
-.Day-class{
+.Day-class {
     margin-bottom: -20%;
 }
 
-.Day-timeListTime{
+.Day-timeListTime {
     margin-right: 10%;
 }
 
@@ -550,83 +558,98 @@ font-style: normal;
     font-size: 25px;
 }
 
-.Day-ClassMargin{
+.Day-ClassMargin {
     margin-bottom: -20%;
 }
 
-.Day-ClassMargin3{
+.Day-ClassMargin3 {
     margin-bottom: -5%;
 }
 
-.Day-ClassMargin4{
+.Day-ClassMargin4 {
     margin-top: 38%;
     margin-bottom: 100%;
 }
 
-.Day-ClassMargin2{
+.Day-ClassMargin2 {
     margin-bottom: -68%;
 }
 
-.Day-TextBig{
+.Day-TextBig {
     font-size: 23px;
     margin-bottom: 0%;
     margin-top: 0%;
     white-space: nowrap;
 }
 
-.Day-TextBigSub{
+.Day-TextBigSub {
     font-size: 15px;
     margin-top: 0%;
     margin-bottom: 0%;
 }
 
-.Day-LeftLineBig{
+.Day-LeftLineBig {
     background-color: #4E3427;
     width: 3px;
     margin-right: 5px;
 }
 
-.Day-textSmall{
+.Day-textSmall {
     font-size: 15px;
     margin-top: 0%;
     margin-bottom: 0%;
 }
 
-.Day-sin{
+.Day-sin {
     zoom: 0.5;
     opacity: 0.3;
     position: absolute;
-    transform: translate(40%,-40%);
+    transform: translate(40%, -40%);
 }
 
-.Day-bus{
+.Day-bus {
     zoom: 0.5;
     opacity: 0.3;
     position: absolute;
-    transform: translate(40%,-40%);
+    transform: translate(40%, -40%);
 }
 
-.Day-hune{
+.Day-hune {
     zoom: 0.5;
     opacity: 0.3;
     position: absolute;
-    transform: translate(40%,-40%);
+    transform: translate(40%, -40%);
 }
 
-.Day-hito{
+.Day-hito {
     zoom: 0.5;
     opacity: 0.3;
     position: absolute;
-    transform: translate(40%,-40%);
+    transform: translate(40%, -40%);
 }
 
-.Day-TextSmallSub{
-    font-size:8px;
+.Day-TextSmallSub {
+    font-size: 8px;
 }
 
-.Day-smoke{
+.Day-smoke {
     zoom: 0.5;
     opacity: 0.7;
-z-index: -1;
+    z-index: -1;
     position: fixed;
-    }
+}
+
+.DaySpace {
+    display: flex;
+    justify-content: center;
+}
+
+.DaySpace p {
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+.DayTextPreset {
+    margin-top: 0%;
+    margin-bottom: 0%;
+}

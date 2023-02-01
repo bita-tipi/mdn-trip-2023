@@ -5,37 +5,33 @@ import { Link, useNavigate } from "react-router-dom";
 const triangle = getImg("triangle.svg");
 const univa = getImg("univa.png");
 const univaa = getImg("univaa.png");
+const lunchi = getImg("ランチセット.svg");
 
 export function ScheduleDay3() {
     const navigate = useNavigate();
     return (
         <main className="Day-main">
             <div className="Day-box">
+                <p className="Day-time">06:30</p>
+                <p className="Day-underBox">起床</p>
+            </div>
+            <div className="Day-box">
                 <p className="Day-time">07:00</p>
                 <p className="Day-underBox">朝食</p>
             </div>
+            <p>本館3階　舞子の間</p>
 
             <div className="Day-box">
-                <div className="Day-timeBarArea">
-                    <p className="Day-timeSmallBar">08:30</p>
-                    <div className="Day-timeBar"></div>
-                    <p className="Day-timeSmallBar2">09:30</p>
-                </div>
-                <div className="Day-busArea">
-                    <h5 className="Day-BusLine">バス</h5>
-                    <div className="Day-leftLineArea">
-                        <div className="Day-leftLine"></div>
-                        <div className="Day-textArea">
-                            <p className="Day-backSchedule">
-                                シーサイドホテル<br></br>舞子ビラ
-                            </p>
-                            <h6 className="Day-backSchedule2">
-                                SeaSide Hotel Maiko Villa Kobe
-                            </h6>
-                        </div>
+                <p className="Day-timeSmall">08:30</p>
+                <div className="Day-leftLineAreaSmall">
+                    <div className="Day-leftLine"></div>
+                    <div className="Day-textArea">
+                        <p className="Day-textName">シーサイドホテル舞子ビラ</p>
+                        <h6 className="">Sea Side Hotel Maiko Bira</h6>
                     </div>
                 </div>
             </div>
+            <p>本館前駐車場</p>
 
             <img className="Day-triangle3" src={triangle} />
 
@@ -56,21 +52,29 @@ export function ScheduleDay3() {
             </div>
 
             <div className="Day-box">
-                <p className="Day-time">09:30</p>
-                <h5 className="Day-underBox">徒歩</h5>
+                <p className="Day-underBox">徒歩</p>
             </div>
 
             <img className="Day-triangle3" src={triangle} />
 
+            <div className="Day-box">
+                <p className="Day-underBox">クラス写真撮影</p>
+            </div>
             <img
-                    className="Day-picture"
-                    src={univa}
-                    onClick={() =>
-                        navigate("/map", {
-                            state: { MapDateIndex: 2 },
-                        })
-                    }
-                />
+                className="Day-picture"
+                src={univa}
+                onClick={() =>
+                    navigate("/map", {
+                        state: { MapDateIndex: 2 },
+                    })
+                }
+            />
+            <p>USJ内限定で5000円分のクーポンあり</p>
+            <div className="Day-lunchBox">
+                <img src={lunchi} className="Day-lunchSet" />
+                <p className="Day-lunch">昼食・夕食は各自</p>
+            </div>
+            <p>2000円分ミールクーポンあり</p>
 
             <div className="Day-box">
                 <p className="Day-time">19:00</p>
@@ -91,20 +95,28 @@ export function ScheduleDay3() {
             </div>
 
             <img className="Day-triangle3" src={triangle} />
-                <img
-                    className="Day-picture"
-                    src={univaa}
-                    onClick={() =>
-                        navigate("/room", {
-                            state: { DayDateIndex: 2 },
-                        })
-                    }
-                />
+            <p>部屋に入れるのは18:30以降</p>
+            <p>1F ツアーデスクで鍵を受け取ること</p>
+            <img
+                className="Day-picture"
+                src={univaa}
+                onClick={() =>
+                    navigate("/room", {
+                        state: { DayDateIndex: 2 },
+                    })
+                }
+            />
 
             <div className="Day-Boxbreak">
                 <p>20:00</p>
                 <p className="Day-underBox">部屋長会議</p>
             </div>
+            <p>1F団体ロビー 名電高校ツアーデスク</p>
+            <div className="Day-Boxbreak">
+                <p>~21:30</p>
+                <p className="Day-underBox">自由時間</p>
+            </div>
+            <p>これ以降部屋から出ること禁止</p>
             <div className="Day-Boxbreak">
                 <p>22:00</p>
                 <p className="Day-underBox">点呼</p>
