@@ -31,6 +31,15 @@ const scheduleImagesPath = [
   imgSchedule4,
 ];
 
+const topicImagesPath = [
+  TopTopic1,
+  TopTopic2,
+  TopTopic3,
+  TopTopic4,
+];
+
+const topicIndex = [6,1,4,8]
+
 type LoadDataKey = keyof LoadData;
 
 class LoadDataRepo {
@@ -107,6 +116,28 @@ function Top() {
     return scheduleImages;
   }
 
+  function generateTopicImages() {
+    let topicImages: ReactElement[] = [];
+
+    for (let index = 0; index < topicImagesPath.length; index++) {
+      topicImages.push(
+        <img
+          src={topicImagesPath[index]}
+          key={index}
+          alt={topicImagesPath[index]}
+          onClick={() =>
+            navigate("/map", {
+              state: {
+                TopicDateIndex: topicIndex[index],
+              },
+            })
+          }
+        />
+      );
+    }
+    return topicImages;
+  }
+
   return (
     <div className="background_top">
       <img className="decolation" src={imgDecolation} />
@@ -157,48 +188,7 @@ function Top() {
             </Link>
           </div>
           <main className="topic_main">
-            <div className="topic_img">
-              <img
-                src={TopTopic1}
-                onClick={() =>
-                  navigate("/map", {
-                    state: {
-                      TopicDateIndex: 6,
-                    },
-                  })
-                }
-              />
-              <img
-                src={TopTopic2}
-                onClick={() =>
-                  navigate("/map", {
-                    state: {
-                      TopicDateIndex: 3,
-                    },
-                  })
-                }
-              />
-              <img
-                src={TopTopic3}
-                onClick={() =>
-                  navigate("/map", {
-                    state: {
-                      TopicDateIndex: 4,
-                    },
-                  })
-                }
-              />
-              <img
-                src={TopTopic4}
-                onClick={() =>
-                  navigate("/map", {
-                    state: {
-                      TopicDateIndex: 8,
-                    },
-                  })
-                }
-              />
-            </div>
+            <div className="schedule_img">{generateTopicImages()}</div>
           </main>
         </section>
 

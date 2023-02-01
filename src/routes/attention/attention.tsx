@@ -387,7 +387,7 @@ export function Attention() {
                 </div>
                 <input
                     className="AttentionMemo"
-                    type="number"
+                    type="text"
                     value={MemoData?.MemoText ?? ""}
                     placeholder="めも"
                     onChange={(event) => handleChanged("MemoText", event)}

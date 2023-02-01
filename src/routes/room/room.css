@@ -11,14 +11,12 @@
 
 
 .roomNext {
-  width: 5%;
-  height: 5%;
+  width: 20px;
   margin-left: 5%;
 }
 
 .roomNext2 {
-  width: 5%;
-  height: 5%;
+  width: 20px;
   transform: rotate(180deg);
   margin-right: 5%;
 }
@@ -26,7 +24,8 @@
 .roomDayArea {
   display: flex;
   align-items: center;
-  margin-left: 6%;
+  margin-left: 50px;
+  justify-content: left;
 }
 
 .roomDay {
@@ -34,18 +33,12 @@
 }
 
 .roomLantern {
-  width: 12%;
-  height: 12%;
+  width: 50px;
   margin-right: 5%;
 }
 
 .roomLantern2 {
-  margin-top: 5%;
-  margin-bottom: 5%;
-  width: 12%;
-  height: 12%;
-  margin-right: 5%;
-  margin-left: 6%;
+  width: 50px;
 }
 
 .roomTorii {
@@ -60,7 +53,7 @@
 }
 
 .roomBox {
-  margin-left: 12%;
+  margin-left: 65px;
   display: flex;
 }
 
@@ -102,8 +95,8 @@
   font-size: 30px;
   border-radius: 10px;
   border-style: none;
-  padding-top: 1%;
-  padding-bottom: 1%;
+  padding-top: 2%;
+  padding-bottom: 2%;
   text-align: center;
   color: #4d3326;
 }
@@ -124,6 +117,9 @@
 .roomTitle {
   display: flex;
   align-items: center;
+  margin-left: 50px;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .roomTitle p {
@@ -133,7 +129,7 @@
 .roomUserName {
   background-color: #d47878;
   display: inline-block;
-  width: 40%;
+  width: 60%;
   font-size: 30px;
   border-radius: 10px;
   border-style: none;
@@ -165,7 +161,7 @@
   border-color: #d47878;
   border-style: solid;
   border-radius: 15px;
-  margin-right: 25%;
+  margin-right: 20%;
   margin-top: 5%;
   margin-bottom: 5%;
 }
@@ -209,4 +205,25 @@
   margin-bottom: 2%;
   font-size: 30px;
   margin-left: 1%;
+}
+.roomMember{
+  border-style: none;
+  background: none;
+  font-family: irohamaru, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  margin-left: 2%;
+  color:#4d3326
+}
+.roomMemberDay{
+  display: flex;
+  align-items: center;
+}
+.roomPoint{
+  margin-left: 5%;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #4d3326;
 }

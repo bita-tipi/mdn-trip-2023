@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import _ from "lodash";
 import "./room.css";
 import { getImg } from "model/assets";
-import { HotelData} from "assets/storage";
+import { HotelData } from "assets/storage";
 import { useLocation } from "react-router-dom";
 
 export type MapProps = {
@@ -12,24 +12,24 @@ export type MapProps = {
 class HotelDataRepo {
     // タイプミスが怖いから, ここで1回だけ定義しておく
     private key = "hotel_data";
-  
-    public get(): HotelData | undefined {
-      const data = localStorage.getItem(this.key);
-      if (data) {
-        return JSON.parse(data) as HotelData;
-      }
-    }
-  
-    public set(data: HotelData) {
-      localStorage.setItem(this.key, JSON.stringify(data));
-    }
-  
-    public clear() {
-      localStorage.removeItem(this.key);
-    }
-  }
 
-  type HotelDataKey = keyof HotelData; // "roomNumber" | "className" | "personName"
+    public get(): HotelData | undefined {
+        const data = localStorage.getItem(this.key);
+        if (data) {
+            return JSON.parse(data) as HotelData;
+        }
+    }
+
+    public set(data: HotelData) {
+        localStorage.setItem(this.key, JSON.stringify(data));
+    }
+
+    public clear() {
+        localStorage.removeItem(this.key);
+    }
+}
+
+type HotelDataKey = keyof HotelData; // "roomNumber" | "className" | "personName"
 
 const sennsu = getImg("扇子.svg");
 const lantern = getImg("redlantern.svg");
@@ -44,35 +44,33 @@ function RoomHTML() {
     const [hotelData, setHotelData] = useState<HotelData>();
 
     useEffect(() => {
-      // ここで localStorage からデータを取得して、
-      const data = new HotelDataRepo().get();
-      // undefined チェック (初めてページを開いたときも undefined になるね)
-      if (!data) return;
-  
-      // それぞれの値が undefined でなければ、state にセットする
-      if (data.roomNumber && data.className && data.personName) {
-        setHotelData(data);
-      } else {
-        console.error("[x] data in `hotel_data` of localStorage is invalid");
-      }
+        // ここで localStorage からデータを取得して、
+        const data = new HotelDataRepo().get();
+        // undefined チェック (初めてページを開いたときも undefined になるね)
+        if (!data) return;
+
+        // それぞれの値が undefined でなければ、state にセットする
+        if (data.roomNumberDay1) {
+            setHotelData(data);
+        } else {
+            console.error("[x] data in `hotel_data` of localStorage is invalid");
+        }
+
     }, []);
-  
+
     function handleChanged(
-      // key: 更新したいのは, "roomNumber" or "className" or "personName" のどれですか
-      key: HotelDataKey,
-      event: React.ChangeEvent<HTMLInputElement>,
+        // key: 更新したいのは, "roomNumber" or "className" or "personName" のどれですか
+        key: HotelDataKey,
+        event: React.ChangeEvent<HTMLInputElement>,
     ) {
-      const value = event.target.value;
-      const newHotelData = { ...hotelData, [key]: value };
-      setHotelData(newHotelData);
-      new HotelDataRepo().set(newHotelData);
+        const value = event.target.value;
+        const newHotelData = { ...hotelData, [key]: value };
+        setHotelData(newHotelData);
+        new HotelDataRepo().set(newHotelData);
     }
 
 
 
-    const [roomNumber, setNumber] = useState("000");
-    const [roomClassName, setClass] = useState("G2A");
-    const [roomUserName, setName] = useState("名電太郎");
 
     const { state } = useLocation() as { state: MapProps | undefined };
     const DayDateIndex = state?.DayDateIndex;
@@ -121,13 +119,29 @@ function RoomHTML() {
                             <p>部屋</p>
                         </div>
                         <div className="roomNumberArea">
-                        <input
-                            className="roomNumber"
-                            type="number"
-                            value={hotelData?.roomNumber ?? ""}
-                            placeholder="部屋番号"
-                            onChange={(event) => handleChanged("roomNumber", event)}
-                        />
+                            {clickedDay === 0 ? (<input
+                                className="roomNumber"
+                                type="number"
+                                value={hotelData?.roomNumberDay1 ?? ""}
+                                placeholder="000"
+                                onChange={(event) => handleChanged("roomNumberDay1", event)}
+                            />) : (<></>)}
+                            {clickedDay === 1 ? (
+                                <input
+                                    className="roomNumber"
+                                    type="number"
+                                    value={hotelData?.roomNumberDay2 ?? ""}
+                                    placeholder="000"
+                                    onChange={(event) => handleChanged("roomNumberDay2", event)}
+                                />) : (<></>)}
+                            {clickedDay === 2 ? (
+                                <input
+                                    className="roomNumber"
+                                    type="number"
+                                    value={hotelData?.roomNumberDay3 ?? ""}
+                                    placeholder="000"
+                                    onChange={(event) => handleChanged("roomNumberDay3", event)}
+                                />) : (<></>)}
                             <p>号室</p>
                         </div>
                     </div>
@@ -142,11 +156,11 @@ function RoomHTML() {
                     <div className="roomClassArea">
                         <p>クラス</p>
                         <input
-                          className="roomClass"
-                          type="text"
-                          value={hotelData?.className ?? ""}
-                           placeholder="クラス名"
-                          onChange={(event) => handleChanged("className", event)}
+                            className="roomClass"
+                            type="text"
+                            value={hotelData?.className ?? ""}
+                            placeholder="G2A"
+                            onChange={(event) => handleChanged("className", event)}
                         />
                     </div>
                     <div className="roomNameArea">
@@ -164,9 +178,79 @@ function RoomHTML() {
                         <p>メンバー</p>
                     </div>
                     <div className="roomMemberArea">
-                        <p>おれ</p>
-                        <p>おまえ</p>
-                        <p>わたし</p>
+                        <div className="roomMemberDay">
+                            <div className="roomPoint"></div>
+                            {clickedDay === 0 ? (<input
+                                className="roomMember"
+                                type="text"
+                                value={hotelData?.member1Day1 ?? ""}
+                                placeholder="友達の名前"
+                                onChange={(event) => handleChanged("member1Day1", event)}
+                            />) : (<></>)}
+                            {clickedDay === 1 ? (<input
+                                className="roomMember"
+                                type="text"
+                                value={hotelData?.member1Day2 ?? ""}
+                                placeholder="友達の名前"
+                                onChange={(event) => handleChanged("member1Day2", event)}
+                            />) : (<></>)}
+                            {clickedDay === 2 ? (<input
+                                className="roomMember"
+                                type="text"
+                                value={hotelData?.member1Day3 ?? ""}
+                                placeholder="友達の名前"
+                                onChange={(event) => handleChanged("member1Day3", event)}
+                            />) : (<></>)}
+                        </div>
+
+                        <div className="roomMemberDay">
+                            <div className="roomPoint"></div>
+                            {clickedDay === 0 ? (<input
+                                className="roomMember"
+                                type="text"
+                                value={hotelData?.member2Day1 ?? ""}
+                                placeholder="友達の名前"
+                                onChange={(event) => handleChanged("member2Day1", event)}
+                            />) : (<></>)}
+                            {clickedDay === 1 ? (<input
+                                className="roomMember"
+                                type="text"
+                                value={hotelData?.member2Day2 ?? ""}
+                                placeholder="友達の名前"
+                                onChange={(event) => handleChanged("member2Day2", event)}
+                            />) : (<></>)}
+                            {clickedDay === 2 ? (<input
+                                className="roomMember"
+                                type="text"
+                                value={hotelData?.member2Day3 ?? ""}
+                                placeholder="友達の名前"
+                                onChange={(event) => handleChanged("member2Day3", event)}
+                            />) : (<></>)}
+                        </div>
+                        <div className="roomMemberDay">
+                            <div className="roomPoint"></div>
+                            {clickedDay === 0 ? (<input
+                                className="roomMember"
+                                type="text"
+                                value={hotelData?.member3Day1 ?? ""}
+                                placeholder="友達の名前"
+                                onChange={(event) => handleChanged("member3Day1", event)}
+                            />) : (<></>)}
+                            {clickedDay === 1 ? (<input
+                                className="roomMember"
+                                type="text"
+                                value={hotelData?.member3Day2 ?? ""}
+                                placeholder="友達の名前"
+                                onChange={(event) => handleChanged("member3Day2", event)}
+                            />) : (<></>)}
+                            {clickedDay === 2 ? (<input
+                                className="roomMember"
+                                type="text"
+                                value={hotelData?.member3Day3 ?? ""}
+                                placeholder="友達の名前"
+                                onChange={(event) => handleChanged("member3Day3", event)}
+                            />) : (<></>)}
+                        </div>
                     </div>
                 </div>
             </div>

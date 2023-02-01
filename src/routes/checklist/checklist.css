@@ -1,5 +1,6 @@
 .logo {
     width: 65px;
+    margin-right: 20px;
 }
 
 .checklist-body {
@@ -7,12 +8,22 @@
     padding-bottom: 30%;
     color: #4D3326;
     text-align: center;
+    font-family: irohamaru, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .list-title {
     padding: 10px;
+    font-size: 20px;
+    font-weight: 500;
 }
 
+.list-MainTitle{
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
 
 .my-list-pulldown {
     animation-name: pulldown;
@@ -21,37 +32,45 @@
     text-align: center;
     display: flex;
     justify-content: space-around;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 @keyframes pulldown {
     0% {
         opacity: 0;
-        transform: translateY(-30%);
-        margin-bottom: -30%;
+        transform: translateY(0%);
+        margin-bottom: 0%;
     }
 
     100% {
         opacity: 1;
-        margin-bottom: 0%;
-        transform: translateY(0%);
+        margin-bottom: 10%;
+        transform: translateY(10%);
     }
 }
 
 .List-OneSet{
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    align-items: center;
+}
+.List-OneSet p{
+    white-space: nowrap;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .List-bar{
-    background-color: #98A99F;
+    background-color: #de7c7c;
     width:2px;
     height:auto;
-    margin-top: 13%;
-    margin-bottom:13%;
 }
 
 .List-flexSet{
-    display: flex;
+    text-align: left;
 }
 
 .List-closeAnimation{
@@ -78,4 +97,10 @@
     text-align: center;
     display: flex;
     justify-content: space-around;
+}
+
+.DaySpace{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90% !important;
 }

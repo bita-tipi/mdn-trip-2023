@@ -16,6 +16,7 @@ const hune = getImg("hune.png");
 const hito = getImg("hito.png");
 const bus = getImg("bus.png");
 const smoke = getImg("smoke.png");
+const Space = getImg("nagoyaSpace.png");
 
 export function ScheduleDay1() {
     const navigate = useNavigate();
@@ -24,6 +25,7 @@ export function ScheduleDay1() {
             <img className="Day-picture" src={nagoya} />
 
             <img />
+            <img className="Day-picture DaySpace" src={Space} />
 
             <div className="Day-box">
                 <div className="Day-timeBarArea">
