@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { KEYS, setItem, getItem, removeItem } from "assets/localstorage";
+import {} from "assets/storage";
 import "./checklist.css";
 import Checkbox from "@mui/material/Checkbox";
 import { FormControlLabel, FormGroup } from "@mui/material";
@@ -17,13 +17,9 @@ function Check() {
     }, []);
 
     const handleChange = (e: any) => {
-        setItem(KEYS.SAMPLE_TEXT, e.target.value);
-        setText(e.target.value);
     };
 
     const getClick = () => {
-        // LocalStorageの値をテキストボックスに入れる
-        setText(getItem(KEYS.FREEAREA));
     };
 
     function ListSelect(index: number) {

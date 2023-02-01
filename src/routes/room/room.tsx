@@ -2,12 +2,34 @@ import React, { useState, useEffect } from "react";
 import _ from "lodash";
 import "./room.css";
 import { getImg } from "model/assets";
-import { KEYS, setItem, getItem, removeItem } from "assets/localstorage";
+import { HotelData} from "assets/storage";
 import { useLocation } from "react-router-dom";
 
 export type MapProps = {
     DayDateIndex: number;
 };
+
+class HotelDataRepo {
+    // タイプミスが怖いから, ここで1回だけ定義しておく
+    private key = "hotel_data";
+  
+    public get(): HotelData | undefined {
+      const data = localStorage.getItem(this.key);
+      if (data) {
+        return JSON.parse(data) as HotelData;
+      }
+    }
+  
+    public set(data: HotelData) {
+      localStorage.setItem(this.key, JSON.stringify(data));
+    }
+  
+    public clear() {
+      localStorage.removeItem(this.key);
+    }
+  }
+
+  type HotelDataKey = keyof HotelData; // "roomNumber" | "className" | "personName"
 
 const sennsu = getImg("扇子.svg");
 const lantern = getImg("redlantern.svg");
@@ -16,37 +38,44 @@ const torii = getImg("鳥居.svg");
 const turu = getImg("turu.svg");
 const next = getImg("矢印.svg");
 
+
 function RoomHTML() {
+
+    const [hotelData, setHotelData] = useState<HotelData>();
+
+    useEffect(() => {
+      // ここで localStorage からデータを取得して、
+      const data = new HotelDataRepo().get();
+      // undefined チェック (初めてページを開いたときも undefined になるね)
+      if (!data) return;
+  
+      // それぞれの値が undefined でなければ、state にセットする
+      if (data.roomNumber && data.className && data.personName) {
+        setHotelData(data);
+      } else {
+        console.error("[x] data in `hotel_data` of localStorage is invalid");
+      }
+    }, []);
+  
+    function handleChanged(
+      // key: 更新したいのは, "roomNumber" or "className" or "personName" のどれですか
+      key: HotelDataKey,
+      event: React.ChangeEvent<HTMLInputElement>,
+    ) {
+      const value = event.target.value;
+      const newHotelData = { ...hotelData, [key]: value };
+      setHotelData(newHotelData);
+      new HotelDataRepo().set(newHotelData);
+    }
+
+
+
     const [roomNumber, setNumber] = useState("000");
     const [roomClassName, setClass] = useState("G2A");
     const [roomUserName, setName] = useState("名電太郎");
 
     const { state } = useLocation() as { state: MapProps | undefined };
     const DayDateIndex = state?.DayDateIndex;
-
-    useEffect(() => {
-        getClick();
-    }, []);
-
-    const handleChange = (e: any) => {
-        setItem(KEYS.NUMBER, e.target.value);
-        setNumber(e.target.value);
-    };
-    const handleChange2 = (e: any) => {
-        setItem(KEYS.CLASS, e.target.value);
-        setClass(e.target.value);
-    };
-    const handleChange3 = (e: any) => {
-        setItem(KEYS.NAME, e.target.value);
-        setName(e.target.value);
-    };
-
-    const getClick = () => {
-        // LocalStorageの値をテキストボックスに入れる
-        setNumber(getItem(KEYS.NUMBER));
-        setName(getItem(KEYS.NAME));
-        setClass(getItem(KEYS.CLASS));
-    };
 
     const [clickedDay, updateClickedDay] = useState(DayDateIndex ?? 0);
     const HotelList = ["ヒルトン広島", "舞子ビラ", "リーベルホテル"];
@@ -92,12 +121,13 @@ function RoomHTML() {
                             <p>部屋</p>
                         </div>
                         <div className="roomNumberArea">
-                            <input
-                                className="roomNumber"
-                                type="number"
-                                value={roomNumber}
-                                onChange={handleChange}
-                            />
+                        <input
+                            className="roomNumber"
+                            type="number"
+                            value={hotelData?.roomNumber ?? ""}
+                            placeholder="部屋番号"
+                            onChange={(event) => handleChanged("roomNumber", event)}
+                        />
                             <p>号室</p>
                         </div>
                     </div>
@@ -112,10 +142,11 @@ function RoomHTML() {
                     <div className="roomClassArea">
                         <p>クラス</p>
                         <input
-                            className="roomClass"
-                            type="text"
-                            value={roomClassName}
-                            onChange={handleChange2}
+                          className="roomClass"
+                          type="text"
+                          value={hotelData?.className ?? ""}
+                           placeholder="クラス名"
+                          onChange={(event) => handleChanged("className", event)}
                         />
                     </div>
                     <div className="roomNameArea">
@@ -123,8 +154,9 @@ function RoomHTML() {
                         <input
                             className="roomUserName"
                             type="text"
-                            value={roomUserName}
-                            onChange={handleChange3}
+                            value={hotelData?.personName ?? ""}
+                            placeholder="お名前"
+                            onChange={(event) => handleChanged("personName", event)}
                         />
                     </div>
                     <div className="roomMemberTitle">
