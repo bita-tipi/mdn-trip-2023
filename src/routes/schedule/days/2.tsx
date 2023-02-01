@@ -40,7 +40,7 @@ export function ScheduleDay2() {
 
             <div className="Day-box">
                 <div className="Day-timeBarArea">
-                    <p className="Day-timeSmallBar">08:15</p>
+                    <p className="Day-timeSmallBar">08:00</p>
                     <div className="Day-timeBar"></div>
                     <p className="Day-timeSmallBar2">10:30</p>
                 </div>
@@ -87,9 +87,9 @@ export function ScheduleDay2() {
 
             <div className="Day-box">
                 <div className="Day-timeBarArea">
-                    <p className="Day-timeSmallBar">08:15</p>
+                    <p className="Day-timeSmallBar">13:00</p>
                     <div className="Day-timeBar"></div>
-                    <p className="Day-timeSmallBar2">10:30</p>
+                    <p className="Day-timeSmallBar2">14:00</p>
                 </div>
                 <div className="Day-busArea2">
                     <div className="Day-leftLineArea2">
@@ -129,16 +129,16 @@ export function ScheduleDay2() {
                     <p className="Day-kama">夢幻庵</p>
                     <div>
                         <p className="Day-class">J2B,G2H,G2I,G2J</p>
-                        <p>G2E,G2F,G2G,G2H</p>
+                        <p>G2E,G2F,G2G,G2K</p>
                     </div>
                 </div>
             </div>
 
             <div className="Day-box">
                 <div className="Day-timeBarArea">
-                    <p className="Day-timeSmallBar">08:15</p>
+                    <p className="Day-timeSmallBar">15:30</p>
                     <div className="Day-timeBar"></div>
-                    <p className="Day-timeSmallBar2">10:30</p>
+                    <p className="Day-timeSmallBar2">17:20</p>
                 </div>
                 <div className="Day-busArea2">
                     <div className="Day-leftLineArea2">

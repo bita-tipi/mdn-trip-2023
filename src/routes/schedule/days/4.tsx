@@ -105,7 +105,7 @@ export function ScheduleDay4() {
                         <p className="Day-lunch">昼食は各自</p>
                     </div>
                     <div className="Day-box">
-                        <p className="Day-timeSmall">13:50</p>
+                        <p className="Day-timeSmall">13:45</p>
                         <div className="Day-busArea">
                             <h5 className="Day-BusLineSmall">バス</h5>
                             <div className="Day-leftLineArea">
@@ -170,7 +170,7 @@ export function ScheduleDay4() {
             {isListOpenDays[1] ? (
                 <div className="Day-pulldown2">
                     <div className="Day-box">
-                        <p className="Day-timeSmall">10:15</p>
+                        <p className="Day-timeSmall">10:00</p>
                         <div className="Day-leftLineAreaSmall">
                             <div className="Day-leftLine"></div>
                             <div className="Day-textArea">
@@ -182,7 +182,7 @@ export function ScheduleDay4() {
                         </div>
                     </div>
                     <div className="Day-box-picture">
-                        <p className="Day-timePicture">10:15</p>
+                        <p className="Day-timePicture">10:00</p>
                         <img
                             className="Day-picture"
                             src={ninen}
@@ -198,7 +198,7 @@ export function ScheduleDay4() {
                         <p className="Day-lunch">昼食は各自</p>
                     </div>
                     <div className="Day-box">
-                        <p className="Day-timeSmall">14:10</p>
+                        <p className="Day-timeSmall">14:05</p>
                         <div className="Day-busArea">
                             <h5 className="Day-BusLineSmall">バス</h5>
                             <div className="Day-leftLineArea">
@@ -323,7 +323,7 @@ export function ScheduleDay4() {
             </div>
 
                     <div className="Day-box-picture">
-                        <p className="Day-timePicture">11:15</p>
+                        <p className="Day-timePicture">11:30</p>
                         <img className="Day-picture" src={nishiki} />
                     </div>
                     <div className="Day-lunchBox">
@@ -331,7 +331,7 @@ export function ScheduleDay4() {
                         <p className="Day-lunch">昼食は各自</p>
                     </div>
                     <div className="Day-box">
-                        <p className="Day-time">14:10</p>
+                        <p className="Day-time">14:05</p>
                         <div className="Day-busArea">
                             <h5 className="Day-BusLine">バス</h5>
                             <div className="Day-leftLineArea">

@@ -11,7 +11,7 @@ export function ScheduleDay3() {
     return (
         <main className="Day-main">
             <div className="Day-box">
-                <p className="Day-time">07:30</p>
+                <p className="Day-time">07:00</p>
                 <p className="Day-underBox">朝食</p>
             </div>
 
@@ -40,7 +40,7 @@ export function ScheduleDay3() {
             <img className="Day-triangle3" src={triangle} />
 
             <div className="Day-box">
-                <p className="Day-timeSmall">09:00</p>
+                <p className="Day-timeSmall">09:30</p>
                 <div className="Day-leftLineAreaSmall">
                     <div className="Day-leftLine"></div>
                     <div className="Day-textArea">
