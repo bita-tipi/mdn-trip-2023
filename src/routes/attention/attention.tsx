@@ -63,7 +63,7 @@ export function Attention() {
                                 <li>
                                     集合や点呼は5分前集合を守り、速やかに行動する。
                                 </li>
-                                <li>全員がマスクを使用する</li>
+                                <li>全員がマスクを使用する。</li>
                                 <li>
                                     食事、入浴、就寝時以外は終日マスクを着用すること。
                                 </li>
@@ -71,7 +71,7 @@ export function Attention() {
                                     発熱や体調不良があれば必ず担任の先生に連絡すること。
                                 </li>
                                 <li>
-                                    ホテルや訪問施設などでは、可能な範囲で密をさけるようにすること
+                                    ホテルや訪問施設などでは、可能な範囲で密をさけるようにすること。
                                 </li>
                                 <li>
                                     食事の前後や訪問先では、
@@ -142,8 +142,7 @@ export function Attention() {
                         <div className="pulldownAttention explanation-container">
                             <div className="attentiontext">
                                 <li>
-                                    金銭は必要最小限にし<br></br>
-                                    友人間での貸し借りをしないこと。
+                                    金銭は必要最小限にし友人間での貸し借りをしないこと。
                                 </li>
                                 <li> 貴重品の管理は各自で行うこと。 </li>
                             </div>
@@ -244,7 +243,7 @@ export function Attention() {
                                 </li>
                                 <li>
                                     食事、点呼、 消灯、起床、
-                                    出発などの時間を厳守する
+                                    出発などの時間を厳守する。
                                 </li>
                                 <li>
                                     ホテルのプール、 電話の使用は禁止とする。
@@ -292,7 +291,7 @@ export function Attention() {
                             <div className="attentiontext">
                                 <li>当日の欠席連絡は下記連絡先にする</li>
                                 <li>
-                                    修学旅行欠席の場合は、13日(月)から16日(水)に1・2班合同で学校で授業があります。(312教室で50分4限)
+                                    修学旅行欠席の場合は、13日(月)から15日(水)に1・2班合同で学校で授業があります。(312教室で50分4限)
                                 </li>
                             </div>
                         </div>
@@ -319,7 +318,7 @@ export function Attention() {
                             <div className="attentiontext">
                                 <li>
                                     <span>
-                                        緊急連絡・撮影用として携帯電話やスマートフォンの持ち込みを許可する
+                                        緊急連絡・撮影用として携帯電話やスマートフォンの持ち込みを許可する。
                                     </span>
                                     ただし不適切・不必要な使用は絶対にしないこと。
                                     (ゲームも含む)
