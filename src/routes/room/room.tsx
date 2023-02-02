@@ -3,13 +3,16 @@ import _ from "lodash";
 import "./room.css";
 import { getImg } from "model/assets";
 import { useLocation } from "react-router-dom";
-import { UserData, HotelData, localStorageKey, LocalStorage } from "assets/storage_test"
+import {
+    UserData,
+    HotelData,
+    localStorageKey,
+    LocalStorage,
+} from "assets/storage_test";
 
 export type MapProps = {
     DayDateIndex: number;
 };
-
-
 
 const sennsu = getImg("扇子.svg");
 const lantern = getImg("redlantern.svg");
@@ -20,22 +23,19 @@ const next = getImg("矢印.svg");
 const userDataRepo = new LocalStorage<UserData>(localStorageKey.userData);
 const hotelDataRepo = new LocalStorage<HotelData[]>(localStorageKey.hotelData);
 
-
-
-
 function RoomHTML() {
     const [userData, setUserData] = useState<UserData>(
         // initの宣言としてローカルストレージから持ってくるのはアリよりのアリ (useEffect 要らなくなる)
-        userDataRepo.get() || { className: "", personName: "" },
+        userDataRepo.get() || { className: "", personName: "" }
     );
     const [hotelData, setHotelData] = useState<HotelData[]>(
-        hotelDataRepo.get() || [],
+        hotelDataRepo.get() || []
     );
 
     function getHotelData(
         key: keyof HotelData, // "roomNumber" か "members" かどっちなんだい
         day: number,
-        memberIndex?: number,
+        memberIndex?: number
     ): string {
         switch (key) {
             case "roomNumber": {
@@ -57,7 +57,7 @@ function RoomHTML() {
     // userDataに関してのupdate
     function updateUserData(
         event: React.ChangeEvent<HTMLInputElement>,
-        key: keyof UserData, // "className" か "personName" かどっちなんだい
+        key: keyof UserData // "className" か "personName" かどっちなんだい
     ) {
         const newUserData = { ...userData, [key]: event.target.value };
         setUserData(newUserData);
@@ -69,7 +69,7 @@ function RoomHTML() {
         event: React.ChangeEvent<HTMLInputElement>,
         key: keyof HotelData, // "roomNumber" か "members" かどっちなんだい
         day: number, // 何日目？
-        memberIndex?: number, // 何人目？ (任意)
+        memberIndex?: number // 何人目？ (任意)
     ) {
         const value = event.target.value;
 
@@ -102,8 +102,6 @@ function RoomHTML() {
         setHotelData(newHotelData);
         hotelDataRepo.set(newHotelData);
     }
-
-
 
     const { state } = useLocation() as { state: MapProps | undefined };
     const DayDateIndex = state?.DayDateIndex;
@@ -152,27 +150,45 @@ function RoomHTML() {
                             <p>部屋</p>
                         </div>
                         <div className="roomNumberArea">
-                            {clickedDay === 0 ? (<input
-                                type="number"
-                                className="roomNumber"
-                                value={getHotelData("roomNumber", 0)}
-                                placeholder="部屋番号"
-                                onChange={(event) => updateHotelData(event, "roomNumber", 0)}
-                            />) : (<></>)}
-                            {clickedDay === 1 ? (<input
-                                type="number"
-                                className="roomNumber"
-                                value={getHotelData("roomNumber", 1)}
-                                placeholder="部屋番号"
-                                onChange={(event) => updateHotelData(event, "roomNumber", 1)}
-                            />) : (<></>)}
-                            {clickedDay === 2 ? (<input
-                                type="number"
-                                className="roomNumber"
-                                value={getHotelData("roomNumber", 2)}
-                                placeholder="部屋番号"
-                                onChange={(event) => updateHotelData(event, "roomNumber", 2)}
-                            />) : (<></>)}
+                            {clickedDay === 0 ? (
+                                <input
+                                    type="number"
+                                    className="roomNumber"
+                                    value={getHotelData("roomNumber", 0)}
+                                    placeholder="000"
+                                    onChange={(event) =>
+                                        updateHotelData(event, "roomNumber", 0)
+                                    }
+                                />
+                            ) : (
+                                <></>
+                            )}
+                            {clickedDay === 1 ? (
+                                <input
+                                    type="number"
+                                    className="roomNumber"
+                                    value={getHotelData("roomNumber", 1)}
+                                    placeholder="000"
+                                    onChange={(event) =>
+                                        updateHotelData(event, "roomNumber", 1)
+                                    }
+                                />
+                            ) : (
+                                <></>
+                            )}
+                            {clickedDay === 2 ? (
+                                <input
+                                    type="number"
+                                    className="roomNumber"
+                                    value={getHotelData("roomNumber", 2)}
+                                    placeholder="000"
+                                    onChange={(event) =>
+                                        updateHotelData(event, "roomNumber", 2)
+                                    }
+                                />
+                            ) : (
+                                <></>
+                            )}
                             <p>号室</p>
                         </div>
                     </div>
@@ -190,8 +206,10 @@ function RoomHTML() {
                             className="roomClass"
                             type="text"
                             value={userData.className}
-                            placeholder="クラス名"
-                            onChange={(event) => updateUserData(event, "className")}
+                            placeholder="G2A"
+                            onChange={(event) =>
+                                updateUserData(event, "className")
+                            }
                         />
                     </div>
                     <div className="roomNameArea">
@@ -201,7 +219,9 @@ function RoomHTML() {
                             type="text"
                             value={userData.personName}
                             placeholder="お名前"
-                            onChange={(event) => updateUserData(event, "personName")}
+                            onChange={(event) =>
+                                updateUserData(event, "personName")
+                            }
                         />
                     </div>
                     <div className="roomMemberTitle">
@@ -211,77 +231,130 @@ function RoomHTML() {
                     <div className="roomMemberArea">
                         <div className="roomMemberDay">
                             <div className="roomPoint"></div>
-                            {clickedDay === 0 ? (<input
-                                className="roomMember"
-                                type="text"
-                                value={getHotelData("members", 0, 0)}
-                                placeholder="お友達"
-                                onChange={(event) => updateHotelData(event, "members", 0, 0)}
-                            />) : (<></>)}
-                            {clickedDay === 1 ? (<input
-                                className="roomMember"
-                                type="text"
-                                value={getHotelData("members", 1, 0)}
-                                placeholder="お友達"
-                                onChange={(event) => updateHotelData(event, "members", 1, 0)}
-                            />) : (<></>)}
-                            {clickedDay === 2 ? (<input
-                                className="roomMember"
-                                type="text"
-                                value={getHotelData("members", 2, 0)}
-                                placeholder="お友達"
-                                onChange={(event) => updateHotelData(event, "members", 2, 0)}
-                            />) : (<></>)}
+                            {clickedDay === 0 ? (
+                                <input
+                                    className="roomMember"
+                                    type="text"
+                                    value={getHotelData("members", 0, 0)}
+                                    placeholder="お友達"
+                                    onChange={(event) =>
+                                        updateHotelData(event, "members", 0, 0)
+                                    }
+                                />
+                            ) : (
+                                <></>
+                            )}
+                            {clickedDay === 1 ? (
+                                <input
+                                    className="roomMember"
+                                    type="text"
+                                    value={getHotelData("members", 1, 0)}
+                                    placeholder="お友達"
+                                    onChange={(event) =>
+                                        updateHotelData(event, "members", 1, 0)
+                                    }
+                                />
+                            ) : (
+                                <></>
+                            )}
+                            {clickedDay === 2 ? (
+                                <input
+                                    className="roomMember"
+                                    type="text"
+                                    value={getHotelData("members", 2, 0)}
+                                    placeholder="お友達"
+                                    onChange={(event) =>
+                                        updateHotelData(event, "members", 2, 0)
+                                    }
+                                />
+                            ) : (
+                                <></>
+                            )}
                         </div>
                         <div className="roomMemberDay">
                             <div className="roomPoint"></div>
-                            {clickedDay === 0 ? (<input
-                                className="roomMember"
-                                type="text"
-                                value={getHotelData("members", 0, 1)}
-                                placeholder="お友達"
-                                onChange={(event) => updateHotelData(event, "members", 0, 1)}
-                            />) : (<></>)}
-                            {clickedDay === 1 ? (<input
-                                className="roomMember"
-                                type="text"
-                                value={getHotelData("members", 1, 1)}
-                                placeholder="お友達"
-                                onChange={(event) => updateHotelData(event, "members", 1, 1)}
-                            />) : (<></>)}
-                            {clickedDay === 2 ? (<input
-                                className="roomMember"
-                                type="text"
-                                value={getHotelData("members", 2, 1)}
-                                placeholder="お友達"
-                                onChange={(event) => updateHotelData(event, "members", 2, 1)}
-                            />) : (<></>)}
+                            {clickedDay === 0 ? (
+                                <input
+                                    className="roomMember"
+                                    type="text"
+                                    value={getHotelData("members", 0, 1)}
+                                    placeholder="お友達"
+                                    onChange={(event) =>
+                                        updateHotelData(event, "members", 0, 1)
+                                    }
+                                />
+                            ) : (
+                                <></>
+                            )}
+                            {clickedDay === 1 ? (
+                                <input
+                                    className="roomMember"
+                                    type="text"
+                                    value={getHotelData("members", 1, 1)}
+                                    placeholder="お友達"
+                                    onChange={(event) =>
+                                        updateHotelData(event, "members", 1, 1)
+                                    }
+                                />
+                            ) : (
+                                <></>
+                            )}
+                            {clickedDay === 2 ? (
+                                <input
+                                    className="roomMember"
+                                    type="text"
+                                    value={getHotelData("members", 2, 1)}
+                                    placeholder="お友達"
+                                    onChange={(event) =>
+                                        updateHotelData(event, "members", 2, 1)
+                                    }
+                                />
+                            ) : (
+                                <></>
+                            )}
                         </div>
                         <div className="roomMemberDay">
                             <div className="roomPoint"></div>
-                            {clickedDay === 0 ? (<input
-                                className="roomMember"
-                                type="text"
-                                value={getHotelData("members", 0, 2)}
-                                placeholder="お友達"
-                                onChange={(event) => updateHotelData(event, "members", 0, 2)}
-                            />) : (<></>)}
-                            {clickedDay === 1 ? (<input
-                                className="roomMember"
-                                type="text"
-                                value={getHotelData("members", 1, 2)}
-                                placeholder="お友達"
-                                onChange={(event) => updateHotelData(event, "members", 1, 2)}
-                            />) : (<></>)}
-                            {clickedDay === 2 ? (<input
-                                className="roomMember"
-                                type="text"
-                                value={getHotelData("members", 2, 2)}
-                                placeholder="お友達"
-                                onChange={(event) => updateHotelData(event, "members", 2, 2)}
-                            />) : (<></>)}
+                            {clickedDay === 0 ? (
+                                <input
+                                    className="roomMember"
+                                    type="text"
+                                    value={getHotelData("members", 0, 2)}
+                                    placeholder="お友達"
+                                    onChange={(event) =>
+                                        updateHotelData(event, "members", 0, 2)
+                                    }
+                                />
+                            ) : (
+                                <></>
+                            )}
+                            {clickedDay === 1 ? (
+                                <input
+                                    className="roomMember"
+                                    type="text"
+                                    value={getHotelData("members", 1, 2)}
+                                    placeholder="お友達"
+                                    onChange={(event) =>
+                                        updateHotelData(event, "members", 1, 2)
+                                    }
+                                />
+                            ) : (
+                                <></>
+                            )}
+                            {clickedDay === 2 ? (
+                                <input
+                                    className="roomMember"
+                                    type="text"
+                                    value={getHotelData("members", 2, 2)}
+                                    placeholder="お友達"
+                                    onChange={(event) =>
+                                        updateHotelData(event, "members", 2, 2)
+                                    }
+                                />
+                            ) : (
+                                <></>
+                            )}
                         </div>
-
                     </div>
                 </div>
             </div>

@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { getImg } from "model/assets";
 
 const imgHamburgerButton = getImg("menu.svg");
+const triangleWhite = getImg("triangle-white.svg");
 
 type Anchor = "top" | "left" | "bottom" | "right";
 
@@ -21,6 +22,13 @@ function Header() {
         copiedPage[index] = !copiedPage[index];
         updateOnPage(copiedPage);
     }
+
+    const scrollTop = (): void => {
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
 
     const [state, setState] = React.useState({
         right: false,
@@ -63,35 +71,75 @@ function Header() {
                     {
                         <div>
                             <li className="header-List">
-                                <Link to="/" className="header_link" onClick={() => ListSelect(0)}>
+                                <Link
+                                    to="/"
+                                    className="header_link"
+                                    onClick={() => ListSelect(0)}
+                                >
                                     <div className="headerSelector">
-                                        <div className={onPage[0] ? "headerBarYellow" : "headerBarRed"}></div>
+                                        <div
+                                            className={
+                                                onPage[0]
+                                                    ? "headerBarYellow"
+                                                    : "headerBarRed"
+                                            }
+                                        ></div>
                                         <div className="headerText">
-                                            <p className="headerTextMain">ホーム</p>
-                                            <p className="headerTextSub">Home</p>
+                                            <p className="headerTextMain">
+                                                ホーム
+                                            </p>
+                                            <p className="headerTextSub">
+                                                Home
+                                            </p>
                                         </div>
                                     </div>
                                 </Link>
                             </li>
 
                             <li className="header-List">
-                                <Link to="/schedule" className="header_link" onClick={() => ListSelect(1)}>
-                                <div className="headerSelector">
-                                        <div className={onPage[1] ? "headerBarYellow" : "headerBarRed"}></div>
+                                <Link
+                                    to="/schedule"
+                                    className="header_link"
+                                    onClick={() => ListSelect(1)}
+                                >
+                                    <div className="headerSelector">
+                                        <div
+                                            className={
+                                                onPage[1]
+                                                    ? "headerBarYellow"
+                                                    : "headerBarRed"
+                                            }
+                                        ></div>
                                         <div className="headerText">
-                                            <p className="headerTextMainLong">スケジュール</p>
-                                            <p className="headerTextSubMain">schedule</p>
+                                            <p className="headerTextMainLong">
+                                                スケジュール
+                                            </p>
+                                            <p className="headerTextSubMain">
+                                                schedule
+                                            </p>
                                         </div>
                                     </div>
                                 </Link>
                             </li>
 
                             <li className="header-List">
-                                <Link to="/map" className="header_link" onClick={() => ListSelect(2)}>
-                                <div className="headerSelector">
-                                        <div className={onPage[2] ? "headerBarYellow" : "headerBarRed"}></div>
+                                <Link
+                                    to="/map"
+                                    className="header_link"
+                                    onClick={() => ListSelect(2)}
+                                >
+                                    <div className="headerSelector">
+                                        <div
+                                            className={
+                                                onPage[2]
+                                                    ? "headerBarYellow"
+                                                    : "headerBarRed"
+                                            }
+                                        ></div>
                                         <div className="headerText">
-                                            <p className="headerTextMain">マップ</p>
+                                            <p className="headerTextMain">
+                                                マップ
+                                            </p>
                                             <p className="headerTextSub">Map</p>
                                         </div>
                                     </div>
@@ -102,48 +150,104 @@ function Header() {
                     {
                         <div>
                             <li className="header-List">
-                                <Link to="/room" className="header_link" onClick={() => ListSelect(3)}>
-                                <div className="headerSelector">
-                                        <div className={onPage[3] ? "headerBarYellow" : "headerBarRed"}></div>
+                                <Link
+                                    to="/room"
+                                    className="header_link"
+                                    onClick={() => ListSelect(3)}
+                                >
+                                    <div className="headerSelector">
+                                        <div
+                                            className={
+                                                onPage[3]
+                                                    ? "headerBarYellow"
+                                                    : "headerBarRed"
+                                            }
+                                        ></div>
                                         <div className="headerText">
-                                            <p className="headerTextMainSub">部屋割り</p>
-                                            <p className="headerTextSubLong">Room Allocation</p>
+                                            <p className="headerTextMainSub">
+                                                部屋割り
+                                            </p>
+                                            <p className="headerTextSubLong">
+                                                Room Allocation
+                                            </p>
                                         </div>
                                     </div>
                                 </Link>
                             </li>
 
                             <li className="header-List">
-                                <Link to="/Seat" className="header_link" onClick={() => ListSelect(4)}>
-                                <div className="headerSelector">
-                                        <div className={onPage[4] ? "headerBarYellow" : "headerBarRed"}></div>
+                                <Link
+                                    to="/Seat"
+                                    className="header_link"
+                                    onClick={() => ListSelect(4)}
+                                >
+                                    <div className="headerSelector">
+                                        <div
+                                            className={
+                                                onPage[4]
+                                                    ? "headerBarYellow"
+                                                    : "headerBarRed"
+                                            }
+                                        ></div>
                                         <div className="headerText">
-                                            <p className="headerTextMainSub">座席表</p>
-                                            <p className="headerTextSubLong">Seating Chart</p>
+                                            <p className="headerTextMainSub">
+                                                座席表
+                                            </p>
+                                            <p className="headerTextSubLong">
+                                                Seating Chart
+                                            </p>
                                         </div>
                                     </div>
                                 </Link>
                             </li>
 
                             <li className="header-List">
-                                <Link to="/checklist" className="header_link" onClick={() => ListSelect(5)}>
-                                <div className="headerSelector">
-                                        <div className={onPage[5] ? "headerBarYellow" : "headerBarRed"}></div>
+                                <Link
+                                    to="/checklist"
+                                    className="header_link"
+                                    onClick={() => ListSelect(5)}
+                                >
+                                    <div className="headerSelector">
+                                        <div
+                                            className={
+                                                onPage[5]
+                                                    ? "headerBarYellow"
+                                                    : "headerBarRed"
+                                            }
+                                        ></div>
                                         <div className="headerText">
-                                            <p className="headerTextMainLong2">持ち物リスト</p>
-                                            <p className="headerTextSubLong">Inventory List</p>
+                                            <p className="headerTextMainLong2">
+                                                持ち物リスト
+                                            </p>
+                                            <p className="headerTextSubLong">
+                                                Inventory List
+                                            </p>
                                         </div>
                                     </div>
                                 </Link>
                             </li>
 
                             <li className="header-List">
-                                <Link to="/attention" className="header_link" onClick={() => ListSelect(6)}>
-                                <div className="headerSelector">
-                                        <div className={onPage[6] ? "headerBarYellow" : "headerBarRed"}></div>
+                                <Link
+                                    to="/attention"
+                                    className="header_link"
+                                    onClick={() => ListSelect(6)}
+                                >
+                                    <div className="headerSelector">
+                                        <div
+                                            className={
+                                                onPage[6]
+                                                    ? "headerBarYellow"
+                                                    : "headerBarRed"
+                                            }
+                                        ></div>
                                         <div className="headerText">
-                                            <p className="headerTextMainLong2">注意事項</p>
-                                            <p className="headerTextSub">Notes</p>
+                                            <p className="headerTextMainLong2">
+                                                注意事項
+                                            </p>
+                                            <p className="headerTextSub">
+                                                Notes
+                                            </p>
                                         </div>
                                     </div>
                                 </Link>
@@ -161,21 +265,32 @@ function Header() {
                 {(["right"] as const).map((anchor) => (
                     <React.Fragment key={anchor}>
                         <div className="textAlignCenter">
-
                             <Button onClick={toggleDrawer(anchor, true)}>
-                               <img src={imgHamburgerButton} className="header-menu"></img>
+                                <img
+                                    src={imgHamburgerButton}
+                                    className="header-menu"
+                                ></img>
                             </Button>
                             <Drawer
-                            anchor={anchor}
-                            open={state[anchor]}
-                            onClose={toggleDrawer(anchor, false)}
-                            className="drawer_opacity"
+                                anchor={anchor}
+                                open={state[anchor]}
+                                onClose={toggleDrawer(anchor, false)}
+                                className="drawer_opacity"
                             >
                                 {list(anchor)}
                             </Drawer>
-                            </div>
+                        </div>
                     </React.Fragment>
                 ))}
+                <div>
+                    <img
+                        src={triangleWhite}
+                        onClick={() => {
+                            scrollTop();
+                        }}
+                        className="scrollButton"
+                    ></img>
+                </div>
             </div>
         </div>
     );

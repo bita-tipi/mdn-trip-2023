@@ -183,8 +183,8 @@
 .roomClass {
   background-color: #d47878;
   display: inline-block;
-  width: 25%;
-  font-size: 30px;
+  width: 40%;
+  font-size: 25px;
   border-radius: 10px;
   border-style: none;
   padding-top: 1%;
@@ -206,7 +206,8 @@
   font-size: 30px;
   margin-left: 1%;
 }
-.roomMember{
+
+.roomMember {
   border-style: none;
   background: none;
   font-family: irohamaru, sans-serif;
@@ -214,13 +215,15 @@
   font-style: normal;
   font-size: 20px;
   margin-left: 2%;
-  color:#4d3326
+  color: #4d3326
 }
-.roomMemberDay{
+
+.roomMemberDay {
   display: flex;
   align-items: center;
 }
-.roomPoint{
+
+.roomPoint {
   margin-left: 5%;
   width: 10px;
   height: 10px;

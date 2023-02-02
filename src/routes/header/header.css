@@ -128,6 +128,18 @@
     white-space: nowrap;
 }
 
+.scrollButton {
+    background-color: #999;
+    opacity: 0.8;
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 0%;
+    bottom: 0%;
+    transform: rotate(-90deg);
+    padding: 10px;
+}
+
 .headerTextMainLong2 {
     font-size: 20px;
     margin-bottom: 0%;

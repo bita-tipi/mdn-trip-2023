@@ -51,10 +51,6 @@ export function ScheduleDay3() {
                 </div>
             </div>
 
-            <div className="Day-box">
-                <p className="Day-underBox">徒歩</p>
-            </div>
-
             <img className="Day-triangle3" src={triangle} />
 
             <div className="Day-box">
