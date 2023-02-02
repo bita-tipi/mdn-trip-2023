@@ -26,8 +26,8 @@ const decoy = getImg("decoy.png");
 
 const scheduleImagesPath = [
   imgSchedule1,
-  imgSchedule2,
   imgSchedule3,
+  imgSchedule2,
   imgSchedule4,
 ];
 
