@@ -124,7 +124,7 @@ function Map() {
                     <p className="map-text">食べ物</p>
                 </div>
                 <div className="map-icon">
-                    <img src={imgGift} onClick={() => updateTopicNumber(2)} />
+                    <img src={imgGift} onClick={() => upDateTopicNumber(2)} />
                     <p className="map-text">お土産</p>
                 </div>
             </div>
