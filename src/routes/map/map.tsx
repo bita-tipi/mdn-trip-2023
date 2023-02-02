@@ -38,7 +38,7 @@ const hiroshima2 = getImg("topic/広島お土産2.png");
 const hiroshimaFood = getImg("topic/広島食べ物1.png");
 const hiroshimaFood2 = getImg("topic/広島食べ物2.png");
 const hiroshimaHistory = getImg("topic/広島歴史.png");
-const hiroshimaArea = getImg("topic/広島場所.png")
+const hiroshimaArea = getImg("topic/広島場所.png");
 const kurashikiPlace1 = getImg("topic/倉敷場所.png");
 const kurashiloPlace2 = getImg("topic/倉敷場所2.png");
 const kurashiloPlace3 = getImg("topic/倉敷場所3.png");
@@ -123,8 +123,8 @@ function Map() {
                     <img src={imgFoods} onClick={() => upDateTopicNumber(13)} />
                     <p className="map-text">食べ物</p>
                 </div>
-                <div>
-                    <img src={imgGift} onClick={()=> updateTopicNumber(2)}/>
+                <div className="map-icon">
+                    <img src={imgGift} onClick={() => updateTopicNumber(2)} />
                     <p className="map-text">お土産</p>
                 </div>
             </div>
@@ -212,13 +212,16 @@ function Map() {
                         <p className="MapTitleSub">Map Selection</p>
                     </div>
                 </div>
-                <div className="MapPick" onClick={() =>
-                    updateIsListOpen(!isListOpen)
-                }>
+                <div
+                    className="MapPick"
+                    onClick={() => updateIsListOpen(!isListOpen)}
+                >
                     <div className="mapSvgArea">
                         <img src={imgMap} className="map-svg" />
                         {isListOpen ? (
-                            <div className="circleArea mapPulldownAnimation">                                <div className="map-red-bar"></div>
+                            <div className="circleArea mapPulldownAnimation">
+                                {" "}
+                                <div className="map-red-bar"></div>
                                 <div className="map-red-circle"></div>
                                 <div className="map-red-bar"></div>
                                 <div className="map-red-circle"></div>
@@ -235,9 +238,13 @@ function Map() {
                             <></>
                         )}
                     </div>
-                    {isListOpen ? (<div className="MapBarRed mapPulldownAnimation2"></div>) : (<div className="MapBarRed"></div>)}
+                    {isListOpen ? (
+                        <div className="MapBarRed mapPulldownAnimation2"></div>
+                    ) : (
+                        <div className="MapBarRed"></div>
+                    )}
                     <div>
-                        {isListOpen ? (<p>場所設定</p>) : (<p>{areaList[map]}</p>)}
+                        {isListOpen ? <p>場所設定</p> : <p>{areaList[map]}</p>}
 
                         {isListOpen ? (
                             <div className="mapSelectArea mapPulldownAnimation">
