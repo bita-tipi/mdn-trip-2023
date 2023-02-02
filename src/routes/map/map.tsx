@@ -38,6 +38,7 @@ const hiroshima2 = getImg("topic/広島お土産2.png");
 const hiroshimaFood = getImg("topic/広島食べ物1.png");
 const hiroshimaFood2 = getImg("topic/広島食べ物2.png");
 const hiroshimaHistory = getImg("topic/広島歴史.png");
+const hiroshimaArea = getImg("topic/広島場所.png")
 const kurashikiPlace1 = getImg("topic/倉敷場所.png");
 const kurashiloPlace2 = getImg("topic/倉敷場所2.png");
 const kurashiloPlace3 = getImg("topic/倉敷場所3.png");
@@ -92,6 +93,9 @@ function Map() {
         kurashiloFood1,
         kurashiloHistory1,
         miyajima1,
+        Arashiyama,
+        yuniba8,
+        hiroshimaArea,
     ];
     const areaList = ["広島", "倉敷", "USJ", "清水寺", "北野天満宮", "嵐山"];
     const topicList2 = ["USJ", "京都", "倉敷", "広島"];
@@ -113,11 +117,15 @@ function Map() {
             <div className="mapIconSort">
                 <div className="map-icon">
                     <img src={imgPlace} onClick={() => upDateTopicNumber(1)} />
-                    <p className="map-text">場所</p>
+                    <p className="map-text">乗り物</p>
                 </div>
                 <div className="map-icon">
-                    <img src={imgFoods} onClick={() => upDateTopicNumber(2)} />
+                    <img src={imgFoods} onClick={() => upDateTopicNumber(13)} />
                     <p className="map-text">食べ物</p>
+                </div>
+                <div>
+                    <img src={imgGift} onClick={()=> updateTopicNumber(2)}/>
+                    <p className="map-text">お土産</p>
                 </div>
             </div>
         );
@@ -130,7 +138,7 @@ function Map() {
                     <p className="map-text">場所</p>
                 </div>
                 <div className="map-icon">
-                    <img src={imgFoods} onClick={() => upDateTopicNumber(0)} />
+                    <img src={imgFoods} onClick={() => upDateTopicNumber(12)} />
                     <p className="map-text">食べ物</p>
                 </div>
                 <div className="map-icon">
@@ -168,7 +176,7 @@ function Map() {
         return (
             <div className="mapIconSort">
                 <div className="map-icon">
-                    <img src={imgPlace} onClick={() => upDateTopicNumber(0)} />
+                    <img src={imgPlace} onClick={() => upDateTopicNumber(14)} />
                     <p className="map-text">場所</p>
                 </div>
                 <div className="map-icon">
