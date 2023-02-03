@@ -9,6 +9,12 @@ const lunchi = getImg("ランチセット.svg");
 
 export function ScheduleDay3() {
     const navigate = useNavigate();
+    function linkSelect(to: string, dateIndex: number): void {
+        navigate(to, {
+            state: { MapDateIndex: dateIndex },
+            preventScrollReset: true,
+        })
+    }
     return (
         <main className="Day-main">
             <div className="Day-box">
@@ -60,9 +66,7 @@ export function ScheduleDay3() {
                 className="Day-picture"
                 src={univa}
                 onClick={() =>
-                    navigate("/map", {
-                        state: { MapDateIndex: 2 },
-                    })
+                    linkSelect("/map",2)
                 }
             />
             <p>USJ内限定で5000円分のクーポンあり</p>
@@ -97,9 +101,7 @@ export function ScheduleDay3() {
                 className="Day-picture"
                 src={univaa}
                 onClick={() =>
-                    navigate("/room", {
-                        state: { DayDateIndex: 2 },
-                    })
+                    linkSelect("room",2)
                 }
             />
 

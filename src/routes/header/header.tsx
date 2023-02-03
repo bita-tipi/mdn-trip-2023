@@ -4,16 +4,20 @@ import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import _ from "lodash";
 import "./header.css";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getImg } from "model/assets";
+import { useLocation } from "react-router-dom";
 
 const imgHamburgerButton = getImg("menu.svg");
 const triangleWhite = getImg("triangle-white.svg");
 
 type Anchor = "top" | "left" | "bottom" | "right";
 
+
+
 function Header() {
+
     function ListSelect(index: number) {
         const copiedPage = _.cloneDeep(onPage);
         for (let n = 0; n < 7; n++) {
@@ -22,7 +26,12 @@ function Header() {
         copiedPage[index] = !copiedPage[index];
         updateOnPage(copiedPage);
     }
-
+    const [locationArea,setLocationArea] = useState("");
+    const location = useLocation()
+    useEffect(() => {
+        setLocationArea(location.pathname)
+        console.log()
+    }, []);
     const scrollTop = (): void => {
         window.scroll({
             top: 0,
@@ -30,7 +39,7 @@ function Header() {
         });
     };
 
-    const [state, setState] = React.useState({
+    const [headerState, setState] = React.useState({
         right: false,
     });
     const [onPage, updateOnPage] = useState([
@@ -53,7 +62,7 @@ function Header() {
                 return;
             }
 
-            setState({ ...state, [anchor]: open });
+            setState({ ...headerState, [anchor]: open });
         };
 
     const list = (anchor: Anchor) => (
@@ -273,7 +282,7 @@ function Header() {
                             </Button>
                             <Drawer
                                 anchor={anchor}
-                                open={state[anchor]}
+                                open={headerState[anchor]}
                                 onClose={toggleDrawer(anchor, false)}
                                 className="drawer_opacity"
                             >

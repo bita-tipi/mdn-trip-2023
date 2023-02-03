@@ -20,6 +20,18 @@ const Space = getImg("nagoyaSpace.png");
 
 export function ScheduleDay1() {
     const navigate = useNavigate();
+    const scrollTop = (): void => {
+        window.scroll({
+            top: 0,
+            behavior: "smooth",
+        });
+    };
+    function linkSelect(to: string, dateIndex: number): void {
+        navigate(to, {
+            state: { MapDateIndex: dateIndex },
+            preventScrollReset: true,
+        })
+    }
     return (
         <main className="Day-main">
             <img className="Day-picture" src={nagoya} />
@@ -55,9 +67,9 @@ export function ScheduleDay1() {
             </div>
 
             <img className="Day-picture" src={Hiroshima} onClick={() =>
-                navigate("/map", {
-                    state: { MapDateIndex: 0 },
-                })
+                linkSelect(
+                    "/map", 0
+                )
             } />
 
             <div className="Day-box">
@@ -228,9 +240,9 @@ export function ScheduleDay1() {
 
             <img className="Day-picture" src={Hilton}
                 onClick={() =>
-                    navigate("/room", {
-                        state: { DayDateIndex: 0 },
-                    })} />
+                    linkSelect("/room",0)
+                }
+            />
 
             <div className="Day-BoxBreak">
                 <p className="DayTextPreset">18:00~</p>

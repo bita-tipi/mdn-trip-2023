@@ -27,7 +27,12 @@ export function ScheduleDay4() {
         copiedList[index] = !copiedList[index];
         updateIsListOpenDays(copiedList);
     }
-
+    function linkSelect(to: string, dateIndex: number): void {
+        navigate(to, {
+            state: { MapDateIndex: dateIndex },
+            preventScrollReset: true,
+        })
+    }
     return (
         <main className="Day-main">
             <div className="Day-Boxbreak">
@@ -110,9 +115,7 @@ export function ScheduleDay4() {
                         className="Day-picture"
                         src={kitano}
                         onClick={() =>
-                            navigate("/map", {
-                                state: { MapDateIndex: 4 },
-                            })
+                            linkSelect("/map",4)
                         }
                     />
 
@@ -199,9 +202,7 @@ export function ScheduleDay4() {
                         className="Day-picture"
                         src={ninen}
                         onClick={() =>
-                            navigate("/map", {
-                                state: { MapDateIndex: 3 },
-                            })
+                            linkSelect("/map",3)
                         }
                     />
                     <div className="Day-lunchBox">
@@ -256,9 +257,7 @@ export function ScheduleDay4() {
                         className="Day-picture"
                         src={arashiyama}
                         onClick={() =>
-                            navigate("/map", {
-                                state: { MapDateIndex: 5 },
-                            })
+                            linkSelect("/map",5)
                         }
                     />
                     <div className="Day-lunchBox">

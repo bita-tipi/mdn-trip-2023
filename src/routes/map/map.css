@@ -51,7 +51,7 @@
     margin-left: 2%;
     zoom: 0.6;
     animation-name: IconMainAnimation;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
@@ -277,7 +277,7 @@
     margin-left: 15%;
     justify-content: left;
     animation-name: IconSlide;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 

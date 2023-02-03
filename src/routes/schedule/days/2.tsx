@@ -10,6 +10,12 @@ const maiko = getImg("bira.png");
 
 export function ScheduleDay2() {
     const navigate = useNavigate();
+    function linkSelect(to: string, dateIndex: number): void {
+        navigate(to, {
+            state: { MapDateIndex: dateIndex },
+            preventScrollReset: true,
+        })
+    }
 
     return (
         <main className="Day-main">
@@ -84,9 +90,7 @@ export function ScheduleDay2() {
                 className="Day-picture"
                 src={kurashiki}
                 onClick={() =>
-                    navigate("/map", {
-                        state: { MapDateIndex: 1 },
-                    })
+                    linkSelect("/map",1)
                 }
             />
 
@@ -178,9 +182,7 @@ export function ScheduleDay2() {
                 className="Day-picture"
                 src={maiko}
                 onClick={() =>
-                    navigate("/room", {
-                        state: { DayDateIndex: 1 },
-                    })
+                    linkSelect("/room",1)
                 }
             />
 
