@@ -54,7 +54,11 @@ export function ScheduleDay1() {
                 </div>
             </div>
 
-            <img className="Day-picture" src={Hiroshima} />
+            <img className="Day-picture" src={Hiroshima} onClick={() =>
+                navigate("/map", {
+                    state: { MapDateIndex: 0 },
+                })
+            } />
 
             <div className="Day-box">
                 <div className="Day-timeBarArea">
@@ -222,7 +226,11 @@ export function ScheduleDay1() {
             </div>
 
 
-            <img className="Day-picture" src={Hilton} />
+            <img className="Day-picture" src={Hilton}
+                onClick={() =>
+                    navigate("/room", {
+                        state: { DayDateIndex: 0 },
+                    })} />
 
             <div className="Day-BoxBreak">
                 <p className="DayTextPreset">18:00~</p>

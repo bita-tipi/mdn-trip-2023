@@ -50,6 +50,18 @@
     margin-right: 2%;
     margin-left: 2%;
     zoom: 0.6;
+    animation-name: IconMainAnimation;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes IconMainAnimation{
+    0%{
+        margin-left: 5%;
+    }
+    100%{
+        margin-left:0%;
+    }
 }
 
 
@@ -262,7 +274,23 @@
     padding-top: 4%;
     padding-bottom: 0%;
     display: flex;
+    margin-left: 15%;
     justify-content: left;
+    animation-name: IconSlide;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes IconSlide {
+    0% {
+        opacity: 0;
+        margin-left: 15%;
+    }
+
+    100% {
+        opacity: 1;
+        margin-left: 0%;
+    }
 }
 
 .map-icon-sort {
