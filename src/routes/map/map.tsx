@@ -202,9 +202,7 @@ function Map() {
     return (
         <div className="map-body">
             <div className="map-main">
-                <Element id="mapImg" x={0} y={0}>
                    <img className="map-map" src={map_List[map]} />
-                </Element>
             </div>
             <img src={imgBorder} className="map-area" />
             <div className="map-TouchArea">
