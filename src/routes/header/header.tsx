@@ -26,6 +26,9 @@ function Header() {
         updateOnPage(copiedPage);
     }
     const location = useLocation()
+    const [state, setState] = React.useState({
+        right: false,
+    });
     
     const scrollTop = (): void => {
         window.scroll({
@@ -34,9 +37,6 @@ function Header() {
         });
     };
     
-    const [headerState, setState] = React.useState({
-        right: false,
-    });
     const [onPage, updateOnPage] = useState([
         true,
         false,
@@ -48,13 +48,14 @@ function Header() {
     
     const pickList = ["/","/schedule","/map","/room","/Seat","/checklist","/attention"]
     function menuClickAction(){
-        toggleDrawer(true);
         const selectIndex = pickList.indexOf(location.pathname)
         ListSelect(selectIndex);
     }
 
+    
+    
     const toggleDrawer =
-        (open: boolean) =>
+        (anchor: Anchor, open: boolean) =>
         (event: React.KeyboardEvent | React.MouseEvent) => {
             if (
                 event.type === "keydown" &&
@@ -64,14 +65,15 @@ function Header() {
                 return;
             }
 
-            setState({ ...headerState, "right": open });
+            setState({ ...state, [anchor]: open });
         };
 
-    const list =() => (
+                
+    const list =(anchor:Anchor) => (
         <Box
             role="presentation"
-            onClick={toggleDrawer( false)}
-            onKeyDown={toggleDrawer( false)}
+            onClick={toggleDrawer(anchor,false)}
+            onKeyDown={toggleDrawer(anchor,false)}
             className="background_menu"
         >
             <div className="padding-menu">
@@ -273,7 +275,7 @@ function Header() {
                 {(["right"] as const).map((anchor) => (
                     <React.Fragment key={anchor}>
                         <div className="textAlignCenter">
-                            <Button>
+                            <Button onClick ={toggleDrawer(anchor,true)}>
                                 <img
                                     src={imgHamburgerButton}
                                     className="header-menu"
@@ -282,11 +284,11 @@ function Header() {
                             </Button>
                             <Drawer
                                 anchor={anchor}
-                                open={headerState[anchor]}
-                                onClose={toggleDrawer(false)}
+                                open={state[anchor]}
+                                onClose={toggleDrawer(anchor,false)}
                                 className="drawer_opacity"
                             >
-                                {list()}
+                                {list(anchor)}
                             </Drawer>
                         </div>
                     </React.Fragment>
