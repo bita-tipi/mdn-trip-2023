@@ -46,7 +46,7 @@ function Header() {
         false,
     ]);
     
-    const pickList = ["Seat","map"]
+    const pickList = ["/","/schedule","/map","/room","/Seat","/checklist","/attention"]
     function menuClickAction(){
         toggleDrawer(true);
         const selectIndex = pickList.indexOf(location.pathname)
