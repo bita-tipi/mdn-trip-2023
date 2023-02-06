@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./map.css";
 import { getImg } from "model/assets";
 import { useLocation } from "react-router-dom";
+import PanZoom, { Element } from '@sasza/react-panzoom'
 
 export type MapProps = {
     MapDateIndex: number;
@@ -201,7 +202,9 @@ function Map() {
     return (
         <div className="map-body">
             <div className="map-main">
-                <img className="map-map" src={map_List[map]} />
+                <Element id="mapImg" x={0} y={0}>
+                   <img className="map-map" src={map_List[map]} />
+                </Element>
             </div>
             <img src={imgBorder} className="map-area" />
             <div className="map-TouchArea">
