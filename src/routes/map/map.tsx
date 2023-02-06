@@ -103,6 +103,8 @@ function Map() {
     const [TopicNumber, updateTopicNumber] = useState(0);
     const [SortPulldown, upDataSortPulldown] = useState(false);
 
+
+
     function Sort(i: number) {
         updateIsListOpen(false);
         updateMap(i);
@@ -202,7 +204,9 @@ function Map() {
     return (
         <div className="map-body">
             <div className="map-main">
-                   <img className="map-map" src={map_List[map]} />
+                <PanZoom>
+                    <img className="map-map" src={map_List[map]}></img>
+                </PanZoom>
             </div>
             <img src={imgBorder} className="map-area" />
             <div className="map-TouchArea">
