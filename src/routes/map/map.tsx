@@ -204,7 +204,7 @@ function Map() {
     return (
         <div className="map-body">
             <div className="map-main">
-                <PanZoom>
+                <PanZoom disabledMove={true}>
                     <img className="map-map" src={map_List[map]}></img>
                 </PanZoom>
             </div>
