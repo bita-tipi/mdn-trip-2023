@@ -8,6 +8,10 @@
     margin-top: -10%;
 }
 
+.mapZIndex{
+    z-index: -1;
+}
+
 .map-sort {
     text-align: center;
     background-color: #EBD497;
