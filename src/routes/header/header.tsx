@@ -4,14 +4,17 @@ import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import _ from "lodash";
 import "./header.css";
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getImg } from "model/assets";
+import { useLocation } from "react-router-dom";
 
 const imgHamburgerButton = getImg("menu.svg");
 const triangleWhite = getImg("triangle-white.svg");
 
 type Anchor = "top" | "left" | "bottom" | "right";
+
+
 
 function Header() {
     function ListSelect(index: number) {
@@ -22,17 +25,18 @@ function Header() {
         copiedPage[index] = !copiedPage[index];
         updateOnPage(copiedPage);
     }
-
+    const location = useLocation()
+    const [state, setState] = React.useState({
+        right: false,
+    });
+    
     const scrollTop = (): void => {
         window.scroll({
             top: 0,
             behavior: "smooth",
         });
     };
-
-    const [state, setState] = React.useState({
-        right: false,
-    });
+    
     const [onPage, updateOnPage] = useState([
         true,
         false,
@@ -41,7 +45,15 @@ function Header() {
         false,
         false,
     ]);
+    
+    const pickList = ["/","/schedule","/map","/room","/Seat","/checklist","/attention"]
+    function menuClickAction(){
+        const selectIndex = pickList.indexOf(location.pathname)
+        ListSelect(selectIndex);
+    }
 
+    
+    
     const toggleDrawer =
         (anchor: Anchor, open: boolean) =>
         (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -56,14 +68,13 @@ function Header() {
             setState({ ...state, [anchor]: open });
         };
 
-    const list = (anchor: Anchor) => (
+                
+    const list =(anchor:Anchor) => (
         <Box
-            sx={{
-                width: anchor === "top" || anchor === "bottom" ? "auto" : 200,
-            }}
+        sx ={{width:anchor === "top" || anchor === "bottom" ? "auto":200,}}
             role="presentation"
-            onClick={toggleDrawer(anchor, false)}
-            onKeyDown={toggleDrawer(anchor, false)}
+            onClick={toggleDrawer(anchor,false)}
+            onKeyDown={toggleDrawer(anchor,false)}
             className="background_menu"
         >
             <div className="padding-menu">
@@ -265,16 +276,17 @@ function Header() {
                 {(["right"] as const).map((anchor) => (
                     <React.Fragment key={anchor}>
                         <div className="textAlignCenter">
-                            <Button onClick={toggleDrawer(anchor, true)}>
+                            <Button onClick ={toggleDrawer(anchor,true)}>
                                 <img
                                     src={imgHamburgerButton}
                                     className="header-menu"
+                                    onClick = {() => menuClickAction()}
                                 ></img>
                             </Button>
                             <Drawer
                                 anchor={anchor}
                                 open={state[anchor]}
-                                onClose={toggleDrawer(anchor, false)}
+                                onClose={toggleDrawer(anchor,false)}
                                 className="drawer_opacity"
                             >
                                 {list(anchor)}
