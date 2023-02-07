@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./map.css";
 import { getImg } from "model/assets";
 import { useLocation } from "react-router-dom";
-import PanZoom, { Element } from '@sasza/react-panzoom'
+import PanZoom, { Element } from "@sasza/react-panzoom";
 
 export type MapProps = {
     MapDateIndex: number;
@@ -61,11 +61,26 @@ function Map() {
     const { state } = useLocation() as { state: MapProps | undefined };
     const MapDateIndex = state?.MapDateIndex;
     const IsTopicSelectNumber = [
-        false,true,true,false,false,true,true,
-    ]
+        false,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+    ];
     const TopicDateIndex = state?.TopicDateIndex;
 
     const Sort_List = [Usj(), Kyoto(), Kurashiki(), Hiroshima()];
+    const topicFunction = ["",Topic1(),Topic2(),"","",Topic3(),Topic4(),"",Topic5(),Topic6(),Topic7(),Topic8(),Topic9(),"",""];
     const [sort, updateSort] = useState(0);
     const map_List = [
         decoy,
@@ -105,8 +120,6 @@ function Map() {
     const topicList2 = ["USJ", "京都", "倉敷", "広島"];
     const [TopicNumber, updateTopicNumber] = useState(0);
     const [SortPulldown, upDataSortPulldown] = useState(false);
-
-
 
     function Sort(i: number) {
         updateIsListOpen(false);
@@ -329,9 +342,48 @@ function Map() {
                     </div>
                 </div>
                 <img src={topicList[topicNumber]} className="map-topicArea" />
+                {IsTopicSelectNumber[topicNumber] ? (
+                    <div>{topicFunction[topicNumber]}</div>
+                ) : (
+                    <></>
+                )}
             </div>
         </div>
     );
 }
 
 export default Map;
+
+function Topic1() {
+    return <div>ゆにば１</div>;
+}
+
+function Topic2() {
+    return <div>ゆにば２</div>;
+}
+
+function Topic3() {
+    return <div>ひろしま１</div>;
+}
+
+function Topic4() {
+    return <div>ひろしまふーど</div>;
+}
+
+function Topic5() {
+    return <div>ひろしま歴史</div>;
+}
+
+function Topic6() {
+    return <div>くらしきばしょ</div>;
+}
+
+function Topic7() {
+    return <div>くらしきれきし</div>;
+}
+function Topic8() {
+    return <div>みやじま</div>;
+}
+function Topic9() {
+    return <div>あらしやま</div>;
+}
