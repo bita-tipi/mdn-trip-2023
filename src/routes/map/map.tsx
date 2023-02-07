@@ -60,6 +60,9 @@ const YA = getImg("TopicYA.svg");
 function Map() {
     const { state } = useLocation() as { state: MapProps | undefined };
     const MapDateIndex = state?.MapDateIndex;
+    const IsTopicSelectNumber = [
+        false,true,true,false,false,true,true,
+    ]
     const TopicDateIndex = state?.TopicDateIndex;
 
     const Sort_List = [Usj(), Kyoto(), Kurashiki(), Hiroshima()];
