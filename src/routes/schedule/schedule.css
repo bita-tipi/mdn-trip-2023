@@ -20,6 +20,9 @@
     padding: 15px;
     white-space: nowrap;
     text-align: center;
+    font-family: irohamaru, sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .schedule_hinichi-pick {
@@ -31,6 +34,9 @@
     background-color: #A51A29;
     padding: 15px;
     white-space: nowrap;
+    font-family: irohamaru, sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 /*一段目*/
