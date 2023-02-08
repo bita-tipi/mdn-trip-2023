@@ -220,9 +220,7 @@ function Map() {
     return (
         <div className="map-body">
             <div className="map-main">
-                <PanZoom zoomMin={1} className="mapZIndex">
-                    <img className="map-map" src={map_List[map]}></img>
-                </PanZoom>
+            <img className="map-map" src={map_List[map]}></img>
             </div>
             <img src={imgBorder} className="map-area" />
             <div className="map-TouchArea">
