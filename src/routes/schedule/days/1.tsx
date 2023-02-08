@@ -30,7 +30,7 @@ export function ScheduleDay1() {
         navigate(to, {
             state: { MapDateIndex: dateIndex },
             preventScrollReset: true,
-        })
+        });
     }
     return (
         <main className="Day-main">
@@ -66,11 +66,11 @@ export function ScheduleDay1() {
                 </div>
             </div>
 
-            <img className="Day-picture" src={Hiroshima} onClick={() =>
-                linkSelect(
-                    "/map", 0
-                )
-            } />
+            <img
+                className="Day-picture"
+                src={Hiroshima}
+                onClick={() => linkSelect("/map", 0)}
+            />
 
             <div className="Day-box">
                 <div className="Day-timeBarArea">
@@ -123,6 +123,7 @@ export function ScheduleDay1() {
                 </div>
             </div>
             <img className="Day-picture" src={Miyazima} />
+            <p>広島内で2000円分のクーポンあり</p>
 
             <div className="Day-lunchBox">
                 <img src={lunchi} className="Day-lunchSet" />
@@ -237,11 +238,10 @@ export function ScheduleDay1() {
                 </div>
             </div>
 
-
-            <img className="Day-picture" src={Hilton}
-                onClick={() =>
-                    linkSelect("/room",0)
-                }
+            <img
+                className="Day-picture"
+                src={Hilton}
+                onClick={() => linkSelect("/room", 0)}
             />
 
             <div className="Day-BoxBreak">
