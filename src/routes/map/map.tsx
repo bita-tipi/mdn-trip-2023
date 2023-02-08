@@ -9,9 +9,10 @@ export type MapProps = {
     TopicDateIndex: number;
 };
 
+
 const imgMapKiyomizu = getImg("清水寺.png");
 const imgMapKurashiki = getImg("kurashikiMap.png");
-const imgMapHiroshima = getImg("HiroshimaMap.png");
+const imgMapHiroshima = getImg("hirosimaMap.png");
 const imgMapKitano = getImg("kitanoMap.png");
 const imgMapUsj = getImg("univaMap.png");
 
