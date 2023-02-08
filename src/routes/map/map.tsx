@@ -10,11 +10,12 @@ export type MapProps = {
 };
 
 
-const imgMapKiyomizu = getImg("清水寺.png");
-const imgMapKurashiki = getImg("kurashikiMap.png");
-const imgMapHiroshima = getImg("hirosimaMap.png");
-const imgMapKitano = getImg("kitanoMap.png");
-const imgMapUsj = getImg("univaMap.png");
+const imgMapKiyomizu = getImg("kiyomizu_map.svg");
+const imgMapKurashiki = getImg("kurasiki_map.svg");
+const imgMapHiroshima = getImg("hirosima_map.svg");
+const imgMapKitano = getImg("tenmanguu_map.svg");
+const imgMapUsj = getImg("usj_map.svg");
+const imgMapArashiyama = getImg("arasiyama_map.svg");
 
 const imgYoshi = getImg("yoshi.png");
 const imgMainLogo = getImg("main_logo.svg");
@@ -84,18 +85,12 @@ function Map() {
     const topicFunction = ["",Topic1(),Topic2(),"","",Topic3(),Topic4(),"",Topic5(),Topic6(),Topic7(),Topic8(),Topic9(),"",""];
     const [sort, updateSort] = useState(0);
     const map_List = [
-        decoy,
-        decoy,
-        decoy,
-        decoy,
-        decoy,
-        decoy,
         imgMapHiroshima,
         imgMapKurashiki,
         imgMapUsj,
         imgMapKiyomizu,
         imgMapKitano,
-        imgMapKitano,
+        imgMapArashiyama,
     ];
     const [map, updateMap] = useState(MapDateIndex ?? 0);
     const [isListOpen, updateIsListOpen] = useState(false);
