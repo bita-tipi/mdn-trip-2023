@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import "./attention.css";
 import _ from "lodash";
 import { getImg } from "model/assets";
-import { MemoData } from "assets/storage";
+import { MemoData, localStorageKey, LocalStorage } from "assets/storage_test";
 
 const base = "attention/logo";
+const MemoDataRepo = new LocalStorage<MemoData>(localStorageKey.memoData);
 const img = {
     kodo: getImg(`${base}/kodo.svg`),
     fukuso: getImg(`${base}/fukuso.svg`),
@@ -17,11 +18,26 @@ const img = {
     temple: getImg("attention/temple.svg"),
 };
 export function Attention() {
+    useEffect(() => {}, []);
 
-    useEffect(() => {
+    function getMemoData(
+        key: keyof MemoData // "roomNumber" か "members" かどっちなんだい
+    ) {
+        return memoData?.memoData?.toString() ?? "";
+    }
 
-    }, []);
+    function updataMemoData(
+        event: React.ChangeEvent<HTMLTextAreaElement>,
+        key: keyof MemoData // "className" か "personName" かどっちなんだい
+    ) {
+        const newMemoData = { ...memoData, [key]: event.target.value };
+        setMemoData(newMemoData);
+        MemoDataRepo.set(newMemoData);
+    }
 
+    const [memoData, setMemoData] = useState<MemoData>(
+        MemoDataRepo.get() || { memoData: "" }
+    );
 
     const [isListOpen, updateIsListOpen] = useState([
         false,
@@ -145,7 +161,9 @@ export function Attention() {
                                     金銭は必要最小限にし友人間での貸し借りをしないこと。
                                 </li>
                                 <li> 貴重品の管理は各自で行うこと。 </li>
-                                <li> 10日(金)に着替えなどの大きな荷物を学校に持ってくること。その荷物は広島のホテルに送られるため修学旅行1日目の夜まで開封できません。
+                                <li>
+                                    {" "}
+                                    10日(金)に着替えなどの大きな荷物を学校に持ってくること。その荷物は広島のホテルに送られるため修学旅行1日目の夜まで開封できません。
                                 </li>
                             </div>
                         </div>
@@ -335,6 +353,13 @@ export function Attention() {
                         <></>
                     )}
                 </ul>
+                <div className="AttentionBox">
+                    <textarea
+                        value={getMemoData("memoData")}
+                        onChange={(event) => updataMemoData(event, "memoData")}
+                        rows={5}
+                    ></textarea>
+                </div>
                 <div className="AttentionBox">
                     <p>緊急連絡先</p>
                     <div>

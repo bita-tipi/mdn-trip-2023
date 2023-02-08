@@ -155,11 +155,15 @@ body {
     white-space: nowrap
 }
 
-.AttentionBox{
+.AttentionBox {
     margin-left: 10%;
 }
 
-.AttentionBox p{
+.AttentionBox p {
     white-space: nowrap;
     color: #4c3427;
+}
+
+.AttentionBox textarea {
+    font-size: 20px;
 }

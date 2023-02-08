@@ -50,5 +50,25 @@ class HotelDataRepo {
   }
 }
 
+type MemoDataKey = keyof MemoData;
+
+class MemoDataRepo {
+  private key = "memo_data"
+
+  public get(): MemoData | undefined {
+    const data = localStorage.getItem(this.key);
+    if (data) {
+      return JSON.parse(data) as MemoData;
+    }
+  }
+
+  public set(data: MemoData) {
+    localStorage.setItem(this.key, JSON.stringify(data));
+  }
+
+  public clear() {
+    localStorage.removeItem(this.key);
+  }
+}
 // ここだ
 

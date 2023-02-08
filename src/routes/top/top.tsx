@@ -25,158 +25,149 @@ const TopTopic4 = getImg("TopTopic4.png");
 const decoy = getImg("decoy.png");
 
 const scheduleImagesPath = [
-  imgSchedule1,
-  imgSchedule3,
-  imgSchedule2,
-  imgSchedule4,
+    imgSchedule1,
+    imgSchedule3,
+    imgSchedule2,
+    imgSchedule4,
 ];
 
-const topicImagesPath = [
-  TopTopic1,
-  TopTopic2,
-  TopTopic3,
-  TopTopic4,
-];
+const topicImagesPath = [TopTopic1, TopTopic2, TopTopic3, TopTopic4];
 
-const topicIndex = [6,1,4,8]
-
+const topicIndex = [6, 1, 4, 8];
 
 function Top() {
+    useEffect(() => {
+        window.scroll({ top: 0, behavior: "smooth" });
+    }, []);
+    // state
+    const [isLoading, SetLoading] = useState(false);
 
+    // local
+    const navigate = useNavigate();
 
+    // view
+    function generateScheduleImages() {
+        let scheduleImages: ReactElement[] = [];
 
-  useEffect(() => {
-
-  }, []);
-  // state
-  const [isLoading, SetLoading] = useState(false);
-
-  // local
-  const navigate = useNavigate();
-
-  useEffect(() => {
-
-  }, []);
-
-  // view
-  function generateScheduleImages() {
-    let scheduleImages: ReactElement[] = [];
-
-    for (let index = 0; index < scheduleImagesPath.length; index++) {
-      scheduleImages.push(
-        <img
-          src={scheduleImagesPath[index]}
-          key={index}
-          alt={scheduleImagesPath[index]}
-          onClick={() =>
-            navigate("/schedule", {
-              state: { preferDateIndex: index },
-            })
-          }
-        />
-      );
+        for (let index = 0; index < scheduleImagesPath.length; index++) {
+            scheduleImages.push(
+                <img
+                    src={scheduleImagesPath[index]}
+                    key={index}
+                    alt={scheduleImagesPath[index]}
+                    onClick={() =>
+                        navigate("/schedule", {
+                            state: { preferDateIndex: index },
+                        })
+                    }
+                />
+            );
+        }
+        return scheduleImages;
     }
-    return scheduleImages;
-  }
 
-  function generateTopicImages() {
-    let topicImages: ReactElement[] = [];
+    function generateTopicImages() {
+        let topicImages: ReactElement[] = [];
 
-    for (let index = 0; index < topicImagesPath.length; index++) {
-      topicImages.push(
-        <img
-          src={topicImagesPath[index]}
-          key={index}
-          alt={topicImagesPath[index]}
-          onClick={() =>
-            navigate("/map", {
-              state: {
-                TopicDateIndex: topicIndex[index],
-              },
-            })
-          }
-        />
-      );
+        for (let index = 0; index < topicImagesPath.length; index++) {
+            topicImages.push(
+                <img
+                    src={topicImagesPath[index]}
+                    key={index}
+                    alt={topicImagesPath[index]}
+                    onClick={() =>
+                        navigate("/map", {
+                            state: {
+                                TopicDateIndex: topicIndex[index],
+                            },
+                        })
+                    }
+                />
+            );
+        }
+        return topicImages;
     }
-    return topicImages;
-  }
 
-  return (
-    <div className="background_top">
-      <img className="decolation" src={imgDecolation} />
+    return (
+        <div className="background_top">
+            <img className="decolation" src={imgDecolation} />
 
-      <div className="mainvisual">
-        <div className="box">
-          <img className="mainvisual_sp" src={imgMainvisual} />
-          <img className="mainvisual_pc" src={imgMainvisual1} />
-          <img className="main_logo" src={imgMainLogo} />
-          <img className="main_logo2" src={imgMainLogo} />
-        </div>
-      </div>
-
-      <div className="top-main">
-        <section className="schedule">
-          <div className="title">
-            <img src={imgScheduleLogo} />
-            <Link to="/schedule" className="link">
-              <h2>日程</h2>
-            </Link>
-          </div>
-          <main className="schedule_main">
-            <div className="schedule_img">{generateScheduleImages()}</div>
-          </main>
-        </section>
-
-        <section className="map">
-          <div className="title">
-            <img src={imgMapLogo} />
-            <Link to="/map" className="link">
-              <h2>マップ</h2>
-            </Link>
-          </div>
-          <main className="map_main">
-            <div className="map_img">
-              <Link to="/map">
-                <img src={decoy} />
-              </Link>
+            <div className="mainvisual">
+                <div className="box">
+                    <img className="mainvisual_sp" src={imgMainvisual} />
+                    <img className="mainvisual_pc" src={imgMainvisual1} />
+                    <img className="main_logo" src={imgMainLogo} />
+                    <img className="main_logo2" src={imgMainLogo} />
+                </div>
             </div>
-          </main>
-        </section>
 
-        <section className="topic">
-          <div className="title">
-            <img src={imgTopicLogo} />
-            <Link to="/map" className="link">
-              <h2>トピック</h2>
-            </Link>
-          </div>
-          <main className="topic_main">
-            <div className="schedule_img">{generateTopicImages()}</div>
-          </main>
-        </section>
+            <div className="top-main">
+                <section className="schedule">
+                    <div className="title">
+                        <img src={imgScheduleLogo} />
+                        <Link to="/schedule" className="link">
+                            <h2>日程</h2>
+                        </Link>
+                    </div>
+                    <main className="schedule_main">
+                        <div className="schedule_img">
+                            {generateScheduleImages()}
+                        </div>
+                    </main>
+                </section>
 
-        <section className="attention">
-          <div className="title">
-            <img src={imgAttentionLogo} />
-            <Link to="/attention" className="link">
-              <h2>注意事項 ＞</h2>
-            </Link>
-          </div>
-          <div className="border_attention" />
-        </section>
-      </div>
+                <section className="map">
+                    <div className="title">
+                        <img src={imgMapLogo} />
+                        <Link to="/map" className="link">
+                            <h2>マップ</h2>
+                        </Link>
+                    </div>
+                    <main className="map_main">
+                        <div className="map_img">
+                            <Link to="/map">
+                                <img src={decoy} />
+                            </Link>
+                        </div>
+                    </main>
+                </section>
 
-      <img className="decolation1" src={imgDecolation} />
+                <section className="topic">
+                    <div className="title">
+                        <img src={imgTopicLogo} />
+                        <Link to="/map" className="link">
+                            <h2>トピック</h2>
+                        </Link>
+                    </div>
+                    <main className="topic_main">
+                        <div className="schedule_img">
+                            {generateTopicImages()}
+                        </div>
+                    </main>
+                </section>
 
-      {isLoading ? (
-        <div className="load_top">
-          <Loading />
+                <section className="attention">
+                    <div className="title">
+                        <img src={imgAttentionLogo} />
+                        <Link to="/attention" className="link">
+                            <h2>注意事項 ＞</h2>
+                        </Link>
+                    </div>
+                    <div className="border_attention" />
+                </section>
+            </div>
+
+            <img className="decolation1" src={imgDecolation} />
+
+            {isLoading ? (
+                <div className="load_top">
+                    <Loading />
+                </div>
+            ) : (
+                <div></div>
+            )}
         </div>
-      ) : (
-        <div></div>
-      )}
-    </div>
-  );
+    );
 }
 
 export default Top;

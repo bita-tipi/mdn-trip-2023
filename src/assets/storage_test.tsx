@@ -5,6 +5,7 @@ import { valueOf } from "./atom";
 export const localStorageKey = {
   userData: "user_data",
   hotelData: "hotel_data",
+  memoData:"memo_data"
 } as const;
 
 type LocalStorageKey = valueOf<typeof localStorageKey>;
@@ -17,6 +18,10 @@ export type UserData = {
 export type HotelData = {
   roomNumber: number;
   members: string[];
+};
+
+export type MemoData = {
+  memoData:string;
 };
 
 export class LocalStorage<T> {
