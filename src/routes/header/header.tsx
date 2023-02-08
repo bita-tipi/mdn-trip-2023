@@ -11,6 +11,7 @@ import { useLocation } from "react-router-dom";
 
 const imgHamburgerButton = getImg("menu.svg");
 const triangleWhite = getImg("triangle-white.svg");
+const button = getImg("scrollButton.svg");
 
 type Anchor = "top" | "left" | "bottom" | "right";
 
@@ -296,7 +297,7 @@ function Header() {
                 ))}
                 <div>
                     <img
-                        src={triangleWhite}
+                        src={button}
                         onClick={() => {
                             scrollTop();
                         }}
