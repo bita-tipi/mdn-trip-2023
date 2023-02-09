@@ -3,6 +3,8 @@ import "./top.css";
 import Loading from "../load/loading";
 import { getImg } from "model/assets";
 import { Link, useNavigate } from "react-router-dom";
+import { LoadData, localStorageKey, LocalStorage } from "assets/storage_test";
+import { breakpoints } from "@mui/system";
 
 const imgScheduleLogo = getImg("schedule-logo.svg");
 const imgMapLogo = getImg("map-logo.svg");
@@ -31,19 +33,46 @@ const scheduleImagesPath = [
     imgSchedule4,
 ];
 
-const topicImagesPath = [TopTopic1, TopTopic2, TopTopic3, TopTopic4];
+const loadDataRepo = new LocalStorage<LoadData>(localStorageKey.loadData);
+
+const topicImagesPath = [TopTopic1, TopTopic4, TopTopic2, TopTopic3];
 
 const topicIndex = [6, 1, 4, 8];
 
 function Top() {
     useEffect(() => {
         window.scroll({ top: 0, behavior: "smooth" });
+        setLoadingNumber(getLoadData("isLoading"));
+        if (loadingNumber === 0) {
+            SetLoading(true);
+        } else if (loadingNumber % 3 === 0) {
+            SetLoading(true);
+        }
+        updataLoadData(loadingNumber + 1, "isLoading");
     }, []);
     // state
     const [isLoading, SetLoading] = useState(false);
+    const [loadingNumber, setLoadingNumber] = useState(3);
 
     // local
     const navigate = useNavigate();
+
+    const [loadData, setLoadData] = useState<LoadData>(
+        loadDataRepo.get() || { isLoading: 1 }
+    );
+
+    function getLoadData(key: keyof LoadData) {
+        return loadData?.isLoading ?? 0;
+    }
+
+    function updataLoadData(
+        number: number,
+        key: keyof LoadData // "className" か "personName" かどっちなんだい
+    ) {
+        const newLoadData = { ...loadData, [key]: number };
+        setLoadData(newLoadData);
+        loadDataRepo.set(newLoadData);
+    }
 
     // view
     function generateScheduleImages() {

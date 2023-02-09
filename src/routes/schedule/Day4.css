@@ -497,7 +497,7 @@
 
 .Day-timeList {
     display: flex;
-    font-size: 15px;
+    font-size: 13px;
     margin-top: -20%;
     margin-bottom: 10%;
 }
@@ -662,9 +662,11 @@
 .DayBox {
     text-align: left;
 }
-.DayTimeMoji{
+
+.DayTimeMoji {
     font-size: 17px;
 }
+
 .DayBox p {
     margin-top: 0%;
     margin-bottom: 0%;
@@ -675,4 +677,9 @@
     display: flex;
     align-items: center;
     margin-left: 20%;
+    font-size: 14px;
+}
+
+.textnowarp {
+    white-space: nowrap;
 }

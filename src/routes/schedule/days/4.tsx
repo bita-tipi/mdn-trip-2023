@@ -31,7 +31,7 @@ export function ScheduleDay4() {
         navigate(to, {
             state: { MapDateIndex: dateIndex },
             preventScrollReset: true,
-        })
+        });
     }
     return (
         <main className="Day-main">
@@ -96,9 +96,7 @@ export function ScheduleDay4() {
             {isListOpenDays[0] ? (
                 <div className="Day-pulldown2">
                     <img className="Day-triangle3" src={triangle}></img>
-                    <p>
-                        1班 1~3号車  2班 1~4号車
-                    </p>
+                    <p>1班 1~3号車 2班 1~4号車</p>
                     <div className="Day-box">
                         <p className="Day-timeSmall">10:15</p>
                         <div className="Day-leftLineAreaSmall">
@@ -114,9 +112,7 @@ export function ScheduleDay4() {
                     <img
                         className="Day-picture"
                         src={kitano}
-                        onClick={() =>
-                            linkSelect("/map",4)
-                        }
+                        onClick={() => linkSelect("/map", 4)}
                     />
 
                     <div className="Day-box">
@@ -173,7 +169,7 @@ export function ScheduleDay4() {
                     </div>
                 </div>
             ) : (
-              <></>
+                <></>
             )}
             <div className="Day-routeIf" onClick={() => ListSelectDays(1)}>
                 {isListOpenDays[1] ? (
@@ -185,6 +181,7 @@ export function ScheduleDay4() {
             </div>
             {isListOpenDays[1] ? (
                 <div className="Day-pulldown2">
+                    <p>1班 4~5号車 2班 5~8号車</p>
                     <img className="Day-triangle3" src={triangle}></img>
                     <div className="Day-box">
                         <p className="Day-timeSmall">10:00</p>
@@ -201,9 +198,7 @@ export function ScheduleDay4() {
                     <img
                         className="Day-picture"
                         src={ninen}
-                        onClick={() =>
-                            linkSelect("/map",3)
-                        }
+                        onClick={() => linkSelect("/map", 3)}
                     />
                     <div className="Day-lunchBox">
                         <img src={lunchi} className="Day-lunchSet" />
@@ -228,7 +223,7 @@ export function ScheduleDay4() {
                     </div>
                 </div>
             ) : (
-            <></>
+                <></>
             )}
             <div className="Day-routeIf" onClick={() => ListSelectDays(2)}>
                 {isListOpenDays[2] ? (
@@ -240,6 +235,7 @@ export function ScheduleDay4() {
             </div>
             {isListOpenDays[2] ? (
                 <div className="Day-pulldown">
+                    <p>1班 6~8号車</p>
                     <img className="Day-triangle3" src={triangle} />
                     <div className="Day-box">
                         <p className="Day-timeSmall">10:00</p>
@@ -256,9 +252,7 @@ export function ScheduleDay4() {
                     <img
                         className="Day-picture"
                         src={arashiyama}
-                        onClick={() =>
-                            linkSelect("/map",5)
-                        }
+                        onClick={() => linkSelect("/map", 5)}
                     />
                     <div className="Day-lunchBox">
                         <img src={lunchi} className="Day-lunchSet" />
@@ -282,7 +276,7 @@ export function ScheduleDay4() {
                     <div className="Day-RedLine"></div>
                 </div>
             ) : (
-            <></>
+                <></>
             )}
             <img className="Day-triangle3" src={triangle}></img>
 
