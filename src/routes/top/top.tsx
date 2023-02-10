@@ -24,7 +24,7 @@ const TopTopic1 = getImg("TopTopic.png");
 const TopTopic2 = getImg("TopTopic2.png");
 const TopTopic3 = getImg("TopTopic3.png");
 const TopTopic4 = getImg("TopTopic4.png");
-const decoy = getImg("decoy.png");
+const decoy = getImg("map-top.png");
 
 const scheduleImagesPath = [
     imgSchedule1,

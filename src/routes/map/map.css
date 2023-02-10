@@ -8,7 +8,7 @@
     margin-top: -10%;
 }
 
-.mapZIndex{
+.mapZIndex {
     z-index: -1;
 }
 
@@ -50,6 +50,10 @@
     height: 100%;
 }
 
+.topicFunction {
+    z-index: -1;
+}
+
 .map-icon {
     margin-top: 0%;
     margin-right: 2%;
@@ -60,12 +64,13 @@
     animation-fill-mode: forwards;
 }
 
-@keyframes IconMainAnimation{
-    0%{
+@keyframes IconMainAnimation {
+    0% {
         margin-left: 5%;
     }
-    100%{
-        margin-left:0%;
+
+    100% {
+        margin-left: 0%;
     }
 }
 
@@ -188,6 +193,28 @@
 .map-topicArea {
     width: 90%;
     margin-bottom: 10%;
+    animation-name: topic;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.map-topicAreaNoAnimation {
+    width: 90%;
+    margin-bottom: 10%;
+}
+
+@keyframes topic {
+    0% {
+        opacity: 0;
+    }
+
+    ;
+
+    100% {
+        opacity: 1;
+    }
+
+    ;
 }
 
 .map-topic-icon {

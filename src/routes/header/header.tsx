@@ -272,7 +272,7 @@ function Header() {
     );
 
     return (
-        <div>
+        <div className="header-main">
             <div className="header-background">
                 {(["right"] as const).map((anchor) => (
                     <React.Fragment key={anchor}>

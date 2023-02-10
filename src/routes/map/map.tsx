@@ -4,6 +4,11 @@ import { getImg } from "model/assets";
 import { useLocation } from "react-router-dom";
 import PanZoom, { Element } from "@sasza/react-panzoom";
 import { JsxElement } from "typescript";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper";
+import "swiper/css";
+import { EffectFlip } from "swiper";
+import "swiper/css/effect-flip";
 
 export type MapProps = {
     MapDateIndex: number;
@@ -58,32 +63,9 @@ const imgTopicArea = getImg("topic-area.png");
 const YA = getImg("TopicYA.svg");
 
 function Map() {
-    const [start, setStart] = useState(performance.now());
-
-    function timeCount() {
-        const supported = (function () {
-            if (!window.performance) return false;
-            if (!performance.now) return false;
-            return true;
-        })();
-        // ------------------------------------------------------------
-        // 一定時間ごとに実行される関数
-        // ------------------------------------------------------------
-        setInterval(function () {
-            // 高分解能タイマーを取得
-            setStart(performance.now());
-        }, 1);
-    }
-
     const [randomIndex, setRandomIndex] = useState(
         Math.floor(Math.random() * 14)
     );
-
-    useEffect(() => {
-        if (Math.floor(start) % 6000 === 0) {
-            setRandomIndex(Math.floor(Math.random() * 14));
-        }
-    }, [start]);
 
     const { state } = useLocation() as { state: MapProps | undefined };
     const MapDateIndex = state?.MapDateIndex;
@@ -194,9 +176,54 @@ function Map() {
             yuniba8,
             hiroshimaArea,
         ];
+        let onSlideAnimation = false;
+        function onSlideChange() {
+            setRandomIndex(Math.floor(Math.random() * 14));
+
+            onSlideAnimation = false;
+            onSlideAnimation = true;
+        }
+
         return (
             <div>
-                <img src={topicList2[randomIndex]} className="map-topicArea" />
+                <Swiper
+                    slidesPerView={1}
+                    onSlideChange={() => onSlideChange()}
+                    autoplay={{ delay: 2000 }}
+                    modules={[EffectFlip, Autoplay]}
+                    effect={"flip"}
+                >
+                    <SwiperSlide>
+                        <img
+                            src={topicList2[randomIndex]}
+                            className={
+                                onSlideAnimation
+                                    ? ""
+                                    : "map-topicAreaNoAnimation"
+                            }
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            src={topicList2[randomIndex]}
+                            className={
+                                onSlideAnimation
+                                    ? ""
+                                    : "map-topicAreaNoAnimation"
+                            }
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            src={topicList2[randomIndex]}
+                            className={
+                                onSlideAnimation
+                                    ? ""
+                                    : "map-topicAreaNoAnimation"
+                            }
+                        />
+                    </SwiperSlide>
+                </Swiper>
             </div>
         );
     }
@@ -494,7 +521,9 @@ function Map() {
                 </div>
                 <img src={topicList[topicNumber]} className="map-topicArea" />
                 {IsTopicSelectNumber[topicNumber] ? (
-                    <div>{topicFunction[topicNumber]}</div>
+                    <div className="topicFunction">
+                        {topicFunction[topicNumber]}
+                    </div>
                 ) : (
                     <></>
                 )}

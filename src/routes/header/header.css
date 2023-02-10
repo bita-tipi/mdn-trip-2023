@@ -165,3 +165,7 @@
 .header-List {
     margin-top: 10%;
 }
+
+.header-main {
+    z-index: 10;
+}

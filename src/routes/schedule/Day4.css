@@ -604,7 +604,7 @@
     zoom: 0.5;
     opacity: 0.3;
     position: absolute;
-    transform: translate(40%, -40%);
+    transform: translate(25%, -40%);
 }
 
 .Day-bus {

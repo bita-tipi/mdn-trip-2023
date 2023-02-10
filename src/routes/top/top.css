@@ -160,6 +160,10 @@
   margin-left: 6.3%;
 }
 
+.map_img img {
+  border: solid 1.5px #a41a29;
+}
+
 .topic_main {
   display: flex;
 }
