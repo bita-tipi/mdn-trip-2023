@@ -15,7 +15,8 @@
         "isolatedModules": true,
         "noEmit": true,
         "jsx": "preserve",
-        "baseUrl": "src"
+        "baseUrl": "src",
+        "noUncheckedIndexedAccess": true
     },
     "include": ["src"]
 }

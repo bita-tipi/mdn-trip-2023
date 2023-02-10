@@ -17,10 +17,6 @@ export const getAssets = (path: ASSETS): string => {
             assetsUrl !== undefined,
             "REACT_APP_ASSETS_URL is undefined.  Check your environment file available",
         );
-    } else {
-        if (assetsUrl === undefined) {
-            console.warn("[･] Environment file not found... (dev)");
-        }
     }
 
     assert(

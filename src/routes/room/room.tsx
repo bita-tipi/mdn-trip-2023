@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import _ from "lodash";
 import "./room.css";
 import { getImg } from "model/assets";
@@ -26,10 +26,10 @@ const hotelDataRepo = new LocalStorage<HotelData[]>(localStorageKey.hotelData);
 function RoomHTML() {
     const [userData, setUserData] = useState<UserData>(
         // initの宣言としてローカルストレージから持ってくるのはアリよりのアリ (useEffect 要らなくなる)
-        userDataRepo.get() || { className: "", personName: "" }
+        userDataRepo.get() ?? { className: "", personName: "" }
     );
     const [hotelData, setHotelData] = useState<HotelData[]>(
-        hotelDataRepo.get() || []
+        hotelDataRepo.get() ?? []
     );
 
     function getHotelData(
@@ -39,19 +39,21 @@ function RoomHTML() {
     ): string {
         switch (key) {
             case "roomNumber": {
+                if (!hotelData[day]) break;
                 return hotelData[day]?.roomNumber?.toString() ?? "";
             }
             case "members": {
-                if (memberIndex === undefined) return "";
                 if (
-                    typeof hotelData[day] === "undefined" ||
-                    typeof hotelData[day].members === "undefined"
+                    memberIndex === undefined ||
+                    !hotelData[day] ||
+                    !hotelData[day]?.members
                 ) {
-                    return "";
+                    break;
                 }
-                return hotelData[day].members[memberIndex] ?? "";
+                return hotelData[day]?.members[memberIndex] ?? "";
             }
         }
+        return "";
     }
 
     // userDataに関してのupdate
@@ -70,18 +72,19 @@ function RoomHTML() {
         key: keyof HotelData, // "roomNumber" か "members" かどっちなんだい
         day: number, // 何日目？
         memberIndex?: number // 何人目？ (任意)
-    ) {
+    ): void {
         const value = event.target.value;
 
         const newHotelData = [...hotelData]; // いったんclone
+        let newHotelDataDay = newHotelData[day];
 
         switch (key) {
             case "roomNumber": {
                 // roomNumberの場合 -> valueをnumberへ変換
-                newHotelData[day] = {
+                newHotelDataDay = {
                     ...newHotelData[day],
                     roomNumber: value as unknown as number,
-                };
+                } as HotelData;
                 break;
             }
             case "members": {
@@ -90,15 +93,17 @@ function RoomHTML() {
                     throw Error("memberIndex is undefined");
                 }
                 // membersの場合 -> valueをstringへ変換して, そのmemberIndex番目に入れる
-                const newMembers = [...(newHotelData[day]?.members || [])];
+                const newMembers = [...(newHotelData[day]?.members ?? [])];
                 newMembers[memberIndex] = value as unknown as string;
 
-                newHotelData[day] = {
+                newHotelDataDay = {
                     ...newHotelData[day],
                     members: newMembers,
-                };
+                } as HotelData;
             }
         }
+
+        newHotelData[day] = newHotelDataDay;
         setHotelData(newHotelData);
         hotelDataRepo.set(newHotelData);
     }
