@@ -6,7 +6,7 @@ export const localStorageKey = {
     userData: "user_data",
     hotelData: "hotel_data",
     memoData: "memo_data",
-    loadData: "load_data",
+    visitedTimes: "visited_times",
 } as const;
 
 type LocalStorageKey = valueOf<typeof localStorageKey>;
@@ -23,10 +23,6 @@ export type HotelData = {
 
 export type MemoData = {
     memoData: string;
-};
-
-export type LoadData = {
-    isLoading: number;
 };
 
 export class LocalStorage<T> {
