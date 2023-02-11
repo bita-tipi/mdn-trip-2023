@@ -101,7 +101,7 @@ export function ScheduleDay3() {
                 className="Day-picture"
                 src={univaa}
                 onClick={() =>
-                    linkSelect("room",2)
+                    linkSelect("/room",2)
                 }
             />
 
