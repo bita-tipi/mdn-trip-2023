@@ -1,94 +1,8 @@
-.load {
-    text-align: center;
-}
-
-.animation-box {
-    animation-name: animation-logo;
-    animation-duration: 2s;
-    background-color: white;
-    animation-iteration-count: 1;
-    position: absolute;
-    animation-fill-mode: forwards;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-}
-
 .animation-box1 {
-    animation-name: animation-logo;
-    animation-duration: 3s;
-    background-image: var(--img-main-logo-svg);
-    animation-iteration-count: 1;
-    position: absolute;
-    animation-fill-mode: forwards;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-}
-
-.animation-box2 {
-    animation-name: animation-logo;
-    animation-duration: 4s;
-    background-image: var(--img-load2-png);
-    animation-iteration-count: 1;
-    position: absolute;
-    animation-fill-mode: forwards;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-}
-
-.load_animation {
-    animation-name: animation;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-duration: 2s;
-}
-
-.null {
-    display: none;
-}
-
-.load_flame {
-    animation-name: flame;
-    animation-duration: 3s;
-    background-color: #fff;
-    background-image: var(--img-flame-png);
-    animation-iteration-count: 1;
-    position: absolute;
-    animation-fill-mode: forwards;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    transform-origin: center;
-}
-
-@keyframes flame {
-    0% {
-        opacity: 0;
-        transform: scale(200%);
-    }
-
-    30% {
-        opacity: 1;
-        transform: scale(100%);
-    }
-
-    60% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(-100%);
-        visibility: hidden;
-    }
 }
 
 @keyframes animation-logo {
     0% {
-        opacity: 0;
     }
 
     60% {
@@ -102,20 +16,12 @@
         visibility: hidden;
     }
 }
-
-@keyframes animation {
-    0% {
-        opacity: 0;
-    }
-
-    40% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(-100%);
-        visibility: hidden;
-    }
+.loadMain{
+    height: 100%;
+    width: 100%;
+    animation-name: animation-logo;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-color: #fcebbe;
 }

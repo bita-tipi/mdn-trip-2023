@@ -25,6 +25,7 @@ const TopTopic2 = getImg("TopTopic2.png");
 const TopTopic3 = getImg("TopTopic3.png");
 const TopTopic4 = getImg("TopTopic4.png");
 const decoy = getImg("map-top.png");
+const loading = getImg("loading.png")
 
 const scheduleImagesPath = [
     imgSchedule1,
@@ -49,7 +50,7 @@ function Top() {
         setLoadingNumber(loadDataRepo.get() ?? 0);
         if (loadingNumber === 0) {
             SetLoading(true);
-        } else if (loadingNumber % 3 === 0) {
+        } else if (loadingNumber % 1 === 0) {
             SetLoading(true);
         }
         loadDataRepo.set(loadingNumber + 1);
@@ -173,9 +174,7 @@ function Top() {
             <img className="decolation1" src={imgDecolation} />
 
             {isLoading ? (
-                <div className="load_top">
-                    <Loading />
-                </div>
+                <img className="loadMain" src={loading}></img>
             ) : (
                 <div></div>
             )}
