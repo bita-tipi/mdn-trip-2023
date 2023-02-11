@@ -5,7 +5,7 @@ export const localStorageKey = {
     userData: "user_data",
     hotelData: "hotel_data",
     memoData: "memo_data",
-    visitedTimes: "visited_times",
+    visitedTimes2: "visited_times2",
 } as const;
 
 type LocalStorageKey = valueOf<typeof localStorageKey>;
@@ -25,7 +25,7 @@ export type MemoData = {
 };
 
 export class LocalStorage<T> {
-    constructor(private key: LocalStorageKey) {}
+    constructor(private key: LocalStorageKey) { }
 
     public get(): T | undefined {
         const data = localStorage.getItem(this.key);

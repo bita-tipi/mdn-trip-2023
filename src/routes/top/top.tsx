@@ -34,7 +34,7 @@ const scheduleImagesPath = [
     imgSchedule4,
 ];
 
-const loadDataRepo = new LocalStorage<number>(localStorageKey.visitedTimes);
+const loadDataRepo = new LocalStorage<number>(localStorageKey.visitedTimes2);
 
 const topicImagesPath = [TopTopic1, TopTopic4, TopTopic2, TopTopic3];
 
@@ -175,7 +175,7 @@ function Top() {
 
             {isLoading ? (
                 <div className="loadMain">
-                    <img className="loadMainImg"src={loading}></img>
+                    <img className="loadMainImg" src={loading}></img>
                 </div>
             ) : (
                 <div></div>
