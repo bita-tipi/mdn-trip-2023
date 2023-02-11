@@ -50,7 +50,7 @@ function Top() {
         setLoadingNumber(loadDataRepo.get() ?? 0);
         if (loadingNumber === 0) {
             SetLoading(true);
-        } else if (loadingNumber % 1 === 0) {
+        } else if (loadingNumber % 3 === 0) {
             SetLoading(true);
         }
         loadDataRepo.set(loadingNumber + 1);
@@ -174,7 +174,9 @@ function Top() {
             <img className="decolation1" src={imgDecolation} />
 
             {isLoading ? (
-                <img className="loadMain" src={loading}></img>
+                <div className="loadMain">
+                    <img className="loadMainImg"src={loading}></img>
+                </div>
             ) : (
                 <div></div>
             )}

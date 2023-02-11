@@ -225,4 +225,11 @@
   animation-fill-mode: forwards;
   position: absolute;
   top:0;
+  background-color: #fcebbe;
+}
+
+
+.loadMainImg{
+  height: auto;
+  width:100%;
 }
